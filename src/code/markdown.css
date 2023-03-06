@@ -537,12 +537,11 @@ svg.h-4.w-4 {
     background-color: transparent !important;
     margin: 0px;
     padding: 0px;
-    color: hsl(var(--cl-primary));
 }
 
 :is(.block-properties, .page-properties) > div:only-child > div > .page-property-key {
-    color: hsl(var(--cl-primary));
-    font-weight: 500;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 :is(.block-properties, .page-properties) {
