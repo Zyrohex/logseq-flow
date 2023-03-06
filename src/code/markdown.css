@@ -539,6 +539,12 @@ svg.h-4.w-4 {
     padding: 0px;
 }
 
+:is(.block-properties, .page-properties) > div:only-child > .mr-1 {
+    margin: 0px 2px;
+    position: relative;
+    top: -1px;
+}
+
 :is(.block-properties, .page-properties) > div:only-child > div > .page-property-key {
     font-weight: 600;
     text-transform: uppercase;
@@ -837,20 +843,19 @@ h1.title {
 /* Main Reference Panels surround each block */
 
 :is(.lazy-visibility, .lazy-visibility > .fade-enter) .color-level > .flex.flex-col > .initial > div > .blocks-container, .cp__right-sidebar .references.page-linked .color-level > .flex.flex-col > .initial > div > .blocks-container {
-    border: 1px solid hsl(var(--cl-background), 0.85);
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 15px;
     border-radius: 4px;
     padding-right: 20px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    border: 1px solid hsl(var(--cl-background), 0.3);
+    border: 1px solid var(--bg-color-2);
 }
 .white-theme :is(.lazy-visibility, .lazy-visibility > .fade-enter) .color-level > .flex.flex-col > .initial > div > .blocks-container {
-    background-color: hsl(var(--cl-background), 0.25);
+    background-color: var(--bg-color-1);
 }
 .dark-theme :is(.lazy-visibility, .lazy-visibility > .fade-enter) .color-level > .flex.flex-col > .initial > div > .blocks-container, .dark-theme .cp__right-sidebar .references.page-linked .color-level > .flex.flex-col > .initial > div > .blocks-container {
-    background-color: hsl(var(--cl-background), 0.25);
+    background-color: var(--bg-color-1);
 }
 .white-theme .cp__right-sidebar .references.page-linked .color-level > .flex.flex-col > .initial > div > .blocks-container {
     background-color: var(--bg-color);

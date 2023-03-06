@@ -209,8 +209,8 @@ span.mx-2.opacity-50:before {
 **    Embeds    **
 ******************************/
 .color-level.embed-block.bg-base-2 {
-    background-color: hsl(var(--cl-background), 0.4);
-    border: 1px solid hsl(var(--cl-background), 0.3);
+    background-color: var(--bg-color-1);
+    border: 1px solid var(--bg-color-2);
     border-radius: 2px;
 }
 
