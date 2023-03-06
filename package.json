@@ -372,6 +372,12 @@
                 "mode": "dark"
             },
             {
+                "name": "Newspaper",
+                "url": "./src/palettes/newspaper.css",
+                "description": "Newspaper",
+                "mode": "light"
+            },
+            {
                 "name": "Newsprint",
                 "url": "./src/palettes/newsprint.css",
                 "description": "Newsprint",
@@ -501,6 +507,12 @@
                 "name": "Soft Era",
                 "url": "./src/palettes/soft-era.css",
                 "description": "Soft Era",
+                "mode": "light"
+            },
+            {
+                "name": "Sonoma",
+                "url": "./src/palettes/sonoma.css",
+                "description": "Sonoma",
                 "mode": "light"
             },
             {

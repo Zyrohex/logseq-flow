@@ -8,8 +8,8 @@ html[data-theme='dark'] {
     --cl-background: 345,13%,25%;
     --cl-text-color: 23,27%,60%;
     --cl-primary: 187,47%,55%;
-    --cl-secondary: 353,63%,55%;
-    --cl-accent: 7,47%,55%;
+    --cl-secondary: 7,47%,55%;
+    --cl-accent: 353,63%,55%;
 }
 
 .white-theme,
