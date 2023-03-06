@@ -523,13 +523,32 @@ svg.h-4.w-4 {
 }
 
 /* Block Properties */
-.page-properties,
-.color-level .page-properties {
+:is(.page-properties, .block-properties) > div:not(:only-child),
+.color-level :is(.page-properties, .block-properties) > div:not(:only-child) {
     letter-spacing: 0px !important;
     word-spacing: normal !important;
     font-family: var(--ls-font-family) !important;
     background-color: hsl(var(--cl-properties-background-color, var(--cl-background), 0.35));
     color: hsl(var(--cl-text-color), 0.9);
+    padding: 0px 10px;
+}
+
+:is(.block-properties, .page-properties) > div:only-child {
+    background-color: transparent !important;
+    margin: 0px;
+    padding: 0px;
+    color: hsl(var(--cl-primary));
+}
+
+:is(.block-properties, .page-properties) > div:only-child > div > .page-property-key {
+    color: hsl(var(--cl-primary));
+    font-weight: 500;
+}
+
+:is(.block-properties, .page-properties) {
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
 }
 
 .page-properties a.tag {
@@ -549,15 +568,6 @@ svg.h-4.w-4 {
 }
 
 /* Some values take on important to avoid style plugins from overriding these settings */
-.block-properties:not(.page-properties) {
-    background-color: hsl(var(--cl-properties-background-color, var(--cl-background), 0.35));
-    border-radius: var(--cl-border-minor);
-    display: inline-block;
-    padding: 3px 5px !important;
-    font-size: smaller !important;
-    font-family: var(--ls-font-family) !important;
-    color: hsl(var(--cl-text-color), 0.9);
-}
 
 /* hide icons for properties */
 .block-properties:not(.page-properties) .page-ref .awLinks-page-icon {
