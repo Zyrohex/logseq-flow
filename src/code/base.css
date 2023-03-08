@@ -1,7 +1,7 @@
 @import './fonts.css';
 @import './interface.css';
 @import './markdown.css';
-@import './tana-bullets.css';
+/*@import './tana-bullets.css';*/
 @import './plugins.css';
 @import './live-query.css';
 @import './logseq.css';
@@ -593,9 +593,6 @@ Breadcrumbs
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb .bracket {
     display: none;
 }
-.lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb span.mx-2.opacity-50:before {
-    letter-spacing: -6px;
-}
 .flex.flex-col > .lazy-visibility:not(:first-child) {
     margin-top: -12px;
 }
@@ -626,7 +623,7 @@ Code Mirror Settings
     margin-bottom: 10px;
 }
 .cm-s-solarized.cm-s-dark, .cm-s-solarized.cm-s-light {
-    background-color: hsl(var(--cl-background), 0.4);
+    background-color: var(--bg-color-1);
     text-shadow: none;
     color: var(--ls-primary-text-color);
     border: 0px solid var(--bg-color-2);
@@ -634,7 +631,7 @@ Code Mirror Settings
     padding-right: 10px;
 }
 .white-theme .cm-s-solarized {
-    background-color: hsl(var(--cl-background), 0.4) !important;
+    background-color: var(--bg-color-1);
 }
 .dark-theme .cm-s-solarized {
     background-color: var(--bg-dark);

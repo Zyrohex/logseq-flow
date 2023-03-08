@@ -14,11 +14,11 @@
 /******************************,
 **    Block References    **
 ******************************/
-/*.block-ref:before {
+.block-ref:before {
     content: " ";
     color: hsl(var(--cl-primary), 1);
     vertical-align: middle;
-    background-color: hsl(var(--cl-accent), 1);
+    background-color: hsl(var(--cl-secondary), 1);
     border-radius: 2px;
     font-size: 7px;
     position: relative;
@@ -26,10 +26,9 @@
     margin-right: 5px;
     margin-left: 2px;
     padding-right: 1px;
-}*/
+}
 :not(.whiteboard-shape) .block-ref {
     border-bottom: 0px dashed hsl(var(--cl-text-color), 0.15);
-    color: hsl(var(--cl-secondary), 0.85);
     background-color: hsl(var(--cl-accent), 0);
     border-radius: 0px;
     opacity: 1;

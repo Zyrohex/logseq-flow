@@ -244,12 +244,24 @@
     a:hover .bullet-container {
       background-color: transparent;
     }
-    
-    /*.ls-block[data-refs-self*='"'] > .flex.flex-row.pr-2 .bullet-container:hover .bullet:before {
-        color: hsl(var(--cl-accent));
-        background-color: hsl(var(--cl-accent), 0.15);
-      }
-      .ls-block[data-refs-self*='"a'] > .flex.flex-row.pr-2 .bullet-container.bullet-closed .bullet:before {
-        background-color: hsl(var(--cl-primary), 0.85);
-        color: var(--bg-color);
-      }*/
+
+
+.ls-block[data-refs-self*='"question']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\edeb" !important;
+  font-family: 'tabler-icons240';
+  color: var(--ls-block-bullet-color);
+  border-radius: 50%;
+  position: relative;
+  top: -8px;
+  left: -4px;
+  letter-spacing: -8px;
+  font-size: 14px;
+}
+      
+.ls-block[data-refs-self*='"question']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet {
+  background-color: transparent;
+  color: transparent;
+}
+.ls-block[data-refs-self*='"question']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet {
+  background-color: transparent;
+}

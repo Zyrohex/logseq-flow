@@ -31,7 +31,7 @@
 /* Inline Code */
 :not(pre):not(mark)>code {
     padding: 2px 6px !important;
-    color: hsl(var(--cl-accent), 1);
+    color: hsl(var(--cl-secondary), 1);
     border-radius: 2px;
     font-family: "SF Mono", MonoLisa, Fira Code, Monaco, Menlo, Consolas, COURIER NEW, monospace;
     border: 0px dashed hsl(var(--cl-text-color), 0.15);
@@ -83,11 +83,11 @@ mark>code:after {
 
 /* Blockquotes */
 blockquote {
-    background-color: hsl(var(--cl-accent), 0.05);
+    background-color: hsl(var(--cl-secondary), 0.05);
     color: var(--ls-primary-text-color);
     display: flex;
     padding-left: 0px;
-    border-left: 2px solid hsl(var(--cl-accent));
+    border-left: 2px solid hsl(var(--cl-secondary));
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -96,7 +96,7 @@ blockquote:before {
     content: "\ee09";
     font-family: 'tabler-icons';
     align-self: center;
-    color: hsl(var(--cl-accent));
+    color: hsl(var(--cl-secondary));
     position: relative;
     left: -9px;
     z-index: 3;
@@ -560,12 +560,12 @@ svg.h-4.w-4 {
     background-color: transparent;
     padding: 0px;
     border: 0px solid;
-    color: hsl(var(--cl-accent));
+    color: hsl(var(--cl-secondary));
     font-weight: 400;
 }
 
 .page-properties a.tag:hover {
-    color: hsl(var(--cl-accent));
+    color: hsl(var(--cl-secondary));
 }
 
 .page-properties a.tag .awLinks-page-icon {
@@ -583,14 +583,14 @@ svg.h-4.w-4 {
 .block-properties:not(.page-properties) a.tag {
     background-color: transparent;
     padding: 0px;
-    color: hsl(var(--cl-accent));
+    color: hsl(var(--cl-secondary));
     border: 0px solid;
     font-weight: 400;
     font-size: 13px;
 }
 
 .block-properties:not(.page-properties) a.tag:hover {
-    color: hsl(var(--cl-accent));
+    color: hsl(var(--cl-secondary));
 }
 
 .block-properties:not(.page-properties) .bracket {
@@ -606,15 +606,15 @@ svg.h-4.w-4 {
 
 /* Tags */
 a.tag {
-    background-color: hsl(var(--cl-tag-background-color, var(--cl-accent), 0.2));
-    color: hsl(var(--cl-tag-color, var(--cl-accent), 0.85));
+    background-color: hsl(var(--cl-tag-background-color, var(--cl-secondary), 0.2));
+    color: hsl(var(--cl-tag-color, var(--cl-secondary), 0.85));
     opacity: 1;
     padding: 0px 5px;
     text-align: center;
     display: inline-block;
     border-radius: var(--cl-tag-border, 2px);
     border: 0px solid;
-    border-color: hsl(var(--cl-accent), 0.15);
+    border-color: hsl(var(--cl-secondary), 0.15);
     transition: 0.2s;
     vertical-align: middle;
     font-weight: 500;
@@ -693,13 +693,10 @@ thead {
 
 /* External Links */
 .external-link {
-    color: hsl(var(--cl-secondary));
+    color: var(--ls-primary-text-color);
     padding: 0px;
     border: 0px;
-    text-decoration: underline;
-    text-decoration-style: solid;
-    text-underline-offset: 1px;
-    text-decoration-skip: auto;
+    border-bottom: 1px solid hsl(var(--cl-primary));
 }
 
 /* Block Highlighter */
@@ -858,10 +855,10 @@ h1.title {
     background-color: var(--bg-color-1);
 }
 .white-theme .cp__right-sidebar .references.page-linked .color-level > .flex.flex-col > .initial > div > .blocks-container {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-1);
 }
 .dark-theme .cp__right-sidebar .references.page-linked .color-level > .flex.flex-col > .initial > div > .blocks-container {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-1);
 }
 :is(.lazy-visibility, .lazy-visibility > .fade-enter) .color-level, .cp__right-sidebar .references.page-linked .lazy-visibility .color-level {
     background-color: transparent;
@@ -890,4 +887,39 @@ h1.title {
 /* dim out all the breadcrumb elements except the last block */
 .block-parents a:not(:last-child) {
     opacity: 0.5;
+}
+
+
+
+/* Improved Bullets */
+:is(.ls-block[data-refs-self*='"question'], .ls-block[data-refs-self*='"claim'], .ls-block[data-refs-self*='"evidence'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+    font-family: 'tabler-icons240';
+    color: var(--ls-block-bullet-color);
+    border-radius: 50%;
+    position: relative;
+    top: -10px;
+    left: -4px;
+    letter-spacing: -8px;
+    font-size: 14px;
+}
+        
+:is(.ls-block[data-refs-self*='"question'], .ls-block[data-refs-self*='"claim'], .ls-block[data-refs-self*='"evidence'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet {
+    background-color: transparent;
+    color: transparent;
+}
+:is(.ls-block[data-refs-self*='"question'], .ls-block[data-refs-self*='"claim'], .ls-block[data-refs-self*='"evidence'])>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container {
+    background-color: transparent !important;
+    color: transparent !important;
+}
+:is(.ls-block[data-refs-self*='"question'], .ls-block[data-refs-self*='"claim'], .ls-block[data-refs-self*='"evidence'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet {
+    background-color: transparent;
+}
+.ls-block[data-refs-self*='"question']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+    content: "\edeb" !important;
+}
+.ls-block[data-refs-self*='"claim']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+    content: "\f028" !important;
+}
+.ls-block[data-refs-self*='"evidence']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+    content: "\ebd2" !important;
 }

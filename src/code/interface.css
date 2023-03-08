@@ -184,11 +184,11 @@ span.mx-2.opacity-50 {
     margin-left: 3px;
 }
 span.mx-2.opacity-50:before {
-    font-size: 14px;
+    font-size: 16px;
     content: "\ea61";
     font-family: 'tabler-icons';
-    vertical-align: bottom;
-    color: hsl(var(--cl-text-color), 0.4)
+    color: hsl(var(--cl-text-color), 0.4);
+    letter-spacing: -5px;
 }
 /* Adds some color to the ellipsis */
 .breadcrumb.block-parents.flex-row.flex-1.my-2 > .opacity-70 {
