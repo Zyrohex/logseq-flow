@@ -366,6 +366,18 @@
                 "mode": "dark"
             },
             {
+                "name": "Munsell",
+                "url": "./src/palettes/munsell.css",
+                "description": "Munsell",
+                "mode": "light"
+            },
+            {
+                "name": "Munsell",
+                "url": "./src/palettes/munsell.css",
+                "description": "Munsell",
+                "mode": "dark"
+            },
+            {
                 "name": "Nebula",
                 "url": "./src/palettes/nebula.css",
                 "description": "Nebula",
@@ -552,6 +564,24 @@
                 "mode": "dark"
             },
             {
+                "name": "Sweetie",
+                "url": "./src/palettes/sweetie.css",
+                "description": "Sweetie",
+                "mode": "light"
+            },
+            {
+                "name": "Sunbather",
+                "url": "./src/palettes/sunbather.css",
+                "description": "Sunbather",
+                "mode": "dark"
+            },
+            {
+                "name": "Sunbather",
+                "url": "./src/palettes/sunbather.css",
+                "description": "Sunbather",
+                "mode": "light"
+            },
+            {
                 "name": "Synthwave 84",
                 "url": "./src/palettes/synthwave84.css",
                 "description": "Synthwave 84",
@@ -582,6 +612,18 @@
                 "mode": "light"
             },
             {
+                "name": "Two Firewatch",
+                "url": "./src/palettes/twofirewatch.css",
+                "description": "Two Firewatch",
+                "mode": "dark"
+            },
+            {
+                "name": "Two Firewatch",
+                "url": "./src/palettes/twofirewatch.css",
+                "description": "Two Firewatch",
+                "mode": "light"
+            },
+            {
                 "name": "Watermelon",
                 "url": "./src/palettes/watermelon.css",
                 "description": "Watermelon",
@@ -591,6 +633,12 @@
                 "name": "Watermelon",
                 "url": "./src/palettes/watermelon.css",
                 "description": "Watermelon",
+                "mode": "dark"
+            },
+            {
+                "name": "Yellowmoon",
+                "url": "./src/palettes/yellowmoon.css",
+                "description": "Yellowmoon",
                 "mode": "dark"
             },
             {

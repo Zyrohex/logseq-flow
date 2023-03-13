@@ -172,7 +172,7 @@ html[data-theme='dark'] {
     --ls-highlight-color-purple-text: #c084fc;
     --ls-highlight-color-pink-text: #f472b6;
     --ls-success-text-color: var(--color-green-500);
-    --ls-header-button-background: hsl(var(--cl-text-color), 0.75);
+    --ls-header-button-background: hsl(var(--cl-text-color), 1);
 }
 
 /* Light Settings */
@@ -293,7 +293,7 @@ html[data-theme='light'] {
     --ls-highlight-color-pink: #f472b630;
     --ls-highlight-color-pink-text: #f472b6;
     --ls-success-text-color: var(--color-green-500);
-    --ls-header-button-background: hsl(var(--cl-text-color), 0.75);
+    --ls-header-button-background: hsl(var(--cl-text-color), 1);
 }
 
 /* ==========================================================================
@@ -587,14 +587,10 @@ Breadcrumbs
    ========================================================================== */
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
     font-size: 88%;
-    margin-bottom: 5px;
-    margin-left: 2px;
+    margin-left: 0px;
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb .bracket {
     display: none;
-}
-.flex.flex-col > .lazy-visibility:not(:first-child) {
-    margin-top: -12px;
 }
 .lazy-visibility > .fade-enter > .my-2.color-level.px-2 > .flex.flex-col > .content > .flex-1.flex-row.foldable-title > .flex.flex-row.items-center > .block-control svg {
     fill: transparent;
