@@ -11,3 +11,15 @@ html[data-theme='dark'] {
     --cl-secondary: 199,94%,65%;
     --cl-accent: 194,95%,76%;
 }
+
+.white-theme, 
+html[data-theme='light'] {
+    --background-color-h: 44;
+    --background-color-s: 87%;
+    --background-color-l: 94%;
+    --cl-background: 44, 87%, 84%;
+    --cl-text-color: 196, 13%, 45%;
+    --cl-primary: 205, 69%, 49%;
+    --cl-secondary: 175, 59%, 40%;
+    --cl-accent: 192, 81%, 14%;
+}
