@@ -3,18 +3,9 @@
 ********************************************/
 
 /* Code Blocks */
-.block-ref .cp__fenced-code-block {
-    display: inline-block;
-}
-
 .block-ref .block-body {
     display: contents;
 }
-
-.cp__fenced-code-block {
-    display: inline-block;
-}
-
 /* Example BLocks */
 .pre-wrap-white-space {
     background-color: hsl(var(--cl-secondary), 0.05);
@@ -240,20 +231,19 @@ a.priority[href="#/page/C" i]::before {
 
 /*  === Checkboxes ===  */
 .form-checkbox {
-    background-color: var(--cl-checkbox-background-color, var(--bg-dark));
-    border: 1.7px solid hsl(var(--cl-text-color), 0.15);
+    background-color: hsl(var(--cl-text-color), 0.15);
+    border: 0px solid hsl(var(--cl-accent), 0.85);
     border-style: solid;
-    border-color: hsl(var(--cl-checkbox-border-color, var(--cl-text-color), 0.25));
-    border-radius: var(--cl-checkbox-radius, 2px);
+    border-radius: 1px;
     position: relative;
     opacity: var(--cl-checkbox-opacity, 1);
-    top: -1.7px;
     width: 14px;
     height: 14px;
+    top: -1px;
 }
 
 .form-checkbox:checked {
-    background-color: hsl(var(--cl-primary)) !important;
+    background-color: hsl(var(--cl-accent)) !important;
     opacity: 1;
 }
 
@@ -262,7 +252,7 @@ a.priority[href="#/page/C" i]::before {
 .block-marker {
     font-size: inherit;
     font-weight: 400;
-    color: hsl(var(--cl-text-color), 0.6);
+    color: hsl(var(--cl-accent), 0.8);
 }
 
 .block-marker:hover {
@@ -894,6 +884,61 @@ h1.title {
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb span.mx-2.opacity-50:before {
     font-size: 12px;
     vertical-align: baseline;
+}
+
+/* modifying our block-refs and page-references */
+:not(.whiteboard-shape) .block-ref:before {
+    content: "((";
+    color: hsl(var(--cl-primary));
+    opacity: 0.3;
+    padding: 0px 1px;
+}
+
+:not(.whiteboard-shape) .block-ref:after {
+    content: "))";
+    color: hsl(var(--cl-primary));
+    opacity: 0.3;
+    padding: 0px 1px;
+}
+
+:not(.whiteboard-shape) .block-ref {
+    color: hsl(var(--cl-text-color), 0.5);
+}
+:not(.whiteboard-shape) .block-ref:hover :is(b, i, .mark) {
+    color: hsl(var(--cl-primary));
+}
+:not(.whiteboard-shape) .block-ref :is(b, i, .mark) {
+    color: hsl(var(--cl-text-color), 1);
+}
+.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb+.blocks-container.flex-1 {
+    display: table-cell;
+    position: relative;
+    top: 5px;
+}
+:not(.ls-wide-mode) .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb+.blocks-container.flex-1 {
+    min-width: calc(var(--ls-main-content-max-width) - 240px);
+    max-width: calc(var(--ls-main-content-max-width) - 240px);
+}
+.ls-wide-mode .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb+.blocks-container.flex-1 {
+    min-width: calc(var(--ls-main-content-max-width-wide) - 240px);
+    max-width: calc(var(--ls-main-content-max-width-wide) - 240px);
+}
+.cp__right-sidebar-inner .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb+.blocks-container.flex-1 {
+    min-width: calc(var(--ls-right-sidebar-width) - 240px);
+    max-width: calc(var(--ls-right-sidebar-width) - 240px);
+}
+.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
+    display: table-cell;
+    min-width: 200px;
+    max-width: 200px;
+}
+.cp__right-sidebar-inner .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
+    min-width: 150px;
+    max-width: 150px;
+}
+.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div:not(:first-child) {
+    border-top: 1px solid hsl(var(--cl-text-color), 0.1);
+    margin: 6px 0px;
 }
 
 /* reference panel table style layout */

@@ -65,7 +65,7 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
     background-color: transparent;
 }
 .color-level .color-level {
-    background-color: var(--bg-color-1);
+    background-color: var(--bg-color-2);
 }
 
 /********************************************

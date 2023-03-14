@@ -300,6 +300,12 @@
                 "mode": "light"
             },
             {
+                "name": "cool - Inkstained",
+                "url": "./src/palettes/inkstained.css",
+                "description": "Inkstained",
+                "mode": "light"
+            },
+            {
                 "name": "cool - Kanagawa",
                 "url": "./src/palettes/kanagawa.css",
                 "description": "Kanagawa",
@@ -381,6 +387,18 @@
                 "name": "cool - Munsell",
                 "url": "./src/palettes/munsell.css",
                 "description": "Munsell",
+                "mode": "dark"
+            },
+            {
+                "name": "warm - Mellow",
+                "url": "./src/palettes/mellow.css",
+                "description": "Mellow",
+                "mode": "light"
+            },
+            {
+                "name": "warm - Mellow",
+                "url": "./src/palettes/mellow.css",
+                "description": "Mellow",
                 "mode": "dark"
             },
             {
@@ -483,6 +501,12 @@
                 "name": "warm - Paper",
                 "url": "./src/palettes/paper.css",
                 "description": "Paper",
+                "mode": "light"
+            },
+            {
+                "name": "cool - Papercolor",
+                "url": "./src/palettes/papercolor.css",
+                "description": "Papercolor",
                 "mode": "light"
             },
             {
