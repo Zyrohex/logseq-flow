@@ -910,6 +910,29 @@ h1.title {
 :not(.whiteboard-shape) .block-ref :is(b, i, .mark) {
     color: hsl(var(--cl-text-color), 1);
 }
+
+.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.block-children-container {
+    display: table-cell;
+    position: relative;
+    top: 22px;
+}
+.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.flex.flex-row .bullet-container {
+    display: none;
+}
+.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.flex.flex-row {
+    display: table-cell;
+    min-width: 250px;
+    max-width: 250px;
+}
+.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div:not(:first-child) {
+    border-top: 1px solid hsl(var(--cl-text-color), 0.1);
+    margin: 35px 0px;
+}
+.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block {
+    padding-bottom: 30px;
+    margin-top: -20px;
+}
+/*
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb+.blocks-container.flex-1 {
     display: table-cell;
     position: relative;
