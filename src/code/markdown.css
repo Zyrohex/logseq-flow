@@ -887,20 +887,6 @@ h1.title {
 }
 
 /* modifying our block-refs and page-references */
-:not(.whiteboard-shape) .block-ref:before {
-    content: "((";
-    color: hsl(var(--cl-primary));
-    opacity: 0.3;
-    padding: 0px 1px;
-}
-
-:not(.whiteboard-shape) .block-ref:after {
-    content: "))";
-    color: hsl(var(--cl-primary));
-    opacity: 0.3;
-    padding: 0px 1px;
-}
-
 :not(.whiteboard-shape) .block-ref {
     color: hsl(var(--cl-text-color), 0.5);
 }
