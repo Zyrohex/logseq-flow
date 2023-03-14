@@ -938,7 +938,7 @@ h1.title {
 }
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div:not(:first-child) {
     border-top: 1px solid hsl(var(--cl-text-color), 0.1);
-    margin: 6px 0px;
+    margin: 10px 0px;
 }
 
 /* reference panel table style layout */

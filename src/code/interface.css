@@ -65,6 +65,12 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
     background-color: transparent;
 }
 .color-level .color-level {
+    background-color: var(--bg-color-1);
+}
+#left-sidebar .color-level .color-level {
+    background-color: var(--bg-color-1);
+}
+.references .color-level .color-level {
     background-color: var(--bg-color-2);
 }
 
