@@ -52,6 +52,12 @@ Base Root Settings
     --cl-primary-darker: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) / 1.20));
     --cl-primary-light: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) * 1.10));
     --cl-primary-lighter: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) * 1.20));
+    --cl-sidebar-left-panel: calc(var(--ls-main-content-max-width) * 0.2);
+    --cl-sidebar-right-panel: calc(var(--ls-main-content-max-width) * 0.8);
+    --cl-left-panel: calc(var(--ls-main-content-max-width) * 0.33);
+    --cl-left-wide-panel: calc(var(--ls-main-content-max-width-wide) * 0.33);
+    --cl-right-panel: calc(var(--ls-main-content-max-width) * 0.67);
+    --cl-right-wide-panel: calc(var(--ls-main-content-max-width-wide) * 0.67);
 }
 
 /* Dark settings */
@@ -629,8 +635,8 @@ Code Mirror Settings
 .white-theme .cm-s-solarized {
     background-color: var(--bg-color-1);
 }
-.color-level .white-theme .cm-s-solarized {
-    background-color: var(--bg-color-2) !important;
+.white-theme .color-level .cm-s-solarized {
+    background-color: var(--bg-color-2);
 }
 .dark-theme .cm-s-solarized {
     background-color: var(--bg-dark);

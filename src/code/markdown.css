@@ -231,8 +231,8 @@ a.priority[href="#/page/C" i]::before {
 
 /*  === Checkboxes ===  */
 .form-checkbox {
-    background-color: hsl(var(--cl-text-color), 0.15);
-    border: 0px solid hsl(var(--cl-accent), 0.85);
+    background-color: hsl(var(--cl-text-color), 0.05);
+    border: 1px solid hsl(var(--cl-text-color), 0.35);
     border-style: solid;
     border-radius: 1px;
     position: relative;
@@ -897,6 +897,7 @@ h1.title {
 :not(.whiteboard-shape) .block-ref :is(b, i, .mark) {
     color: hsl(var(--cl-text-color), 1);
 }
+/* add table layouts to reference panel */
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col>.content>.flex-1.flex-row.foldable-title {
     font-size: 115%;
     margin-bottom: 3px;
@@ -908,26 +909,32 @@ h1.title {
     border-left: 0px solid;
 }
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.flex.flex-row {
-    flex: 0 0 250px;
+    flex: 0 0 var(--cl-left-panel);
     margin-left: -30px;
 }
 .cp__right-sidebar .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.flex.flex-row {
     flex: 0 0 150px;
 }
+.ls-wide-mode .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.block-children-container .extensions__code {
+    width: calc(var(--cl-right-panel-wide) - 90px);
+}
+.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.block-children-container .extensions__code {
+    width: calc(var(--cl-right-panel) - 90px);
+}
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.block-children-container {
-    flex: 1;
+    flex: 1 var(--cl-right-panel);
 }
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block {
     display: flex;
     flex-direction: row;
 }
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container > .lazy-visibility:not(:first-child) {
-    border-top: 1px solid hsl(var(--cl-text-color), 0.2);
+    border-top: 1px solid hsl(var(--cl-text-color), 0.1);
     margin: 10px 0px;
     padding: 10px 0px;
 }
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div:not(:first-child) {
-    border-top: 1px solid hsl(var(--cl-text-color), 0.2);
+    border-top: 1px solid hsl(var(--cl-text-color), 0.1);
     margin: 10px 0px;
     padding: 10px 0px;
 }
@@ -966,7 +973,7 @@ h1.title {
     top: -4px;
 }
 #journals>div>.journal-item>.flex-1>.flex.flex-col>.content+.initial>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block:not(:first-child) {
-    border-top: 1px solid hsl(var(--cl-text-color), 0.2);
+    border-top: 1px solid hsl(var(--cl-text-color), 0.1);
     margin: 10px 0px;
     padding: 10px 0px;
 }
@@ -1007,7 +1014,7 @@ h1.title {
     top: -4px;
 }
 #main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block:not(:first-child) {
-    border-top: 1px solid hsl(var(--cl-text-color), 0.2);
+    border-top: 1px solid hsl(var(--cl-text-color), 0.1);
     margin: 10px 0px;
     padding: 10px 0px;
 }
@@ -1022,7 +1029,7 @@ h1.title {
     min-width: 350px;
 }
 #main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children>.ls-block:not(:first-child) {
-    border-top: 1px solid hsl(var(--cl-text-color), 0.2);
+    border-top: 1px solid hsl(var(--cl-text-color), 0.1);
 }
 #main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children>.ls-block {
     display: flex;
