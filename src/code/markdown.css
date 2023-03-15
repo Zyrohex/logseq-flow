@@ -533,7 +533,7 @@ svg.h-4.w-4 {
 a.tag {
     background-color: hsl(var(--cl-tag-background-color, var(--cl-secondary), 0.2));
     background-color: transparent;
-    color: hsl(var(--cl-tag-color, var(--cl-secondary), 0.85));
+    color: var(--ls-secondary-text-color);
     opacity: 1;
     padding: 0px;
     text-align: center;
@@ -556,8 +556,7 @@ a.tag:hover {
 
 .is-paragraph .tag {
     background-color: transparent;
-    color: hsl(var(--cl-text-color), 0.7);
-    opacity: 0.8;
+    color: var(--ls-secondary-text-color);
     text-transform: lowercase;
     font-weight: 400;
 }
