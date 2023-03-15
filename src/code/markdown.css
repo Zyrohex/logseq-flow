@@ -978,9 +978,11 @@ h1.title {
 
 :not(.ls-wide-mode) #main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row.pr-2 {
     flex: 0 calc(var(--ls-main-content-max-width) * .45);
+    min-width: 300px;
 }
 .ls-wide-mode #main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row.pr-2 {
     flex: 0 calc(var(--ls-main-content-max-width-wide) * .4);
+    min-width: 350px;
 }
 #main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row.pr-2 .block-marker {
     display: inline-flex;
@@ -1013,9 +1015,11 @@ h1.title {
 /* Add table view to drill downs */
 :not(.ls-wide-mode) #main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children>.ls-block>.flex.flex-row.pr-2 {
     flex: 0 calc(var(--ls-main-content-max-width) * .45);
+    min-width: 300px;
 }
 .ls-wide-mode #main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children>.ls-block>.flex.flex-row.pr-2 {
     flex: 0 calc(var(--ls-main-content-max-width-wide) * .4);
+    min-width: 350px;
 }
 #main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children>.ls-block:not(:first-child) {
     border-top: 1px solid hsl(var(--cl-text-color), 0.2);
@@ -1037,6 +1041,7 @@ h1.title {
 
 #main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children>.ls-block>.flex.flex-row.pr-2 {
     flex: 0 300px;
+    min-width: 300px;
 }
 
 #main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row .bullet-container {display: none;}
