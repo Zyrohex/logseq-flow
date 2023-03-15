@@ -24,12 +24,12 @@ Base Root Settings
     --cl-background: var(--background-color-h), var(--background-color-s), var(--background-color-l);
     --cl-block-bullet-fix: 20px;
     --ls-main-content-max-width: var(--cl-page-width, 1000px);
-    --ls-main-content-max-width-wide: var(--cl-page-max-width, 100%);
+    --ls-main-content-max-width-wide: var(--cl-page-max-width, 1200px);
     --ls-page-title-size: 28px;
     --ls-left-sidebar-width: 200px;
     --ls-right-sidebar-width: 30%;
     /* General Settings */
-    --cl-box-shadow: rgba(23, 42, 53, 0.1) 0 1px 2px 0;
+    --cl-box-shadow: rgba(23, 42, 53, 0.1) 0px 0px 4px 2px;
     /* Border Settings */
     --cl-border-minor: 2px;
     --cl-border-max: 4px;
@@ -588,6 +588,7 @@ Breadcrumbs
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
     font-size: 88%;
     margin-left: 0px;
+    margin-bottom: 4px;
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb .bracket {
     display: none;
@@ -619,7 +620,6 @@ Code Mirror Settings
     margin-bottom: 10px;
 }
 .cm-s-solarized.cm-s-dark, .cm-s-solarized.cm-s-light {
-    background-color: var(--bg-color-1);
     text-shadow: none;
     color: var(--ls-primary-text-color);
     border: 0px solid var(--bg-color-2);
@@ -628,6 +628,9 @@ Code Mirror Settings
 }
 .white-theme .cm-s-solarized {
     background-color: var(--bg-color-1);
+}
+.color-level .white-theme .cm-s-solarized {
+    background-color: var(--bg-color-2) !important;
 }
 .dark-theme .cm-s-solarized {
     background-color: var(--bg-dark);

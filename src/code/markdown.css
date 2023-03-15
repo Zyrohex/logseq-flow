@@ -803,6 +803,7 @@ h1.title {
 .color-level {
     background-color: var(--bg-color-1);
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+    border: 1px solid hsl(var(--cl-text-color), 0.2);
 }
 
 /* Title Elements */
@@ -896,108 +897,169 @@ h1.title {
 :not(.whiteboard-shape) .block-ref :is(b, i, .mark) {
     color: hsl(var(--cl-text-color), 1);
 }
+.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col>.content>.flex-1.flex-row.foldable-title {
+    font-size: 115%;
+    margin-bottom: 3px;
+}
+.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.block-children-container>.block-children-left-border {
+    display: none;
+}
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.block-children-container>.block-children {
     border-left: 0px solid;
 }
-.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.block-children-container {
-    display: table-cell;
-    position: relative;
-}
-.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.flex.flex-row .bullet-container {
-    display: none;
-}
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.flex.flex-row {
-    display: table-cell;
-    min-width: 250px;
-    max-width: 250px;
-    padding-left: 14px;
-    position: relative;
-    top: -28px;
+    flex: 0 0 250px;
+    margin-left: -30px;
 }
-.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div:not(:first-child) {
-    border-top: 1px solid hsl(var(--cl-text-color), 0.1);
-    margin: 35px 0px;
+.cp__right-sidebar .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.flex.flex-row {
+    flex: 0 0 150px;
+}
+.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.block-children-container {
+    flex: 1;
 }
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block {
-    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
 }
-.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.flex.flex-row>.block-control-wrap {
-    display: block;
-    margin-left: -20px;
-}
-.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.flex.flex-row>.block-content-wrapper {
-    display: contents;
-}
-/*2
-.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb+.blocks-container.flex-1 {
-    display: table-cell;
-    position: relative;
-    top: 5px;
-}
-:not(.ls-wide-mode) .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb+.blocks-container.flex-1 {
-    min-width: calc(var(--ls-main-content-max-width) - 240px);
-    max-width: calc(var(--ls-main-content-max-width) - 240px);
-}
-.ls-wide-mode .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb+.blocks-container.flex-1 {
-    min-width: calc(var(--ls-main-content-max-width-wide) - 240px);
-    max-width: calc(var(--ls-main-content-max-width-wide) - 240px);
-}
-.cp__right-sidebar-inner .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb+.blocks-container.flex-1 {
-    min-width: calc(var(--ls-right-sidebar-width) - 240px);
-    max-width: calc(var(--ls-right-sidebar-width) - 240px);
-}
-.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
-    display: table-cell;
-    min-width: 200px;
-    max-width: 200px;
-}
-.cp__right-sidebar-inner .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
-    min-width: 150px;
-    max-width: 150px;
+.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container > .lazy-visibility:not(:first-child) {
+    border-top: 1px solid hsl(var(--cl-text-color), 0.2);
+    margin: 10px 0px;
+    padding: 10px 0px;
 }
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div:not(:first-child) {
-    border-top: 1px solid hsl(var(--cl-text-color), 0.1);
+    border-top: 1px solid hsl(var(--cl-text-color), 0.2);
     margin: 10px 0px;
+    padding: 10px 0px;
 }
 
-/* reference panel table style layout */
-/*
-.dark-theme :is(.lazy-visibility, .lazy-visibility > .fade-enter) .color-level>.flex.flex-col>.initial>div>.blocks-container,
-.dark-theme .cp__right-sidebar .references.page-linked .color-level>.flex.flex-col>.initial>div>.blocks-container {
-    display: table;
-    max-width: 100%;
-    min-width: 100%;
+/* Add table view to journal pages */
+#journals>div>.journal-item>.flex-1>.flex.flex-col>.content+.initial>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block {
+    display: flex;
+    flex-direction: row;
+}
+:not(.ls-wide-mode) #journals>div>.journal-item>.flex-1>.flex.flex-col>.content+.initial>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row.pr-2 {
+    flex: 0 calc(var(--ls-main-content-max-width) * .45);
+}
+.ls-wide-mode #journals>div>.journal-item>.flex-1>.flex.flex-col>.content+.initial>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row.pr-2 {
+    flex: 0 calc(var(--ls-main-content-max-width-wide) * .4);
+}
+#journals>div>.journal-item>.flex-1>.flex.flex-col>.content+.initial>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row.pr-2 .block-marker {
+    display: inline-flex;
 }
 
-:is(.lazy-visibility, .lazy-visibility > .fade-enter) .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility>.fade-enter>.ls-block {
-    display: table-row-group;
+#journals>div>.journal-item>.flex-1>.flex.flex-col>.content+.initial>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row.pr-2>.block-children-container>.block-children {
+    border-left: 0px solid !important;
 }
 
-:is(.lazy-visibility, .lazy-visibility > .fade-enter) .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility>.fade-enter>.ls-block>:is(.flex.flex-row.pr-2, .block-children-container) {
-    display: table-cell;
-    padding-left: 10px;
-    padding-bottom: 10px;
-}
-
-:is(.lazy-visibility, .lazy-visibility > .fade-enter) .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility>.fade-enter>.ls-block>.flex.flex-row.pr-2>.block-control-wrap {
-    display: none;
-}
-
-:is(.lazy-visibility, .lazy-visibility > .fade-enter) .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility>.fade-enter>.ls-block>.flex.flex-row.pr-2 {
-    min-width: 300px;
-    max-width: 300px;
-}
-
-:is(.lazy-visibility, .lazy-visibility > .fade-enter) .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility>.fade-enter>.ls-block>.flex.flex-row.pr-2>.flex.flex-col.block-content-wrapper {
-    max-width: 300px;
-    min-width: 300px;
-    padding-right: 10px;
-}
-:is(.lazy-visibility, .lazy-visibility > .fade-enter) .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility>.fade-enter>.ls-block>.block-children-container>.block-children-left-border {
-    display: none;
-}
-
-:is(.lazy-visibility, .lazy-visibility > .fade-enter) .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility>.fade-enter>.ls-block>.block-children-container>.block-children {
+#journals>div>.journal-item>.flex-1>.flex.flex-col>.content+.initial>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children {
     border-left: 0px solid;
 }
-*/
+
+#journals>div>.journal-item>.flex-1>.flex.flex-col>.content+.initial>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children-left-border {
+    display: none;
+}
+
+#journals>div>.journal-item>.flex-1>.flex.flex-col>.content+.initial>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container {
+    margin-left: 0px;
+    flex: 1 100%;
+    position: relative;
+    top: -4px;
+}
+#journals>div>.journal-item>.flex-1>.flex.flex-col>.content+.initial>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block:not(:first-child) {
+    border-top: 1px solid hsl(var(--cl-text-color), 0.2);
+    margin: 10px 0px;
+    padding: 10px 0px;
+}
+/* add table view to standard pages */
+#main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block {
+    display: flex;
+    flex-direction: row;
+}
+
+:not(.ls-wide-mode) #main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row.pr-2 {
+    flex: 0 calc(var(--ls-main-content-max-width) * .45);
+}
+.ls-wide-mode #main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row.pr-2 {
+    flex: 0 calc(var(--ls-main-content-max-width-wide) * .4);
+}
+#main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row.pr-2 .block-marker {
+    display: inline-flex;
+}
+
+#main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row.pr-2>.block-children-container>.block-children {
+    border-left: 0px solid !important;
+}
+
+#main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children {
+    border-left: 0px solid;
+}
+
+#main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children-left-border {
+    display: none;
+}
+
+#main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container {
+    margin-left: 0px;
+    flex: 1 100%;
+    position: relative;
+    top: -4px;
+}
+#main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block:not(:first-child) {
+    border-top: 1px solid hsl(var(--cl-text-color), 0.2);
+    margin: 10px 0px;
+    padding: 10px 0px;
+}
+
+/* Add table view to drill downs */
+:not(.ls-wide-mode) #main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children>.ls-block>.flex.flex-row.pr-2 {
+    flex: 0 calc(var(--ls-main-content-max-width) * .45);
+}
+.ls-wide-mode #main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children>.ls-block>.flex.flex-row.pr-2 {
+    flex: 0 calc(var(--ls-main-content-max-width-wide) * .4);
+}
+#main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children>.ls-block:not(:first-child) {
+    border-top: 1px solid hsl(var(--cl-text-color), 0.2);
+}
+#main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children>.ls-block {
+    display: flex;
+    flex-direction: row !important;
+    margin-left: -7px;
+}
+
+#main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block {display: revert;flex-direction: row;}
+
+#main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children>.ls-block>.block-children-container {
+    margin-left: 0px;
+    flex: 1 100%;
+    position: relative;
+    top: -4px;
+}
+
+#main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children>.ls-block>.flex.flex-row.pr-2 {
+    flex: 0 300px;
+}
+
+#main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row .bullet-container {display: none;}
+
+#main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children {
+    border-left: 0px solid;
+    margin-top: 12px;
+}
+
+#main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row {
+    font-size: 125%;
+    margin-left: -9px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+#main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children>.ls-block>.block-children-container>.block-children {
+    border-left: 0px;
+}
+
+#main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container.flex {
+    margin-left: 0px;
+}
+#main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container.flex>.block-children-left-border {
+    display: none;
+}
