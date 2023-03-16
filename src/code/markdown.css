@@ -977,9 +977,6 @@ h1.title {
     position: relative;
     top: -4px;
 }
-#journals>div>.journal-item>.flex-1>.flex.flex-col>.content+.initial>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block:nth-child(even) {
-    background-color: hsl(var(--cl-text-color), 0.05);
-}
 /* add table view to standard pages */
 #main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block {
     display: flex;
