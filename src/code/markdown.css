@@ -903,6 +903,7 @@ h1.title {
     font-size: 115%;
     margin-bottom: 3px;
 }
+/*
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.block-children-container>.block-children-left-border {
     display: none;
 }
@@ -978,6 +979,7 @@ h1.title {
     top: -4px;
 }
 /* add table view to standard pages */
+/*
 #main-content-container>div>.mx-auto>.flex-1>.relative > div+div>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block {
     display: flex;
     flex-direction: row;
@@ -1058,7 +1060,7 @@ h1.title {
     margin-top: 12px;
 }
 
-#main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row {
+#main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row>.flex.flex-col>.flex.flex-row {
     font-size: 125%;
     margin-left: -9px;
     font-weight: 600;

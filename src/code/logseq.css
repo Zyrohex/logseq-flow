@@ -41,9 +41,10 @@ a.warning, div.warning:not(.admonitionblock), p.warning, span.warning {
     filter:ccontrast(0.5);
 }
 .open-block-ref-link {
-    background-color: hsl(var(--cl-text-color), 0.1);
+    background-color: hsl(var(--cl-text-color), 0);
     color: hsl(var(--cl-text-color), 1);
     font-weight: 400;
+    display: contents;
 }
 /******************************
 **    Reference Panel    **

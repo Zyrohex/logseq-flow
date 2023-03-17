@@ -555,7 +555,7 @@ div[data-refs-self*="-h400"]>.block-children-container.flex>.block-children.w-fu
 
 mark.p-0.rounded-none {
     background-color: transparent;
-    color: hsl(var(--cl-primary));
+    color: hsl(var(--cl-background), 0.5);
     font-weight: 600;
     text-decoration: none;
 }

@@ -20,17 +20,33 @@
 ********************************************/
 
 .absolute.rounded-md.shadow-lg.absolute-modal {
+    background-color: hsl(var(--cl-text-color), 1);
     width: 800px !important;
     max-width: 100% !important;
-    border: 3px solid var(--bg-color-1);
+    border: 0px solid var(--bg-color-1);
     max-height: 500px !important;
     height: fit-content !important;
 }
 .menu-link {
-    background-color: var(--bg-color-2);
+    background-color: hsl(var(--cl-text-color), 1);
+}
+#ui__ac-inner a.chosen .flex > div, #ui__ac-inner a.chosen .flex .p-0, .menu-link > span.flex-1, .menu-links-wrapper .ui__icon, .menu-link .preview-trigger-wrapper > .flex>div>span, .menu-link p span {
+    color: var(--bg-color);
+}
+#ui__ac-inner a.chosen {
+    background-color: hsl(var(--cl-primary));
 }
 .menu-links-outer, .menu-links-wrapper, .dropdown-wrapper {
-    background-color: var(--bg-color-2);
+    background-color: hsl(var(--cl-text-color), 1);
+}
+.menu-link .flex.items-center {
+    color: var(--bg-color);
+}
+.menu-link > .flex-1 > div {
+    color: var(--bg-color);
+}
+#ui__ac-inner .menu-link {
+    color: var(--bg-color);
 }
 .menu-separator {
     border-color: var(--bg-color-2);
