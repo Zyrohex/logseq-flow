@@ -400,7 +400,7 @@ Bullet Containers
 .bullet-container {
     width: 11px;
     height: 11px;
-    margin-left: calc(var(--ls-block-bullet-threading-width-overwrite, var(--cl-block-bullet-fix)) * .14); /* Fix for bullet threading */
+    margin-left: calc(var(--ls-block-bullet-threading-width-overwrite, var(--cl-block-bullet-fix)) * .16); /* Fix for bullet threading */
     position: relative;
     margin-top: 0.5px;
 }
@@ -568,7 +568,7 @@ mark.p-0.rounded-none {
 }
 .block-control {
     position: relative;
-    top: -1px;
+    top: 1px;
 }
 
 div[data-refs-self*='"card"'] {

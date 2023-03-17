@@ -51,6 +51,9 @@
 .menu-separator {
     border-color: var(--bg-color-2);
 }
+.menu-link .self-center {
+    color: var(--ls-primary-text-color);
+}
 
 /********************************************
          LEFT SIDEBAR IMPROVEMENTS

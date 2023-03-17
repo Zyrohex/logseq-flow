@@ -232,7 +232,7 @@ a.priority[href="#/page/C" i]::before {
 /*  === Checkboxes ===  */
 .form-checkbox {
     background-color: hsl(var(--cl-text-color), 0.02);
-    border: 1px solid hsl(var(--cl-text-color), 0.15);
+    border: 1.7px solid hsl(var(--cl-text-color), 0.2);
     border-style: solid;
     border-radius: 3px;
     position: relative;
@@ -940,6 +940,7 @@ h1.title {
 }
 
 /* Add table view to journal pages */
+/*
 #journals>div>.journal-item>.flex-1>.flex.flex-col>.content+.initial>div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block {
     display: flex;
     flex-direction: row;
@@ -1022,6 +1023,7 @@ h1.title {
 }
 
 /* Add table view to drill downs */
+/*
 :not(.ls-wide-mode) #main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container>.block-children>.ls-block>.flex.flex-row.pr-2 {
     flex: 0 calc(var(--ls-main-content-max-width) * .45);
     min-width: 300px;

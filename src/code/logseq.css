@@ -63,7 +63,7 @@ a.warning, div.warning:not(.admonitionblock), p.warning, span.warning {
 }
 .block-children {
     border-left-color: var(--cl-children-border-color, var(--ls-guideline-color));
-    border-left-width: 1px;
+    border-left-width: 2px;
 }
 /* ==========================================================================
 Block Color Styling
