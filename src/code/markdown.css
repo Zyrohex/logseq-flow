@@ -1079,3 +1079,12 @@ h1.title {
 #main-content-container>div>.mx-auto>.flex-1>.relative>div>.mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.block-children-container.flex>.block-children-left-border {
     display: none;
 }
+*/
+.page-reference[data-ref^="+/"]:before {
+    content: "#";
+}
+
+.page-reference[data-ref^="+/"] .page-ref {
+    color: hsl(var(--cl-secondary));
+    font-weight: 700;
+}
