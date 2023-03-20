@@ -334,7 +334,6 @@ Base Settings
 .left-sidebar-inner {
     padding-top: 0px;
     width: var(--ls-left-sidebar-width);
-    background-color: var(--bg-color);
 }
 .left-sidebar-inner .create {
     background-image: none !important;
@@ -360,11 +359,6 @@ Base Settings
     -webkit-app-region: drag;
 }
 
-.cp__right-sidebar {
-    z-index: var(--ls-z-index-level-1);
-    transition: width .3s;
-    background-color: var(--bg-color,#d8e1e8);
-}
 :not(.block-ref) .ls-block h1, .editor-inner .multiline-block.h1::first-line, .editor-inner .uniline-block.h1, .ls-block h1 {
     transform:translateY(-1px) !important;
     margin: 0px !important;

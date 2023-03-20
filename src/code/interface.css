@@ -51,8 +51,45 @@
 .menu-separator {
     border-color: var(--bg-color-2);
 }
-.menu-link .self-center {
+.ui__modal-panel {
+    background-color: var(--ls-primary-text-color);
+    color: var(--bg-color);
+}
+.cp__palette-main .cp__palette-input, .cp__select-main .cp__palette-input {
+    color: var(--bg-color-1);
+}
+.menu-link span {
+    color: var(--bg-color);
+}
+.menu-link .page-ref {
+    color: hsl(var(--cl-accent));
+}
+.menu-link .type-icon:before {
+    background-color: hsl(var(--cl-accent));
+}
+.menu-link .type-icon {
+    border: 0px solid !important;
+}
+.search-results-engines-tabs>li.is-active .ui__button {
+    background-color: hsl(var(--cl-primary));
+    color: var(--bg-color);
+}
+.search-results-engines-tabs>li .ui__button {
+    background-color: hsl(var(--cl-text-color), 0.85);
+    color: var(--bg-color);
+}
+.menu-link span.ui__icon {
     color: var(--ls-primary-text-color);
+}
+.cp__themes-installed .it.is-active {
+    color: hsl(var(--cl-primary));
+}
+.cp__themes-installed .it {
+    background-color: transparent;
+}
+.ui__button[intent=border-link] {
+    border: 1px solid var(--bg-color);
+    color: var(--bg-color);
 }
 
 /********************************************
@@ -82,9 +119,6 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
 }*/
 .sidebar-item-list .color-level {
     background-color: transparent;
-}
-.color-level .color-level {
-    background-color: var(--bg-color-1);
 }
 #left-sidebar .color-level .color-level {
     background-color: var(--bg-color-1);
