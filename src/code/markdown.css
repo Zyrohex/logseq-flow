@@ -1080,34 +1080,43 @@ h1.title {
     display: none;
 }
 */
-.page-reference[data-ref^="+/"]:before {
+.page-reference[data-ref$="+"]:before {
     content: "#";
 }
 
-.page-reference[data-ref^="+/"] .page-ref {
+.page-reference[data-ref$="+"] .page-ref {
     background-color: transparent;
     border-bottom: 0px solid;
     color: hsl(var(--cl-secondary));
     font-weight: 700;
 }
-.page-reference[data-ref^="@/"]:before {
+.page-reference[data-ref^="@"]:before {
     content: "@";
 }
 
-.page-reference[data-ref^="@/"] .page-ref {
+.page-reference[data-ref^="@"] .page-ref {
     background-color: transparent;
     border-bottom: 0px solid;
     color: hsl(var(--cl-primary));
     font-weight: 700;
 }
-.page-reference[data-ref^="!/"]:before {
+.page-reference[data-ref^="!"]:before {
     content: "#";
 }
 
-.page-reference[data-ref^="!/"] .page-ref {
+.page-reference[data-ref^="!"] .page-ref {
     background-color: transparent;
     border-bottom: 0px solid;
     color: hsl(var(--cl-primary));
+    font-weight: 500;
+}
+.tag[data-ref^="!"] {
+    background-color: hsl(var(--cl-secondary), 0.15);
+    border-bottom: 0px solid;
+    color: hsl(var(--cl-secondary));
+    line-height: 1rem;
+    border-radius: .25rem;
+    padding: 1px 4px;
     font-weight: 500;
 }
 .page-reference .page-ref {
