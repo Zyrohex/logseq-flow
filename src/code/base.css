@@ -17,7 +17,6 @@
 Base Root Settings
    ========================================================================== */
 
-
 :root {
     --ls-font-family: var(--cl-font-family, Inter);
     -webkit-font-smoothing: antialiased;
