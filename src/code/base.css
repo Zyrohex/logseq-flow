@@ -585,15 +585,12 @@ div[data-refs-self*='"card"'] {
 Breadcrumbs
    ========================================================================== */
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
-    font-size: 88%;
-    margin-left: 0px;
+    margin-left: 18px;
+    margin-top: 4px;
     margin-bottom: 4px;
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb .bracket {
     display: none;
-}
-.lazy-visibility > .fade-enter > .my-2.color-level.px-2 > .flex.flex-col > .content > .flex-1.flex-row.foldable-title > .flex.flex-row.items-center > .block-control svg {
-    fill: transparent;
 }
 .lazy-visibility > .fade-enter > .my-2.color-level.px-2 > .flex.flex-col > .content > .flex-1.flex-row.foldable-title > .flex.flex-row.items-center > .block-control {
     position: relative;
