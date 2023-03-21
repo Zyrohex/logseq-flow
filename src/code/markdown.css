@@ -900,7 +900,6 @@ h1.title {
 /* add table layouts to reference panel */
 
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col>.content>.flex-1.flex-row.foldable-title {
-    font-size: 115%;
     margin-bottom: 3px;
 }
 /*
