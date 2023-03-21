@@ -252,12 +252,12 @@ a.priority[href="#/page/C" i]::before {
 .block-marker {
     font-size: inherit;
     font-weight: 400;
-    color: hsl(var(--cl-primary));
+    color: var(--ls-secondary-text-color);
     opacity: 0.8;
 }
 
 .block-marker:hover {
-    color: hsl(var(--cl-primary));
+    color: var(--ls-primary-text-color);
     opacity: 1;
 }
 
@@ -1088,7 +1088,6 @@ h1.title {
     background-color: transparent;
     border-bottom: 0px solid;
     color: hsl(var(--cl-primary));
-    font-weight: 500;
 }
 .page-reference .page-ref {
     color: hsl(var(--cl-primary));
