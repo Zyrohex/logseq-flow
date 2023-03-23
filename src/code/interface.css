@@ -182,9 +182,6 @@ span.mx-2.opacity-50:before {
 .breadcrumb.block-parents.flex-row.flex-1.my-2 > .opacity-70 {
     color: hsl(var(--cl-primary));
 }
-.breadcrumb .page-reference {
-    color: hsl(var(--cl-primary));
-}
 
 /******************************
 **    Today's Query Panel    **

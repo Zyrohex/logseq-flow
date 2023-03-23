@@ -1104,3 +1104,7 @@ h1.title {
 .lsp-hook-ui-slot {
     display: inline-block;
 }
+/* breadcrumbs color */
+.breadcrumb a, .breadcrumb .page-reference .bracket:first-child:before, .breadcrumb .page-reference .bracket:last-child:after {
+    color: hsl(var(--cl-text-color), 0.5) !important;
+}
