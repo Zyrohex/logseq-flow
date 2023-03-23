@@ -532,25 +532,17 @@ svg.h-4.w-4 {
 
 /* Tags */
 a.tag {
-    background-color: hsl(var(--cl-tag-background-color, var(--cl-secondary), 0.2));
-    background-color: transparent;
+    background-color: hsl(var(--cl-text-color), 0.1);
     color: var(--ls-secondary-text-color);
-    opacity: 1;
-    padding: 0px;
-    text-align: center;
-    display: inline-block;
-    border-radius: var(--cl-tag-border, 2px);
-    border: 0px solid;
+    padding: 0px 3px;
+    border-radius: 2px;
     border-color: hsl(var(--cl-secondary), 0.15);
     transition: 0.2s;
-    vertical-align: middle;
-    font-weight: 600;
-    position: relative;
-    opacity: 0.8;
-    top: -1px;
+    font-size: 13.6px;
 }
 
 a.tag:hover {
+    background-color: hsl(var(--cl-secondary), 0.1);
     color: hsl(var(--cl-secondary), 1);
     opacity: 1;
 }
