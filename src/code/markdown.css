@@ -804,7 +804,7 @@ h1.title {
     background-color: var(--bg-color-1);
     /*box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);*/
     border: 2px solid hsl(var(--cl-text-color), 0.1);
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 /* Title Elements */
