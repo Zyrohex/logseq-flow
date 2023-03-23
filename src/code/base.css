@@ -154,7 +154,7 @@ html[data-theme='dark'] {
     --ls-cloze-text-color: hsl(var(--cl-primary));
     --ls-icon-color: hsl(var(--cl-primary));
     --ls-search-icon-color: var(--ls-link-text-color);
-    --ls-a-chosen-bg: var(--ls-secondary-background-color);
+    --ls-a-chosen-bg: hsl(var(--cl-text-color), 0.1);
     --ls-right-sidebar-code-bg-color: var(--bg-color-3);
     --color-level-1: var(--ls-secondary-background-color);
     --color-level-2: var(--ls-tertiary-background-color);
@@ -275,7 +275,7 @@ html[data-theme='light'] {
     --ls-cloze-text-color: hsl(var(--cl-primary));
     --ls-icon-color: hsl(var(--cl-primary));
     --ls-search-icon-color: var(--ls-link-text-color);
-    --ls-a-chosen-bg: var(--ls-secondary-background-color);
+    --ls-a-chosen-bg: hsl(var(--cl-text-color), 0.1);
     --ls-right-sidebar-code-bg-color: var(--bg-color-3);
     --color-level-1: var(--ls-secondary-background-color);
     --color-level-2: var(--ls-tertiary-background-color);
