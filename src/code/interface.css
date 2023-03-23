@@ -47,7 +47,7 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
     background-color: var(--bg-color);
 }*/
 .sidebar-item-list .color-level {
-    background-color: transparent;
+    background-color: var(--bg-color);
 }
 #left-sidebar .color-level .color-level {
     background-color: var(--bg-color-1);
