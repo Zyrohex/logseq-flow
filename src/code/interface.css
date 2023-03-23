@@ -27,7 +27,7 @@
     max-height: 500px !important;
     height: fit-content !important;
 }
-.menu-link {
+/*.menu-link {
     background-color: hsl(var(--cl-text-color), 1);
 }
 #ui__ac-inner a.chosen .flex > div, #ui__ac-inner a.chosen .flex .p-0, .menu-link > span.flex-1, .menu-links-wrapper .ui__icon, .menu-link .preview-trigger-wrapper > .flex>div>span, .menu-link p span {
@@ -90,7 +90,7 @@
 .ui__button[intent=border-link] {
     border: 1px solid var(--bg-color);
     color: var(--bg-color);
-}
+}*/
 
 /********************************************
          LEFT SIDEBAR IMPROVEMENTS
