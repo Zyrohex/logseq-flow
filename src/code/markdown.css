@@ -532,8 +532,8 @@ svg.h-4.w-4 {
 
 /* Tags */
 a.tag {
-    background-color: hsl(var(--cl-text-color), 0.1);
-    color: var(--ls-secondary-text-color);
+    background-color: hsl(var(--cl-text-color), 1);
+    color: var(--bg-color);
     padding: 0px 3px;
     border-radius: 2px;
     border-color: hsl(var(--cl-secondary), 0.15);
@@ -1072,7 +1072,7 @@ h1.title {
     display: none;
 }
 */
-.page-reference[data-ref^="root/"]:before {
+.ls-block .page-reference[data-ref^="root/"]:before {
     content: "#";
 }
 
