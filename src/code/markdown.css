@@ -751,9 +751,16 @@ h1.title {
 }*/
 .color-level {
     background-color: var(--bg-color-1);
-    /*box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);*/
-    border: 2px solid hsl(var(--cl-text-color), 0.1);
+    /* box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%); */
+    border: 0px solid hsl(var(--cl-text-color), 0.1);
+}
+/* set reference panel style for each matched block rather than page */
+.color-level .initial>div>.blocks-container {
+    border: 1.5px solid hsl(var(--cl-background), 0.5);
     border-radius: 5px;
+    background-color: var(--bg-color);
+    padding: 5px 0px;
+    margin: 8px 0px;
 }
 /* background color to right side panel */
 .cp__right-sidebar-scrollable {

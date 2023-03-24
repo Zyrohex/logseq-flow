@@ -584,7 +584,7 @@ div[data-refs-self*='"card"'] {
 Breadcrumbs
    ========================================================================== */
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
-    margin-left: 18px;
+    margin-left: 0px;
     margin-top: 4px;
     margin-bottom: 4px;
 }
