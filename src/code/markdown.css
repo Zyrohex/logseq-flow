@@ -532,8 +532,8 @@ svg.h-4.w-4 {
 
 /* Tags */
 a.tag {
-    background-color: hsl(var(--cl-text-color), 1);
-    color: var(--bg-color);
+    background-color: hsl(var(--cl-secondary), 0.15);
+    color: hsl(var(--cl-secondary), 1);
     padding: 0px 3px;
     border-radius: 2px;
     border-color: hsl(var(--cl-secondary), 0.15);
@@ -565,49 +565,6 @@ a.tag:hover {
 body {
     color: var(--ls-primary-text-color);
     -webkit-font-smoothing: auto;
-}
-
-/* Tables */
-tr:nth-child(2n) {
-    background: transparent;
-}
-
-tr:hover {
-    background: hsl(var(--cl-primary), 0.25);
-}
-
-tr:last-child {
-    border-bottom: 1px solid hsl(var(--cl-background));
-    border-bottom-left-radius: 4px;
-}
-
-tr:not(:last-child) {
-    border-bottom: 1px solid hsl(var(--cl-background));
-    border-radius: 4px;
-}
-
-tr {
-    border-left: 1px solid hsl(var(--cl-background));
-    border-right: 1px solid hsl(var(--cl-background));
-}
-
-th {
-    border-bottom: 0px;
-}
-
-table {
-    border-radius: 4px;
-}
-
-th {
-    padding: 2px 8px;
-    background-color: hsl(var(--cl-background));
-    font-weight: 700;
-    border-top: 1px solid hsl(var(--cl-background));
-}
-
-thead {
-    background-color: hsl(var(--cl-background));
 }
 
 /* External Links */
@@ -797,6 +754,10 @@ h1.title {
     /*box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);*/
     border: 2px solid hsl(var(--cl-text-color), 0.1);
     border-radius: 5px;
+}
+/* background color to right side panel */
+.cp__right-sidebar-scrollable {
+    background-color: var(--bg-color);
 }
 
 /* Title Elements */
