@@ -4,8 +4,8 @@
 html[data-theme='dark'] {
     --background-color-h: 0;
     --background-color-s: 0%;
-    --background-color-l: 0%;
-    --cl-background: 0, 0%, 10%;
+    --background-color-l: 10%;
+    --cl-background: 0, 0%, 20%;
     --cl-text-color: 0, 0%, 78%;
     --cl-primary: 340, 60%, 61%;
     --cl-secondary: 0, 0%, 46%;
@@ -16,8 +16,8 @@ html[data-theme='dark'] {
 html[data-theme='light'] {
     --background-color-h: 0;
     --background-color-s: 0%;
-    --background-color-l: 100%;
-    --cl-background: 0,0%,90%;
+    --background-color-l: 96%;
+    --cl-background: 0,0%,86%;
     --cl-text-color: 0, 0%, 15%;
     --cl-primary: 345, 100%, 69%;
     --cl-secondary: 0, 0%, 46%;

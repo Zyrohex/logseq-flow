@@ -41,12 +41,8 @@
     border: 0px dashed hsl(var(--cl-text-color), 0.15);
 }
 
-.dark-theme :not(pre):not(mark)>code {
-    background-color: var(--bg-dark);
-}
-
-.white-theme :not(pre):not(mark)>code {
-    background-color: hsl(var(--cl-background), 0.35);
+:not(pre):not(mark)>code {
+    background-color: hsl(var(--cl-secondary), 0.1);
 }
 
 /*:not(pre):not(mark)>code:before {
@@ -70,7 +66,6 @@ mark {
     color: var(--cl-mark-color, var(--ls-primary-text-color));
     text-underline-offset: 2px;
     text-decoration-skip-ink: none;
-    font-weight: 500;
 }
 
 mark .external-link {
@@ -532,9 +527,9 @@ svg.h-4.w-4 {
 
 /* Tags */
 a.tag {
-    background-color: hsl(var(--cl-secondary), 0.15);
-    color: hsl(var(--cl-secondary), 1);
-    padding: 0px 3px;
+    background-color: hsl(var(--cl-text-color), 0);
+    color: hsl(var(--cl-text-color), 1);
+    padding: 0px 0px;
     border-radius: 2px;
     border-color: hsl(var(--cl-secondary), 0.15);
     transition: 0.2s;
@@ -542,7 +537,7 @@ a.tag {
 }
 
 a.tag:hover {
-    background-color: hsl(var(--cl-secondary), 0.1);
+    background-color: hsl(var(--cl-secondary), 0);
     color: hsl(var(--cl-secondary), 1);
     opacity: 1;
 }
@@ -778,11 +773,6 @@ h1.title {
     color: hsl(var(--cl-primary), 1);
 }
 
-/* dim out all the breadcrumb elements except the last block */
-.block-parents a:not(:last-child) {
-    opacity: 0.5;
-}
-
 /* Improved Bullets */
 :is(.ls-block[data-refs-self*='"question'], .ls-block[data-refs-self*='"claim'], .ls-block[data-refs-self*='"evidence'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
     font-family: 'tabler-icons240';
@@ -848,16 +838,6 @@ h1.title {
     vertical-align: baseline;
 }
 
-/* modifying our block-refs and page-references */
-:not(.whiteboard-shape) .block-ref {
-    color: hsl(var(--cl-text-color), 0.5);
-}
-:not(.whiteboard-shape) .block-ref:hover :is(b, i, .mark) {
-    color: hsl(var(--cl-primary));
-}
-:not(.whiteboard-shape) .block-ref :is(b, i, .mark) {
-    color: hsl(var(--cl-text-color), 1);
-}
 /* add table layouts to reference panel */
 
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col>.content>.flex-1.flex-row.foldable-title {
@@ -1042,6 +1022,9 @@ h1.title {
 */
 .ls-block .page-reference[data-ref^="root/"]:before {
     content: "#";
+}
+.ls-block .page-reference[data-ref^="root/"] .bracket {
+    display: none;
 }
 
 .page-reference .page-ref {
