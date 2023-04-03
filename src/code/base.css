@@ -360,23 +360,15 @@ Base Settings
 
 :not(.block-ref) .ls-block h1, .editor-inner .multiline-block.h1::first-line, .editor-inner .uniline-block.h1, .ls-block h1 {
     transform:translateY(-1px) !important;
-    margin: 0px !important;
-    padding: 0px !important;
 }
 :not(.block-ref) .ls-block h2, .editor-inner .multiline-block.h2::first-line, .editor-inner .uniline-block.h2, .ls-block h2 {
     transform:translateY(-3px) !important;
-    margin: 0px !important;
-    padding: 0px !important;
 }
 :not(.block-ref) .ls-block h3, .editor-inner .multiline-block.h3::first-line, .editor-inner .uniline-block.h3, .ls-block h3 {
     transform:translateY(-3px) !important;
-    margin: 0px !important;
-    padding: 0px !important;
 }
 :not(.block-ref) .ls-block h4, .editor-inner .multiline-block.h4::first-line, .editor-inner .uniline-block.h4, .ls-block h4 {
     transform:translateY(-3.5px) !important;
-    margin: 0px !important;
-    padding: 0px !important;
 }
 
 /* ==========================================================================
