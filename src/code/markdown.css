@@ -527,8 +527,8 @@ svg.h-4.w-4 {
 
 /* Tags */
 a.tag {
-    background-color: hsl(var(--cl-text-color), 0);
-    color: hsl(var(--cl-text-color), 1);
+    background-color: hsl(var(--cl-secondary), 0);
+    color: hsl(var(--cl-secondary), 1);
     padding: 0px 0px;
     border-radius: 2px;
     border-color: hsl(var(--cl-secondary), 0.15);
@@ -1022,9 +1022,14 @@ h1.title {
 */
 .ls-block .page-reference[data-ref^="root/"]:before {
     content: "#";
+    font-weight: 400;
 }
 .ls-block .page-reference[data-ref^="root/"] .bracket {
     display: none;
+}
+.foldable-title .page-ref[data-ref*="root/"]:before {
+    content: "#";
+    color: var(--ls-primary-text-color);
 }
 
 .page-reference .page-ref {
@@ -1050,4 +1055,8 @@ h1.title {
 /* breadcrumbs color */
 .breadcrumb a, .breadcrumb .page-reference .bracket:first-child:before, .breadcrumb .page-reference .bracket:last-child:after {
     color: hsl(var(--cl-text-color), 0.5) !important;
+}
+/* Make main panel align to the left */
+.cp__sidebar-left-layout.is-open+#main-content-container {
+    justify-content: flex-start;
 }

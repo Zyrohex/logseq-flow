@@ -6,20 +6,20 @@ html[data-theme='dark'] {
     --background-color-s: 19%;
     --background-color-l: 18%;
     --cl-background: 200, 19%, 28%;
-    --cl-text-color: 167, 22%, 79%;
-    --cl-primary: 196, 59%, 63%;
-    --cl-secondary: 276, 23%, 56%;
-    --cl-accent: 51, 100%, 50%;
+    --cl-text-color: 188, 33%, 83%;
+    --cl-primary: 84, 66%, 73%;
+    --cl-secondary: 196, 59%, 63%;
+    --cl-accent: 14, 90%, 70%;
 }
 
 .white-theme,
 html[data-theme='light'] {
-    --background-color-h: 200;
-    --background-color-s: 19%;
-    --background-color-l: 98%;
-    --cl-background: 200, 19%, 88%;
-    --cl-text-color: 167, 22%, 29%;
-    --cl-primary: 196, 59%, 43%;
-    --cl-secondary: 276, 23%, 36%;
-    --cl-accent: 51, 100%, 40%;
+    --background-color-h: 0;
+    --background-color-s: 0%;
+    --background-color-l: 92%;
+    --cl-background: 0, 0%, 82%;
+    --cl-text-color: 208, 21%, 27%;
+    --cl-primary: 174, 100%, 29%;
+    --cl-secondary: 207, 42%, 54%;
+    --cl-accent: 13, 92%, 62%;
 }
