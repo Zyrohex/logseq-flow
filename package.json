@@ -6,7 +6,7 @@
     "logseq": {
         "themes": [
             {
-                "name": "blue - Absent",
+                "name": "slate/blue - Absent",
                 "url": "./src/palettes/absent.css",
                 "description": "Absent",
                 "mode": "dark"
@@ -18,7 +18,7 @@
                 "mode": "light"
             },
             {
-                "name": "green - Momo",
+                "name": "slate/green - Momo",
                 "url": "./src/palettes/momo.css",
                 "description": "Momo",
                 "mode": "dark"
@@ -36,19 +36,19 @@
                 "mode": "light"
             },
             {
-                "name": "red - Adobe",
+                "name": "blue/red - Adobe",
                 "url": "./src/palettes/adobe.css",
                 "description": "Adobe",
                 "mode": "dark"
             },
             {
-                "name": "green - Anderson",
+                "name": "black/green - Anderson",
                 "url": "./src/palettes/anderson.css",
                 "description": "Anderson",
                 "mode": "dark"
             },
             {
-                "name": "red - Ark",
+                "name": "slate/red - Ark",
                 "url": "./src/palettes/ark.css",
                 "description": "Ark",
                 "mode": "dark"
@@ -60,13 +60,13 @@
                 "mode": "light"
             },
             {
-                "name": "orange - Ayu",
+                "name": "slate/orange - Ayu",
                 "url": "./src/palettes/ayu.css",
                 "description": "Ayu",
                 "mode": "dark"
             },
             {
-                "name": "blue - Bear",
+                "name": "black/blue - Bear",
                 "url": "./src/palettes/bear.css",
                 "description": "Bear",
                 "mode": "dark"
@@ -90,7 +90,7 @@
                 "mode": "light"
             },
             {
-                "name": "green - Bearded Solarized",
+                "name": "blue/green - Bearded Solarized",
                 "url": "./src/palettes/bearded-solarized.css",
                 "description": "Bearded Solarized",
                 "mode": "dark"
@@ -108,7 +108,7 @@
                 "mode": "light"
             },
             {
-                "name": "red - Bespin",
+                "name": "brown/red - Bespin",
                 "url": "./src/palettes/bespin.css",
                 "description": "Bespin",
                 "mode": "dark"
@@ -126,19 +126,19 @@
                 "mode": "light"
             },
             {
-                "name": "green - Catppuccin Frappe",
+                "name": "black/green - Catppuccin Frappe",
                 "url": "./src/palettes/catppuccin-frappe.css",
                 "description": "Catppuccin Frappe",
                 "mode": "dark"
             },
             {
-                "name": "blue - Catppuccin Macchiato",
+                "name": "blue/blue - Catppuccin Macchiato",
                 "url": "./src/palettes/catppuccin-macchiato.css",
                 "description": "Catppuccin Macchiato",
                 "mode": "dark"
             },
             {
-                "name": "orange - Catppuccin Mocha",
+                "name": "purple/orange - Catppuccin Mocha",
                 "url": "./src/palettes/catppuccin-mocha.css",
                 "description": "Catppuccin Mocha",
                 "mode": "dark"
@@ -150,19 +150,19 @@
                 "mode": "light"
             },
             {
-                "name": "blue - Chocolate",
+                "name": "brown/blue - Chocolate",
                 "url": "./src/palettes/chocolate.css",
                 "description": "Dark Chocolate",
                 "mode": "dark"
             },
             {
-                "name": "green - Cobalt",
+                "name": "blue/turqoise - Cobalt",
                 "url": "./src/palettes/cobalt.css",
                 "description": "Cobalt",
                 "mode": "dark"
             },
             {
-                "name": "pink - Daycula",
+                "name": "blue/pink - Daycula",
                 "url": "./src/palettes/daycula.css",
                 "description": "Daycula",
                 "mode": "dark"
@@ -174,25 +174,25 @@
                 "mode": "light"
             },
             {
-                "name": "blue - Default",
+                "name": "blue/blue - Default",
                 "url": "./src/palettes/default.css",
                 "description": "Dark Default with Improvements",
                 "mode": "dark"
             },
             {
-                "name": "pink - Dracula",
+                "name": "slate/pink - Dracula",
                 "url": "./src/palettes/dracula.css",
                 "description": "Dracula",
                 "mode": "dark"
             },
             {
-                "name": "yellow - Ephemeral",
+                "name": "slate/yellow - Ephemeral",
                 "url": "./src/palettes/ephemeral.css",
                 "description": "Ephemeral",
                 "mode": "dark"
             },
             {
-                "name": "blue - Everforest",
+                "name": "slate/blue - Everforest",
                 "url": "./src/palettes/everforest.css",
                 "description": "Everforest",
                 "mode": "dark"
@@ -216,7 +216,7 @@
                 "mode": "light"
             },
             {
-                "name": "blue - Github",
+                "name": "black/blue - Github",
                 "url": "./src/palettes/github.css",
                 "description": "Github Dark",
                 "mode": "dark"
@@ -228,13 +228,13 @@
                 "mode": "light"
             },
             {
-                "name": "orange - Gruvbox",
+                "name": "slate/orange - Gruvbox",
                 "url": "./src/palettes/gruvbox.css",
                 "description": "Gruvbox",
                 "mode": "dark"
             },
             {
-                "name": "blue - Hatsunemiku",
+                "name": "black/blue - Hatsunemiku",
                 "url": "./src/palettes/hatsunemiku.css",
                 "description": "Hatsunemiku",
                 "mode": "dark"
@@ -258,7 +258,7 @@
                 "mode": "light"
             },
             {
-                "name": "green - Kanagawa",
+                "name": "charcoal/green - Kanagawa",
                 "url": "./src/palettes/kanagawa.css",
                 "description": "Kanagawa",
                 "mode": "dark"
@@ -270,7 +270,7 @@
                 "mode": "light"
             },
             {
-                "name": "blue - Material",
+                "name": "slate/blue - Material",
                 "url": "./src/palettes/material.css",
                 "description": "material",
                 "mode": "dark"
@@ -288,19 +288,19 @@
                 "mode": "light"
             },
             {
-                "name": "orange - Miramare",
+                "name": "graphite/orange - Miramare",
                 "url": "./src/palettes/miramare.css",
                 "description": "Miramare",
                 "mode": "dark"
             },
             {
-                "name": "blue - Monokai Pro",
+                "name": "black/blue - Monokai Pro",
                 "url": "./src/palettes/monokai-pro.css",
                 "description": "Monokai Pro",
                 "mode": "dark"
             },
             {
-                "name": "purple - Moonlight",
+                "name": "blue/purple - Moonlight",
                 "url": "./src/palettes/moonlight.css",
                 "description": "Moonlight",
                 "mode": "dark"
@@ -318,7 +318,7 @@
                 "mode": "light"
             },
             {
-                "name": "blue - Munsell",
+                "name": "slate/blue - Munsell",
                 "url": "./src/palettes/munsell.css",
                 "description": "Munsell",
                 "mode": "dark"
@@ -330,13 +330,13 @@
                 "mode": "light"
             },
             {
-                "name": "orange - Mellow",
+                "name": "red/orange - Mellow",
                 "url": "./src/palettes/mellow.css",
                 "description": "Mellow",
                 "mode": "dark"
             },
             {
-                "name": "purple - Nebula",
+                "name": "blue/purple - Nebula",
                 "url": "./src/palettes/nebula.css",
                 "description": "Nebula",
                 "mode": "dark"
@@ -348,19 +348,19 @@
                 "mode": "light"
             },
             {
-                "name": "neutral - Newsprint",
+                "name": "black/neutral - Newsprint",
                 "url": "./src/palettes/newsprint.css",
                 "description": "Newsprint",
                 "mode": "dark"
             },
             {
-                "name": "neutral - Newsprint",
+                "name": "gray/neutral - Newsprint",
                 "url": "./src/palettes/newsprint.css",
                 "description": "Newsprint",
                 "mode": "light"
             },
             {
-                "name": "green - Ngvuq",
+                "name": "blue/green - Ngvuq",
                 "url": "./src/palettes/ngvuq.css",
                 "description": "Ngvuq",
                 "mode": "dark"
@@ -378,13 +378,13 @@
                 "mode": "light"
             },
             {
-                "name": "blue - Nord",
+                "name": "slate/blue - Nord",
                 "url": "./src/palettes/nord.css",
                 "description": "Nord",
                 "mode": "dark"
             },
             {
-                "name": "blue - Oceanic Material",
+                "name": "teal/turqoise - Oceanic Material",
                 "url": "./src/palettes/oceanic-material.css",
                 "description": "Oceanic Material",
                 "mode": "dark"
@@ -396,13 +396,13 @@
                 "mode": "light"
             },
             {
-                "name": "red - Oceanic Next",
+                "name": "slate/red - Oceanic Next",
                 "url": "./src/palettes/oceanic.css",
                 "description": "Oceanic Dark",
                 "mode": "dark"
             },
             {
-                "name": "blue - One Dark Pro",
+                "name": "slate/blue - One Dark Pro",
                 "url": "./src/palettes/one-dark-pro.css",
                 "description": "One Dark Pro",
                 "mode": "dark"
@@ -426,7 +426,7 @@
                 "mode": "light"
             },
             {
-                "name": "red - Primary",
+                "name": "brown/red - Primary",
                 "url": "./src/palettes/primary.css",
                 "description": "Primary",
                 "mode": "dark"
@@ -444,25 +444,25 @@
                 "mode": "light"
             },
             {
-                "name": "purple - Remedy",
+                "name": "charcoal/purple - Remedy",
                 "url": "./src/palettes/remedy.css",
                 "description": "Remedy",
                 "mode": "dark"
             },
             {
-                "name": "blue - Panda",
+                "name": "black/cyan - Panda",
                 "url": "./src/palettes/panda.css",
                 "description": "Panda",
                 "mode": "dark"
             },
             {
-                "name": "pink - Rogue",
+                "name": "slate/pink - Rogue",
                 "url": "./src/palettes/rogue.css",
                 "description": "Rogue",
                 "mode": "dark"
             },
             {
-                "name": "pink - Rose",
+                "name": "purple/pink - Rose",
                 "url": "./src/palettes/rose.css",
                 "description": "Rose",
                 "mode": "dark"
@@ -480,7 +480,7 @@
                 "mode": "light"
             },
             {
-                "name": "pink - Snazzy",
+                "name": "slate/pink - Snazzy",
                 "url": "./src/palettes/snazzy.css",
                 "description": "Snazzy",
                 "mode": "dark"
@@ -498,7 +498,7 @@
                 "mode": "light"
             },
             {
-                "name": "blue - Solarized",
+                "name": "blue/blue - Solarized",
                 "url": "./src/palettes/solarized.css",
                 "description": "Dark Default with Improvements",
                 "mode": "dark"
@@ -510,7 +510,7 @@
                 "mode": "light"
             },
             {
-                "name": "pink - Sunbather",
+                "name": "black/pink - Sunbather",
                 "url": "./src/palettes/sunbather.css",
                 "description": "Sunbather",
                 "mode": "dark"
@@ -522,25 +522,25 @@
                 "mode": "light"
             },
             {
-                "name": "blue - Synthwave 84",
+                "name": "purple/blue - Synthwave 84",
                 "url": "./src/palettes/synthwave84.css",
                 "description": "Synthwave 84",
                 "mode": "dark"
             },
             {
-                "name": "blue - Teady",
+                "name": "slate/blue - Teady",
                 "url": "./src/palettes/teady.css",
                 "description": "Teady",
                 "mode": "dark"
             },
             {
-                "name": "green - Tokyo",
+                "name": "slate/green - Tokyo",
                 "url": "./src/palettes/tokyo.css",
                 "description": "Tokyo",
                 "mode": "dark"
             },
             {
-                "name": "red - Two Firewatch",
+                "name": "slate/red - Two Firewatch",
                 "url": "./src/palettes/twofirewatch.css",
                 "description": "Two Firewatch",
                 "mode": "dark"
@@ -558,13 +558,13 @@
                 "mode": "light"
             },
             {
-                "name": "blue - Watermelon",
+                "name": "slate/blue - Watermelon",
                 "url": "./src/palettes/watermelon.css",
                 "description": "Watermelon",
                 "mode": "dark"
             },
             {
-                "name": "red - Yellowmoon",
+                "name": "slate/red - Yellowmoon",
                 "url": "./src/palettes/yellowmoon.css",
                 "description": "Yellowmoon",
                 "mode": "dark"
