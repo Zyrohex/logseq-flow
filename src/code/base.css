@@ -323,6 +323,7 @@ Base Settings
     border: 0px solid var(--ls-border-color);
     padding-bottom: 1rem !important;
     padding-top: 0px !important;
+    justify-content: flex-start;
 }
 
 /* Setting up outer layer background color */

@@ -1056,7 +1056,3 @@ h1.title {
 .breadcrumb a, .breadcrumb .page-reference .bracket:first-child:before, .breadcrumb .page-reference .bracket:last-child:after {
     color: hsl(var(--cl-text-color), 0.5) !important;
 }
-/* Make main panel align to the left */
-.cp__sidebar-left-layout.is-open+#main-content-container {
-    justify-content: flex-start;
-}
