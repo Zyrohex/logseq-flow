@@ -6,6 +6,7 @@
 .block-ref .block-body {
     display: contents;
 }
+
 /* Example BLocks */
 .pre-wrap-white-space {
     background-color: hsl(var(--cl-secondary), 0.05);
@@ -57,15 +58,12 @@
 
 /* Highlights */
 mark {
-    background-color: hsl(var(--cl-mark-background-color, transparent));
+    background-color: hsl(var(--cl-secondary), 0.15);
     padding: 4px 0px !important;
     border-radius: 1px;
-    text-decoration: var(--cl-mark-decoration, underline);
-    text-decoration-color: hsl(var(--cl-secondary));
-    text-decoration-thickness: var(--cl-mark-decoration-thickness, 4px);
-    color: var(--cl-mark-color, var(--ls-primary-text-color));
+    color: hsl(var(--cl-secondary), 1);
+    text-decoration: underline;
     text-underline-offset: 2px;
-    text-decoration-skip-ink: none;
 }
 
 mark .external-link {
@@ -749,6 +747,7 @@ h1.title {
     /* box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%); */
     border: 0px solid hsl(var(--cl-text-color), 0.1);
 }
+
 /* set reference panel style for each matched block rather than page */
 .color-level .initial>div>.blocks-container {
     border: 1.5px solid hsl(var(--cl-background), 0.5);
@@ -757,6 +756,7 @@ h1.title {
     padding: 5px 0px;
     margin: 8px 0px;
 }
+
 /* background color to right side panel */
 .cp__right-sidebar-scrollable {
     background-color: var(--bg-color);
@@ -833,16 +833,17 @@ h1.title {
 }
 
 /* align breadcrumb arrow in ref panel */
-.lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb span.mx-2.opacity-50:before {
+.lazy-visibility>.fade-enter>.color-level>.flex.flex-col>.initial>div>.breadcrumb span.mx-2.opacity-50:before {
     font-size: 12px;
     vertical-align: baseline;
 }
 
 /* add table layouts to reference panel */
 
-.initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col>.content>.flex-1.flex-row.foldable-title {
+.initial>.references-blocks>div>div>.content>.flex.flex-col>.lazy-visibility>.fade-enter>.color-level>.flex.flex-col>.content>.flex-1.flex-row.foldable-title {
     margin-bottom: 3px;
 }
+
 /*
 .initial > .references-blocks > div > div > .content > .flex.flex-col > .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .blocks-container.flex-1>.lazy-visibility>.fade-enter>.ls-block>.block-children-container>.block-children-left-border {
     display: none;
@@ -1024,9 +1025,11 @@ h1.title {
     content: "#";
     font-weight: 400;
 }
+
 .ls-block .page-reference[data-ref^="root/"] .bracket {
     display: none;
 }
+
 .foldable-title .page-ref[data-ref*="root/"]:before {
     content: "#";
     color: var(--ls-primary-text-color);
@@ -1037,11 +1040,13 @@ h1.title {
     border-bottom: 0px solid;
     color: hsl(var(--cl-primary));
 }
+
 .page-reference .page-ref {
     color: hsl(var(--cl-primary));
     border-radius: 0px;
     border-bottom: 0px solid;
 }
+
 /* Smart blocks */
 .templater-btn {
     border: 0px solid !important;
@@ -1049,10 +1054,41 @@ h1.title {
     font-weight: 600;
     padding: 0px 2px !important;
 }
+
 .lsp-hook-ui-slot {
     display: inline-block;
 }
+
 /* breadcrumbs color */
-.breadcrumb a, .breadcrumb .page-reference .bracket:first-child:before, .breadcrumb .page-reference .bracket:last-child:after {
+.breadcrumb a,
+.breadcrumb .page-reference .bracket:first-child:before,
+.breadcrumb .page-reference .bracket:last-child:after {
     color: hsl(var(--cl-text-color), 0.5) !important;
+}
+
+/* Put nav buttons on one row, no text */
+.nav-header {
+    margin-left: 2px;
+}
+
+.nav-header .flex-1 {
+    display: none
+}
+
+.nav-header .item {
+    margin-left: 4px;
+    padding: 2px !important;
+}
+
+.nav-header .ui__icon {
+    margin-right: 0px !important;
+}
+
+.nav-header {
+    flex-direction: row;
+}
+
+.flashcards-nav .inline-block {
+    margin-left: 2px;
+    padding: 0px;
 }
