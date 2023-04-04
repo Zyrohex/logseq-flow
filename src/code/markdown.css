@@ -1095,5 +1095,5 @@ h1.title {
 
 /* whiteboard panels */
 .tl-logseq-portal-container {
-    border: 2px solid var(--bg-color-3);
+    border: 1px solid var(--bg-color-3);
 }
