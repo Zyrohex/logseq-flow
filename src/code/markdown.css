@@ -1094,6 +1094,6 @@ h1.title {
 }
 
 /* whiteboard panels */
-.tl-logseq-portal-container {
+.single-block>:is(.block-content-wrapper,.editor-wrapper) {
     border: 1px solid var(--bg-color-3);
 }
