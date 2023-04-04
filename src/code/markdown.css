@@ -1092,8 +1092,3 @@ h1.title {
     margin-left: 2px;
     padding: 0px;
 }
-
-/* whiteboard panels */
-.single-block>:is(.block-content-wrapper,.editor-wrapper) {
-    border: 2px solid var(--bg-color-3);
-}
