@@ -3,9 +3,7 @@
 @import './markdown.css';
 /*@import './tana-bullets.css';*/
 @import './plugins.css';
-@import './live-query.css';
 @import './logseq.css';
-
 @font-face { 
     font-family: 'tabler-icons240';
     src: url('./tabler-icons.ttf') format('truetype');
@@ -15,11 +13,14 @@
 
 /* ==========================================================================
 Base Root Settings
-   ========================================================================== */
+========================================================================== */
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
 
 :root {
     --ls-font-family: var(--cl-font-family, Inter);
-    -webkit-font-smoothing: antialiased;
     --cl-background: var(--background-color-h), var(--background-color-s), var(--background-color-l);
     --cl-block-bullet-fix: 20px;
     --ls-main-content-max-width: var(--cl-page-width, 1000px);
@@ -162,13 +163,13 @@ html[data-theme='dark'] {
     --color-level-4: var(--bg-color-4);
     --color-level-5: var(--bg-color-5);
     --color-level-6: var(--bg-color-5);
-    --ls-highlight-color-gray: #17171730;
-    --ls-highlight-color-red: #7f1d1d30;
-    --ls-highlight-color-yellow: #78350f30;
-    --ls-highlight-color-green: #14532d30;
-    --ls-highlight-color-blue: #1e3a8a30;
-    --ls-highlight-color-purple: #581c8730;
-    --ls-highlight-color-pink: #83184330;
+    --ls-highlight-color-gray: #17171760;
+    --ls-highlight-color-red: #7f1d1d60;
+    --ls-highlight-color-yellow: #78350f60;
+    --ls-highlight-color-green: #14532d60;
+    --ls-highlight-color-blue: #1e3a8a60;
+    --ls-highlight-color-purple: #581c8760;
+    --ls-highlight-color-pink: #83184360;
     --ls-highlight-color-gray-text: #a3a3a3;
     --ls-highlight-color-red-text: #f87171;
     --ls-highlight-color-yellow-text: #d79c05;
@@ -580,6 +581,13 @@ Breadcrumbs
     margin-left: 0px;
     margin-top: 4px;
     margin-bottom: 4px;
+    display: block;
+}
+.lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb > .ui__icon {
+    vertical-align: sub;
+}
+.lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb > .ui__icon:first-child {
+    display: none;
 }
 .lazy-visibility > .fade-enter > .my-2.color-level.px-2 > .flex.flex-col > .content > .flex-1.flex-row.foldable-title > .flex.flex-row.items-center > .block-control {
     position: relative;
