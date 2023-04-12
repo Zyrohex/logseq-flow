@@ -1098,36 +1098,3 @@ h1.title {
     margin-left: 2px;
     padding: 0px;
 }
-
-/* redesign reference panel to reference all style markup */
-.color-level {
-    margin: 6px 0px;
-    padding: 0px;
-    background-color: transparent;
-    border: 0px solid;
-}
-
-.color-level .initial>div>.blocks-container {
-    border: 0px solid;
-    padding: 0px;
-    margin: 8px 0px;
-    margin-left: -17px;
-}
-
-.flex-1.flex-row.foldable-title .page-ref {
-    color: hsl(var(--cl-secondary), 1);
-}
-
-.content>.flex.flex-col {
-    row-gap: 18px;
-}
-
-.flex-1.flex-row.foldable-title .page-ref:before {
-    content: "\eb96";
-    font-family: 'tabler-icons';
-    margin-right: 5px;
-}
-
-.color-level>.flex.flex-col>.initial {
-    margin-left: 3px;
-}
