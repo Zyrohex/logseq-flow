@@ -750,18 +750,19 @@ h1.title {
 }*/
 .color-level {
     background-color: var(--bg-color-1);
-    border: 1px solid hsl(var(--cl-text-color), 0.1);
-    padding-bottom: 20px;
+    /* border: 2px solid hsl(var(--cl-background), 0.8);*/
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 /* set reference panel style for each matched block rather than page */
-.color-level .initial>div>.blocks-container {
+/*.color-level .initial>div>.blocks-container {
     border: 2px solid hsl(var(--cl-background), 0.5);
     border-radius: 5px;
     background-color: var(--bg-color);
     padding: 5px 0px;
     margin: 8px 0px;
-}
+}*/
 
 /* background color to right side panel */
 .cp__right-sidebar-scrollable {
