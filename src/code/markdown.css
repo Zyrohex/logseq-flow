@@ -1061,12 +1061,6 @@ span.ui__icon.ti.ls-icon-chevron-right.opacity-50.mx-1 {
 }
 
 .page-reference .page-ref {
-    background-color: transparent;
-    border-bottom: 0px solid;
-    color: hsl(var(--cl-primary));
-}
-
-.page-reference .page-ref {
     color: hsl(var(--cl-primary));
     border-radius: 0px;
     border-bottom: 0px solid;
