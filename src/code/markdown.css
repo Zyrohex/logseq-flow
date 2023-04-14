@@ -765,6 +765,9 @@ h1.title {
     vertical-align: bottom;
     color: hsl(var(--cl-accent));
 }
+.breadcrumb :is(a:first-child) {
+    margin-left: 10px;
+}
 span.ui__icon.ti.ls-icon-chevron-right.opacity-50.mx-1 {
     display: none;
 }
