@@ -583,9 +583,6 @@ Breadcrumbs
     margin-bottom: 4px;
     display: block;
 }
-.lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb > .ui__icon {
-    vertical-align: sub;
-}
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb > .ui__icon:first-child {
     display: none;
 }
