@@ -805,7 +805,6 @@ span.ui__icon.ti.ls-icon-chevron-right.opacity-50.mx-1 {
 .flex-1.flex-row.foldable-title .page-ref {
     color: hsl(var(--cl-primary), 1);
     font-size: larger;
-    border-bottom: 1px solid;
 }
 
 /* Improved Bullets */
