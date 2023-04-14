@@ -755,6 +755,19 @@ h1.title {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
+.color-level>.flex.flex-col>.initial {
+    margin-left: -16px;
+}
+.color-level .breadcrumb a:not(:first-child):before {
+    content: "\ea61";
+    margin: 0px 5px;
+    font-family: 'tabler-icons';
+    vertical-align: bottom;
+    color: hsl(var(--cl-accent));
+}
+span.ui__icon.ti.ls-icon-chevron-right.opacity-50.mx-1 {
+    display: none;
+}
 /* set reference panel style for each matched block rather than page */
 /*.color-level .initial>div>.blocks-container {
     border: 2px solid hsl(var(--cl-background), 0.5);
@@ -778,6 +791,8 @@ h1.title {
 /* Adjust font size on the page-ref titles in the references block section */
 .flex-1.flex-row.foldable-title .page-ref {
     color: hsl(var(--cl-primary), 1);
+    font-size: larger;
+    border-bottom: 1px solid;
 }
 
 /* Improved Bullets */
