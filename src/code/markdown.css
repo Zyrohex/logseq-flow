@@ -866,7 +866,7 @@ span.ui__icon.ti.ls-icon-chevron-right.opacity-50.mx-1 {
 /* add table layouts to reference panel */
 
 .initial>.references-blocks>div>div>.content>.flex.flex-col>.lazy-visibility>.fade-enter>.color-level>.flex.flex-col>.content>.flex-1.flex-row.foldable-title {
-    margin-bottom: 3px;
+    margin-bottom: 6px;
 }
 
 /*
