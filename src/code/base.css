@@ -4,6 +4,7 @@
 /*@import './tana-bullets.css';*/
 @import './plugins.css';
 @import './logseq.css';
+@import './markup.css';
 @font-face { 
     font-family: 'tabler-icons240';
     src: url('./tabler-icons.ttf') format('truetype');
@@ -324,7 +325,6 @@ Base Settings
     border: 0px solid var(--ls-border-color);
     padding-bottom: 1rem !important;
     padding-top: 0px !important;
-    justify-content: flex-start;
 }
 
 /* Setting up outer layer background color */
@@ -599,7 +599,7 @@ Breadcrumbs
 Code Mirror Settings
    ========================================================================== */
 
-   .extensions__code-lang {
+.extensions__code-lang {
     margin: 2px;
     background-color: transparent;
     color: hsl(var(--cl-secondary));
@@ -617,10 +617,10 @@ Code Mirror Settings
     padding-right: 10px;
 }
 .white-theme .cm-s-solarized {
-    background-color: var(--bg-color-1);
+    background-color: var(--ls-primary-text-color);
 }
 .white-theme .color-level .cm-s-solarized {
-    background-color: var(--bg-color-2);
+    background-color: var(--ls-primary-text-color);
 }
 .dark-theme .cm-s-solarized {
     background-color: var(--bg-dark);
@@ -639,7 +639,7 @@ Code Mirror Settings
 }
 
 .extensions__code-lang {
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-primary));
 }
 
 /* === Coloring CodeMirror Keywords === */
@@ -664,12 +664,18 @@ Code Mirror Settings
 .cm-s-solarized .cm-comment {
     color: slategray;
 }
-.cm-s-solarized .cm-variable {
+.white-theme .cm-s-solarized .cm-variable {
+    color: var(--bg-color);
+}
+.dark-theme .cm-s-solarized .cm-variable {
     color: var(--ls-primary-text-color);
 }
 .cm-s-solarized .cm-def,
 .cm-s-solarized .cm-attribute {
     color: hsl(var(--cl-primary));
+}
+.white-theme .CodeMirror-line>span {
+    color: var(--bg-color);
 }
 /* ==========================================================================
 End of Code Mirror
