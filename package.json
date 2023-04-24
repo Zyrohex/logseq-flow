@@ -570,6 +570,12 @@
                 "mode": "dark"
             },
             {
+                "name": "Grail (slate/green)",
+                "url": "./src/palettes/grail.css",
+                "description": "Grail",
+                "mode": "dark"
+            },
+            {
                 "name": "Zengarden (warm/red)",
                 "url": "./src/palettes/zengarden.css",
                 "description": "Zengarden",

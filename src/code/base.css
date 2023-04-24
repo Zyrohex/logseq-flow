@@ -540,11 +540,11 @@ div[data-refs-self*="-h400"]>.block-children-container.flex>.block-children.w-fu
     margin-top: var(--mt-4, 2em);
 }
 
-mark.p-0.rounded-none {
+/*mark.p-0.rounded-none {
     color: hsl(var(--cl-primary));
     text-decoration: underline;
-    text-decoration-color: hsl(var(--cl-accent));
-}
+    text-decoration-color: hsl(var(--cl-primary));
+}*/
 .tippy-tooltip-content {
     border-radius: 4px;
 }
@@ -617,10 +617,10 @@ Code Mirror Settings
     padding-right: 10px;
 }
 .white-theme .cm-s-solarized {
-    background-color: var(--ls-primary-text-color);
+    background-color: hsl(215, 21%, 11%);
 }
 .white-theme .color-level .cm-s-solarized {
-    background-color: var(--ls-primary-text-color);
+    background-color: hsl(215, 21%, 11%);
 }
 .dark-theme .cm-s-solarized {
     background-color: var(--bg-dark);
@@ -684,9 +684,12 @@ End of Code Mirror
 /* ==========================================================================
 Parent Block Header Style
    ========================================================================== */
-/*
 .mb-4 + div > .page-blocks-inner > div > div > .content > .blocks-container > div > div > .ls-block > .flex.flex-row.pr-2 > .block-control-wrap {
     display: none;
+}
+.mb-4 + div > .page-blocks-inner > div > div > .content > .blocks-container > div > div > .ls-block > .flex.flex-row.pr-2 .awLi-icon[data-is-emoji=true] {
+    font-size: 32px !important;
+    margin-right: 28px;
 }
 .mb-4 + div > .page-blocks-inner > div > div > .content > .blocks-container > div > div > .ls-block > .flex.flex-row.pr-2 {
     font-size: 32px !important;

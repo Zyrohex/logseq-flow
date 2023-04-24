@@ -629,7 +629,7 @@ span.inline.px-1.with-bg-color[style*="pink"] {
 h1.title {
     font-family: var(--cl-title-font, var(--ls-font-family));
     font-weight: 700;
-    filter: saturate(0.85);
+    color: hsl(var(--cl-primary));
 }
 
 /* Fixes the line-break for long page titles */
@@ -788,7 +788,7 @@ h1.title {
     margin-left: 10px;
 }
 
-.mb-4>.breadcrumb>a:before {
+.mb-4>.breadcrumb>a:not(:first-child):before {
     content: "\ea61";
     margin: 0px 5px;
     font-family: 'tabler-icons';
@@ -1129,7 +1129,7 @@ span.ui__icon.ti.ls-icon-chevron-right.opacity-50.mx-1 {
 }
 /* Bujo polka dots */
 div#main-content-container {
-    background-image: radial-gradient(var(--bg-color-2) 5%, var(--bg-color) 5%);
+    background-image: radial-gradient(var(--bg-color-1) 5%, var(--bg-color) 5%);
     background-position: 0 0;
     background-position-x: 5px;
     background-position-y: 5px;
@@ -1137,7 +1137,7 @@ div#main-content-container {
 }
 
 /* journal query kanban view */
-:not(.ls-wide-mode) div#today-queries>.lazy-visibility {
+/*:not(.ls-wide-mode) div#today-queries>.lazy-visibility {
     flex-basis: 33%;
 }
 .ls-wide-mode div#today-queries>.lazy-visibility {
@@ -1156,4 +1156,4 @@ div#today-queries {
 .custom-query .initial {
     max-height: 500px;
     overflow: scroll;
-}
+}*/
