@@ -577,6 +577,9 @@ div[data-refs-self*='"card"'] {
 /* ==========================================================================
 Breadcrumbs
    ========================================================================== */
+.references-blocks .breadcrumb {
+    margin-left: 0.5rem;
+}
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
     margin-left: 14px;
     margin-top: 4px;
@@ -684,7 +687,7 @@ End of Code Mirror
 /* ==========================================================================
 Parent Block Header Style
    ========================================================================== */
-.mb-4 + div > .page-blocks-inner > div > div > .content > .blocks-container > div > div > .ls-block > .flex.flex-row.pr-2 > .block-control-wrap {
+/*.mb-4 + div > .page-blocks-inner > div > div > .content > .blocks-container > div > div > .ls-block > .flex.flex-row.pr-2 > .block-control-wrap {
     display: none;
 }
 .mb-4 + div > .page-blocks-inner > div > div > .content > .blocks-container > div > div > .ls-block > .flex.flex-row.pr-2 .awLi-icon[data-is-emoji=true] {
