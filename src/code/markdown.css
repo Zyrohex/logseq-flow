@@ -150,6 +150,29 @@ blockquote:before {
     font-size: 105%;
 }
 
+.ls-block :is(h1,h2,h3,h4,h5,h6) {
+    overflow: hidden;
+}
+.ls-block :is(h1,h2,h3,h4,h5,h6):before, .ls-block :is(h1,h2,h3,h4,h5,h6):after {
+    background-color: hsl(var(--cl-text-color), 0.2);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50px;
+}
+
+.ls-block :is(h1,h2,h3,h4,h5,h6):before {
+    right: 0.5rem;
+    margin-left: -50px;
+}
+
+.ls-block :is(h1,h2,h3,h4,h5,h6):after {
+    left: 0.5rem;
+    margin-right: -50px;
+}
+
 .editor-inner .uniline-block:is(.h1, .h2),
 .ls-block :is(h1, h2) {
     margin: 0px;
@@ -775,15 +798,6 @@ h1.title {
 span.ui__icon.ti.ls-icon-chevron-right.opacity-50.mx-1:first-of-type {
     display: none;
 }
-
-/* set reference panel style for each matched block rather than page */
-/*.color-level .initial>div>.blocks-container {
-    border: 2px solid hsl(var(--cl-background), 0.5);
-    border-radius: 5px;
-    background-color: var(--bg-color);
-    padding: 5px 0px;
-    margin: 8px 0px;
-}*/
 
 /* background color to right side panel */
 .cp__right-sidebar-scrollable {
