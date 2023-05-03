@@ -578,7 +578,7 @@ div[data-refs-self*='"card"'] {
 Breadcrumbs
    ========================================================================== */
 .references-blocks .breadcrumb {
-    margin-left: 0.5rem;
+    margin-left: 0px;
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
     margin-left: 14px;
@@ -596,6 +596,26 @@ Breadcrumbs
 }
 .my-2.color-level.px-2 .foldable-title:hover:before {
     color: hsl(var(--cl-primary));
+}
+.breadcrumb span.page-reference {
+    color: hsl(var(--cl-primary));
+}
+
+.breadcrumb span.page-reference .bracket {
+    display: none;
+}
+.breadcrumb.block-parents:before {
+    background-color: hsl(var(--cl-text-color), 0.2);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50px;
+}
+
+.breadcrumb.block-parents:before {
+    margin-right: 10px;
 }
 
 /* ==========================================================================
