@@ -53,7 +53,10 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
     background-color: var(--bg-color-1);
 }
 .references .color-level .color-level {
-    background-color: var(--bg-color-2);
+    background-color: var(--bg-color);
+    border: 1px solid var(--bg-color-3);
+    padding: 8px;
+    border-radius: 5px;
 }
 
 /********************************************
