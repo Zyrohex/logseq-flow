@@ -15,11 +15,11 @@
 **    Block References    **
 ******************************/
 :not(.whiteboard-shape) .block-ref {
-    border-bottom: 1px solid hsl(var(--cl-secondary), 0.15);
+    border-bottom: 1px solid hsl(var(--cl-primary), 0.5);
     background-color: hsl(var(--cl-secondary), 0);
     border-radius: 0px;
     transition: 0.2s;
-    padding: 2.7px 0px;
+    padding: 0px 0px;
 }
 .block-ref mark {
     padding: 0px 1px;

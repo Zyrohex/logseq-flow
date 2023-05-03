@@ -794,11 +794,6 @@ h1.title {
     border-radius: 3px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
-
-.color-level span.ui__icon.ti.ls-icon-chevron-right.opacity-50.mx-1:first-of-type {
-    display: none;
-}
-
 /* background color to right side panel */
 .cp__right-sidebar-scrollable {
     background-color: var(--bg-color);
