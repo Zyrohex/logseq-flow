@@ -5,10 +5,11 @@
     
     .ls-block:not([data-refs-self='""'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
       position: relative;
-      left: -4px;
+      left: -2px;
       letter-spacing: -6px;
       margin: 3px;
-      top: 1px;
+      top: 0px;
+      font-size: 12px;
     }
     
     .ls-block[data-refs-self*='"']>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container>.bullet:before {
