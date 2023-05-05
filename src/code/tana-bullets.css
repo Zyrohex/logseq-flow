@@ -8,6 +8,7 @@
       left: -4px;
       letter-spacing: -6px;
       margin: 3px;
+      top: 1px;
     }
     
     .ls-block[data-refs-self*='"']>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container>.bullet:before {
