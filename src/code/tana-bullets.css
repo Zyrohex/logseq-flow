@@ -194,13 +194,13 @@
     .bullet-container.bullet-closed,
     .bullet-container.bullet-closed .bullet:before {
       transition: 0.4s;
-      content: "\ea61";
+      content: "\f7d8";
       font-family: 'tabler-icons240';
       color: var(--ls-block-bullet-color);
     }
     
     .ls-block:not(:focus-within) .bullet-closed .bullet:before {
-      content: "\ea61";
+      content: "\f7d8";
     }
     
     .bullet-container.bullet-closed,
@@ -222,7 +222,7 @@
     }
 
     .ls-block[haschild="true"]:not(:focus-within) .bullet-container:not(.bullet-closed) .bullet:before {
-      content: "\ea5f";
+      content: "\f7d6";
     }
     
     .ls-block[haschild="false"]:not(:focus-within) .bullet-container.bullet-closed,
@@ -264,4 +264,9 @@
 }
 .ls-block[data-refs-self*='"question']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet {
   background-color: transparent;
+}
+
+.contains-properties>.flex.flex-row>.block-control-wrap .bullet-container:not(.bullet-closed) .bullet:before {
+  content: "\f7da" !important;
+  font-family: 'tabler-icons240';
 }

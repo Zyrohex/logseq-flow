@@ -1,7 +1,7 @@
 @import './fonts.css';
 @import './interface.css';
 @import './markdown.css';
-/*@import './tana-bullets.css';*/
+@import './tana-bullets.css';
 @import './plugins.css';
 @import './logseq.css';
 @import './markup.css';
