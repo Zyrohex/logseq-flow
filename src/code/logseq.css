@@ -15,8 +15,8 @@
 **    Block References    **
 ******************************/
 :not(.whiteboard-shape) .block-ref {
-    border-bottom: 1px solid hsl(var(--cl-primary), 0.5);
-    background-color: hsl(var(--cl-secondary), 0);
+    border-bottom: 0px solid hsl(var(--cl-primary), 0.5);
+    background-color: hsl(var(--cl-secondary), 0.1);
     border-radius: 0px;
     transition: 0.2s;
     padding: 0px 0px;
@@ -36,15 +36,12 @@
 }
 /* Block reference broken links */
 a.warning, div.warning:not(.admonitionblock), p.warning, span.warning {
-    background-color: var(--ls-highlight-color-red-text);
+    background-color: hsl(var(--cl-accent));
     color: var(--bg-color);
-    filter:ccontrast(0.5);
 }
-.open-block-ref-link {
-    background-color: hsl(var(--cl-text-color), 0);
-    color: hsl(var(--cl-text-color), 1);
-    font-weight: 400;
-    display: contents;
+span.warning:before {
+    content: "\eb46";
+    margin-right: 5px;
 }
 /******************************
 **    Reference Panel    **

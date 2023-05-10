@@ -441,8 +441,8 @@ div[data-refs-self*="gallery"]>.block-children-container.flex>.block-children.w-
 div[data-refs-self*="gallery"]>.block-children-container.flex>.block-children.w-full>div.ls-block {
     padding: 0;
     margin: 5px -15px;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     overflow: hidden;
 }
 
@@ -523,12 +523,12 @@ div[data-refs-self*="-h400"]>.block-children-container.flex>.block-children.w-fu
     height: 400px !important;
 }
 /* remove left border and bullets for gallery */
-[data-refs-self*="gallery"] .block-children-left-border,
-[data-refs-self*="gallery"] .block-children-container.flex .bullet-container {
+.references-blocks [data-refs-self*="gallery"] .block-children-left-border,
+.references-blocks [data-refs-self*="gallery"] .block-children-container.flex .bullet-container {
     display: none;
 }
 
-[data-refs-self*="gallery"]>.block-children-container.flex .block-children-container.flex {
+.references-blocks [data-refs-self*="gallery"]>.block-children-container.flex .block-children-container.flex {
     margin: 0px !important;
     line-height: 0.2rem;
     padding-bottom: 0;
@@ -578,7 +578,8 @@ div[data-refs-self*='"card"'] {
 Breadcrumbs
    ========================================================================== */
 .references-blocks .breadcrumb {
-    margin-left: 0px;
+    margin-left: 13px;
+    margin-bottom: 1px;
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
     margin-left: 14px;
@@ -611,11 +612,11 @@ Breadcrumbs
     height: 1px;
     position: relative;
     vertical-align: middle;
-    width: 50px;
+    width: 10px;
 }
 
 .breadcrumb.block-parents:before {
-    margin-right: 10px;
+    margin-right: 3px;
 }
 
 /* ==========================================================================
@@ -657,7 +658,7 @@ Code Mirror Settings
 }
 .cm-s-solarized.cm-s-dark .CodeMirror-linenumber, .cm-s-solarized.cm-s-light .CodeMirror-linenumber {
     text-shadow: none;
-    color: hsl(var(--cl-accent));
+    color: var(--bg-color);
     text-align: -webkit-center;
 }
 

@@ -64,11 +64,11 @@
 
 /* Highlights */
 mark {
-    background-color: hsl(var(--cl-secondary), 0.15);
+    background-color: hsl(var(--cl-accent), 0.1);
     padding: 1px 0px !important;
-    border-radius: 1px;
-    color: hsl(var(--cl-secondary), 1);
-    text-decoration: underline;
+    border-radius: 0px;
+    color: hsl(var(--cl-text-color));
+    text-decoration: none;
     text-underline-offset: 3px;
 }
 
@@ -153,7 +153,7 @@ blockquote:before {
 .ls-block :is(h1,h2,h3,h4,h5,h6) {
     overflow: hidden;
 }
-.ls-block :is(h1,h2,h3,h4,h5,h6):before, .ls-block :is(h1,h2,h3,h4,h5,h6):after {
+.ls-block :is(h1,h2,h3,h4,h5,h6):after {
     background-color: hsl(var(--cl-text-color), 0.2);
     content: "";
     display: inline-block;
@@ -161,11 +161,6 @@ blockquote:before {
     position: relative;
     vertical-align: middle;
     width: 50px;
-}
-
-.ls-block :is(h1,h2,h3,h4,h5,h6):before {
-    right: 0.5rem;
-    margin-left: -50px;
 }
 
 .ls-block :is(h1,h2,h3,h4,h5,h6):after {
@@ -565,30 +560,19 @@ svg.h-4.w-4 {
 
 /* Tags */
 a.tag {
-    background-color: hsl(var(--cl-secondary), 0);
-    color: hsl(var(--cl-secondary), 1);
-    padding: 0px 0px;
-    border-radius: 2px;
+    background-color: hsl(var(--cl-text-color), 1);
+    color: var(--bg-color);
+    padding: 0px 5px;
+    border-radius: 3px;
     border-color: hsl(var(--cl-secondary), 0.15);
     transition: 0.2s;
-    font-size: 13.6px;
+    font-size: smaller;
 }
 
 a.tag:hover {
-    background-color: hsl(var(--cl-secondary), 0);
-    color: hsl(var(--cl-secondary), 1);
+    background-color: hsl(var(--cl-secondary), 1);
+    color: var(--bg-color);
     opacity: 1;
-}
-
-.is-paragraph .tag {
-    background-color: transparent;
-    color: var(--ls-secondary-text-color);
-    text-transform: lowercase;
-    font-weight: 400;
-}
-
-.is-paragraph .tag:hover {
-    color: hsl(var(--cl-primary));
 }
 
 .ls-block :is(h1, h2, h3, h4, h5, h6) a.tag {
@@ -650,8 +634,7 @@ span.inline.px-1.with-bg-color[style*="pink"] {
 
 /* Page Titles */
 h1.title {
-    font-family: var(--cl-title-font, var(--ls-font-family));
-    font-weight: 700;
+    font-weight: 600;
     color: hsl(var(--cl-primary));
 }
 
@@ -795,10 +778,12 @@ h1.title {
     /*box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);*/
     padding: 0px;
 }
-.color-level>.flex.flex-col>.initial>div>.blocks-container {
+.color-level>.flex.flex-col>.initial>div {
     background-color: var(--bg-color-1);
     border-radius: 5px;
-    padding: 5px 0px;
+    padding: 2px 6px;
+    margin: 8px 0px;
+    border: 1.5px solid hsl(var(--cl-text-color), 0.05);
 }
 /* background color to right side panel */
 .cp__right-sidebar-scrollable {
@@ -1133,3 +1118,78 @@ div#today-queries {
     max-height: 500px;
     overflow: scroll;
 }*/
+
+/* fix new numbered list added in 0.9.5 */
+.bullet-container.typed-list:not(:focus-within) .bullet {
+    height: 5px;
+    width: 5px;
+    left: 3px;
+    position: relative;
+}
+.bullet-container.as-order-list {
+    justify-content: flex-start;
+    white-space: nowrap;
+    width: 30px;
+}
+
+/* hide most interface elements for ~ pages */
+div:is(#fk, #pa, div#type\/notes) .color-level>.flex.flex-col>.initial>div {
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+    border: 0px;
+}
+
+.references-blocks div:is(#fk, #pa, div#type\/notes) .color-level .breadcrumb {
+    display: none;
+}
+
+div:is(#fk, #pa, div#type\/notes) .color-level>.flex.flex-col>.content {
+    display: none;
+}
+
+div:is(#fk, #pa, div#type\/notes)>.content>div.flex.flex-col {
+    row-gap: 0px !important;
+}
+
+.references-blocks div:is(#fk, #pa, div#type\/notes) .color-level {
+    margin: 0px;
+    margin-left: -30px;
+}
+/* make paragraphs more unique */
+.is-paragraph {
+    font-size: smaller;
+}
+
+/* special markup for applies concepts and applied insights tags */
+/*a.tag[data-ref="fk"] {
+    font-size: 0px;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+}
+
+a.tag[data-ref="fk"]:before {
+    font-size: 16px;
+    content: "\f746";
+    font-family: "tabler-icons240";
+    color: hsl(var(--cl-primary));
+    position: relative;
+    top: 1px;
+}
+
+a.tag[data-ref="pa"] {
+    font-size: 0px;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+}
+
+a.tag[data-ref="pa"]:before {
+    font-size: 16px;
+    content: "\f95c";
+    font-family: "tabler-icons240";
+    color: hsl(var(--cl-secondary));
+    position: relative;
+    top: 1px;
+}
