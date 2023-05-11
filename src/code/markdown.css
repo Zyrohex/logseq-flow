@@ -1133,33 +1133,33 @@ div#today-queries {
 }
 
 /* hide most interface elements for ~ pages */
-div:is(#fk, #pa, div#type\/notes) .color-level>.flex.flex-col>.initial>div {
+div:is(#fk, #pa, div#type\/notes, [id^="fk/"]) .color-level>.flex.flex-col>.initial>div {
     margin: 0px;
     padding: 0px;
     background-color: transparent;
     border: 0px;
 }
 
-div:is(#fk, #pa, div#type\/notes) .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility {
+div:is(#fk, #pa, div#type\/notes, [id^="fk/"]) .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility {
     margin: 10px 0px;
     border: 2px solid hsl(var(--cl-text-color), 0.15);
     border-radius: 5px;
     padding: 8px;
 }
 
-.references-blocks div:is(#fk, div#type\/notes) .color-level .breadcrumb {
+.references-blocks div:is(#fk, #pa, div#type\/notes, [id^="fk/"]) .color-level .breadcrumb {
     display: none;
 }
 
-div:is(#fk, #pa, div#type\/notes) .color-level>.flex.flex-col>.content {
+div:is(#fk, #pa, div#type\/notes, [id^="fk/"]) .color-level>.flex.flex-col>.content {
     display: none;
 }
 
-div:is(#fk, #pa, div#type\/notes)>.content>div.flex.flex-col {
+div:is(#fk, #pa, div#type\/notes, [id^="fk/"])>.content>div.flex.flex-col {
     row-gap: 0px !important;
 }
 
-.references-blocks div:is(#fk, #pa, div#type\/notes) .color-level {
+.references-blocks div:is(#fk, #pa, div#type\/notes, [id^="fk/"]) .color-level {
     margin: 0px;
     margin-left: 0px;
 }
