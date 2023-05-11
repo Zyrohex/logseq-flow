@@ -1140,7 +1140,14 @@ div:is(#fk, #pa, div#type\/notes) .color-level>.flex.flex-col>.initial>div {
     border: 0px;
 }
 
-.references-blocks div:is(#fk, #pa, div#type\/notes) .color-level .breadcrumb {
+div:is(#fk, #pa, div#type\/notes) .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility {
+    margin: 10px 0px;
+    border: 2px solid hsl(var(--cl-text-color), 0.15);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.references-blocks div:is(#fk, div#type\/notes) .color-level .breadcrumb {
     display: none;
 }
 
@@ -1154,7 +1161,7 @@ div:is(#fk, #pa, div#type\/notes)>.content>div.flex.flex-col {
 
 .references-blocks div:is(#fk, #pa, div#type\/notes) .color-level {
     margin: 0px;
-    margin-left: -30px;
+    margin-left: 0px;
 }
 /* make paragraphs more unique */
 .is-paragraph {

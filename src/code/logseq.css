@@ -15,8 +15,8 @@
 **    Block References    **
 ******************************/
 :not(.whiteboard-shape) .block-ref {
-    border-bottom: 0px solid hsl(var(--cl-primary), 0.5);
-    background-color: hsl(var(--cl-secondary), 0.1);
+    border-bottom: 1px solid hsl(var(--cl-primary), 0.5);
+    background-color: hsl(var(--cl-secondary), 0);
     border-radius: 0px;
     transition: 0.2s;
     padding: 0px 0px;
