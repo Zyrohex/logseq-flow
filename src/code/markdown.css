@@ -117,7 +117,6 @@ blockquote:before {
 .editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6),
 .ls-block :is(h1, h2, h3, h4, h5, h6) {
     font-weight: 700;
-    font-family: var(--cl-header-font, var(--ls-font-family));
 }
 
 .ls-block h1,

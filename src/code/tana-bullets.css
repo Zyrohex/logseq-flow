@@ -99,6 +99,10 @@ a:hover .bullet-container {
   background-color: var(--ls-block-bullet-border-color);
 }
 
+.ls-block[data-refs-self*='"pa"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {
+  background-color: transparent !important;
+}
+
 .ls-block[data-refs-self*='"fk"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f746" !important;
   font-family: 'tabler-icons240';
@@ -108,4 +112,8 @@ a:hover .bullet-container {
 
 .ls-block[data-refs-self*='"fk"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   background-color: var(--ls-block-bullet-border-color);
+}
+
+.ls-block[data-refs-self*='"fk"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {
+  background-color: transparent !important;
 }
