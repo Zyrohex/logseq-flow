@@ -420,6 +420,12 @@
                 "mode": "light"
             },
             {
+                "name": "Moon (warm/blue)",
+                "url": "./src/palettes/moon.css",
+                "description": "Moon",
+                "mode": "light"
+            },
+            {
                 "name": "Papercolor (silver/blue)",
                 "url": "./src/palettes/papercolor.css",
                 "description": "Papercolor",

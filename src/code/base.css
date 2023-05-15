@@ -1,10 +1,10 @@
-@import './fonts.css';
-@import './interface.css';
+/*@import './fonts.css';*/
+/*@import './interface.css';*/
 @import './markdown.css';
 @import './tana-bullets.css';
-@import './plugins.css';
+/*@import './plugins.css';
 @import './logseq.css';
-@import './markup.css';
+@import './markup.css';*/
 @font-face { 
     font-family: 'tabler-icons240';
     src: url('./tabler-icons.ttf') format('truetype');
@@ -580,6 +580,12 @@ Breadcrumbs
 .references-blocks .breadcrumb {
     margin-left: 13px;
     margin-bottom: 1px;
+}
+.references-blocks .breadcrumb a {
+    opacity: 0.7;
+}
+.references-blocks .breadcrumb a:hover {
+    opacity: 1;
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
     margin-left: 14px;

@@ -60,7 +60,7 @@ span.warning:before {
 }
 .block-children {
     border-left-color: var(--cl-children-border-color, var(--ls-guideline-color));
-    border-left-width: 2px;
+    border-left-width: 1px;
 }
 /* ==========================================================================
 Block Color Styling

@@ -1,0 +1,13 @@
+@import '../code/base.css';
+
+.white-theme, 
+html[data-theme='light'] {
+    --background-color-h: 210;
+    --background-color-s: 12%;
+    --background-color-l: 88%;
+    --cl-background: 210,12%,78%;
+    --cl-text-color: 210, 20%, 20%; /* Dark Grey for Text */
+    --cl-primary: 210, 50%, 50%; /* Bluish Grey (primary links) */
+    --cl-secondary: 210, 50%, 60%; /* Lighter Bluish Grey (secondary links) */
+    --cl-accent: 210, 100%, 40%; /* Strong Bluish Grey (accent color) */
+}

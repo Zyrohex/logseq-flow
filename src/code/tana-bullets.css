@@ -1,26 +1,32 @@
 /* Fix for bullet threading */
-.ls-block .bullet {
+/*.ls-block .bullet {
   box-shadow: none !important;
-}
+}*/
 
-.ls-block:not([data-refs-self='""'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  position: relative;
-  left: -4px;
-  letter-spacing: -6px;
-  margin: 3px;
-  top: 1.5px;
-}
-
-.ls-block[data-refs-self*='"']>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container>.bullet:before {
-  color: hsl(var(--cl-accent));
-}
-
-/* set our position parameters so the new symbols align with the old bullet position */
-.bullet-container {
+.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
   position: relative;
   top: -10px;
   left: -5px;
 }
+
+.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
+.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container:not(.bullet-closed) .bullet {
+  background-color: transparent !important;
+}
+.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container {
+  background-color: transparent !important;
+}
+
+.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
+.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed .bullet {
+  background-color: transparent !important;
+}
+.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container .bullet {
+  transform: scale(1.1);
+}
+
+/* set our position parameters so the new symbols align with the old bullet position */
+/*
 
 .bullet-container.bullet-closed,
 .bullet-container.bullet-closed .bullet {
@@ -38,12 +44,6 @@
 .ls-block:not(:focus-within) .bullet-closed .bullet:before {
   content: "\f7d8";
 }
-
-.bullet-container.bullet-closed,
-.bullet-container:not(.bullet-closed) .bullet {
-  background-color: transparent !important;
-}
-
 
 .bullet-container.bullet-closed,
 .bullet-container:not(.bullet-closed) .bullet:before {
@@ -81,7 +81,7 @@ a:hover>.bullet-container .bullet {
 
 a:hover .bullet-container {
   background-color: transparent !important;
-}
+}*/
 
 .contains-properties>.flex.flex-row>.block-control-wrap .bullet-container:not(.bullet-closed) .bullet:before {
   content: "\f7da" !important;
@@ -91,12 +91,12 @@ a:hover .bullet-container {
 .ls-block[data-refs-self*='"pa"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f95c" !important;
   font-family: 'tabler-icons240';
-  color: var(--ls-block-bullet-color);
+  color: hsl(var(--cl-primary));
   border-radius: 50%;
 }
 
 .ls-block[data-refs-self*='"pa"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  background-color: var(--ls-block-bullet-border-color);
+  background-color: transparent;
 }
 
 .ls-block[data-refs-self*='"pa"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {
@@ -106,12 +106,16 @@ a:hover .bullet-container {
 .ls-block[data-refs-self*='"fk"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f746" !important;
   font-family: 'tabler-icons240';
-  color: var(--ls-block-bullet-color);
+  color: hsl(var(--cl-primary));
   border-radius: 50%;
+}
+.ls-block[data-refs-self*='"fk"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\f1f8" !important;
+  font-family: 'tabler-icons240';
 }
 
 .ls-block[data-refs-self*='"fk"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  background-color: var(--ls-block-bullet-border-color);
+  background-color: transparent;
 }
 
 .ls-block[data-refs-self*='"fk"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {

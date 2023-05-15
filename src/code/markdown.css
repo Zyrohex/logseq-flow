@@ -12,7 +12,7 @@
     background-color: hsl(var(--cl-secondary), 0.05);
     color: var(--ls-primary-text-color);
     display: flex;
-    padding-left: 0px;
+    padding-left: 10px;
     border-left: 2px solid hsl(var(--cl-secondary));
     padding-top: 15px;
     padding-bottom: 15px;
@@ -23,14 +23,13 @@
 .pre-wrap-white-space:before {
     content: "\ef40";
     font-family: 'tabler-icons';
-    align-self: center;
     color: hsl(var(--cl-secondary));
     position: relative;
-    left: -9px;
+    left: 1px;
     z-index: 3;
-    background-color: var(--bg-color);
     padding-bottom: 2px;
     border-radius: 1px;
+    margin-right: 10px;
 }
 
 /* Inline Code */
@@ -47,7 +46,6 @@
     padding: 2px 6px !important;
     color: hsl(var(--cl-secondary), 1);
     border-radius: 5px;
-    font-family: "Consolas";
     border: 1px solid hsl(var(--cl-text-color), 0.15);
     background-color: var(--bg-color-1);
 }
@@ -563,9 +561,9 @@ a.tag {
     color: var(--bg-color);
     padding: 0px 5px;
     border-radius: 3px;
-    border-color: hsl(var(--cl-secondary), 0.15);
     transition: 0.2s;
     font-size: smaller;
+    opacity: 0.7;
 }
 
 a.tag:hover {
@@ -645,10 +643,6 @@ h1.title {
 /* Interface Improvements */
 
 @media (hover: hover) {
-
-    body {
-        letter-spacing: -0.00622354em;
-    }
 
     .left-sidebar-inner>div>nav {
         margin-left: 0px !important;
@@ -777,7 +771,7 @@ h1.title {
     /*box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);*/
     padding: 0px;
 }
-.color-level>.flex.flex-col>.initial>div {
+.color-level>.flex.flex-col>.initial>div>.blocks-container {
     background-color: var(--bg-color-1);
     border-radius: 5px;
     padding: 2px 6px;
@@ -1132,35 +1126,44 @@ div#today-queries {
 }
 
 /* hide most interface elements for ~ pages */
-div:is(#fk, #pa, div#type\/notes, [id^="fk/"]) .color-level>.flex.flex-col>.initial>div {
+div:is(#fk, div#type\/notes, [id^="fk/"]) .color-level>.flex.flex-col>.initial>div {
     margin: 0px;
     padding: 0px;
     background-color: transparent;
     border: 0px;
 }
 
-div:is(#fk, #pa, div#type\/notes, [id^="fk/"]) .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility {
+div:is(#fk, div#type\/notes, [id^="fk/"]) .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility {
     margin: 10px 0px;
     border: 2px solid hsl(var(--cl-text-color), 0.15);
     border-radius: 5px;
     padding: 8px;
 }
+div:is(#fk, div#type\/notes, [id^="fk/"]) .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility {
+    background-color: var(--bg-color-1);
+}
 
-.references-blocks div:is(#fk, #pa, div#type\/notes, [id^="fk/"]) .color-level .breadcrumb {
+.references-blocks div:is(#fk, div#type\/notes, [id^="fk/"]) .color-level .breadcrumb {
     display: none;
 }
 
-div:is(#fk, #pa, div#type\/notes, [id^="fk/"]) .color-level>.flex.flex-col>.content {
+div:is(#fk, div#type\/notes, [id^="fk/"]) .color-level>.flex.flex-col>.content {
     display: none;
 }
 
-div:is(#fk, #pa, div#type\/notes, [id^="fk/"])>.content>div.flex.flex-col {
+div:is(#fk, div#type\/notes, [id^="fk/"])>.content>div.flex.flex-col {
     row-gap: 0px !important;
 }
 
-.references-blocks div:is(#fk, #pa, div#type\/notes, [id^="fk/"]) .color-level {
+.references-blocks div:is(#fk, div#type\/notes, [id^="fk/"]) .color-level {
     margin: 0px;
     margin-left: 0px;
+}
+.references-blocks div:is(#fk, div#type\/notes, [id^="fk/"]) .color-level>.flex.flex-col>.initial>div>.blocks-container {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid;
 }
 /* make paragraphs more unique */
 .is-paragraph {
