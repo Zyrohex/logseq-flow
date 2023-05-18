@@ -123,13 +123,13 @@ a:hover .bullet-container {
 }
 
 .ls-block[data-refs-self*='"index"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\eac3" !important;
+  content: "\eb6e" !important;
   font-family: 'tabler-icons240';
   color: hsl(var(--cl-primary));
   border-radius: 50%;
 }
 .ls-block[data-refs-self*='"index"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\eac3" !important;
+  content: "\eb6e" !important;
   font-family: 'tabler-icons240';
 }
 
