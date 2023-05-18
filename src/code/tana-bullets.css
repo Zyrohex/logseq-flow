@@ -86,6 +86,7 @@ a:hover .bullet-container {
 .contains-properties>.flex.flex-row>.block-control-wrap .bullet-container:not(.bullet-closed) .bullet:before {
   content: "\f7da" !important;
   font-family: 'tabler-icons240';
+  vertical-align: middle;
 }
 
 .ls-block[data-refs-self*='"pa"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
@@ -93,6 +94,7 @@ a:hover .bullet-container {
   font-family: 'tabler-icons240';
   color: hsl(var(--cl-primary));
   border-radius: 50%;
+  vertical-align: middle;
 }
 
 .ls-block[data-refs-self*='"pa"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
@@ -108,10 +110,12 @@ a:hover .bullet-container {
   font-family: 'tabler-icons240';
   color: hsl(var(--cl-primary));
   border-radius: 50%;
+  vertical-align: middle;
 }
 .ls-block[data-refs-self*='"fk"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   content: "\f1f8" !important;
   font-family: 'tabler-icons240';
+  vertical-align: middle;
 }
 
 .ls-block[data-refs-self*='"fk"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
@@ -127,10 +131,12 @@ a:hover .bullet-container {
   font-family: 'tabler-icons240';
   color: hsl(var(--cl-primary));
   border-radius: 50%;
+  vertical-align: middle;
 }
 .ls-block[data-refs-self*='"index"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   content: "\eb6e" !important;
   font-family: 'tabler-icons240';
+  vertical-align: middle;
 }
 
 .ls-block[data-refs-self*='"index"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {

@@ -408,8 +408,38 @@ function collapseAndAbbreviateNamespaceRefs() {
     childList: true,
   });
 }
+
+function indexBlocks() {
+  const observer = new MutationObserver((mutationList) => {
+    for (const mutation of mutationList) {
+      for (const node of mutation.addedNodes) {
+        if (!node.querySelectorAll) continue;
+
+        const blockPropertiesElements = node.querySelectorAll('.block-properties');
+
+        for (const blockElement of blockPropertiesElements) {
+          const indexRefElement = blockElement.querySelector('.page-ref[data-ref="index"]');
+          if (indexRefElement) {
+            const divElement = blockElement.querySelector('div');
+            if (divElement) {
+              divElement.classList.add('index-ref');
+              divElement.style.display = 'none';
+            }
+          }
+        }
+      }
+    }
+  });
+
+  observer.observe(document.getElementById("app-container"), {
+    subtree: true,
+    childList: true,
+  });
+}
+
 collapseAndAbbreviateNamespaceRefs();
 noteBlock();
+indexBlocks();
 // propertyRef();
 // pageRefClass();
 // gardenRef();
