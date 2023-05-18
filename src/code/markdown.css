@@ -490,8 +490,14 @@ svg.h-4.w-4 {
     padding: 0px;
 }
 
-:is(.block-properties, .page-properties)>div:only-child>div>.page-property-key {
-    font-weight: 600;
+:is(.block-properties, .page-properties)>div:only-child>.mr-1 {
+    margin: 0px 2px;
+    position: relative;
+    top: -1px;
+    display: none;
+}
+.block-properties .page-ref:after {
+    content: ": ";
 }
 
 :is(.block-properties, .page-properties) {
