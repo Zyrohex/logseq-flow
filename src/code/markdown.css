@@ -493,7 +493,7 @@ svg.h-4.w-4 {
 :is(.block-properties, .page-properties)>div:only-child>.mr-1 {
     margin: 0px;
     position: relative;
-    top: -1px;
+    top: 0px;
 }
 
 :is(.block-properties, .page-properties) {
