@@ -36,12 +36,14 @@
 .color-level :not(pre):not(mark)>code {
     background-color: var(--bg-color-2);
 }
+
 :not(pre):not(mark)>code:before {
     font-family: 'tabler-icons240';
     position: relative;
     top: 1px;
     color: hsl(var(--cl-secondary));
 }
+
 :not(pre):not(mark)>code {
     padding: 2px 6px !important;
     color: hsl(var(--cl-secondary), 1);
@@ -147,10 +149,11 @@ blockquote:before {
     font-size: 105%;
 }
 
-.ls-block :is(h1,h2,h3,h4,h5,h6) {
+.ls-block :is(h1, h2, h3, h4, h5, h6) {
     overflow: hidden;
 }
-.ls-block :is(h1,h2,h3,h4,h5,h6):after {
+
+.ls-block :is(h1, h2, h3, h4, h5, h6):after {
     background-color: hsl(var(--cl-text-color), 0.2);
     content: "";
     display: inline-block;
@@ -160,7 +163,7 @@ blockquote:before {
     width: 50px;
 }
 
-.ls-block :is(h1,h2,h3,h4,h5,h6):after {
+.ls-block :is(h1, h2, h3, h4, h5, h6):after {
     left: 0.5rem;
     margin-right: -50px;
 }
@@ -766,6 +769,7 @@ h1.title {
     /*box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);*/
     padding: 0px;
 }
+
 .color-level>.flex.flex-col>.initial>div>.blocks-container {
     background-color: var(--bg-color-1);
     border-radius: 5px;
@@ -773,6 +777,7 @@ h1.title {
     margin: 8px 0px;
     border: 1.5px solid hsl(var(--cl-text-color), 0.05);
 }
+
 /* background color to right side panel */
 .cp__right-sidebar-scrollable {
     background-color: var(--bg-color);
@@ -1076,6 +1081,7 @@ h1.title {
     margin-left: 2px;
     padding: 0px;
 }
+
 /* Bujo polka dots */
 div#main-content-container {
     background-image: radial-gradient(var(--bg-color-1) 5%, var(--bg-color) 5%);
@@ -1114,6 +1120,7 @@ div#today-queries {
     left: 3px;
     position: relative;
 }
+
 .bullet-container.as-order-list {
     justify-content: flex-start;
     white-space: nowrap;
@@ -1134,6 +1141,7 @@ div:is(#fk, div#type\/notes, [id^="fk/"]) .color-level>.flex.flex-col>.initial>d
     border-radius: 5px;
     padding: 8px;
 }
+
 div:is(#fk, div#type\/notes, [id^="fk/"]) .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility {
     background-color: var(--bg-color-1);
 }
@@ -1154,46 +1162,35 @@ div:is(#fk, div#type\/notes, [id^="fk/"])>.content>div.flex.flex-col {
     margin: 0px;
     margin-left: 0px;
 }
+
 .references-blocks div:is(#fk, div#type\/notes, [id^="fk/"]) .color-level>.flex.flex-col>.initial>div>.blocks-container {
     background-color: transparent;
     padding: 0px;
     margin: 0px;
     border: 0px solid;
 }
+
 /* make paragraphs more unique */
 .is-paragraph {
     font-size: smaller;
 }
 
-/* special markup for applies concepts and applied insights tags */
-/*a.tag[data-ref="fk"] {
-    font-size: 0px;
+/* adds special views for index pages */
+div#index .color-level .blocks-container>.lazy-visibility .ls-block .ls-block {
+    display: none;
+}
+
+div#index .color-level>.flex.flex-col>.initial>div>.blocks-container {
     background-color: transparent;
     margin: 0px;
     padding: 0px;
+    border: 0px solid;
 }
 
-a.tag[data-ref="fk"]:before {
-    font-size: 16px;
-    content: "\f746";
-    font-family: "tabler-icons240";
-    color: hsl(var(--cl-primary));
-    position: relative;
-    top: 1px;
-}
-
-a.tag[data-ref="pa"] {
-    font-size: 0px;
-    background-color: transparent;
-    margin: 0px;
-    padding: 0px;
-}
-
-a.tag[data-ref="pa"]:before {
-    font-size: 16px;
-    content: "\f95c";
-    font-family: "tabler-icons240";
-    color: hsl(var(--cl-secondary));
-    position: relative;
-    top: 1px;
+div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visibility {
+    background-color: var(--bg-color-1);
+    margin: 15px 0px;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: var(--cl-box-shadow);
 }
