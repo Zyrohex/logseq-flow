@@ -490,15 +490,8 @@ svg.h-4.w-4 {
     padding: 0px;
 }
 
-:is(.block-properties, .page-properties)>div:only-child>.mr-1 {
-    margin: 0px 2px;
-    position: relative;
-    top: -1px;
-}
-
 :is(.block-properties, .page-properties)>div:only-child>div>.page-property-key {
     font-weight: 600;
-    text-transform: uppercase;
 }
 
 :is(.block-properties, .page-properties) {
@@ -557,18 +550,19 @@ svg.h-4.w-4 {
 
 /* Tags */
 a.tag {
-    background-color: hsl(var(--cl-text-color), 1);
-    color: var(--bg-color);
+    background-color: hsl(var(--cl-secondary), 0.25);
+    color: hsl(var(--cl-secondary), 1);
     padding: 0px 5px;
     border-radius: 3px;
     transition: 0.2s;
     font-size: smaller;
     opacity: 0.7;
+    font-weight: 500;
 }
 
 a.tag:hover {
-    background-color: hsl(var(--cl-secondary), 1);
-    color: var(--bg-color);
+    background-color: hsl(var(--cl-secondary), 0.25);
+    color: hsl(var(--cl-secondary), 1);
     opacity: 1;
 }
 

@@ -1,10 +1,10 @@
 /*@import './fonts.css';*/
-/*@import './interface.css';*/
+@import './interface.css';
 @import './markdown.css';
 @import './tana-bullets.css';
-/*@import './plugins.css';
+/*@import './plugins.css';*/
 @import './logseq.css';
-@import './markup.css';*/
+/*@import './markup.css';*/
 @font-face { 
     font-family: 'tabler-icons240';
     src: url('./tabler-icons.ttf') format('truetype');

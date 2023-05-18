@@ -28,7 +28,7 @@
 .block-ref .external-link {
     text-underline-offset: 4px !important;
 }
-.block-ref .block-ref {
+.block-ref .block-ref, .block-ref {
     border-bottom: 0px solid !important;
 }
 .block-marker + .block-ref-wrap > div > .block-ref .block-marker, .block-marker + .block-ref-wrap > div > .block-ref .form-checkbox {
