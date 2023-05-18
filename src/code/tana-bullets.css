@@ -3,25 +3,25 @@
   box-shadow: none !important;
 }*/
 
-.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
+.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"index"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
   position: relative;
   top: -10px;
   left: -5px;
 }
 
-.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
-.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container:not(.bullet-closed) .bullet {
+.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"index"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
+.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"index"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container:not(.bullet-closed) .bullet {
   background-color: transparent !important;
 }
-.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container {
+.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"index"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container {
   background-color: transparent !important;
 }
 
-.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
-.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed .bullet {
+.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"index"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
+.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"index"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed .bullet {
   background-color: transparent !important;
 }
-.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container .bullet {
+.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"index"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container .bullet {
   transform: scale(1.1);
 }
 
