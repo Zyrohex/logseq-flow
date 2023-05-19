@@ -1,59 +1,75 @@
 body, .ls-block, .inline {
-    font-variant-ligatures: common-ligatures;
-    font-size: 14px;
-  }
-  
-  :root {
-    --cl-properties-background-color: var(--cl-background), 0.35;
-    --cl-page-width: 100%;
-    --cl-page-max-width: 700px;
-    --cl-checkbox-opacity: 1;
-    --cl-checkbox-border-color: var(--cl-accent), .45;
-    --cl-marker-color: var(--cl-primary), .65;
-    --cl-marker-pre-size: 16px;
-    --cl-marker-size: 0px;
-    --cl-children-left-border: hsl(var(--cl-text-color), 0);
-    --cl-children-border-color: hsl(var(--cl-text-color), 0.1);
-    --cl-font-family: "Euclid Circular A";
-    --cl-font-family: "Consolas";
-    --cl-font-family: Inter;
-    --cl-font-family: "Airbnb Cereal App";
-    --cl-font-family: Inter;
-    --cl-selected-background-color: var(--cl-secondary), 0.1;
-    --cl-selected-color: var(--cl-secondary), 1;
-    --ls-scrollbar-width: 2px;
-    --cl-tag-border: 2px;
-    --cl-tag-color: var(--cl-secondary), 1;
-    --cl-tag-background-color: var(--cl-text-color), 0.25;
-    --cl-block-bullet-color: var(--cl-text-color), 0.55;
-    --cl-block-bullet-border-color: var(--cl-text-color), 0.1;
-  }
-  ::marker {
-    color: var(--ls-block-bullet-color);
-  }
-  mark {
-    text-decoration: none;
-  }
-  .ls-block :is(h1,h2,h3,h4,h5,h6) {
-      overflow: hidden;
-  }
-  .ls-block :is(h1,h2,h3,h4,h5,h6):before, .ls-block :is(h1,h2,h3,h4,h5,h6):after {
-      background-color: hsl(var(--cl-text-color), 0.2);
-      content: "";
-      display: inline-block;
-      height: 1px;
-      position: relative;
-      vertical-align: middle;
-      width: 50px;
-  }
-  
-  .ls-block :is(h1,h2,h3,h4,h5,h6):before {
-      right: 0.5rem;
-      margin-left: -50px;
-  }
-  
-  .ls-block :is(h1,h2,h3,h4,h5,h6):after {
-      left: 0.5rem;
-      margin-right: -50px;
-  }
-  
+  font-variant-ligatures: common-ligatures;
+  font-size: 14px;
+}
+
+:root {
+  --cl-properties-background-color: var(--cl-background), 0.35;
+  --cl-page-width: 100%;
+  --cl-page-max-width: 700px;
+  --cl-checkbox-opacity: 1;
+  --cl-checkbox-border-color: var(--cl-accent), .45;
+  --cl-marker-color: var(--cl-primary), .65;
+  --cl-marker-pre-size: 16px;
+  --cl-marker-size: 0px;
+  --cl-children-left-border: hsl(var(--cl-text-color), 0);
+  --cl-children-border-color: hsl(var(--cl-text-color), 0.1);
+  --cl-font-family: "Euclid Circular A";
+  --cl-font-family: "Consolas";
+  --cl-font-family: Inter;
+  --cl-font-family: "Airbnb Cereal App";
+  --cl-font-family: Inter;
+  --cl-selected-background-color: var(--cl-secondary), 0.1;
+  --cl-selected-color: var(--cl-secondary), 1;
+  --ls-scrollbar-width: 2px;
+  --cl-tag-border: 2px;
+  --cl-tag-color: var(--cl-secondary), 1;
+  --cl-tag-background-color: var(--cl-text-color), 0.25;
+  --cl-block-bullet-color: var(--cl-text-color), 0.55;
+  --cl-block-bullet-border-color: var(--cl-text-color), 0.1;
+}
+::marker {
+  color: var(--ls-block-bullet-color);
+}
+mark {
+  text-decoration: none;
+}
+.ls-block :is(h1,h2,h3,h4,h5,h6) {
+    overflow: hidden;
+}
+.ls-block :is(h1,h2,h3,h4,h5,h6):before, .ls-block :is(h1,h2,h3,h4,h5,h6):after {
+    background-color: hsl(var(--cl-text-color), 0.2);
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50px;
+}
+
+.ls-block :is(h1,h2,h3,h4,h5,h6):before {
+    right: 0.5rem;
+    margin-left: -50px;
+}
+
+.ls-block :is(h1,h2,h3,h4,h5,h6):after {
+    left: 0.5rem;
+    margin-right: -50px;
+}
+
+.ls-block :is(b,i) {
+color: hsl(var(--cl-primary));
+}
+.index-card .tag {
+float: right;
+margin: 0px 1px;
+}
+.index-card {
+border: 1px solid hsl(var(--cl-text-color), 0.3);
+border-radius: 5px;
+padding: 8px;
+background-color: var(--bg-color-1);
+}
+.color-level .index-card {
+background-color: var(--bg-color-2);
+}
