@@ -6,7 +6,7 @@ body, .ls-block, .inline {
 :root {
   --cl-properties-background-color: var(--cl-background), 0.35;
   --cl-page-width: 100%;
-  --cl-page-max-width: 700px;
+  --cl-page-max-width: 600px;
   --cl-checkbox-opacity: 1;
   --cl-checkbox-border-color: var(--cl-accent), .45;
   --cl-marker-color: var(--cl-primary), .65;
@@ -65,11 +65,27 @@ float: right;
 margin: 0px 1px;
 }
 .index-card {
-border: 1px solid hsl(var(--cl-text-color), 0.3);
-border-radius: 5px;
-padding: 8px;
-background-color: var(--bg-color-1);
+  border: 1px solid hsl(var(--cl-text-color), 0.15);
+  border-radius: 5px;
+  padding: 8px;
+  background-color: var(--bg-color-1);
+  margin: 5px 0px;
 }
 .color-level .index-card {
-background-color: var(--bg-color-2);
+background-color: var(--bg-color);
+}
+.index-card .ls-block .bullet-container {
+  display: none;
+}
+.index-card .ls-block:not(:first-child) {
+  margin: 5px 0px;
+}
+.index-card .ls-block .inline {
+  font-size: 11.667px;
+}
+.index-card .block-children {
+  border-left-color: transparent;
+}
+.index-card .block-children-container {
+  margin-left: 14px;
 }

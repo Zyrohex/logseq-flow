@@ -1176,7 +1176,7 @@ div:is(#fk, div#type\/notes, [id^="fk/"])>.content>div.flex.flex-col {
 }
 
 /* adds special views for index pages */
-div#index .color-level .blocks-container>.lazy-visibility .ls-block .ls-block {
+div#index .color-level .blocks-container>.lazy-visibility .ls-block .ls-block.index-card {
     display: none;
 }
 
