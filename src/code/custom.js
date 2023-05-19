@@ -167,17 +167,14 @@ function indexBlocks2() {
 
   document.addEventListener('keydown', (event) => {
     clearTimeout(keyboardInputTimeout);
-    shouldProcessMutations = false;
+    keyboardInputTimeout = setTimeout(() => {
+      shouldProcessMutations = false;
+    }, 2000); // 2 seconds
   });
 
   document.addEventListener('keyup', (event) => {
-    if (event.key === 'Enter' || event.key === 'Escape') {
-      shouldProcessMutations = true;
-    } else {
-      keyboardInputTimeout = setTimeout(() => {
-        shouldProcessMutations = true;
-      }, 2000); // 2 seconds
-    }
+    clearTimeout(keyboardInputTimeout);
+    shouldProcessMutations = true;
   });
 
   observer.observe(document.getElementById("app-container"), {
@@ -185,8 +182,6 @@ function indexBlocks2() {
     childList: true,
   });
 }
-
-
 
 indexBlocks2();
 collapseAndAbbreviateNamespaceRefs();
