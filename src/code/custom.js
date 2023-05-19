@@ -150,7 +150,7 @@ function indexBlocks2() {
               divElement.style.display = 'none';
 
               let ancestorElement = divElement;
-              for(let i = 0; i < 6; i++) {
+              for(let i = 0; i < 7; i++) {
                 if(ancestorElement.parentElement) {
                   ancestorElement = ancestorElement.parentElement;
                 } else {
