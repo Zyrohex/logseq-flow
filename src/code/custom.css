@@ -74,17 +74,22 @@ margin: 0px 1px;
 }
 .index-card .ls-block {
   margin: 0px 0px;
+  padding: 0px;
+}
+.index-card .ls-block + .ls-block {
+  padding: 3px 0px;
 }
 /*.index-card .ls-block .inline {
   font-size: 11.667px;
 }*/
 .index-card .block-children {
   border-left-color: transparent;
+  padding: 0px;
 }
 .index-card .block-children-container {
   margin-left: 14px;
+  padding: 0px;
 }
 .index-card>.flex.flex-row.pr-2 {
     font-weight: bolder;
-    color: hsl(var(--cl-primary));
 }
