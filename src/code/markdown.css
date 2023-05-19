@@ -1037,10 +1037,10 @@ h1.title {
 }
 */
 
-.page-reference .page-ref {
-    color: hsl(var(--cl-primary));
+.ls-block .page-ref {
+    color: var(--ls-primary-text-color);
     border-radius: 0px;
-    border-bottom: 0px solid;
+    border-bottom: 1px solid hsl(var(--cl-primary));
 }
 
 /* Smart blocks */

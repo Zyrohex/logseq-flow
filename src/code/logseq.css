@@ -7,8 +7,7 @@
 }
 .ls-block .page-reference:hover {
     background-color: transparent !important;
-    color: hsl(var(--cl-primary), 1);
-    filter: brightness(1.2);
+    color: var(--ls-primary-text-color);
 }
 
 /******************************,

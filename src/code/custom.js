@@ -1,315 +1,4 @@
-/*
-function pageRefClass() {
-  // Create a <style> element
-  const style = document.createElement('style');
-  // Set the content of the <style> element
-  style.innerHTML = `
-    .folder-ref:before {
-      content: "";
-	  color: var(--ls-primary-text-color);
-    }
-  `;
-  // Append the <style> element to the <head> of the document
-  document.head.appendChild(style);
-
-  const observer = new MutationObserver((mutationList) => {
-    for (const mutation of mutationList) {
-      for (const node of mutation.addedNodes) {
-        if (!node.querySelectorAll) continue;
-
-        // Select all elements with class ".page-ref"
-        const pageRefs = node.querySelectorAll('.page-ref');
-
-        for (const pageRef of pageRefs) {
-          // Get the value of the 'data-ref' attribute
-          const attributeValue = pageRef.getAttribute('data-ref');
-
-          // Check if the attribute value starts with "root/"
-          if (attributeValue && attributeValue.startsWith('root/')) {
-            // Add the new class "single-page-ref" to the element
-            pageRef.classList.add('folder-ref');
-          }
-        }
-      }
-    }
-  });
-
-  observer.observe(document.getElementById("app-container"), {
-    subtree: true,
-    childList: true,
-  });
-}
-
-function gardenRef() {
-  // Create a <style> element
-  const style = document.createElement('style');
-  // Set the content of the <style> element
-  style.innerHTML = `
-    .garden-ref:before {
-      content: "";
-    }
-  `;
-  // Append the <style> element to the <head> of the document
-  document.head.appendChild(style);
-
-  const observer = new MutationObserver((mutationList) => {
-    for (const mutation of mutationList) {
-      for (const node of mutation.addedNodes) {
-        if (!node.querySelectorAll) continue;
-
-        // Select all elements with class ".page-ref"
-        const pageRefs = node.querySelectorAll('.page-ref');
-
-        for (const pageRef of pageRefs) {
-          // Get the value of the 'data-ref' attribute
-          const attributeValue = pageRef.getAttribute('data-ref');
-
-          // Check if the attribute value starts with "/"
-          if (attributeValue && attributeValue.startsWith('garden/')) {
-            // Add the new class "single-page-ref" to the element
-            pageRef.classList.add('garden-ref');
-          }
-        }
-      }
-    }
-  });
-
-  observer.observe(document.getElementById("app-container"), {
-    subtree: true,
-    childList: true,
-  });
-}
-
-function collapseNamespaceRefs() {
-
-  const observer = new MutationObserver((mutationList) => {
-    for (const mutation of mutationList) {
-      for (const node of mutation.addedNodes) {
-        if (!node.querySelectorAll) continue;
-        const namespaceRefs = node.querySelectorAll(
-          '.ls-block a.page-ref[data-ref*="/"], span[data-ref*="/"], span[data-ref*="/"].title, .foldable-title [data-ref*="/"], li[title*="root/"] .page-title'
-        );
-        for (const namespaceRef of namespaceRefs) {
-          const text = namespaceRef.textContent;
-          const testText = namespaceRef.classList.contains("tag")
-            ? text.substring(1).toLowerCase()
-            : text.toLowerCase();
-          if (testText !== namespaceRef.dataset.ref) continue;
-          // Perform collapsing.
-          const content = `${text.substring(text.lastIndexOf("/") + 1)}`;
-          namespaceRef.dataset.origText = text;
-          namespaceRef.textContent = content;
-        }
-      }
-    }
-  });
-
-  observer.observe(document.getElementById("app-container"), {
-    subtree: true,
-    childList: true,
-  });
-}
-
-function propertyRef() {
-  const observer = new MutationObserver((mutationList) => {
-    for (const mutation of mutationList) {
-      for (const node of mutation.addedNodes) {
-        if (!node.querySelectorAll) continue;
-
-        // Select all elements with class ".block-properties"
-        const blockProperties = node.querySelectorAll('.block-properties');
-
-        for (const blockProperty of blockProperties) {
-          let currentElement = blockProperty;
-          let levelsUp = 6;
-
-          // Traverse 6 levels up in the DOM tree
-          while (levelsUp > 0 && currentElement.parentElement) {
-            currentElement = currentElement.parentElement;
-            levelsUp--;
-          }
-
-          // Add the new class ".contains-properties" to the element
-          if (levelsUp === 0) {
-            currentElement.classList.add('contains-properties');
-          }
-        }
-      }
-    }
-  });
-
-  observer.observe(document.getElementById("app-container"), {
-    subtree: true,
-    childList: true,
-  });
-}
-
-
-function collapseSpanPages() {
-
-  const observer = new MutationObserver((mutationList) => {
-    for (const mutation of mutationList) {
-      for (const node of mutation.addedNodes) {
-        if (!node.querySelectorAll) continue;
-        const namespaceRefs = node.querySelectorAll(
-          'span[data-ref*="/"].page-reference'
-        );
-        for (const namespaceRef of namespaceRefs) {
-          const text = namespaceRef.textContent;
-          const testText = namespaceRef.classList.contains("tag")
-            ? text.substring(1).toLowerCase()
-            : text.toLowerCase();
-          if (testText !== namespaceRef.dataset.ref) continue;
-          // Perform collapsing.
-          const content = `${text.substring(text.lastIndexOf("/") + 1)}`;
-          namespaceRef.dataset.origText = text;
-          namespaceRef.textContent = content;
-        }
-      }
-    }
-  });
-
-  observer.observe(document.getElementById("app-container"), {
-    subtree: true,
-    childList: true,
-  });
-}
-
-function pageTitleBreadcrumb() {
-  const observer = new MutationObserver((mutationList) => {
-    for (const mutation of mutationList) {
-      for (const node of mutation.addedNodes) {
-        if (!node.querySelectorAll) continue;
-
-        // Select all elements with class ".foldable-title a.page-ref"
-        const pageRefs = node.querySelectorAll('.foldable-title a.page-ref');
-
-        for (const pageRef of pageRefs) {
-          let currentElement = pageRef;
-          let levelsUp = 6;
-
-          // Traverse 6 levels up in the DOM tree
-          while (levelsUp > 0 && currentElement.parentElement) {
-            currentElement = currentElement.parentElement;
-            levelsUp--;
-          }
-
-          // Create a new div element with class ".title-breadcrumb" and pre-append it to the ".initial > div > .breadcrumb" location
-          if (levelsUp === 0 && currentElement.classList.contains('flex') && currentElement.classList.contains('flex-col')) {
-            const breadcrumb = currentElement.querySelector('.initial > div > .breadcrumb');
-            if (breadcrumb) {
-              const titleBreadcrumb = document.createElement('div');
-              titleBreadcrumb.classList.add('title-breadcrumb');
-
-              // Copy the original data-ref value
-              const originalDataRef = pageRef.getAttribute('data-ref');
-              titleBreadcrumb.setAttribute('data-ref', originalDataRef);
-
-              // Display the data-ref value as text inside the div
-              titleBreadcrumb.textContent = originalDataRef;
-
-              // Pre-append the new div element
-              breadcrumb.insertBefore(titleBreadcrumb, breadcrumb.firstChild);
-            }
-          }
-        }
-      }
-    }
-  });
-
-  observer.observe(document.getElementById("app-container"), {
-    subtree: true,
-    childList: true,
-  });
-}
-
-function abbreviateNamespace() {
-  const observer = new MutationObserver((mutationList) => {
-    for (const mutation of mutationList) {
-      for (const node of mutation.addedNodes) {
-        if (!node.querySelectorAll) continue;
-        const namespaceRefs = node.querySelectorAll(
-          '.ls-block a.page-ref[data-ref*="/"], .foldable-title [data-ref*="/"], li[title*="root/"] .page-title'
-        );
-        for (const namespaceRef of namespaceRefs) {
-          const text = namespaceRef.textContent;
-          const testText = namespaceRef.classList.contains("tag")
-            ? text.substring(1).toLowerCase()
-            : text.toLowerCase();
-          if (testText !== namespaceRef.dataset.ref) continue;
-
-          // Perform collapsing.
-          const abbreviatedText = text.split('/').map((part, index, arr) => {
-            if (index === arr.length - 1) {
-              return part;
-            } else {
-              return part.charAt(0);
-            }
-          }).join('/');
-
-          namespaceRef.dataset.origText = text;
-          namespaceRef.textContent = abbreviatedText;
-
-          // Show entire string on hover
-          namespaceRef.addEventListener('mouseenter', () => {
-            namespaceRef.textContent = namespaceRef.dataset.origText;
-          });
-
-          namespaceRef.addEventListener('mouseleave', () => {
-            namespaceRef.textContent = abbreviatedText;
-          });
-        }
-      }
-    }
-  });
-
-  observer.observe(document.getElementById("app-container"), {
-    subtree: true,
-    childList: true,
-  });
-}
-
-function abbreviateNamespaceTags() {
-  const observer = new MutationObserver((mutationList) => {
-    for (const mutation of mutationList) {
-      for (const node of mutation.addedNodes) {
-        if (!node.querySelectorAll) continue;
-        const namespaceRefs = node.querySelectorAll(
-          'a.tag[data-ref*="/"]'
-        );
-        for (const namespaceRef of namespaceRefs) {
-          const text = namespaceRef.textContent;
-          const testText = namespaceRef.classList.contains("tag")
-            ? text.substring(1).toLowerCase()
-            : text.toLowerCase();
-          if (testText !== namespaceRef.dataset.ref) continue;
-
-          // Perform collapsing.
-          const abbreviatedText = text.split('/').map((part, index, arr) => {
-            if (index === arr.length - 1) {
-              return part;
-            } else if (index === 0) {
-              return part.substring(0, 2);
-            } else {
-              return part.charAt(0);
-            }
-          }).join('/');
-
-          namespaceRef.dataset.origText = text;
-          namespaceRef.textContent = abbreviatedText;
-        }
-      }
-    }
-  });
-
-  observer.observe(document.getElementById("app-container"), {
-    subtree: true,
-    childList: true,
-  });
-}
-*/
-
-function noteBlock() {
+/*function noteBlock() {
   const observer = new MutationObserver((mutationList) => {
     for (const mutation of mutationList) {
       for (const node of mutation.addedNodes) {
@@ -343,7 +32,7 @@ function noteBlock() {
     subtree: true,
     childList: true,
   });
-}
+}*/
 
 function collapseAndAbbreviateNamespaceRefs() {
   const observer = new MutationObserver((mutationList) => {
@@ -409,7 +98,7 @@ function collapseAndAbbreviateNamespaceRefs() {
   });
 }
 
-function indexBlocks() {
+function indexBlocks2() {
   const observer = new MutationObserver((mutationList) => {
     for (const mutation of mutationList) {
       for (const node of mutation.addedNodes) {
@@ -437,9 +126,71 @@ function indexBlocks() {
   });
 }
 
+let keyboardInputTimeout;
+let shouldProcessMutations = true;
+
+function indexBlocks2() {
+  const observer = new MutationObserver((mutationList) => {
+    if (!shouldProcessMutations) {
+      return;
+    }
+
+    for (const mutation of mutationList) {
+      for (const node of mutation.addedNodes) {
+        if (!node.querySelectorAll) continue;
+
+        const blockPropertiesElements = node.querySelectorAll('.block-properties');
+
+        for (const blockElement of blockPropertiesElements) {
+          const indexRefElement = blockElement.querySelector('.page-ref[data-ref="index"]');
+          if (indexRefElement) {
+            const divElement = blockElement.querySelector('div');
+            if (divElement) {
+              divElement.classList.add('index-ref');
+              divElement.style.display = 'none';
+
+              let ancestorElement = divElement;
+              for(let i = 0; i < 6; i++) {
+                if(ancestorElement.parentElement) {
+                  ancestorElement = ancestorElement.parentElement;
+                } else {
+                  break;
+                }
+              }
+              ancestorElement.classList.add('index-card');
+            }
+          }
+        }
+      }
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    clearTimeout(keyboardInputTimeout);
+    shouldProcessMutations = false;
+  });
+
+  document.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter' || event.key === 'Escape') {
+      shouldProcessMutations = true;
+    } else {
+      keyboardInputTimeout = setTimeout(() => {
+        shouldProcessMutations = true;
+      }, 2000); // 2 seconds
+    }
+  });
+
+  observer.observe(document.getElementById("app-container"), {
+    subtree: true,
+    childList: true,
+  });
+}
+
+
+
+indexBlocks2();
 collapseAndAbbreviateNamespaceRefs();
-noteBlock();
-indexBlocks();
+// noteBlock();
 // propertyRef();
 // pageRefClass();
 // gardenRef();

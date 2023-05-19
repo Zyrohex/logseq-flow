@@ -18,7 +18,7 @@
                 "mode": "light"
             },
             {
-                "name": "Momo (slate/green)",
+                "name": "1-Momo (slate/green)",
                 "url": "./src/palettes/momo.css",
                 "description": "Momo",
                 "mode": "dark"
@@ -228,7 +228,7 @@
                 "mode": "light"
             },
             {
-                "name": "Gruvbox (slate/orange)",
+                "name": "1-Gruvbox (slate/orange)",
                 "url": "./src/palettes/gruvbox.css",
                 "description": "Gruvbox",
                 "mode": "dark"
@@ -252,13 +252,13 @@
                 "mode": "light"
             },
             {
-                "name": "Inkstained (silver/blue)",
+                "name": "1-Inkstained (silver/blue)",
                 "url": "./src/palettes/inkstained.css",
                 "description": "Inkstained",
                 "mode": "light"
             },
             {
-                "name": "Kanagawa (charcoal/green)",
+                "name": "1-Kanagawa (charcoal/green)",
                 "url": "./src/palettes/kanagawa.css",
                 "description": "Kanagawa",
                 "mode": "dark"
@@ -288,7 +288,7 @@
                 "mode": "light"
             },
             {
-                "name": "Miramare (graphite/orange)",
+                "name": "1-Miramare (graphite/orange)",
                 "url": "./src/palettes/miramare.css",
                 "description": "Miramare",
                 "mode": "dark"
@@ -348,7 +348,7 @@
                 "mode": "light"
             },
             {
-                "name": "Newsprint (black/neutral)",
+                "name": "1-Newsprint (black/neutral)",
                 "url": "./src/palettes/newsprint.css",
                 "description": "Newsprint",
                 "mode": "dark"
@@ -378,13 +378,13 @@
                 "mode": "light"
             },
             {
-                "name": "Nord (slate/blue)",
+                "name": "1-Nord (slate/blue)",
                 "url": "./src/palettes/nord.css",
                 "description": "Nord",
                 "mode": "dark"
             },
             {
-                "name": "Oceanic Material (teal/turqoise)",
+                "name": "1-Oceanic Material (teal/turqoise)",
                 "url": "./src/palettes/oceanic-material.css",
                 "description": "Oceanic Material",
                 "mode": "dark"
@@ -402,7 +402,7 @@
                 "mode": "dark"
             },
             {
-                "name": "One Dark Pro (slate/blue)",
+                "name": "1-One Dark Pro (slate/blue)",
                 "url": "./src/palettes/one-dark-pro.css",
                 "description": "One Dark Pro",
                 "mode": "dark"
@@ -516,7 +516,7 @@
                 "mode": "light"
             },
             {
-                "name": "Sunbather (black/pink)",
+                "name": "1-Sunbather (black/pink)",
                 "url": "./src/palettes/sunbather.css",
                 "description": "Sunbather",
                 "mode": "dark"
@@ -534,7 +534,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Teady (slate/blue)",
+                "name": "1-Teady (slate/blue)",
                 "url": "./src/palettes/teady.css",
                 "description": "Teady",
                 "mode": "dark"
@@ -564,7 +564,7 @@
                 "mode": "light"
             },
             {
-                "name": "Watermelon (slate/blue)",
+                "name": "1-Watermelon (slate/blue)",
                 "url": "./src/palettes/watermelon.css",
                 "description": "Watermelon",
                 "mode": "dark"
@@ -576,7 +576,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Grail (slate/green)",
+                "name": "1-Grail (slate/green)",
                 "url": "./src/palettes/grail.css",
                 "description": "Grail",
                 "mode": "dark"
