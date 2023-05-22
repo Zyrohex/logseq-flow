@@ -1172,11 +1172,12 @@ div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visib
     margin: 0px 1px;
 }
 .type-block {
-    border: 1px solid hsl(var(--cl-text-color), 0.15);
+    border: 0px solid hsl(var(--cl-text-color), 0.15);
     border-radius: 5px;
-    padding: 8px !important;
-    background-color: var(--bg-color-1);
     margin: 5px 0px;
+    padding: 8px 0px !important;
+    background-color: var(--bg-color-1);
+    box-shadow: 1px 1px 1px 2px rgb(0 0 0 / 20%);
 }
 .color-level .type-block {
     background-color: var(--bg-color);
@@ -1184,9 +1185,6 @@ div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visib
 .type-block .ls-block {
     margin: 0px 0px;
     padding: 0px;
-}
-.type-block .ls-block+.ls-block {
-    padding: 3px 0px;
 }
 /*.type-block>.flex.flex-row.pr-2 {
     font-weight: bolder;
@@ -1203,9 +1201,9 @@ div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visib
     margin-left: 14px;
     padding: 0px;
 }
-.type-block[data-ref*='project'] {
+/*.type-block[data-ref*='project'] {
     background-color: hsl(var(--cl-primary), 0.1);
 }
 .color-level .type-block[data-ref*='project'] {
     background-color: hsl(var(--cl-primary), 0.1);
-}
+}*/
