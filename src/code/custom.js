@@ -266,11 +266,11 @@ function indexBlocks3() {
           ancestorElement.classList.add('type-block');
 
           // Find any span with page-reference class under 'type-ref' class
-          // and copy its data-ref to the ancestor element
+          // and copy its data-ref to the ancestor element, converting it to lowercase
           const pageRefElement = divElement.parentElement.querySelector('span.page-reference');
           if (pageRefElement) {
             const pageRefValue = pageRefElement.getAttribute('data-ref');
-            ancestorElement.setAttribute('data-ref', pageRefValue);
+            ancestorElement.setAttribute('data-ref', pageRefValue.toLowerCase());
           }
         }
       }
@@ -310,6 +310,7 @@ function indexBlocks3() {
     childList: true,
   });
 }
+
 
 // indexBlocks2();
 indexBlocks3();
