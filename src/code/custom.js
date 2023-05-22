@@ -183,7 +183,136 @@ function indexBlocks2() {
   });
 }
 
-indexBlocks2();
+function indexBlocks3() {
+  const observer = new MutationObserver((mutationList) => {
+    if (!shouldProcessMutations) {
+      return;
+    }
+
+    for (const mutation of mutationList) {
+      for (const node of mutation.addedNodes) {
+        if (!node.querySelectorAll) continue;
+
+        const blockPropertiesElements = node.querySelectorAll('.block-property[data-ref="type"]');
+
+        for (const blockElement of blockPropertiesElements) {
+          const typeRefElement = blockElement;
+          if (typeRefElement) {
+            const divElement = blockElement.closest('div');
+            if (divElement && divElement.parentElement) {
+              divElement.parentElement.classList.add('type-ref');
+              divElement.style.display = 'none';
+
+              let ancestorElement = divElement;
+              for(let i = 0; i < 8; i++) {
+                if(ancestorElement.parentElement) {
+                  ancestorElement = ancestorElement.parentElement;
+                } else {
+                  break;
+                }
+              }
+              ancestorElement.classList.add('type-block');
+
+              // Find the span with 'Project' data-ref and copy its data-ref to the ancestor element
+              const propertyRefElement = node.querySelector('span.page-reference');
+              if (propertyRefElement) {
+                const propertyRefValue = propertyRefElement.getAttribute('data-ref');
+                ancestorElement.setAttribute('data-ref', propertyRefValue);
+              }
+            }
+          }
+        }
+      }
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    clearTimeout(keyboardInputTimeout);
+    keyboardInputTimeout = setTimeout(() => {
+      shouldProcessMutations = false;
+    }, 2000); // 2 seconds
+  });
+
+  document.addEventListener('keyup', (event) => {
+    clearTimeout(keyboardInputTimeout);
+    shouldProcessMutations = true;
+  });
+
+  observer.observe(document.getElementById("app-container"), {
+    subtree: true,
+    childList: true,
+  });
+}
+
+function indexBlocks3() {
+  // Function to process existing elements
+  function processBlockElements(blockPropertiesElements) {
+    for (const blockElement of blockPropertiesElements) {
+      const typeRefElement = blockElement;
+      if (typeRefElement) {
+        const divElement = blockElement.closest('div');
+        if (divElement && divElement.parentElement) {
+          divElement.parentElement.classList.add('type-ref');
+          divElement.style.display = 'none';
+
+          let ancestorElement = divElement;
+          for(let i = 0; i < 8; i++) {
+            if(ancestorElement.parentElement) {
+              ancestorElement = ancestorElement.parentElement;
+            } else {
+              break;
+            }
+          }
+          ancestorElement.classList.add('type-block');
+
+          // Find any span with page-reference class under 'type-ref' class
+          // and copy its data-ref to the ancestor element
+          const pageRefElement = divElement.parentElement.querySelector('span.page-reference');
+          if (pageRefElement) {
+            const pageRefValue = pageRefElement.getAttribute('data-ref');
+            ancestorElement.setAttribute('data-ref', pageRefValue);
+          }
+        }
+      }
+    }
+  }
+
+  // Process elements that are present at the time of page load
+  processBlockElements(document.querySelectorAll('.block-property[data-ref="type"]'));
+
+  const observer = new MutationObserver((mutationList) => {
+    if (!shouldProcessMutations) {
+      return;
+    }
+
+    for (const mutation of mutationList) {
+      for (const node of mutation.addedNodes) {
+        if (!node.querySelectorAll) continue;
+        processBlockElements(node.querySelectorAll('.block-property[data-ref="type"]'));
+      }
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    clearTimeout(keyboardInputTimeout);
+    keyboardInputTimeout = setTimeout(() => {
+      shouldProcessMutations = false;
+    }, 2000); // 2 seconds
+  });
+
+  document.addEventListener('keyup', (event) => {
+    clearTimeout(keyboardInputTimeout);
+    shouldProcessMutations = true;
+  });
+
+  observer.observe(document.getElementById("app-container"), {
+    subtree: true,
+    childList: true,
+  });
+}
+
+// indexBlocks2();
+indexBlocks3();
 collapseAndAbbreviateNamespaceRefs();
 // noteBlock();
 // propertyRef();

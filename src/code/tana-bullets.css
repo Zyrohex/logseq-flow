@@ -3,146 +3,85 @@
   box-shadow: none !important;
 }*/
 
-.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"index"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
   position: relative;
   top: -10px;
   left: -5px;
 }
 
-.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"index"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
-.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"index"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container:not(.bullet-closed) .bullet {
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container:not(.bullet-closed) .bullet {
   background-color: transparent !important;
 }
-.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"index"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container {
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container {
   background-color: transparent !important;
 }
 
-.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"index"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
-.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"index"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed .bullet {
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed .bullet {
   background-color: transparent !important;
 }
-.ls-block:is([data-refs-self*='"pa"'], [data-refs-self*='"index"'], [data-refs-self*='"fk"'])>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container .bullet {
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container .bullet {
   transform: scale(1.1);
 }
 
-/* set our position parameters so the new symbols align with the old bullet position */
-/*
-
-.bullet-container.bullet-closed,
-.bullet-container.bullet-closed .bullet {
-  background-color: transparent !important;
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
+  position: relative;
+  top: -10px;
+  left: -5px;
 }
-
-.bullet-container.bullet-closed,
-.bullet-container.bullet-closed .bullet:before {
-  transition: 0.4s;
-  content: "\f7d8";
-  font-family: 'tabler-icons240';
-  color: var(--ls-block-bullet-color);
-}
-
-.ls-block:not(:focus-within) .bullet-closed .bullet:before {
-  content: "\f7d8";
-}
-
-.bullet-container.bullet-closed,
-.bullet-container:not(.bullet-closed) .bullet:before {
-  transition: 0.4s;
-  content: "\eb0c";
-  font-family: 'tabler-icons240';
-  color: var(--ls-block-bullet-color);
-}
-
-.bullet-container.bullet-closed:hover,
-.bullet-container:not(.bullet-closed):hover .bullet:hover:before {
-  color: hsl(var(--cl-accent));
-}
-
-.ls-block[haschild="true"]:not(:focus-within) .bullet-container:not(.bullet-closed) .bullet:before {
-  content: "\f7d6";
-}
-
-.ls-block[haschild="false"]:not(:focus-within) .bullet-container.bullet-closed,
-.ls-block[haschild="false"]:not(:focus-within) .bullet-container:not(.bullet-closed) .bullet:before {
-  content: "\f698";
-}
-
-
-.bullet-container:hover {
-  background-color: transparent !important;
-  font-weight: 300;
-}
-
-a:hover>.bullet-container .bullet {
-  transform: scale(1.0) !important;
-  font-weight: 300;
-  background-color: transparent !important;
-}
-
-a:hover .bullet-container {
-  background-color: transparent !important;
-}*/
-
-.contains-properties>.flex.flex-row>.block-control-wrap .bullet-container:not(.bullet-closed) .bullet:before {
-  content: "\f7da" !important;
-  font-family: 'tabler-icons240';
-  vertical-align: middle;
-}
-
-.ls-block[data-refs-self*='"pa"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f95c" !important;
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   font-family: 'tabler-icons240';
   color: hsl(var(--cl-primary));
   border-radius: 50%;
   vertical-align: middle;
 }
-
-.ls-block[data-refs-self*='"pa"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  font-family: 'tabler-icons240';
+  vertical-align: middle;
+}
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   background-color: transparent;
 }
-
-.ls-block[data-refs-self*='"pa"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {
   background-color: transparent !important;
 }
-
-.ls-block[data-refs-self*='"fk"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f014";
+  font-weight: 100;
+}
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\f014";
+  font-weight: 100;
+}
+/* ADD YOUR PAGE TYPES BELOW */
+.type-block[data-ref*='indexcard']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f746" !important;
-  font-family: 'tabler-icons240';
-  color: hsl(var(--cl-primary));
-  border-radius: 50%;
-  vertical-align: middle;
 }
-.ls-block[data-refs-self*='"fk"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f1f8" !important;
-  font-family: 'tabler-icons240';
-  vertical-align: middle;
+.type-block[data-ref*='indexcard']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\f746" !important;
 }
-
-.ls-block[data-refs-self*='"fk"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  background-color: transparent;
+.type-block[data-ref*='fleeting']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\ea51" !important;
 }
-
-.ls-block[data-refs-self*='"fk"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {
-  background-color: transparent !important;
+.type-block[data-ref*='fleeting']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\ea51" !important;
 }
-
-.ls-block[data-refs-self*='"index"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\efd5" !important;
-  font-family: 'tabler-icons240';
-  color: hsl(var(--cl-primary));
-  border-radius: 50%;
-  vertical-align: middle;
+.type-block[data-ref*='project']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\ec45" !important;
 }
-.ls-block[data-refs-self*='"index"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\efd5" !important;
-  font-family: 'tabler-icons240';
-  vertical-align: middle;
+.type-block[data-ref*='project']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\ec45" !important;
 }
-
-.ls-block[data-refs-self*='"index"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  background-color: transparent;
+.type-block[data-ref*='resource']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\eb54" !important;
 }
-
-.ls-block[data-refs-self*='"index"']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {
-  background-color: transparent !important;
+.type-block[data-ref*='resource']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\eb54" !important;
+}
+.type-block[data-ref*='question']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\ec9d" !important;
+}
+.type-block[data-ref*='question']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\ec9d" !important;
 }

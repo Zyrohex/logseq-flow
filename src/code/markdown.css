@@ -466,6 +466,7 @@ svg.h-4.w-4 {
 }
 
 /* Block Properties */
+/*
 .page-property-key {
     color: hsl(var(--cl-text-color), 0.95);
     text-transform: lowercase;
@@ -474,10 +475,10 @@ svg.h-4.w-4 {
 .page-property-key:hover {
     color: hsl(var(--cl-text-color));
     background-color: transparent;
-}
+}*/
 
 /* Block Properties */
-:is(.page-properties, .block-properties)>div:not(:only-child),
+/*:is(.page-properties, .block-properties)>div:not(:only-child),
 .color-level :is(.page-properties, .block-properties)>div:not(:only-child) {
     letter-spacing: 0px !important;
     word-spacing: normal !important;
@@ -496,7 +497,7 @@ svg.h-4.w-4 {
 :is(.block-properties, .page-properties)>div:only-child>.mr-1 {
     margin: 0px;
     vertical-align: bottom;
-}
+}*/
 
 :is(.block-properties, .page-properties) {
     background-color: transparent;
@@ -523,12 +524,12 @@ svg.h-4.w-4 {
 /* Some values take on important to avoid style plugins from overriding these settings */
 
 /* hide icons for properties */
-.block-properties:not(.page-properties) .page-ref .awLinks-page-icon {
+/*.block-properties:not(.page-properties) .page-ref .awLinks-page-icon {
     display: none;
 }
 
 /* Tags inside block properties */
-.block-properties:not(.page-properties) a.tag {
+/*.block-properties:not(.page-properties) a.tag {
     background-color: transparent;
     padding: 0px;
     color: hsl(var(--cl-secondary));
@@ -550,7 +551,7 @@ svg.h-4.w-4 {
     margin-top: 5px;
     margin-bottom: 5px;
     padding-bottom: 5px;
-}
+}*/
 
 /* Tags */
 a.tag {
@@ -794,44 +795,6 @@ h1.title {
     color: hsl(var(--cl-primary), 1);
 }
 
-/* Improved Bullets */
-:is(.ls-block[data-refs-self*='"question'], .ls-block[data-refs-self*='"claim'], .ls-block[data-refs-self*='"evidence'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-    font-family: 'tabler-icons240';
-    color: var(--ls-block-bullet-color);
-    border-radius: 50%;
-    position: relative;
-    top: -10px;
-    left: -4px;
-    letter-spacing: -8px;
-    font-size: 14px;
-}
-
-:is(.ls-block[data-refs-self*='"question'], .ls-block[data-refs-self*='"claim'], .ls-block[data-refs-self*='"evidence'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet {
-    background-color: transparent;
-    color: transparent;
-}
-
-:is(.ls-block[data-refs-self*='"question'], .ls-block[data-refs-self*='"claim'], .ls-block[data-refs-self*='"evidence'])>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container {
-    background-color: transparent !important;
-    color: transparent !important;
-}
-
-:is(.ls-block[data-refs-self*='"question'], .ls-block[data-refs-self*='"claim'], .ls-block[data-refs-self*='"evidence'])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet {
-    background-color: transparent;
-}
-
-.ls-block[data-refs-self*='"question']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-    content: "\edeb" !important;
-}
-
-.ls-block[data-refs-self*='"claim']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-    content: "\f028" !important;
-}
-
-.ls-block[data-refs-self*='"evidence']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-    content: "\ebd2" !important;
-}
-
 /* Give the linked & unlinked titles custom icons */
 .page-linked h2.font-medium {
     color: hsl(var(--cl-text-color), 0.5);
@@ -1038,9 +1001,9 @@ h1.title {
 */
 
 .ls-block .page-ref {
-    color: var(--ls-primary-text-color);
+    color: hsl(var(--cl-primary));
     border-radius: 0px;
-    border-bottom: 1px solid hsl(var(--cl-primary));
+    border-bottom: 0px solid hsl(var(--cl-primary));
 }
 
 /* Smart blocks */
@@ -1193,4 +1156,56 @@ div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visib
     padding: 8px;
     border-radius: 5px;
     box-shadow: var(--cl-box-shadow);
+}
+
+/* Add custom styles for type blocks */
+/*.type-block span.inline {
+    display: flex;
+}
+.type-block span.inline>div {
+    flex: 30% 1 0;
+}*/
+.type-ref {
+    display: none;
+}
+.type-block .tag {
+    margin: 0px 1px;
+}
+.type-block {
+    border: 1px solid hsl(var(--cl-text-color), 0.15);
+    border-radius: 5px;
+    padding: 8px !important;
+    background-color: var(--bg-color-1);
+    margin: 5px 0px;
+}
+.color-level .type-block {
+    background-color: var(--bg-color);
+}
+.type-block .ls-block {
+    margin: 0px 0px;
+    padding: 0px;
+}
+.type-block .ls-block+.ls-block {
+    padding: 3px 0px;
+}
+/*.type-block>.flex.flex-row.pr-2 {
+    font-weight: bolder;
+}*/
+/* ADD MARKUP FOR PAGES HERE */
+.type-block[data-ref*='indexcard'] .ls-block .bullet-container {
+    display: none;
+}
+.type-block[data-ref*='indexcard'] .block-children {
+    border-left-color: transparent;
+    padding: 0px;
+}
+.type-block[data-ref*='indexcard'] .block-children-container {
+    margin-left: 14px;
+    padding: 0px;
+}
+.type-block[data-ref*='project'] {
+    background-color: hsl(var(--cl-primary), 0.1);
+}
+.color-level .type-block[data-ref*='project'] {
+    background-color: hsl(var(--cl-primary), 0.1);
 }
