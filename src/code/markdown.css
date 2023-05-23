@@ -1172,12 +1172,27 @@ div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visib
     margin: 0px 1px;
 }
 .type-block {
-    border: 0px solid hsl(var(--cl-text-color), 0.15);
+    border: 1px solid hsl(var(--cl-text-color), 0.15);
     border-radius: 5px;
     margin: 5px 0px;
     padding: 8px 0px !important;
-    background-color: var(--bg-color-1);
-    box-shadow: 1px 1px 1px 2px rgb(0 0 0 / 20%);
+    background-color: hsl(var(--cl-background), 0.25);
+}
+/*.white-theme .type-block {
+    box-shadow: 1px 1px 1px 2px hsl(var(--cl-text-color), 0.7);
+}
+.dark-theme .type-block {
+    box-shadow: 1px 1px 1px 2px var(--bg-dark);
+}*/
+.type-block .type-block {
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+}
+.type-block .type-block + .ls-block:not(.type-block) {
+    margin-top: 4px;
+}
+.type-block .type-block + .type-block {
+    margin: 8px 8px;
 }
 .color-level .type-block {
     background-color: var(--bg-color);

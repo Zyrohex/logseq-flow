@@ -56,22 +56,22 @@
 }
 /* ADD YOUR PAGE TYPES BELOW */
 .type-block[data-ref*='indexcard']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f746" !important;
+  content: "\f59f" !important;
 }
 .type-block[data-ref*='indexcard']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f746" !important;
+  content: "\f59f" !important;
 }
 .type-block[data-ref*='fleeting']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\ea51" !important;
+  content: "\f97d" !important;
 }
 .type-block[data-ref*='fleeting']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\ea51" !important;
+  content: "\f97d" !important;
 }
 .type-block[data-ref*='project']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\ec45" !important;
+  content: "\ea38" !important;
 }
 .type-block[data-ref*='project']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\ec45" !important;
+  content: "\ea38" !important;
 }
 .type-block[data-ref*='resource']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\eb54" !important;
@@ -84,4 +84,22 @@
 }
 .type-block[data-ref*='question']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   content: "\ec9d" !important;
+}
+.type-block[data-ref*='goal']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\eb45" !important;
+}
+.type-block[data-ref*='goal']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\eb45" !important;
+}
+.type-block[data-ref*='task']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f76d" !important;
+}
+.type-block[data-ref*='task']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\f76d" !important;
+}
+.type-block[data-ref*='milestone']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\ec76" !important;
+}
+.type-block[data-ref*='milestone']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\ec76" !important;
 }
