@@ -103,3 +103,15 @@
 .type-block[data-ref*='milestone']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   content: "\ec76" !important;
 }
+.type-block[data-ref*='problem']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f681" !important;
+}
+.type-block[data-ref*='problem']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\f681" !important;
+}
+.type-block[data-ref*='planning']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\ecdd" !important;
+}
+.type-block[data-ref*='planning']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\ecdd" !important;
+}
