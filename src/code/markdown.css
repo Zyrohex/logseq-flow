@@ -1201,6 +1201,23 @@ div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visib
     margin: 0px 0px;
     padding: 0px;
 }
+.type-block .page-property-key {
+    color: var(--ls-primary-text-color);
+}
+
+.type-block .block-properties>div>.mr-1 {display: none;}
+
+.type-block .page-property-key:after {
+    content: "\ea1c";
+    font-family: 'tabler-icons240';
+    margin: 0px 3px;
+    vertical-align: bottom;
+}
+
+.type-block .block-properties, .type-block .block-properties .page-ref, .type-block .block-properties .bracket {
+    font-size: 12px;
+    font-weight: 400;
+}
 /*.type-block>.flex.flex-row.pr-2 {
     font-weight: bolder;
 }*/
@@ -1216,9 +1233,3 @@ div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visib
     margin-left: 14px;
     padding: 0px;
 }
-/*.type-block[data-ref*='project'] {
-    background-color: hsl(var(--cl-primary), 0.1);
-}
-.color-level .type-block[data-ref*='project'] {
-    background-color: hsl(var(--cl-primary), 0.1);
-}*/
