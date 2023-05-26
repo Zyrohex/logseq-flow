@@ -14,12 +14,12 @@ html[data-theme='dark'] {
 
 .white-theme, 
 html[data-theme='light'] {
-    --background-color-h: 44;
-    --background-color-s: 87%;
+    --background-color-h: 235;
+    --background-color-s: 25%;
     --background-color-l: 94%;
-    --cl-background: 44, 87%, 84%;
-    --cl-text-color: 196, 13%, 45%;
+    --cl-background: 235, 25%, 84%;
+    --cl-text-color: 196, 13%, 25%;
     --cl-primary: 205, 69%, 49%;
     --cl-secondary: 175, 59%, 40%;
-    --cl-accent: 192, 81%, 14%;
+    --cl-accent: 192, 81%, 54%;
 }

@@ -4,12 +4,12 @@
 html[data-theme='dark'] {
     --background-color-h: 235;
     --background-color-s: 19%;
-    --background-color-l: 13%;
-    --cl-background: 235,19%,23%;
+    --background-color-l: 18%;
+    --cl-background: 235,19%,28%;
     --cl-text-color: 229,35%,75%;
-    --cl-primary: 89,51%,61%;
-    --cl-secondary: 22,100%,70%;
-    --cl-accent: 261,64%,73%;
+    --cl-primary: 261,64%,73%;
+    --cl-secondary: 89,51%,61%;
+    --cl-accent: 22,100%,70%;
     --cl-gray: rgb(68,75,106);
 }
 

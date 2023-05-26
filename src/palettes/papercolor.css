@@ -20,6 +20,6 @@ html[data-theme='light'] {
     --cl-background: 0, 0%, 83%;
     --cl-text-color: 0, 0%, 27%;
     --cl-primary: 194, 100%, 34%;
-    --cl-accent: 198, 100%, 26%;
-    --cl-secondary: 322, 100%, 42%;
+    --cl-secondary: 198, 100%, 26%;
+    --cl-accent: 322, 100%, 42%;
 }

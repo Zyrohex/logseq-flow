@@ -19,7 +19,7 @@ html[data-theme='light'] {
     --background-color-l: 80%;
     --cl-background: 51, 33%, 70%;
     --cl-text-color: 240, 9%, 36%;
-    --cl-secondary: 54, 31%, 36%;
+    --cl-accent: 54, 31%, 36%;
     --cl-primary: 218, 34%, 45%;
-    --cl-accent: 264, 27%, 41%;
+    --cl-secondary: 264, 27%, 41%;
 }
