@@ -1220,6 +1220,7 @@ div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visib
 }
 .type-block .block-children-left-border {
     background-color: hsl(var(--cl-primary), 0.5);
+    margin: 0px 15px;
 }
 .type-block .block-children {
     border-left-color: transparent !important;
@@ -1228,7 +1229,7 @@ div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visib
     font-weight: bolder;
 }*/
 /* ADD MARKUP FOR PAGES HERE */
-/*.type-block[data-ref*='indexcard'] .ls-block .bullet-container {
+.type-block[data-ref*='indexcard'] .ls-block .bullet-container {
     display: none;
 }
 .type-block[data-ref*='indexcard'] .block-children {
