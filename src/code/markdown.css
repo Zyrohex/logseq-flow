@@ -1171,13 +1171,13 @@ div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visib
 .type-block .tag {
     margin: 0px 1px;
 }
-.type-block {
+/*.type-block {
     border: 1px solid hsl(var(--cl-text-color), 0.15);
     border-radius: 5px;
     margin: 5px 0px;
     padding: 8px 0px !important;
     background-color: hsl(var(--cl-background), 0.25);
-}
+}*/
 /*.white-theme .type-block {
     box-shadow: 1px 1px 1px 2px hsl(var(--cl-text-color), 0.7);
 }
@@ -1194,9 +1194,9 @@ div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visib
 .type-block .type-block + .type-block {
     margin: 8px 8px;
 }
-.color-level .type-block {
+/*.color-level .type-block {
     background-color: var(--bg-color);
-}
+}*/
 .type-block .ls-block {
     margin: 0px 0px;
     padding: 0px;
@@ -1218,11 +1218,17 @@ div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visib
     font-size: 12px;
     font-weight: 400;
 }
+.type-block .block-children-left-border {
+    background-color: hsl(var(--cl-primary), 0.5);
+}
+.type-block .block-children {
+    border-left-color: transparent !important;
+}
 /*.type-block>.flex.flex-row.pr-2 {
     font-weight: bolder;
 }*/
 /* ADD MARKUP FOR PAGES HERE */
-.type-block[data-ref*='indexcard'] .ls-block .bullet-container {
+/*.type-block[data-ref*='indexcard'] .ls-block .bullet-container {
     display: none;
 }
 .type-block[data-ref*='indexcard'] .block-children {
