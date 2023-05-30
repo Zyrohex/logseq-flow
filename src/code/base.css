@@ -82,12 +82,12 @@ html[data-theme='dark'] {
     --accent-color-dark-l: calc(var(--accent-color-l) - var(--darknessTransform));
     /* background colors */
     --bg-darkness-1: calc(var(--background-color-l) - var(--bg-light-transform));
-    --bg-lightness-1: calc(var(--background-color-l) + calc(var(--bg-light-transform) * 1));
-    --bg-lightness-2: calc(var(--background-color-l) + calc(var(--bg-light-transform) * 2));
-    --bg-lightness-3: calc(var(--background-color-l) + calc(var(--bg-light-transform) * 3));
-    --bg-lightness-4: calc(var(--background-color-l) + calc(var(--bg-light-transform) * 4));
-    --bg-lightness-5: calc(var(--background-color-l) + calc(var(--bg-light-transform) * 5));
-    --bg-lightness-6: calc(var(--background-color-l) + calc(var(--bg-light-transform) * 6));
+    --bg-lightness-1: calc(var(--background-color-l) + calc(var(--bg-light-transform) * 0.5));
+    --bg-lightness-2: calc(var(--background-color-l) + calc(var(--bg-light-transform) * 1.5));
+    --bg-lightness-3: calc(var(--background-color-l) + calc(var(--bg-light-transform) * 2.5));
+    --bg-lightness-4: calc(var(--background-color-l) + calc(var(--bg-light-transform) * 3.5));
+    --bg-lightness-5: calc(var(--background-color-l) + calc(var(--bg-light-transform) * 4.5));
+    --bg-lightness-6: calc(var(--background-color-l) + calc(var(--bg-light-transform) * 5.5));
     /* === Variables which we can apply to theme elements === */
     --color-primary: hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l));
     --color-secondary: hsl(var(--secondary-color-h), var(--secondary-color-s), var(--secondary-color-l));

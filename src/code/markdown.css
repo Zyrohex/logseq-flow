@@ -33,35 +33,21 @@
 }
 
 /* Inline Code */
-.color-level :not(pre):not(mark)>code {
-    background-color: var(--bg-color-2);
-}
-
-:not(pre):not(mark)>code:before {
-    font-family: 'tabler-icons240';
-    position: relative;
-    top: 1px;
-    color: hsl(var(--cl-secondary));
-}
-
 :not(pre):not(mark)>code {
     padding: 2px 6px !important;
-    color: hsl(var(--cl-secondary), 1);
+    color: hsl(var(--cl-text-color), 1);
     border-radius: 5px;
-    border: 1px solid hsl(var(--cl-text-color), 0.15);
+    border: 0px solid hsl(var(--cl-text-color), 0.15);
+}
+.white-theme :not(pre):not(mark)>code {
     background-color: var(--bg-color-1);
 }
-
-/*:not(pre):not(mark)>code:before {
-    content: "\ea61";
-    color: hsl(var(--cl-primary));
-    font-family: 'tabler-icons';
-    vertical-align: middle;
-    margin-left: -4px;
-    font-size: x-small;
-    padding-left: 3px;
-}*/
-
+.dark-theme :not(pre):not(mark)>code {
+    background-color: var(--bg-dark);
+}
+.white-theme .color-level :not(pre):not(mark)>code {
+    background-color: var(--bg-color-2);
+}
 /* Highlights */
 mark {
     background-color: hsl(var(--cl-accent), 0.1);
@@ -555,18 +541,17 @@ svg.h-4.w-4 {
 
 /* Tags */
 a.tag {
-    background-color: hsl(var(--cl-secondary), 0.25);
+    background-color: transparent;
     color: hsl(var(--cl-secondary), 1);
-    padding: 0px 5px;
+    padding: 0px 1px;
     border-radius: 3px;
     transition: 0.2s;
-    font-size: smaller;
-    opacity: 0.7;
-    font-weight: 500;
+    opacity: 1;
+    font-weight: 400;
 }
 
 a.tag:hover {
-    background-color: hsl(var(--cl-secondary), 0.25);
+    background-color: transparent;
     color: hsl(var(--cl-secondary), 1);
     opacity: 1;
 }
@@ -1046,13 +1031,13 @@ h1.title {
 }
 
 /* Bujo polka dots */
-div#main-content-container {
+/*div#main-content-container {
     background-image: radial-gradient(var(--bg-color-1) 5%, var(--bg-color) 5%);
     background-position: 0 0;
     background-position-x: 5px;
     background-position-y: 5px;
     background-size: 25px 25px;
-}
+}*/
 
 /* journal query kanban view */
 /*:not(.ls-wide-mode) div#today-queries>.lazy-visibility {
@@ -1135,7 +1120,7 @@ div:is(#fk, div#type\/notes, [id^="fk/"])>.content>div.flex.flex-col {
 
 /* make paragraphs more unique */
 .is-paragraph {
-    font-size: smaller;
+    font-size: small;
 }
 
 /* adds special views for index pages */
@@ -1218,18 +1203,18 @@ div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visib
     font-size: 12px;
     font-weight: 400;
 }
-.type-block .block-children-left-border {
+/*.type-block .block-children-left-border {
     background-color: hsl(var(--cl-primary), 0.5);
     margin: 0px 15px;
 }
 .type-block .block-children {
     border-left-color: transparent !important;
-}
+}*/
 /*.type-block>.flex.flex-row.pr-2 {
     font-weight: bolder;
 }*/
 /* ADD MARKUP FOR PAGES HERE */
-.type-block[data-ref*='indexcard'] .ls-block .bullet-container {
+.type-block[data-ref*='indexcard'] .ls-block:not(.type-block) .bullet-container {
     display: none;
 }
 .type-block[data-ref*='indexcard'] .block-children {

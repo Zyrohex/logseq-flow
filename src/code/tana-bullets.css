@@ -56,10 +56,10 @@
 }
 /* ADD YOUR PAGE TYPES BELOW */
 .type-block[data-ref*='indexcard']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f59f" !important;
+  content: "\f014" !important;
 }
 .type-block[data-ref*='indexcard']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f59f" !important;
+  content: "\f014" !important;
 }
 .type-block[data-ref*='fleeting']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f97d" !important;
