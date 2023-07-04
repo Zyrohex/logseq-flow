@@ -1,297 +1,139 @@
-/*function noteBlock() {
-  const observer = new MutationObserver((mutationList) => {
-    for (const mutation of mutationList) {
-      for (const node of mutation.addedNodes) {
-        if (!node.querySelectorAll) continue;
-
-        const matchingFlexElements = node.querySelectorAll('.flex-1');
-
-        for (const flexElement of matchingFlexElements) {
-          const initialElement = flexElement.querySelector('.initial');
-          if (initialElement) {
-            const divElement = initialElement.querySelector('div');
-            if (divElement) {
-              const tagElement = divElement.querySelector('.tag');
-
-              if (tagElement) {
-                const noteBlockElement = document.createElement('div');
-                noteBlockElement.classList.add('note-block');
-                noteBlockElement.appendChild(tagElement.cloneNode(true));
-
-                flexElement.insertBefore(noteBlockElement, initialElement);
-                tagElement.remove();
-              }
-            }
-          }
-        }
+// Abbreviate namespace
+// Eample: "root/foo/bar" -> "r/f/bar"
+function abbreviate(text, isTag) {
+  return text
+    .split("/")
+    .map((part, index, arr) => {
+      if (index === arr.length - 1) {
+        return part; // return the last part unabbreviated
+      } else {
+        return part
+          .split(" ")
+          .map((word) => word.charAt(0).toUpperCase())
+          .join(""); // abbreviate other parts and capitalize
       }
+    })
+    .join("/");
+}
+
+function abbreviateNamespace(selector) {
+  const appContainer = document.getElementById("app-container");
+
+  const handleNamespaceHover = (event) => {
+    const namespaceRef = event.target.closest(selector);
+    if (!namespaceRef) return;
+
+    if (event.type === "mouseenter") {
+      namespaceRef.textContent = namespaceRef.dataset.origText;
+    } else if (event.type === "mouseleave") {
+      namespaceRef.textContent = namespaceRef.dataset.abbreviatedText;
     }
-  });
+  };
 
-  observer.observe(document.getElementById("app-container"), {
-    subtree: true,
-    childList: true,
-  });
-}*/
+  appContainer.addEventListener("mouseenter", handleNamespaceHover, true);
+  appContainer.addEventListener("mouseleave", handleNamespaceHover, true);
 
-function collapseAndAbbreviateNamespaceRefs() {
   const observer = new MutationObserver((mutationList) => {
     for (const mutation of mutationList) {
       for (const node of mutation.addedNodes) {
         if (!node.querySelectorAll) continue;
 
-        const initialNamespaceRefs = node.querySelectorAll(
-          '.ls-block a.page-ref[data-ref*="/"], span[data-ref*="/"].title, .foldable-title [data-ref*="/"], li[title*="root/"] .page-title, a.tag[data-ref*="/"]'
-        );
-        const pageTitleRefs = node.querySelectorAll('.page-title');
-        const filteredPageTitleRefs = Array.from(pageTitleRefs).filter((pageTitleRef) =>
-          Array.from(pageTitleRef.childNodes).some((child) => child.nodeType === 3 && child.textContent.includes('/'))
-        );
-        const namespaceRefs = [...initialNamespaceRefs, ...filteredPageTitleRefs];
-
+        const namespaceRefs = node.querySelectorAll(selector);
         for (const namespaceRef of namespaceRefs) {
           const text = namespaceRef.textContent;
-          const testText = namespaceRef.classList.contains("tag")
+          const isTag = namespaceRef.classList.contains("tag");
+          const testText = isTag
             ? text.substring(1).toLowerCase()
             : text.toLowerCase();
           if (testText !== namespaceRef.dataset.ref) continue;
 
-          const selectorToMatch = '.ls-block a.page-ref[data-ref*="/"], a.tag[data-ref*="/"], .foldable-title [data-ref*="/"]';
-          const awLiIconElement = namespaceRef.matches(selectorToMatch) ? namespaceRef.parentElement.querySelector('.awLi-icon') : null;
-          const awLiIcon = awLiIconElement ? awLiIconElement.textContent : null;
-
-          // Perform collapsing.
-          const parts = text.split('/').map((part, index, arr) => {
-            if (awLiIcon && index === 0) {
-              return awLiIcon;
-            } else if (namespaceRef.matches('a.tag[data-ref*="/"]') && index === 0) {
-              return part.substring(0, 2);
-            } else if (index === arr.length - 1) {
-              return part;
-            } else {
-              return part.charAt(0);
-            }
-          });
+          const abbreviatedText = abbreviate(text, isTag);
 
           namespaceRef.dataset.origText = text;
-          namespaceRef.innerHTML = '';
-          
-          parts.forEach((part, index) => {
-            const span = document.createElement('span');
-            span.textContent = part;
-            if (index !== 0) {
-              const separator = document.createElement('span');
-              separator.textContent = '/';
-              separator.style.margin = '0 1px';
-              namespaceRef.appendChild(separator);
-            }
-            namespaceRef.appendChild(span);
-          });
+          namespaceRef.dataset.abbreviatedText = abbreviatedText;
+          namespaceRef.textContent = abbreviatedText;
         }
       }
     }
   });
 
-  observer.observe(document.getElementById("app-container"), {
+  observer.observe(appContainer, {
     subtree: true,
     childList: true,
   });
 }
 
-function indexBlocks2() {
-  const observer = new MutationObserver((mutationList) => {
-    for (const mutation of mutationList) {
-      for (const node of mutation.addedNodes) {
-        if (!node.querySelectorAll) continue;
-
-        const blockPropertiesElements = node.querySelectorAll('.block-properties');
-
-        for (const blockElement of blockPropertiesElements) {
-          const indexRefElement = blockElement.querySelector('.page-ref[data-ref="index"]');
-          if (indexRefElement) {
-            const divElement = blockElement.querySelector('div');
-            if (divElement) {
-              divElement.classList.add('index-ref');
-              divElement.style.display = 'none';
-            }
-          }
-        }
-      }
-    }
-  });
-
-  observer.observe(document.getElementById("app-container"), {
-    subtree: true,
-    childList: true,
-  });
-}
-
-let keyboardInputTimeout;
-let shouldProcessMutations = true;
-
-function indexBlocks2() {
-  const observer = new MutationObserver((mutationList) => {
-    if (!shouldProcessMutations) {
-      return;
-    }
-
-    for (const mutation of mutationList) {
-      for (const node of mutation.addedNodes) {
-        if (!node.querySelectorAll) continue;
-
-        const blockPropertiesElements = node.querySelectorAll('.block-properties');
-
-        for (const blockElement of blockPropertiesElements) {
-          const indexRefElement = blockElement.querySelector('.page-ref[data-ref="index"]');
-          if (indexRefElement) {
-            const divElement = blockElement.querySelector('div');
-            if (divElement) {
-              divElement.classList.add('index-ref');
-              divElement.style.display = 'none';
-
-              let ancestorElement = divElement;
-              for(let i = 0; i < 7; i++) {
-                if(ancestorElement.parentElement) {
-                  ancestorElement = ancestorElement.parentElement;
-                } else {
-                  break;
-                }
-              }
-              ancestorElement.classList.add('index-card');
-            }
-          }
-        }
-      }
-    }
-  });
-
-  document.addEventListener('keydown', (event) => {
-    clearTimeout(keyboardInputTimeout);
-    keyboardInputTimeout = setTimeout(() => {
-      shouldProcessMutations = false;
-    }, 2000); // 2 seconds
-  });
-
-  document.addEventListener('keyup', (event) => {
-    clearTimeout(keyboardInputTimeout);
-    shouldProcessMutations = true;
-  });
-
-  observer.observe(document.getElementById("app-container"), {
-    subtree: true,
-    childList: true,
-  });
-}
-
-function indexBlocks3() {
-  const observer = new MutationObserver((mutationList) => {
-    if (!shouldProcessMutations) {
-      return;
-    }
-
-    for (const mutation of mutationList) {
-      for (const node of mutation.addedNodes) {
-        if (!node.querySelectorAll) continue;
-
-        const blockPropertiesElements = node.querySelectorAll('.block-property[data-ref="type"]');
-
-        for (const blockElement of blockPropertiesElements) {
-          const typeRefElement = blockElement;
-          if (typeRefElement) {
-            const divElement = blockElement.closest('div');
-            if (divElement && divElement.parentElement) {
-              divElement.parentElement.classList.add('type-ref');
-              divElement.style.display = 'none';
-
-              let ancestorElement = divElement;
-              for(let i = 0; i < 8; i++) {
-                if(ancestorElement.parentElement) {
-                  ancestorElement = ancestorElement.parentElement;
-                } else {
-                  break;
-                }
-              }
-              ancestorElement.classList.add('type-block');
-
-              // Find the span with 'Project' data-ref and copy its data-ref to the ancestor element
-              const propertyRefElement = node.querySelector('span.page-reference');
-              if (propertyRefElement) {
-                const propertyRefValue = propertyRefElement.getAttribute('data-ref');
-                ancestorElement.setAttribute('data-ref', propertyRefValue);
-              }
-            }
-          }
-        }
-      }
-    }
-  });
-
-  document.addEventListener('keydown', (event) => {
-    clearTimeout(keyboardInputTimeout);
-    keyboardInputTimeout = setTimeout(() => {
-      shouldProcessMutations = false;
-    }, 2000); // 2 seconds
-  });
-
-  document.addEventListener('keyup', (event) => {
-    clearTimeout(keyboardInputTimeout);
-    shouldProcessMutations = true;
-  });
-
-  observer.observe(document.getElementById("app-container"), {
-    subtree: true,
-    childList: true,
-  });
-}
+abbreviateNamespace(
+  '.ls-block a.page-ref[data-ref*="/"], .foldable-title [data-ref*="/"], li[title*="root/"] .page-title, a.tag[data-ref*="/"], .title[data-ref*="/"]'
+);
 
 function indexBlocks3() {
   // Function to process existing elements
   function processBlockElements(blockPropertiesElements) {
     for (const blockElement of blockPropertiesElements) {
-      const typeRefElement = blockElement;
-      if (typeRefElement) {
-        const divElement = blockElement.closest('div');
-        if (divElement && divElement.parentElement) {
-          divElement.parentElement.classList.add('type-ref');
-          divElement.style.display = 'none';
+      // Search through all text nodes in the current blockElement
+      const walker = document.createTreeWalker(blockElement, NodeFilter.SHOW_TEXT);
+      let textNode;
 
-          let ancestorElement = divElement;
-          for(let i = 0; i < 8; i++) {
-            if(ancestorElement.parentElement) {
-              ancestorElement = ancestorElement.parentElement;
-            } else {
-              break;
-            }
-          }
-          ancestorElement.classList.add('type-block');
+      while (textNode = walker.nextNode()) {
+        let textContent = textNode.textContent;
+        
+        if (!textContent.includes(':-') && !textContent.includes(';-') && !textContent.includes('?-')) {
+          continue;
+        }
 
-          // Find any span with page-reference class under 'type-ref' class
-          // and copy its data-ref to the ancestor element, converting it to lowercase
-          const pageRefElement = divElement.parentElement.querySelector('span.page-reference');
-          if (pageRefElement) {
-            const pageRefValue = pageRefElement.getAttribute('data-ref');
-            ancestorElement.setAttribute('data-ref', pageRefValue.toLowerCase());
-          }
+        // Determine the symbol, class to add, and new element
+        let symbol, classToAdd, newElement;
+        if (textContent.includes(':-')) {
+          symbol = ':-';
+          classToAdd = 'concept-block';
+          newElement = 'strong';
+        } else if (textContent.includes(';-')) {
+          symbol = ';-';
+          classToAdd = 'descriptor-block';
+          newElement = 'em';
+        } else if (textContent.includes('?-')) {
+          symbol = '?-';
+          classToAdd = 'question-block';
+          newElement = 'em';
+        }
+
+        // Add the class to the ancestor element
+        let ancestorElement = blockElement.closest('.ls-block');
+        if(ancestorElement) {
+          ancestorElement.classList.add(classToAdd);
+        }
+
+        // Split the text content by symbol and trim extra spaces
+        let parts = textContent.split(symbol);
+
+        // If text was successfully split into two parts
+        if(parts.length === 2) {
+          // Make the first part bold/italic, add " ― ", keep remaining text intact
+          // And ensure the following text node starts with a space if it should
+          textNode.textContent = '';
+          let followingText = parts[1].startsWith(' ') ? parts[1] : ' ' + parts[1];
+          textNode.parentNode.insertBefore(document.createTextNode(' ―' + followingText), textNode.nextSibling);
+          textNode.parentNode.insertBefore(document.createElement(newElement).appendChild(document.createTextNode(parts[0].trim())).parentNode, textNode);
         }
       }
     }
   }
 
   // Process elements that are present at the time of page load
-  processBlockElements(document.querySelectorAll('.block-property[data-ref="type"]'));
+  processBlockElements(document.querySelectorAll('.ls-block .inline'));
 
   const observer = new MutationObserver((mutationList) => {
-    if (!shouldProcessMutations) {
-      return;
-    }
-
     for (const mutation of mutationList) {
       for (const node of mutation.addedNodes) {
         if (!node.querySelectorAll) continue;
-        processBlockElements(node.querySelectorAll('.block-property[data-ref="type"]'));
+        processBlockElements(node.querySelectorAll('.ls-block .inline'));
       }
     }
   });
+
+  let keyboardInputTimeout;
+  let shouldProcessMutations = true;
 
   document.addEventListener('keydown', (event) => {
     clearTimeout(keyboardInputTimeout);
@@ -312,10 +154,5 @@ function indexBlocks3() {
 }
 
 
-// indexBlocks2();
 indexBlocks3();
 collapseAndAbbreviateNamespaceRefs();
-// noteBlock();
-// propertyRef();
-// pageRefClass();
-// gardenRef();
