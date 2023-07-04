@@ -3,47 +3,46 @@
   box-shadow: none !important;
 }*/
 
-.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
+:is(.concept-block, .descriptor-block, .question-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
   position: relative;
-  top: -10px;
+  top: -6px;
   left: -5px;
 }
 
-.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
-.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container:not(.bullet-closed) .bullet {
+:is(.concept-block, .descriptor-block, .question-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
+:is(.concept-block, .descriptor-block, .question-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container:not(.bullet-closed) .bullet {
   background-color: transparent !important;
 }
-.type-block>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container {
+:is(.concept-block, .descriptor-block, .question-block)>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container {
   background-color: transparent !important;
 }
 
-.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
-.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed .bullet {
+:is(.concept-block, .descriptor-block, .question-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
+:is(.concept-block, .descriptor-block, .question-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed .bullet {
   background-color: transparent !important;
 }
-.type-block>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container .bullet {
+:is(.concept-block, .descriptor-block, .question-block)>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container .bullet {
   transform: scale(1.1);
 }
 
-.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
+:is(.concept-block, .descriptor-block, .question-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
   position: relative;
-  top: -10px;
+  top: -8.5px;
   left: -5px;
 }
-.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+:is(.concept-block, .descriptor-block, .question-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   font-family: 'tabler-icons240';
-  color: hsl(var(--cl-primary));
   border-radius: 50%;
   vertical-align: middle;
 }
-.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+:is(.concept-block, .descriptor-block, .question-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   font-family: 'tabler-icons240';
   vertical-align: middle;
 }
-.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+:is(.concept-block, .descriptor-block, .question-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   background-color: transparent;
 }
-.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {
+:is(.concept-block, .descriptor-block, .question-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {
   background-color: transparent !important;
 }
 .type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
@@ -114,4 +113,22 @@
 }
 .type-block[data-ref*='planning']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   content: "\ecdd" !important;
+}
+.descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\eac5" !important;
+}
+.descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\f6d8" !important;
+}
+.question-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\ec9d" !important;
+}
+.question-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\ec9d" !important;
+}
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\ea3a" !important;
+}
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\fa88" !important;
 }
