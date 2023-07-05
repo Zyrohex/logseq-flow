@@ -35,7 +35,7 @@
 /* Inline Code */
 :not(pre):not(mark)>code {
     padding: 2px 6px !important;
-    color: hsl(var(--cl-text-color), 1);
+    color: hsl(var(--cl-primary), 1);
     border-radius: 5px;
     border: 0px solid hsl(var(--cl-text-color), 0.15);
 }
