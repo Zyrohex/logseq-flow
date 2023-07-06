@@ -127,14 +127,14 @@
   content: "\ec9d" !important;
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\ea3a" !important;
+  content: "\ea2a" !important;
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\fa88" !important;
+  content: "\fa83" !important;
 }
 .relator-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\eb8f" !important;
+  content: "\edff" !important;
 }
 .relator-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\eb8f" !important;
+  content: "\f6ed" !important;
 }
