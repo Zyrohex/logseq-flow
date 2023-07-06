@@ -34,10 +34,12 @@
   font-family: 'tabler-icons240';
   border-radius: 50%;
   vertical-align: middle;
+  color: hsl(var(--cl-text-color), 0.6);
 }
 :is(.concept-block, .descriptor-block, .question-block, .relator-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   font-family: 'tabler-icons240';
   vertical-align: middle;
+  color: hsl(var(--cl-text-color), 0.6);
 }
 :is(.concept-block, .descriptor-block, .question-block, .relator-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   background-color: transparent;
@@ -115,10 +117,10 @@
   content: "\ecdd" !important;
 }
 .descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f635" !important;
+  content: "\eac5" !important;
 }
 .descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f6d9" !important;
+  content: "\f6d8" !important;
 }
 .question-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\ec9d" !important;
