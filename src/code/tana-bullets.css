@@ -127,10 +127,10 @@
   content: "\ec9d" !important;
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\ea2a" !important;
+  content: "\ebdf" !important;
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\fa83" !important;
+  content: "\f71b" !important;
 }
 .relator-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\edff" !important;
