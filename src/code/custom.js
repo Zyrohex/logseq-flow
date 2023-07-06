@@ -78,7 +78,7 @@ function indexBlocks3() {
       while (textNode = walker.nextNode()) {
         let textContent = textNode.textContent;
         
-        if (!textContent.includes(':-') && !textContent.includes(';-') && !textContent.includes('?-')) {
+        if (!textContent.includes(':-') && !textContent.includes(';-') && !textContent.includes('!-')) {
           continue;
         }
 
@@ -87,15 +87,15 @@ function indexBlocks3() {
         if (textContent.includes(':-')) {
           symbol = ':-';
           classToAdd = 'concept-block';
-          newElement = 'strong';
+          newElement = null; // no specific element for ":-"
         } else if (textContent.includes(';-')) {
           symbol = ';-';
           classToAdd = 'descriptor-block';
           newElement = 'em';
-        } else if (textContent.includes('?-')) {
-          symbol = '?-';
-          classToAdd = 'question-block';
-          newElement = 'em';
+        } else if (textContent.includes('!-')) {
+          symbol = '!-';
+          classToAdd = 'relator-block';
+          newElement = null; // no specific element for "!-"
         }
 
         // Add the class to the ancestor element
@@ -109,25 +109,39 @@ function indexBlocks3() {
 
         // If text was successfully split into two parts
         if(parts.length === 2) {
-          // Make the first part bold/italic, add " ― ", keep remaining text intact
-          // And ensure the following text node starts with a space if it should
-          textNode.textContent = '';
-          let followingText = parts[1].startsWith(' ') ? parts[1] : ' ' + parts[1];
-          textNode.parentNode.insertBefore(document.createTextNode(' ―' + followingText), textNode.nextSibling);
-          textNode.parentNode.insertBefore(document.createElement(newElement).appendChild(document.createTextNode(parts[0].trim())).parentNode, textNode);
+          textNode.textContent = ''; // clear the current text content
+          let followingText = parts[1];
+          if (newElement) {
+            textNode.parentNode.insertBefore(document.createElement(newElement).appendChild(document.createTextNode(parts[0])), textNode.nextSibling);
+            textNode.parentNode.insertBefore(document.createTextNode(followingText), textNode.nextSibling);
+          } else {
+            textNode.parentNode.insertBefore(document.createTextNode(parts[0] + followingText), textNode.nextSibling);
+          }
         }
       }
     }
   }
 
-  // Process elements that are present at the time of page load
+  // Function to remove :-, ;- and !- from breadcrumb elements
+  function processBreadcrumbElements(breadcrumbElements) {
+    for (const breadcrumbElement of breadcrumbElements) {
+      let textContent = breadcrumbElement.textContent;
+      // Replace :-, ;- and !- with empty string
+      textContent = textContent.replace(/:-|;-|!-/g, '');
+      breadcrumbElement.textContent = textContent;
+    }
+  }
+
+  //Process elements that are present at the time of page load
   processBlockElements(document.querySelectorAll('.ls-block .inline'));
+  processBreadcrumbElements(document.querySelectorAll('.breadcrumb .inline-wrap'));
 
   const observer = new MutationObserver((mutationList) => {
     for (const mutation of mutationList) {
       for (const node of mutation.addedNodes) {
         if (!node.querySelectorAll) continue;
         processBlockElements(node.querySelectorAll('.ls-block .inline'));
+        processBreadcrumbElements(node.querySelectorAll('.breadcrumb .inline-wrap'));
       }
     }
   });
