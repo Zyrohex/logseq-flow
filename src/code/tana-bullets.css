@@ -117,10 +117,12 @@
   content: "\ecdd" !important;
 }
 .descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\eac5" !important;
+  content: "\f635" !important;
+  border: 1px solid transparent;
 }
 .descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f6d8" !important;
+  content: "\f6d9" !important;
+  border: 1px solid transparent;
 }
 .question-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\ec9d" !important;
@@ -129,10 +131,14 @@
   content: "\ec9d" !important;
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\ebdf" !important;
+  content: "\ea45" !important;
+  color: hsl(var(--cl-accent), 0.6);
+  border: 1px solid transparent;
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f71b" !important;
+  content: "\ea45" !important;
+  color: hsl(var(--cl-accent), 0.6);
+  border: 1px solid;
 }
 .relator-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\edff" !important;
