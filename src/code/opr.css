@@ -1,0 +1,10 @@
+.concept-block>.block-main-container>.block-content-wrapper {
+    margin: 0px 0px;
+    border: 1px solid hsl(var(--cl-text-color), 0.1);
+    border-radius: 5px;
+    padding: 3px 8px;
+    background-color: var(--bg-color-1);
+}
+.color-level .concept-block>.block-main-container>.block-content-wrapper {
+    background-color: var(--bg-color-2);
+}
