@@ -254,12 +254,12 @@ a.priority[href="#/page/C" i]::before {
 
 .block-marker {
     font-size: inherit;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--ls-secondary-text-color);
     opacity: 0.8;
     background-color: hsl(var(--cl-text-color), 0.15);
-    padding: 0px 5px;
-    border-radius: 2px;
+    padding: 1px 5px;
+    border-radius: 3px;
     font-size: small;
     margin: 0px 5px;
 }
