@@ -133,12 +133,10 @@
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\ea45" !important;
-  color: hsl(var(--cl-accent), 0.6);
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   content: "\ea45" !important;
-  color: hsl(var(--cl-accent), 0.6);
-  background-color: hsl(var(--cl-accent), 0.15);
+  background-color: hsl(var(--cl-text-color), 0.1);
 }
 .relator-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\edff" !important;

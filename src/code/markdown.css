@@ -234,10 +234,10 @@ a.priority[href="#/page/C" i]::before {
 
 /*  === Checkboxes ===  */
 .form-checkbox {
-    background-color: hsl(var(--cl-text-color), 0.02);
-    border: 1.2px solid hsl(var(--cl-text-color), 0.2);
+    background-color: hsl(var(--cl-primary), 0.4);
+    border: 0px solid hsl(var(--cl-text-color), 0.2);
     border-style: solid;
-    border-radius: 3px;
+    border-radius: 1px;
     position: relative;
     opacity: var(--cl-checkbox-opacity, 1);
     width: 15px;
@@ -613,12 +613,6 @@ span.inline.px-1.with-bg-color[style*="pink"] {
     color: var(--ls-highlight-color-pink-text);
 }
 
-/* Page Titles */
-h1.title {
-    font-weight: 600;
-    color: hsl(var(--cl-primary));
-}
-
 /* Fixes the line-break for long page titles */
 .ls-page-title.title span {
     white-space: normal !important;
@@ -758,10 +752,10 @@ h1.title {
 
 .color-level>.flex.flex-col>.initial>div>.blocks-container {
     background-color: var(--bg-color-1);
-    border-radius: 5px;
+    border-radius: 0px;
     padding: 2px 6px;
     margin: 8px 0px;
-    border: 1.5px solid hsl(var(--cl-text-color), 0.05);
+    border-radius: .25rem;
 }
 
 /* background color to right side panel */
