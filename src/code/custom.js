@@ -67,81 +67,93 @@ abbreviateNamespace(
   '.ls-block a.page-ref[data-ref*="/"], .foldable-title [data-ref*="/"], li[title*="root/"] .page-title, a.tag[data-ref*="/"], .title[data-ref*="/"]'
 );
 
-function indexBlocks3() {
-  // Function to process existing elements
-  function processBlockElements(blockPropertiesElements) {
-    for (const blockElement of blockPropertiesElements) {
-      // Search through all text nodes in the current blockElement
-      const walker = document.createTreeWalker(blockElement, NodeFilter.SHOW_TEXT);
-      let textNode;
+// Process all elements
+function processAllElements() {
+  // Process elements that are present at the time of page load
+  processBlockElements(document.querySelectorAll('.ls-block .inline'));
+  processBreadcrumbElements(document.querySelectorAll('.breadcrumb .inline-wrap'));
+}
 
-      while (textNode = walker.nextNode()) {
-        let textContent = textNode.textContent;
-        
+// Function to process existing elements
+function processBlockElements(blockPropertiesElements) {
+  for (const blockElement of blockPropertiesElements) {
+    // Search through all text nodes in the current blockElement
+    const walker = document.createTreeWalker(blockElement, NodeFilter.SHOW_TEXT);
+    let textNode;
+
+    while (textNode = walker.nextNode()) {
+      let textContent = textNode.textContent;
+      
+      // Determine the symbol, class to remove/add, and new element
+      let symbol, classToManipulate, newElement;
+      if (textContent.includes(':-') && blockElement.querySelector(".block-main-container .is-paragraph") && blockElement.querySelector(".block-main-container .is-paragraph > .page-reference")) {
+        symbol = ':-';
+        classToManipulate = 'relator-block';
+        newElement = null; // no specific element for ":-"
+      } else if (textContent.includes(';-')) {
+        symbol = ';-';
+        classToManipulate = 'descriptor-block';
+        newElement = null; // no specific element for "!-"
+      } else if (textContent.includes(':-')) {
+        symbol = ':-';
+        classToManipulate = 'concept-block';
+        newElement = null; // no specific element for ":-"
+      }
+
+      // Find the ancestor element
+      let ancestorElement = blockElement.closest('.ls-block');
+
+      if (ancestorElement) {
+        // If the textContent includes one of the symbols ':-', ':-', '!-', add the class
+        // otherwise, remove the class
         if (!textContent.includes(':-') && !textContent.includes(';-') && !textContent.includes('!-')) {
-          continue;
+          ancestorElement.classList.remove(classToManipulate);
+        } else {
+          ancestorElement.classList.add(classToManipulate);
         }
+      }
 
-        // Determine the symbol, class to add, and new element
-        let symbol, classToAdd, newElement;
-        if (textContent.includes(':-')) {
-          symbol = ':-';
-          classToAdd = 'concept-block';
-          newElement = null; // no specific element for ":-"
-        } else if (textContent.includes(';-')) {
-          symbol = ';-';
-          classToAdd = 'descriptor-block';
-          newElement = 'em';
-        } else if (textContent.includes('!-')) {
-          symbol = '!-';
-          classToAdd = 'relator-block';
-          newElement = null; // no specific element for "!-"
-        }
+      // Split the text content by symbol and trim extra spaces
+      let parts = textContent.split(symbol);
 
-        // Add the class to the ancestor element
-        let ancestorElement = blockElement.closest('.ls-block');
-        if(ancestorElement) {
-          ancestorElement.classList.add(classToAdd);
-        }
-
-        // Split the text content by symbol and trim extra spaces
-        let parts = textContent.split(symbol);
-
-        // If text was successfully split into two parts
-        if(parts.length === 2) {
-          textNode.textContent = ''; // clear the current text content
-          let followingText = parts[1];
-          if (newElement) {
-            textNode.parentNode.insertBefore(document.createElement(newElement).appendChild(document.createTextNode(parts[0])), textNode.nextSibling);
-            textNode.parentNode.insertBefore(document.createTextNode(followingText), textNode.nextSibling);
-          } else {
-            textNode.parentNode.insertBefore(document.createTextNode(parts[0] + followingText), textNode.nextSibling);
-          }
+      // If text was successfully split into two parts
+      if(parts.length === 2) {
+        textNode.textContent = ''; // clear the current text content
+        let followingText = parts[1];
+        if (newElement) {
+          textNode.parentNode.insertBefore(document.createElement(newElement).appendChild(document.createTextNode(parts[0])), textNode.nextSibling);
+          textNode.parentNode.insertBefore(document.createTextNode(followingText), textNode.nextSibling);
+        } else {
+          textNode.parentNode.insertBefore(document.createTextNode(parts[0] + followingText), textNode.nextSibling);
         }
       }
     }
   }
+}
 
-  // Function to remove :-, ;- and !- from breadcrumb elements
-  function processBreadcrumbElements(breadcrumbElements) {
-    for (const breadcrumbElement of breadcrumbElements) {
-      let textContent = breadcrumbElement.textContent;
-      // Replace :-, ;- and !- with empty string
-      textContent = textContent.replace(/:-|;-|!-/g, '');
-      breadcrumbElement.textContent = textContent;
-    }
+// Function to remove :-, ;- and !- from breadcrumb elements
+function processBreadcrumbElements(breadcrumbElements) {
+  for (const breadcrumbElement of breadcrumbElements) {
+    let textContent = breadcrumbElement.textContent;
+    // Replace :-, ;- and !- with empty string
+    textContent = textContent.replace(/:-|;-|!-/g, '');
+    breadcrumbElement.textContent = textContent;
   }
+}
 
-  //Process elements that are present at the time of page load
-  processBlockElements(document.querySelectorAll('.ls-block .inline'));
-  processBreadcrumbElements(document.querySelectorAll('.breadcrumb .inline-wrap'));
+function indexBlocks3() {
+  processAllElements();
 
   const observer = new MutationObserver((mutationList) => {
     for (const mutation of mutationList) {
-      for (const node of mutation.addedNodes) {
-        if (!node.querySelectorAll) continue;
-        processBlockElements(node.querySelectorAll('.ls-block .inline'));
-        processBreadcrumbElements(node.querySelectorAll('.breadcrumb .inline-wrap'));
+      if (mutation.type === 'childList') {
+        for (const node of mutation.addedNodes) {
+          if (!node.querySelectorAll) continue;
+          processBlockElements(node.querySelectorAll('.ls-block .inline'));
+          processBreadcrumbElements(node.querySelectorAll('.breadcrumb .inline-wrap'));
+        }
+      } else if (mutation.type === 'characterData') {
+        processAllElements();
       }
     }
   });
@@ -164,9 +176,9 @@ function indexBlocks3() {
   observer.observe(document.getElementById("app-container"), {
     subtree: true,
     childList: true,
+    characterData: false,
   });
 }
-
 
 indexBlocks3();
 collapseAndAbbreviateNamespaceRefs();
