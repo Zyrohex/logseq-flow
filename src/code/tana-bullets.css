@@ -3,48 +3,48 @@
   box-shadow: none !important;
 }*/
 
-:is(.concept-block, .descriptor-block, .question-block, .relator-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
   position: relative;
   top: -6px;
   left: -5px;
 }
 
-:is(.concept-block, .descriptor-block, .question-block, .relator-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
-:is(.concept-block, .descriptor-block, .question-block, .relator-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container:not(.bullet-closed) .bullet {
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container:not(.bullet-closed) .bullet {
   background-color: transparent !important;
 }
-:is(.concept-block, .descriptor-block, .question-block, .relator-block)>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container {
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container {
   background-color: transparent !important;
 }
 
-:is(.concept-block, .descriptor-block, .question-block, .relator-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
-:is(.concept-block, .descriptor-block, .question-block, .relator-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed .bullet {
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed .bullet {
   background-color: transparent !important;
 }
-:is(.concept-block, .descriptor-block, .question-block, .relator-block)>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container .bullet {
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container .bullet {
   transform: scale(1.1);
 }
 
-:is(.concept-block, .descriptor-block, .question-block, .relator-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
   position: relative;
   top: -8.5px;
   left: -5px;
 }
-:is(.concept-block, .descriptor-block, .question-block, .relator-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   font-family: 'tabler-icons240';
   border-radius: 50%;
   vertical-align: middle;
   color: hsl(var(--cl-text-color), 0.6);
 }
-:is(.concept-block, .descriptor-block, .question-block, .relator-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   font-family: 'tabler-icons240';
   vertical-align: middle;
   color: hsl(var(--cl-text-color), 0.6);
 }
-:is(.concept-block, .descriptor-block, .question-block, .relator-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   background-color: transparent;
 }
-:is(.concept-block, .descriptor-block, .question-block, .relator-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {
   background-color: transparent !important;
 }
 .type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
@@ -116,32 +116,12 @@
 .type-block[data-ref*='planning']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   content: "\ecdd" !important;
 }
-.descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f014" !important;
-  border: 1px solid transparent;
-}
-.descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f014" !important;
-  border: 1px solid transparent;
-  background-color: hsl(var(--cl-text-color), 0.1);
-}
-.question-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\ec9d" !important;
-}
-.question-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\ec9d" !important;
-}
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\ea45" !important;
+  color: hsl(var(--cl-primary), 0.6);
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   content: "\ea45" !important;
-  background-color: hsl(var(--cl-text-color), 0.1);
-}
-.relator-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\edff" !important;
-}
-.relator-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\edff" !important;
-  background-color: hsl(var(--cl-text-color), 0.1);
+  background-color: hsl(var(--cl-primary), 0.1);
+  color: hsl(var(--cl-primary), 0.6);
 }

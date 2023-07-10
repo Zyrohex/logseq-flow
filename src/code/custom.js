@@ -86,15 +86,7 @@ function processBlockElements(blockPropertiesElements) {
       
       // Determine the symbol, class to remove/add, and new element
       let symbol, classToManipulate, newElement;
-      if (textContent.includes(':-') && blockElement.querySelector(".block-main-container .is-paragraph") && blockElement.querySelector(".block-main-container .is-paragraph > .page-reference")) {
-        symbol = ':-';
-        classToManipulate = 'relator-block';
-        newElement = null; // no specific element for ":-"
-      } else if (textContent.includes(';-')) {
-        symbol = ';-';
-        classToManipulate = 'descriptor-block';
-        newElement = null; // no specific element for "!-"
-      } else if (textContent.includes(':-')) {
+      if (textContent.includes(':-')) {
         symbol = ':-';
         classToManipulate = 'concept-block';
         newElement = null; // no specific element for ":-"
