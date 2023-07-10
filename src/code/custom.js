@@ -141,8 +141,27 @@ function processBreadcrumbElements(breadcrumbElements) {
   }
 }
 
+// Function to add the descriptor-block class
+function processDescriptorBlocks() {
+  // Find all concept-block elements
+  let conceptBlocks = document.querySelectorAll('.concept-block');
+  
+  for (const conceptBlock of conceptBlocks) {
+    // Find all child ls-block elements
+    let childBlocks = conceptBlock.querySelectorAll('.ls-block');
+
+    for (const childBlock of childBlocks) {
+      // If the childBlock is not also a concept-block, add the descriptor-block class
+      if (!childBlock.classList.contains('concept-block')) {
+        childBlock.classList.add('descriptor-block');
+      }
+    }
+  }
+}
+
 function indexBlocks3() {
   processAllElements();
+  processDescriptorBlocks();
 
   const observer = new MutationObserver((mutationList) => {
     for (const mutation of mutationList) {
@@ -151,9 +170,11 @@ function indexBlocks3() {
           if (!node.querySelectorAll) continue;
           processBlockElements(node.querySelectorAll('.ls-block .inline'));
           processBreadcrumbElements(node.querySelectorAll('.breadcrumb .inline-wrap'));
+          processDescriptorBlocks();
         }
       } else if (mutation.type === 'characterData') {
         processAllElements();
+        processDescriptorBlocks();
       }
     }
   });
