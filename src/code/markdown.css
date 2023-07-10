@@ -1114,7 +1114,7 @@ div:is(#fk, div#type\/notes, [id^="fk/"])>.content>div.flex.flex-col {
 
 /* make paragraphs more unique */
 .is-paragraph {
-    font-size: small;
+    font-size: inherit;
 }
 
 /* adds special views for index pages */

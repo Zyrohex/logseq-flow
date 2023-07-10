@@ -1,11 +1,38 @@
-.concept-block>.block-main-container>.block-content-wrapper {
+:is(.concept-block, .descriptor-block, .relator-block)>.block-main-container>.block-content-wrapper {
     margin: 0px 0px;
     border: 0px solid hsl(var(--cl-text-color), 0.1);
     border-radius: 5px;
     padding: 3px 8px;
-    background-color: hsl(var(--cl-accent), 0.05);
+}
+.concept-block>.block-main-container>.block-content-wrapper {
+    background-color: hsl(var(--cl-primary), 0.09);
+    border: 1px solid hsl(var(--cl-primary), 0.2);
+}
+.descriptor-block>.block-main-container>.block-content-wrapper {
+    background-color: hsl(var(--cl-text-color), 0.05);
+}
+.relator-block>.block-main-container>.block-content-wrapper {
+    background-color: hsl(var(--cl-text-color), 0.05);
+}
+.concept-block>.block-main-container>.block-content-wrapper .page-ref {
+    color: hsl(var(--cl-primary), 1);
+}
+.descriptor-block>.block-main-container>.block-content-wrapper .page-ref {
+    color: hsl(var(--cl-secondary), 1);
+}
+.relator-block>.block-main-container>.block-content-wrapper .page-ref {
+    color: hsl(var(--cl-accent), 1);
 }
 
-.concept-block>.block-main-container>.block-control-wrap {
+:is(.concept-block, .descriptor-block, .relator-block)>.block-main-container>.block-control-wrap {
     align-self: center;
+}
+.white-theme .concept-block>.block-main-container :not(pre):not(mark)>code {
+    background-color: hsl(var(--cl-text-color), 0.05);
+}
+:is(.concept-block, .descriptor-block, .relator-block)>.block-main-container .block-content-inner {
+    font-weight: 600 !important;
+}
+.concept-block .page-ref {
+    color: hsl(var(--cl-accent));
 }

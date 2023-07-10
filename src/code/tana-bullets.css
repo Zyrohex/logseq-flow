@@ -117,11 +117,11 @@
   content: "\ecdd" !important;
 }
 .descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f95f" !important;
+  content: "\f014" !important;
   border: 1px solid transparent;
 }
 .descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f95f" !important;
+  content: "\f014" !important;
   border: 1px solid transparent;
   background-color: hsl(var(--cl-text-color), 0.1);
 }
@@ -142,5 +142,6 @@
   content: "\edff" !important;
 }
 .relator-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f6ed" !important;
+  content: "\edff" !important;
+  background-color: hsl(var(--cl-text-color), 0.1);
 }
