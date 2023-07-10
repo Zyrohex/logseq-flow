@@ -6,7 +6,6 @@
 }
 .concept-block>.block-main-container>.block-content-wrapper {
     background-color: hsl(var(--cl-primary), 0.09);
-    border: 1px solid hsl(var(--cl-primary), 0.2);
 }
 .descriptor-block>.block-main-container>.block-content-wrapper {
     background-color: hsl(var(--cl-text-color), 0.05);
