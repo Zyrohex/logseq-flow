@@ -1,11 +1,10 @@
-/*@import './fonts.css';*/
-@import './interface.css';
 @import './markdown.css';
 @import './tana-bullets.css';
-/*@import './plugins.css';*/
-@import './logseq.css';
+@import './plugins.css';
 @import './opr.css';
-/*@import './markup.css';*/
+@import './sidebar.css';
+/*@import './logseq.css';*/
+
 @font-face { 
     font-family: 'tabler-icons240';
     src: url('./tabler-icons.ttf') format('truetype');
@@ -49,17 +48,50 @@ body {
     --cl-transparent-bg-8: hsl(var(--background-color-h), var(--background-color-s), var(--bg-lightness-6), 0.8);
     --cl-transparent-bg-9: hsl(var(--background-color-h), var(--background-color-s), var(--bg-lightness-6), 0.9);
     /* Color Settings */
-    --cl-primary: hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l));
-    --cl-primary-dark: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) / 1.10));
-    --cl-primary-darker: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) / 1.20));
-    --cl-primary-light: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) * 1.10));
-    --cl-primary-lighter: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) * 1.20));
+    --cl-color-1: hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l));
+    --cl-color-1-dark: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) / 1.10));
+    --cl-color-1-darker: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) / 1.20));
+    --cl-color-1-light: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) * 1.10));
+    --cl-color-1-lighter: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) * 1.20));
     --cl-sidebar-left-panel: calc(var(--ls-main-content-max-width) * 0.2);
     --cl-sidebar-right-panel: calc(var(--ls-main-content-max-width) * 0.8);
     --cl-left-panel: calc(var(--ls-main-content-max-width) * 0.33);
     --cl-left-wide-panel: calc(var(--ls-main-content-max-width-wide) * 0.33);
     --cl-right-panel: calc(var(--ls-main-content-max-width) * 0.67);
     --cl-right-wide-panel: calc(var(--ls-main-content-max-width-wide) * 0.67);
+    /* Color Palettes */
+    --cl-color-1-100: hsl(var(--cl-color-1));
+    --cl-color-1-80: hsl(var(--cl-color-1), 0.8);
+    --cl-color-1-60: hsl(var(--cl-color-1), 0.6);
+    --cl-color-1-40: hsl(var(--cl-color-1), 0.4);
+    --cl-color-1-20: hsl(var(--cl-color-1), 0.2);
+    --cl-color-2-100: hsl(var(--cl-color-2));
+    --cl-color-2-80: hsl(var(--cl-color-2), 0.8);
+    --cl-color-2-60: hsl(var(--cl-color-2), 0.6);
+    --cl-color-2-40: hsl(var(--cl-color-2), 0.4);
+    --cl-color-2-20: hsl(var(--cl-color-2), 0.2);
+    --cl-color-3-100: hsl(var(--cl-color-3));
+    --cl-color-3-80: hsl(var(--cl-color-3), 0.8);
+    --cl-color-3-60: hsl(var(--cl-color-3), 0.6);
+    --cl-color-3-40: hsl(var(--cl-color-3), 0.4);
+    --cl-color-3-20: hsl(var(--cl-color-3), 0.2);
+    --cl-color-4-100: hsl(var(--cl-color-4));
+    --cl-color-4-80: hsl(var(--cl-color-4), 0.8);
+    --cl-color-4-60: hsl(var(--cl-color-4), 0.6);
+    --cl-color-4-40: hsl(var(--cl-color-4), 0.4);
+    --cl-color-4-20: hsl(var(--cl-color-4), 0.2);
+    --cl-color-5-100: hsl(var(--cl-color-5));
+    --cl-color-5-80: hsl(var(--cl-color-5), 0.8);
+    --cl-color-5-60: hsl(var(--cl-color-5), 0.6);
+    --cl-color-5-40: hsl(var(--cl-color-5), 0.4);
+    --cl-color-5-20: hsl(var(--cl-color-5), 0.2);
+    --cl-text-color-100: hsl(var(--cl-text-color));
+    --cl-text-color-80: hsl(var(--cl-text-color), 0.8);
+    --cl-text-color-60: hsl(var(--cl-text-color), 0.6);
+    --cl-text-color-40: hsl(var(--cl-text-color), 0.4);
+    --cl-text-color-20: hsl(var(--cl-text-color), 0.2);
+    --cl-text-color-10: hsl(var(--cl-text-color), 0.1);
+    --cl-text-color-05: hsl(var(--cl-text-color), 0.05);
 }
 
 /* Dark settings */
@@ -115,47 +147,47 @@ html[data-theme='dark'] {
     --ls-tertiary-background-color: var(--bg-color-2);
     --ls-quaternary-background-color: var(--bg-color-3);
     --ls-table-tr-even-background-color: var(--color-level-3);
-    --ls-active-primary-color: hsl(var(--cl-primary));
-    --ls-active-secondary-color: hsl(var(--cl-secondary));
+    --ls-active-primary-color: hsl(var(--cl-color-1));
+    --ls-active-secondary-color: hsl(var(--cl-color-2));
     --ls-block-properties-background-color: var(--color-level-1);
     --ls-page-properties-background-color: var(--color-level-1);
-    --ls-block-ref-link-text-color: hsl(var(--cl-primary));
+    --ls-block-ref-link-text-color: hsl(var(--cl-color-1));
     --ls-search-background-color: var(--color-level-3);
     --ls-mark-bg-color: var(--color-accent);
-    --ls-mark-color: hsl(var(--cl-primary));
+    --ls-mark-color: hsl(var(--cl-color-1));
     --ls-border-color: var(--bg-color-1);
-    --ls-secondary-border-color: hsl(var(--cl-secondary));
+    --ls-secondary-border-color: hsl(var(--cl-color-2));
     --ls-guideline-color: hsl(var(--cl-text-color), 0.1);
     --ls-guideline-references-color: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l), 0.3);
     --ls-menu-hover-color: var(--ls-secondary-background-color);
     --ls-primary-text-color: hsl(var(--cl-text-color));
     --ls-secondary-text-color: hsl(var(--cl-text-color), 0.75);
     --ls-title-text-color: var(--ls-primary-text-color);
-    --ls-link-text-color: hsl(var(--cl-primary));
-    --ls-link-text-hover-color: hsl(var(--cl-primary));
-    --ls-link-ref-text-color: hsl(var(--cl-primary));
+    --ls-link-text-color: hsl(var(--cl-color-1));
+    --ls-link-text-hover-color: hsl(var(--cl-color-1));
+    --ls-link-ref-text-color: hsl(var(--cl-color-1));
     --ls-link-ref-text-hover-color: var(--color-primary-light);
     --ls-tag-text-color: var(--ls-secondary-text-color);
-    --ls-tag-text-hover-color: hsl(var(--cl-primary));
+    --ls-tag-text-hover-color: hsl(var(--cl-color-1));
     --ls-slide-background-color: var(--ls-primary-background-color);
     --ls-block-bullet-border-color: hsl(var(--cl-block-bullet-border-color, var(--cl-text-color), 0.1));
-    --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
+    --ls-block-bullet-references-border-color: hsl(var(--cl-color-1), 0.1);
     --ls-block-bullet-color: hsl(var(--cl-block-bullet-color, var(--cl-text-color), 0.5));
     --ls-block-highlight-color: var(--color-level-3);
-    --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
+    --ls-selection-background-color: hsl(var(--cl-color-1), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
-    --ls-page-checkbox-border-color: hsl(var(--cl-primary));
-    --ls-page-blockquote-color: hsl(var(--cl-secondary));
-    --ls-page-blockquote-bg-color: hsl(var(--cl-secondary), 0.2);
+    --ls-page-checkbox-border-color: hsl(var(--cl-color-1));
+    --ls-page-blockquote-color: hsl(var(--cl-color-2));
+    --ls-page-blockquote-bg-color: hsl(var(--cl-color-2), 0.2);
     --ls-page-blockquote-border-color: var(--ls-border-color);
-    --ls-page-inline-code-color: hsl(var(--cl-primary));
-    --ls-page-inline-code-bg-color: hsl(var(--cl-primary), 0.1);
+    --ls-page-inline-code-color: hsl(var(--cl-color-1));
+    --ls-page-inline-code-bg-color: hsl(var(--cl-color-1), 0.1);
     --ls-scrollbar-foreground-color: hsl(var(--cl-background), 0.6);
     --ls-scrollbar-background-color: hsl(var(--cl-text-color), 0);
-    --ls-scrollbar-thumb-hover-color: hsl(var(--cl-primary));
+    --ls-scrollbar-thumb-hover-color: hsl(var(--cl-color-1));
     --ls-head-text-color: var(--ls-link-text-color);
-    --ls-cloze-text-color: hsl(var(--cl-primary));
-    --ls-icon-color: hsl(var(--cl-primary));
+    --ls-cloze-text-color: hsl(var(--cl-color-1));
+    --ls-icon-color: hsl(var(--cl-color-1));
     --ls-search-icon-color: var(--ls-link-text-color);
     --ls-a-chosen-bg: hsl(var(--cl-text-color), 0.1);
     --ls-right-sidebar-code-bg-color: var(--bg-color-3);
@@ -236,47 +268,47 @@ html[data-theme='light'] {
     --ls-tertiary-background-color: var(--bg-color-2);
     --ls-quaternary-background-color: var(--bg-color-3);
     --ls-table-tr-even-background-color: var(--color-level-3);
-    --ls-active-primary-color: hsl(var(--cl-primary));
-    --ls-active-secondary-color: hsl(var(--cl-secondary));
+    --ls-active-primary-color: hsl(var(--cl-color-1));
+    --ls-active-secondary-color: hsl(var(--cl-color-2));
     --ls-block-properties-background-color: var(--color-level-1);
     --ls-page-properties-background-color: var(--color-level-1);
-    --ls-block-ref-link-text-color: hsl(var(--cl-primary));
+    --ls-block-ref-link-text-color: hsl(var(--cl-color-1));
     --ls-search-background-color: var(--color-level-3);
     --ls-mark-bg-color: var(--color-accent);
-    --ls-mark-color: hsl(var(--cl-primary));
+    --ls-mark-color: hsl(var(--cl-color-1));
     --ls-border-color: var(--bg-color-1);
-    --ls-secondary-border-color: hsl(var(--cl-secondary));
+    --ls-secondary-border-color: hsl(var(--cl-color-2));
     --ls-guideline-color: hsl(var(--cl-text-color), 0.1);
     --ls-guideline-references-color: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l), 0.3);
     --ls-menu-hover-color: var(--ls-secondary-background-color);
     --ls-primary-text-color: hsl(var(--cl-text-color));
     --ls-secondary-text-color: hsl(var(--cl-text-color), 0.75);
     --ls-title-text-color: var(--ls-primary-text-color);
-    --ls-link-text-color: hsl(var(--cl-primary));
-    --ls-link-text-hover-color: hsl(var(--cl-primary));
-    --ls-link-ref-text-color: hsl(var(--cl-primary));
+    --ls-link-text-color: hsl(var(--cl-color-1));
+    --ls-link-text-hover-color: hsl(var(--cl-color-1));
+    --ls-link-ref-text-color: hsl(var(--cl-color-1));
     --ls-link-ref-text-hover-color: var(--color-primary-light);
     --ls-tag-text-color: var(--ls-secondary-text-color);
-    --ls-tag-text-hover-color: hsl(var(--cl-primary));
+    --ls-tag-text-hover-color: hsl(var(--cl-color-1));
     --ls-slide-background-color: var(--ls-primary-background-color);
     --ls-block-bullet-border-color: hsl(var(--cl-block-bullet-border-color, var(--cl-text-color), 0.1));
-    --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
+    --ls-block-bullet-references-border-color: hsl(var(--cl-color-1), 0.1);
     --ls-block-bullet-color: hsl(var(--cl-block-bullet-color, var(--cl-text-color), 0.5));
     --ls-block-highlight-color: var(--color-level-3);
-    --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
+    --ls-selection-background-color: hsl(var(--cl-color-1), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
-    --ls-page-checkbox-border-color: hsl(var(--cl-primary));
-    --ls-page-blockquote-color: hsl(var(--cl-secondary));
-    --ls-page-blockquote-bg-color: hsl(var(--cl-secondary), 0.2);
+    --ls-page-checkbox-border-color: hsl(var(--cl-color-1));
+    --ls-page-blockquote-color: hsl(var(--cl-color-2));
+    --ls-page-blockquote-bg-color: hsl(var(--cl-color-2), 0.2);
     --ls-page-blockquote-border-color: var(--ls-border-color);
-    --ls-page-inline-code-color: hsl(var(--cl-primary));
-    --ls-page-inline-code-bg-color: hsl(var(--cl-primary), 0.1);
+    --ls-page-inline-code-color: hsl(var(--cl-color-1));
+    --ls-page-inline-code-bg-color: hsl(var(--cl-color-1), 0.1);
     --ls-scrollbar-foreground-color: hsl(var(--cl-background), 0.6);
     --ls-scrollbar-background-color: hsl(var(--cl-text-color), 0);
-    --ls-scrollbar-thumb-hover-color: hsl(var(--cl-primary));
+    --ls-scrollbar-thumb-hover-color: hsl(var(--cl-color-1));
     --ls-head-text-color: var(--ls-link-text-color);
-    --ls-cloze-text-color: hsl(var(--cl-primary));
-    --ls-icon-color: hsl(var(--cl-primary));
+    --ls-cloze-text-color: hsl(var(--cl-color-1));
+    --ls-icon-color: hsl(var(--cl-color-1));
     --ls-search-icon-color: var(--ls-link-text-color);
     --ls-a-chosen-bg: hsl(var(--cl-text-color), 0.1);
     --ls-right-sidebar-code-bg-color: var(--bg-color-3);
@@ -310,12 +342,12 @@ Base Settings
 
 /* Selected text */
 ::selection {
-    color: hsl(var(--cl-primary));
+    color: hsl(var(--cl-color-1));
 }
 
 .ls-block.selected {
-    background-color: hsl(var(--cl-selected-background-color, var(--cl-primary), 0.1));
-    color: hsl(var(--cl-selected-color, var(--cl-primary), 1));
+    background-color: hsl(var(--cl-selected-background-color, var(--cl-color-1), 0.1));
+    color: hsl(var(--cl-selected-color, var(--cl-color-1), 1));
 }
 
 /* Setting up the container view */
@@ -344,7 +376,7 @@ Base Settings
     background-color: var(--bg-color-1) !important;
 }
 .left-sidebar-inner .create #create-button:hover {
-    background-color: hsl(var(--cl-primary)) !important;
+    background-color: hsl(var(--cl-color-1)) !important;
 }
 .left-sidebar-inner .create #create-button:hover .ui__icon.ti.ti-plus {
     color: var(--bg-color-1);
@@ -402,7 +434,7 @@ Bullet Containers
 }
 /* Adjusting block guidelines */
 .block-children-left-border:hover {
-    background-color: hsl(var(--cl-primary), 1);
+    background-color: hsl(var(--cl-color-1), 1);
 }
 .block-children-container {
     margin-left: 29.5px;
@@ -418,133 +450,14 @@ Typography Settings
 }
 
 
-/* === GALLERY VIEW === */
-/*===========================================================*/
-/* Gallery - flexrow wrap v20220413------------------------ */
-/* - #.v-gallery : create image galleries, default 200x200px */ 
-/* options:                                                  */
-/*     width: -w100 ; -w200 ; -w300 ; -w400 ; -fit           */
-/*     heighht: -h300; -h400 ; default height : 200px        */
-/* eg use #.v-gallery-fit-h300 to fit image widthx300px      */
-
-div[data-refs-self*="gallery"]>.block-children-container.flex {
-    width: 100%;
-}
-[data-refs-self*="gallery"]>.block-children-container.flex .block-content .asset-container {
-    margin-top: 0rem;
-}
-div[data-refs-self*="gallery"]>.block-children-container.flex>.block-children.w-full {
-    display: inline-flex;
-    position: relative;
-    flex-flow: row wrap;
-}
-
-div[data-refs-self*="gallery"]>.block-children-container.flex>.block-children.w-full>div.ls-block {
-    padding: 0;
-    margin: 5px -15px;
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-}
-
-div[data-refs-self*="gallery"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    object-fit: cover !important;
-    height: 200px !important;
-    width: 200px !important;
-}
-/* #gallery-col[2-7] : force number of columns - better for pics with same width */   
-div[data-refs-self*="-col"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-col"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    object-fit: cover ;
-    width: auto !important;
-    height: auto !important;
-    }
-div[data-refs-self*="-col2"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-col2"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    flex-basis: 50%;
-    }
-div[data-refs-self*="-col3"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-col3"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    flex-basis: 33%;
-    }
-div[data-refs-self*="-col4"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-col4"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    flex-basis: 25%;
-}
-div[data-refs-self*="-col5"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-col5"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    flex-basis: 20%;
-}
-div[data-refs-self*="-col6"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-col6"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    flex-basis: 18%;
-}
-div[data-refs-self*="-col7"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-col7"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    flex-basis: 15.5%;
-}
-/* #gallery-w[100-300] : force width of the columns */
-div[data-refs-self*="-w100"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-w100"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    width: 100px !important;
-}
-div[data-refs-self*="-w150"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-w150"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    width: 150px !important;
-}
-div[data-refs-self*="-w200"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-w200"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    width: 200px !important;
-}
-div[data-refs-self*="-w250"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-w250"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    width: 250px !important;
-}
-div[data-refs-self*="-w300"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-w300"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    width: 300px !important;
-}
-div[data-refs-self*="-w400"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-w400"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    width: 400px !important;
-}
-div[data-refs-self*="-fit"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-fit"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    min-width: 200px !important;
-    width: max-content !important; 
-    object-fit: contain;
-}
-
-div[data-refs-self*="-h300"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-h300"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    height: 300px !important;
-}
-div[data-refs-self*="-h400"]>.block-children-container.flex>.block-children.w-full>div.ls-block,
-div[data-refs-self*="-h400"]>.block-children-container.flex>.block-children.w-full>div.ls-block img {
-    height: 400px !important;
-}
-/* remove left border and bullets for gallery */
-.references-blocks [data-refs-self*="gallery"] .block-children-left-border,
-.references-blocks [data-refs-self*="gallery"] .block-children-container.flex .bullet-container {
-    display: none;
-}
-
-.references-blocks [data-refs-self*="gallery"]>.block-children-container.flex .block-children-container.flex {
-    margin: 0px !important;
-    line-height: 0.2rem;
-    padding-bottom: 0;
-}
-
-/* Gallery End */
-
 .ls-block .custom-query.mt-4 {
     margin-top: var(--mt-4, 2em);
 }
 
 /*mark.p-0.rounded-none {
-    color: hsl(var(--cl-primary));
+    color: hsl(var(--cl-color-1));
     text-decoration: underline;
-    text-decoration-color: hsl(var(--cl-primary));
+    text-decoration-color: hsl(var(--cl-color-1));
 }*/
 .tippy-tooltip-content {
     border-radius: 4px;
@@ -573,7 +486,7 @@ div[data-refs-self*='"card"'] {
 }
 
 .my-2.color-level.px-2 .foldable-title:hover {
-    color: hsl(var(--cl-primary));
+    color: hsl(var(--cl-color-1));
 }
 /* ==========================================================================
 Breadcrumbs
@@ -603,10 +516,10 @@ Breadcrumbs
     left: 4px;
 }
 .my-2.color-level.px-2 .foldable-title:hover:before {
-    color: hsl(var(--cl-primary));
+    color: hsl(var(--cl-color-1));
 }
 .breadcrumb span.page-reference {
-    color: hsl(var(--cl-primary));
+    color: hsl(var(--cl-color-1));
 }
 
 .breadcrumb span.page-reference .bracket {
@@ -633,7 +546,7 @@ Code Mirror Settings
 .extensions__code-lang {
     margin: 2px;
     background-color: transparent;
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-color-2));
 }
 
 .cp__fenced-code-block {
@@ -670,21 +583,21 @@ Code Mirror Settings
 }
 
 .extensions__code-lang {
-    color: hsl(var(--cl-primary));
+    color: hsl(var(--cl-color-1));
 }
 
 /* === Coloring CodeMirror Keywords === */
 .cm-s-solarized .cm-keyword {
-    color: hsl(var(--cl-primary));
+    color: hsl(var(--cl-color-1));
 }
 .cm-s-solarized .cm-operator {
-    color: hsl(var(--cl-primary));
+    color: hsl(var(--cl-color-1));
 }
 .cm-s-solarized .cm-property {
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-color-2));
 }
 .cm-s-solarized .cm-builtin {
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-color-2));
 }
 .cm-s-solarized .cm-number {
     color: var(--color-accent);
@@ -703,7 +616,7 @@ Code Mirror Settings
 }
 .cm-s-solarized .cm-def,
 .cm-s-solarized .cm-attribute {
-    color: hsl(var(--cl-primary));
+    color: hsl(var(--cl-color-1));
 }
 .white-theme .CodeMirror-line>span {
     color: var(--bg-color);

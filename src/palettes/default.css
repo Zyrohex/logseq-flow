@@ -7,15 +7,15 @@ html[data-theme='dark'] {
     --background-color-l: 11%;
     --cl-background: 192,94%,21%;
     --cl-text-color: 183,11%,68%;
-    --cl-primary: 180,33%,54%;
-    --cl-secondary: 175,59%,40%;
-    --cl-accent: 175,59%,40%;
+    --cl-color-1: 180,33%,54%;
+    --cl-color-2: 175,59%,40%;
+    --cl-color-3: 175,59%,40%;
 }
 /***
-    --cl-primary: 200,17%,48%;
+    --cl-color-1: 200,17%,48%;
     180,26%,64%
-    --cl-secondary: 20,19%,48%;
-    --cl-accent: 0,87%,74%;
+    --cl-color-2: 20,19%,48%;
+    --cl-color-3: 0,87%,74%;
 ***/
 .white-theme,
 html[data-theme='light'] {
@@ -24,7 +24,7 @@ html[data-theme='light'] {
     --background-color-l: 100%;
     --cl-background: 0,0%,90%;
     --cl-text-color: 38,9%,24%;
-    --cl-secondary: 203,48%,48%;
-    --cl-primary: 203,82%,35%;
-    --cl-accent: 203,48%,48%;
+    --cl-color-2: 203,48%,48%;
+    --cl-color-1: 203,82%,35%;
+    --cl-color-3: 203,48%,48%;
 }

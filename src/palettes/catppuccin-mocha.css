@@ -7,7 +7,7 @@ html[data-theme='dark'] {
     --background-color-l: 15%;
     --cl-background: 240,21%,25%;
     --cl-text-color: 226, 64%, 88%;
-    --cl-primary: 23, 92%, 75%;
-    --cl-secondary: 350, 65%, 77%;
-    --cl-accent: 316, 72%, 86%;
+    --cl-color-1: 23, 92%, 75%;
+    --cl-color-2: 350, 65%, 77%;
+    --cl-color-3: 316, 72%, 86%;
 }

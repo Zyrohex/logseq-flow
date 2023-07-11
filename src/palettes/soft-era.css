@@ -9,8 +9,8 @@ html[data-theme='light'] {
     --background-color-l: 97%;
     --cl-background: 0,25%,87%;
     --cl-text-color: 353,20%,66%;
-    --cl-primary: 288,40%,73%;
-    --cl-secondary: 248,44%,78%;
-    --cl-accent: 209,63%,70%;
+    --cl-color-1: 288,40%,73%;
+    --cl-color-2: 248,44%,78%;
+    --cl-color-3: 209,63%,70%;
     --cl-gray: rgb(217,200,200);
 }

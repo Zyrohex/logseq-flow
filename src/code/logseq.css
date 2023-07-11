@@ -14,8 +14,8 @@
 **    Block References    **
 ******************************/
 :not(.whiteboard-shape) .block-ref {
-    border-bottom: 1px solid hsl(var(--cl-primary), 0.5);
-    background-color: hsl(var(--cl-secondary), 0);
+    border-bottom: 1px solid hsl(var(--cl-color-1), 0.5);
+    background-color: hsl(var(--cl-color-2), 0);
     border-radius: 0px;
     transition: 0.2s;
     padding: 0px 0px;
@@ -35,7 +35,7 @@
 }
 /* Block reference broken links */
 a.warning, div.warning:not(.admonitionblock), p.warning, span.warning {
-    background-color: hsl(var(--cl-accent));
+    background-color: hsl(var(--cl-color-3));
     color: var(--bg-color);
 }
 span.warning:before {

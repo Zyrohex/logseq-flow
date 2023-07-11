@@ -7,9 +7,9 @@ html[data-theme='dark'] {
     --background-color-l: 13%;
     --cl-background: 0,0%,23%;
     --cl-text-color: 192,15%,94%;
-    --cl-primary: 204,70%,53%;
-    --cl-secondary: 283,39%,63%;
-    --cl-accent: 168,76%,42%;
+    --cl-color-1: 204,70%,53%;
+    --cl-color-2: 283,39%,63%;
+    --cl-color-3: 168,76%,42%;
 }
 
 .white-theme,
@@ -19,7 +19,7 @@ html[data-theme='light'] {
     --background-color-l: 94%;
     --cl-background: 192,15%,84%;
     --cl-text-color: 210,29%,24%;
-    --cl-accent: 145, 63%, 42%;
-    --cl-primary: 204, 64%, 44%;
-    --cl-secondary: 282, 44%, 47%;
+    --cl-color-3: 145, 63%, 42%;
+    --cl-color-1: 204, 64%, 44%;
+    --cl-color-2: 282, 44%, 47%;
 }

@@ -9,11 +9,11 @@
 
 /* Example BLocks */
 .pre-wrap-white-space {
-    background-color: hsl(var(--cl-secondary), 0.05);
+    background-color: hsl(var(--cl-color-2), 0.05);
     color: var(--ls-primary-text-color);
     display: flex;
     padding-left: 10px;
-    border-left: 2px solid hsl(var(--cl-secondary));
+    border-left: 2px solid hsl(var(--cl-color-2));
     padding-top: 15px;
     padding-bottom: 15px;
     overflow: unset;
@@ -23,7 +23,7 @@
 .pre-wrap-white-space:before {
     content: "\ef40";
     font-family: 'tabler-icons';
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-color-2));
     position: relative;
     left: 1px;
     z-index: 3;
@@ -35,7 +35,7 @@
 /* Inline Code */
 :not(pre):not(mark)>code {
     padding: 2px 6px !important;
-    color: hsl(var(--cl-primary), 1);
+    color: hsl(var(--cl-color-1), 1);
     border-radius: 5px;
     border: 0px solid hsl(var(--cl-text-color), 0.15);
 }
@@ -50,7 +50,7 @@
 }
 /* Highlights */
 mark {
-    background-color: hsl(var(--cl-accent), 0.1);
+    background-color: hsl(var(--cl-color-3), 0.1);
     padding: 1px 0px !important;
     border-radius: 0px;
     color: hsl(var(--cl-text-color));
@@ -64,7 +64,7 @@ mark .external-link {
 
 mark>code {
     background-color: transparent !important;
-    color: hsl(var(--cl-primary), 1) !important;
+    color: hsl(var(--cl-color-1), 1) !important;
     line-height: inherit !important;
     padding: 0px 2px;
 }
@@ -76,11 +76,11 @@ mark>code:after {
 
 /* Blockquotes */
 blockquote {
-    background-color: hsl(var(--cl-secondary), 0.05);
+    background-color: hsl(var(--cl-color-2), 0.05);
     color: var(--ls-primary-text-color);
     display: flex;
     padding-left: 0px;
-    border-left: 2px solid hsl(var(--cl-secondary));
+    border-left: 2px solid hsl(var(--cl-color-2));
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -89,7 +89,7 @@ blockquote:before {
     content: "\ee09";
     font-family: 'tabler-icons';
     align-self: center;
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-color-2));
     position: relative;
     left: -9px;
     z-index: 3;
@@ -234,7 +234,7 @@ a.priority[href="#/page/C" i]::before {
 
 /*  === Checkboxes ===  */
 .form-checkbox {
-    background-color: hsl(var(--cl-primary), 0.4);
+    background-color: hsl(var(--cl-color-1), 0.4);
     border: 0px solid hsl(var(--cl-text-color), 0.2);
     border-style: solid;
     border-radius: 1px;
@@ -246,7 +246,7 @@ a.priority[href="#/page/C" i]::before {
 }
 
 .form-checkbox:checked {
-    background-color: hsl(var(--cl-accent)) !important;
+    background-color: hsl(var(--cl-color-3)) !important;
     opacity: 1;
 }
 
@@ -266,8 +266,8 @@ a.priority[href="#/page/C" i]::before {
 
 .block-marker.DOING,
 .block-marker.NOW {
-    background-color: hsl(var(--cl-secondary), 0.2);
-    color: hsl(var(--cl-secondary), 1);
+    background-color: hsl(var(--cl-color-2), 0.2);
+    color: hsl(var(--cl-color-2), 1);
 }
 
 .block-marker:hover {
@@ -495,12 +495,12 @@ svg.h-4.w-4 {
     background-color: transparent;
     padding: 0px;
     border: 0px solid;
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-color-2));
     font-weight: 400;
 }
 
 .page-properties a.tag:hover {
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-color-2));
 }
 
 .page-properties a.tag .awLinks-page-icon {
@@ -518,14 +518,14 @@ svg.h-4.w-4 {
 /*.block-properties:not(.page-properties) a.tag {
     background-color: transparent;
     padding: 0px;
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-color-2));
     border: 0px solid;
     font-weight: 400;
     font-size: 13px;
 }
 
 .block-properties:not(.page-properties) a.tag:hover {
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-color-2));
 }
 
 .block-properties:not(.page-properties) .bracket {
@@ -542,7 +542,7 @@ svg.h-4.w-4 {
 /* Tags */
 a.tag {
     background-color: transparent;
-    color: hsl(var(--cl-secondary), 1);
+    color: hsl(var(--cl-color-2), 1);
     padding: 0px 1px;
     border-radius: 3px;
     transition: 0.2s;
@@ -552,7 +552,7 @@ a.tag {
 
 a.tag:hover {
     background-color: transparent;
-    color: hsl(var(--cl-secondary), 1);
+    color: hsl(var(--cl-color-2), 1);
     opacity: 1;
 }
 
@@ -570,7 +570,7 @@ body {
     color: var(--ls-primary-text-color);
     padding: 0px;
     border: 0px;
-    border-bottom: 1px solid hsl(var(--cl-primary));
+    border-bottom: 1px solid hsl(var(--cl-color-1));
 }
 
 /* Block Highlighter */
@@ -771,7 +771,7 @@ span.inline.px-1.with-bg-color[style*="pink"] {
 
 /* Adjust font size on the page-ref titles in the references block section */
 .flex-1.flex-row.foldable-title .page-ref {
-    color: hsl(var(--cl-primary), 1);
+    color: hsl(var(--cl-color-1), 1);
 }
 
 /* Give the linked & unlinked titles custom icons */
@@ -980,15 +980,15 @@ span.inline.px-1.with-bg-color[style*="pink"] {
 */
 
 .ls-block .page-ref {
-    color: hsl(var(--cl-primary));
+    color: hsl(var(--cl-color-1));
     border-radius: 0px;
-    border-bottom: 0px solid hsl(var(--cl-primary));
+    border-bottom: 0px solid hsl(var(--cl-color-1));
 }
 
 /* Smart blocks */
 .templater-btn {
     border: 0px solid !important;
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-color-2));
     font-weight: 600;
     padding: 0px 2px !important;
 }
@@ -1198,7 +1198,7 @@ div#index .color-level>.flex.flex-col>.initial>div>.blocks-container>.lazy-visib
     font-weight: 400;
 }
 /*.type-block .block-children-left-border {
-    background-color: hsl(var(--cl-primary), 0.5);
+    background-color: hsl(var(--cl-color-1), 0.5);
     margin: 0px 15px;
 }
 .type-block .block-children {
