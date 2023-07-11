@@ -118,10 +118,10 @@
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\ea45" !important;
-  color: hsl(var(--cl-primary), 0.6);
+  color: hsl(var(--cl-primary), 0.8);
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   content: "\ea45" !important;
   background-color: hsl(var(--cl-primary), 0.1);
-  color: hsl(var(--cl-primary), 0.6);
+  color: hsl(var(--cl-primary), 0.8);
 }
