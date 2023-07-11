@@ -1,14 +1,15 @@
 .concept-block>.block-main-container span.inline {
     border-radius: 3px;
     padding: 2px 3px;
-    background-color: hsl(var(--cl-color-1), 0.07);
+    background-color: hsl(var(--cl-text-color), 0.07);
+    color: var(--cl-text-color-100);
+}
+.concept-block:not([data-refs-self="[]"])>.block-main-container span.inline {
+    border-radius: 3px;
+    padding: 2px 3px;
+    background-color: hsl(var(--cl-color-1), 0.1);
     color: hsl(var(--cl-color-1));
 }
-.concept-block>.block-main-container span.inline .page-ref {
-    border-bottom: 1px solid;
-    color: hsl(var(--cl-color-1));
-}
-
 .concept-block>.block-main-container>.block-control-wrap {
     align-self: center;
 }
