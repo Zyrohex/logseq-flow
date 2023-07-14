@@ -546,7 +546,6 @@ Code Mirror Settings
 .extensions__code-lang {
     margin: 2px;
     background-color: transparent;
-    color: hsl(var(--cl-color-2));
 }
 
 .cp__fenced-code-block {
@@ -557,14 +556,14 @@ Code Mirror Settings
     text-shadow: none;
     color: var(--ls-primary-text-color);
     border: 0px solid var(--bg-color-2);
-    border-radius: 3px;
+    border-radius: 5px;
     padding-right: 10px;
 }
 .white-theme .cm-s-solarized {
-    background-color: hsl(215, 21%, 11%);
+    background-color: var(--bg-color-1);
 }
 .white-theme .color-level .cm-s-solarized {
-    background-color: hsl(215, 21%, 11%);
+    background-color: var(--bg-color);
 }
 .dark-theme .cm-s-solarized {
     background-color: var(--bg-dark);
@@ -578,48 +577,8 @@ Code Mirror Settings
 }
 .cm-s-solarized.cm-s-dark .CodeMirror-linenumber, .cm-s-solarized.cm-s-light .CodeMirror-linenumber {
     text-shadow: none;
-    color: var(--bg-color);
+    color: transparent;
     text-align: -webkit-center;
-}
-
-.extensions__code-lang {
-    color: hsl(var(--cl-color-1));
-}
-
-/* === Coloring CodeMirror Keywords === */
-.cm-s-solarized .cm-keyword {
-    color: hsl(var(--cl-color-1));
-}
-.cm-s-solarized .cm-operator {
-    color: hsl(var(--cl-color-1));
-}
-.cm-s-solarized .cm-property {
-    color: hsl(var(--cl-color-2));
-}
-.cm-s-solarized .cm-builtin {
-    color: hsl(var(--cl-color-2));
-}
-.cm-s-solarized .cm-number {
-    color: var(--color-accent);
-}
-.cm-s-solarized .cm-string {
-    color: var(--color-accent);
-}
-.cm-s-solarized .cm-comment {
-    color: slategray;
-}
-.white-theme .cm-s-solarized .cm-variable {
-    color: var(--bg-color);
-}
-.dark-theme .cm-s-solarized .cm-variable {
-    color: var(--ls-primary-text-color);
-}
-.cm-s-solarized .cm-def,
-.cm-s-solarized .cm-attribute {
-    color: hsl(var(--cl-color-1));
-}
-.white-theme .CodeMirror-line>span {
-    color: var(--bg-color);
 }
 /* ==========================================================================
 End of Code Mirror
