@@ -751,7 +751,8 @@ span.inline.px-1.with-bg-color[style*="pink"] {
 }
 
 .color-level>.flex.flex-col>.initial>div>.blocks-container {
-    background-color: var(--bg-color-1);
+    background-color: transparent;
+    border: 2px dashed var(--bg-color-3);
     border-radius: 0px;
     padding: 2px 6px;
     margin: 8px 0px;
