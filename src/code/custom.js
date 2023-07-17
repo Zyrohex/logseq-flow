@@ -70,8 +70,9 @@ abbreviateNamespace(
 // Process all elements
 function processAllElements() {
   // Process elements that are present at the time of page load
-  processBlockElements(document.querySelectorAll('.ls-block .inline'));
+  processBlockElements(document.querySelectorAll('.ls-block'));
   processBreadcrumbElements(document.querySelectorAll('.breadcrumb .inline-wrap'));
+  processTaggedElements(document.querySelectorAll('.ls-block > .block-main-container .tag'));
 }
 
 // Function to process existing elements
@@ -83,42 +84,45 @@ function processBlockElements(blockPropertiesElements) {
 
     while (textNode = walker.nextNode()) {
       let textContent = textNode.textContent;
-      
-      // Determine the symbol, class to remove/add, and new element
-      let symbol, classToManipulate, newElement;
-      if (textContent.includes(':-')) {
-        symbol = ':-';
-        classToManipulate = 'concept-block';
-        newElement = null; // no specific element for ":-"
-      }
+
+      // Check if the text starts with a question
+      let isQuestion = textContent.trim().match(/^[A-Za-z0-9\s'()\-&"]+[\?]/);
 
       // Find the ancestor element
       let ancestorElement = blockElement.closest('.ls-block');
 
-      if (ancestorElement) {
-        // If the textContent includes one of the symbols ':-', ':-', '!-', add the class
-        // otherwise, remove the class
-        if (!textContent.includes(':-') && !textContent.includes(';-') && !textContent.includes('!-')) {
-          ancestorElement.classList.remove(classToManipulate);
-        } else {
-          ancestorElement.classList.add(classToManipulate);
-        }
+      // Get '.block-main-container .inline' element within the ancestor '.ls-block'
+      let inlineElement = ancestorElement.querySelector('.block-main-container .block-content-inner .inline');
+
+      // Check if the inlineElement exists and contains only ".page-reference" elements
+      let pageRefOnly = false;
+      if (inlineElement) {
+        let totalChildren = Array.from(inlineElement.childNodes).filter(node => node.nodeType === Node.ELEMENT_NODE || (node.nodeType === Node.TEXT_NODE && /\S/.test(node.textContent))).length;
+        let pageRefChildren = inlineElement.querySelectorAll('.page-reference').length;
+        pageRefOnly = totalChildren === pageRefChildren;
       }
 
-      // Split the text content by symbol and trim extra spaces
-      let parts = textContent.split(symbol);
-
-      // If text was successfully split into two parts
-      if(parts.length === 2) {
-        textNode.textContent = ''; // clear the current text content
-        let followingText = parts[1];
-        if (newElement) {
-          textNode.parentNode.insertBefore(document.createElement(newElement).appendChild(document.createTextNode(parts[0])), textNode.nextSibling);
-          textNode.parentNode.insertBefore(document.createTextNode(followingText), textNode.nextSibling);
-        } else {
-          textNode.parentNode.insertBefore(document.createTextNode(parts[0] + followingText), textNode.nextSibling);
-        }
+      // If the textContent starts with a question, add the class
+      if (isQuestion) {
+        ancestorElement.classList.add('descriptor-block');
       }
+
+      // If the inlineElement contains only page-reference elements, add the 'concept-block' class
+      if (pageRefOnly) {
+        ancestorElement.classList.add('concept-block');
+      } else {
+        ancestorElement.classList.remove('concept-block');
+      }
+    }
+  }
+}
+
+function processTaggedElements(blockElements) {
+  let classToAdd = 'tagged-block'
+  if (blockElements) {
+    for (const blockElement of blockElements) {
+      let ancestorElement = blockElement.closest('.ls-block');
+      ancestorElement.classList.add(classToAdd);
     }
   }
 }
@@ -153,7 +157,7 @@ function processDescriptorBlocks() {
 
 function indexBlocks3() {
   processAllElements();
-  processDescriptorBlocks();
+  /*processDescriptorBlocks();*/
 
   const observer = new MutationObserver((mutationList) => {
     for (const mutation of mutationList) {
@@ -162,11 +166,12 @@ function indexBlocks3() {
           if (!node.querySelectorAll) continue;
           processBlockElements(node.querySelectorAll('.ls-block .inline'));
           processBreadcrumbElements(node.querySelectorAll('.breadcrumb .inline-wrap'));
-          processDescriptorBlocks();
+          processTaggedElements(document.querySelectorAll('.ls-block > .block-main-container .tag'));
+          /*processDescriptorBlocks();*/
         }
       } else if (mutation.type === 'characterData') {
         processAllElements();
-        processDescriptorBlocks();
+        /*processDescriptorBlocks();*/
       }
     }
   });
