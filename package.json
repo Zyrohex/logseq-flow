@@ -18,6 +18,12 @@
                 "mode": "light"
             },
             {
+                "name": "Jellyfish",
+                "url": "./src/palettes/jellyfish.css",
+                "description": "Jellyfish",
+                "mode": "dark"
+            },
+            {
                 "name": "Momo",
                 "url": "./src/palettes/momo.css",
                 "description": "Momo",

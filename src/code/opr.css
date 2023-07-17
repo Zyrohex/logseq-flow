@@ -1,4 +1,18 @@
-
+/*.concept-block>.block-main-container span.inline {
+    border-radius: 3px;
+    padding: 2px 3px;
+    background-color: var(--cl-color-1-20);
+    color: var(--cl-text-color-100);
+}
+.concept-block:not([data-refs-self="[]"])>.block-main-container span.inline {
+    border-radius: 3px;
+    padding: 2px 3px;
+    background-color: var(--cl-color-1-20);
+    color: hsl(var(--cl-color-1-100));
+}
+.white-theme .concept-block>.block-main-container :not(pre):not(mark)>code {
+    background-color: hsl(var(--cl-text-color), 0.05);
+}*/
 .concept-block>.block-main-container>.block-control-wrap {
     align-self: center;
 }

@@ -3,13 +3,13 @@
 .dark-theme,
 html[data-theme='dark'] {
     --background-color-h: 210;
-    --background-color-s: 16%;
-    --background-color-l: 17%;
-    --cl-background: 210, 16%, 27%;
+    --background-color-s: 18%;
+    --background-color-l: 7%;
+    --cl-background: 210, 18%, 17%;
     --cl-text-color: 213, 22%, 92%;
     --cl-color-1: 186, 47%, 58%;
-    --cl-color-2: 186, 63%, 36%;
-    --cl-color-3: 140, 39%, 77%;
+    --cl-color-2: 140, 39%, 77%;
+    --cl-color-3: 186, 63%, 36%;
 }
 
 .white-theme,
@@ -22,42 +22,4 @@ html[data-theme='light'] {
     --cl-color-1: 186, 63%, 36%;
     --cl-color-2: 186, 47%, 58%;
     --cl-color-3: 140, 33%, 42%;
-}
-
-:root {
-
-}
-
-.dark-theme,
-html[data-theme='dark'] {
-    --ls-tag-color: ;
-    --ls-tag-hover-color: ;
-    --ls-ref-color: ;
-    --ls-ref-hover-color: ;
-    --ls-border-size: ;
-    --ls-border-style: ;
-    --ls-box-shadow: ;
-    --ls-link-color: ;
-    --ls-link-hover-color: ;
-    --ls-guideline-color: ;
-    --ls-bullet-border-color: ;
-    --ls-text-color: ;
-    --ls-warning-text-color: ;
-}
-
-.dark-theme,
-html[data-theme='white'] {
-    --ls-tag-color: ;
-    --ls-tag-hover-color: ;
-    --ls-ref-color: ;
-    --ls-ref-hover-color: ;
-    --ls-border-size: ;
-    --ls-border-style: ;
-    --ls-box-shadow: ;
-    --ls-link-color: ;
-    --ls-link-hover-color: ;
-    --ls-guideline-color: ;
-    --ls-bullet-border-color: ;
-    --ls-text-color: ;
-    --ls-warning-text-color: ;
 }

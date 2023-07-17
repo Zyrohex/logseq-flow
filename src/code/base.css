@@ -336,6 +336,23 @@ html[data-theme='light'] {
     --ls-header-button-background: hsl(var(--cl-text-color), 1);
 }
 
+/* Main Interface */
+.cp__sidebar-main-layout, #app-container, .left-sidebar-inner, .cp__right-sidebar, .cp__right-sidebar-topbar, .color-level .color-level {
+    background-color: transparent;
+}
+#app-container, div#right-sidebar-container {
+    background-color: var(--bg-color);
+}
+.color-level>.flex.flex-col>.initial>div>.blocks-container {
+    background-color: var(--bg-color-1);
+    border-radius: 0px;
+    padding: 2px 6px;
+    margin: 8px 0px;
+    border-radius: .25rem;
+}
+.color-level .color-level>.flex.flex-col>.initial>div>.blocks-container {
+    background-color: var(--bg-color-2);
+}
 /* ==========================================================================
 Base Settings
    ========================================================================== */
@@ -372,9 +389,6 @@ Base Settings
 .left-sidebar-inner .create {
     background-image: none !important;
 }
-.left-sidebar-inner .create #create-button {
-    background-color: var(--bg-color-1) !important;
-}
 .left-sidebar-inner .create #create-button:hover {
     background-color: hsl(var(--cl-color-1)) !important;
 }
@@ -387,7 +401,6 @@ Base Settings
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--bg-color);
     z-index: 999;
     user-select: none;
     -webkit-app-region: drag;
