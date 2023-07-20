@@ -72,7 +72,22 @@ function processAllElements() {
   // Process elements that are present at the time of page load
   processBlockElements(document.querySelectorAll('.ls-block'));
   processBreadcrumbElements(document.querySelectorAll('.breadcrumb .inline-wrap'));
-  processTaggedElements(document.querySelectorAll('.ls-block > .block-main-container .tag'));
+}
+
+// Capture each ref panel to iterate through
+function ProcessRefPanels(TagRefPanels) {
+  // Iterate through the list of items
+  console.log("Doing Shit")
+  for (const referenceElement of TagRefPanels) {
+    // check if only 1 element exist for tag
+    let tagRefElements = referenceElement.querySelectorAll(".blocks-container.flex-1>.lazy-visibility .page-property-key");
+    let blockElements = referenceElement.querySelectorAll(".blocks-container.flex-1>.lazy-visibility");
+    console.log(tagRefElements.length, blockElements.length);
+    if (tagRefElements.length == blockElements.length) {
+      // Hide the referenceElement
+      referenceElement.style.display = "none";
+    }
+  }
 }
 
 // Function to process existing elements
@@ -157,7 +172,6 @@ function processDescriptorBlocks() {
 
 function indexBlocks3() {
   processAllElements();
-  /*processDescriptorBlocks();*/
 
   const observer = new MutationObserver((mutationList) => {
     for (const mutation of mutationList) {
@@ -167,7 +181,6 @@ function indexBlocks3() {
           processBlockElements(node.querySelectorAll('.ls-block .inline'));
           processBreadcrumbElements(node.querySelectorAll('.breadcrumb .inline-wrap'));
           processTaggedElements(document.querySelectorAll('.ls-block > .block-main-container .tag'));
-          /*processDescriptorBlocks();*/
         }
       } else if (mutation.type === 'characterData') {
         processAllElements();

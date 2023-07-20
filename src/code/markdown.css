@@ -686,7 +686,7 @@ span.inline.px-1.with-bg-color[style*="pink"] {
 }
 
 /* Bujo polka dots */
-div#main-content-container {
+/*div#main-content-container {
     background-image: radial-gradient(var(--bg-color-1) 5%, var(--bg-color) 5%);
     background-position: 0 0;
     background-position-x: 5px;

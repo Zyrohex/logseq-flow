@@ -504,7 +504,7 @@ div[data-refs-self*='"card"'] {
 /* ==========================================================================
 Breadcrumbs
    ========================================================================== */
-.references-blocks .breadcrumb {
+/*.references-blocks .breadcrumb {
     margin-left: 13px;
     margin-bottom: 1px;
 }
@@ -537,20 +537,7 @@ Breadcrumbs
 
 .breadcrumb span.page-reference .bracket {
     display: none;
-}
-.breadcrumb.block-parents:before {
-    background-color: hsl(var(--cl-text-color), 0.2);
-    content: "";
-    display: inline-block;
-    height: 1px;
-    position: relative;
-    vertical-align: middle;
-    width: 10px;
-}
-
-.breadcrumb.block-parents:before {
-    margin-right: 3px;
-}
+}*/
 
 /* ==========================================================================
 Code Mirror Settings
@@ -592,6 +579,9 @@ Code Mirror Settings
     text-shadow: none;
     color: transparent;
     text-align: -webkit-center;
+}
+.cm-s-solarized.CodeMirror {
+    box-shadow: none;
 }
 /* ==========================================================================
 End of Code Mirror
