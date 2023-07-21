@@ -16,3 +16,13 @@
 .concept-block>.block-main-container>.block-control-wrap {
     align-self: center;
 }
+/*.color-level .concept-block>.block-main-container>.block-content-wrapper {
+    background-color: var(--bg-color-2);
+    border-radius: 3px;
+    padding: 3px 12px;
+}
+.concept-block>.block-main-container>.block-content-wrapper {
+    background-color: var(--bg-color-1);
+    border-radius: 3px;
+    padding: 3px 12px;
+}

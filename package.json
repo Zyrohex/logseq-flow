@@ -264,6 +264,12 @@
                 "mode": "light"
             },
             {
+                "name": "Inkstained",
+                "url": "./src/palettes/inkstained.css",
+                "description": "Inkstained",
+                "mode": "dark"
+            },
+            {
                 "name": "Kanagawa",
                 "url": "./src/palettes/kanagawa.css",
                 "description": "Kanagawa",
