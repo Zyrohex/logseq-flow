@@ -353,6 +353,20 @@ html[data-theme='light'] {
 .color-level .color-level>.flex.flex-col>.initial>div>.blocks-container {
     background-color: var(--bg-color-2);
 }
+/*#main-content-container {
+    margin-top: var(--ct-header-height) !important;
+    border: 1px solid var(--ls-border-color);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    margin: 24px;
+    border-radius: 8px;
+    background: var(--bg-color);
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 800px;
+    padding-top: 18px;
+}
 /* ==========================================================================
 Base Settings
    ========================================================================== */
@@ -504,6 +518,9 @@ div[data-refs-self*='"card"'] {
 /* ==========================================================================
 Breadcrumbs
    ========================================================================== */
+.references-blocks .breadcrumb {
+    margin-left: 0px;
+}
 /*.references-blocks .breadcrumb {
     margin-left: 13px;
     margin-bottom: 1px;

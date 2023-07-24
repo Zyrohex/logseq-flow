@@ -617,11 +617,13 @@ span.inline.px-1.with-bg-color[style*="pink"] {
 /* Adjust font size on the page-ref titles in the references block section */
 .flex-1.flex-row.foldable-title .page-ref {
     color: hsl(var(--cl-color-1), 1);
+    font-weight: 600;
 }
 
 /* Give the linked & unlinked titles custom icons */
 .page-linked h2.font-medium {
     color: hsl(var(--cl-text-color), 0.5);
+    font-weight: 600;
 }
 
 .page-linked h2.font-medium:before {
