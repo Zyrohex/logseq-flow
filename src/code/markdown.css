@@ -50,12 +50,14 @@
 }
 /* Highlights */
 mark {
-    background-color: hsl(var(--cl-color-3), 0.1);
+    background-color: transparent;
     padding: 1px 0px !important;
     border-radius: 0px;
     color: hsl(var(--cl-text-color));
-    text-decoration: none;
+    text-decoration: underline;
     text-underline-offset: 3px;
+    text-decoration-color: var(--cl-color-2-100);
+    text-decoration-thickness: 3px;
 }
 
 mark .external-link {
