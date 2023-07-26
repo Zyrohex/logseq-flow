@@ -126,11 +126,11 @@
   color: var(--cl-color-2-100);
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\ea45" !important;
+  content: "\f561" !important;
   color: var(--cl-color-1-100)
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\ea45" !important;
+  content: "\f561" !important;
   background-color: hsl(var(--cl-color-1), 0.15);
   color: var(--cl-color-1-100);
 }
