@@ -13,3 +13,4 @@ function buildTagPanel(elements) {
 }
 
 // Create our event listener
+document.addEventListener('DOMContentLoaded',)

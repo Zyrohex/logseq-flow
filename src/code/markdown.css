@@ -54,10 +54,11 @@ mark {
     padding: 1px 0px !important;
     border-radius: 0px;
     color: hsl(var(--cl-text-color));
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-color: var(--cl-color-2-100);
-    text-decoration-thickness: 3px;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+    text-decoration-color: var(--cl-color-2-100) !important;
+    text-decoration-thickness: 3px !important;
+    text-decoration-skip-ink: none !important;
 }
 
 mark .external-link {
@@ -140,22 +141,6 @@ blockquote:before {
 .ls-block :is(h1, h2, h3, h4, h5, h6) {
     overflow: hidden;
 }
-
-.ls-block :is(h1, h2, h3, h4, h5, h6):after {
-    background-color: hsl(var(--cl-text-color), 0.2);
-    content: "";
-    display: inline-block;
-    height: 1px;
-    position: relative;
-    vertical-align: middle;
-    width: 50px;
-}
-
-.ls-block :is(h1, h2, h3, h4, h5, h6):after {
-    left: 0.5rem;
-    margin-right: -50px;
-}
-
 .editor-inner .uniline-block:is(.h1, .h2),
 .ls-block :is(h1, h2) {
     margin: 0px;

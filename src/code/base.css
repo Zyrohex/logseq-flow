@@ -1,23 +1,15 @@
+/* === BASE SETTINGS === */
 @import './markdown.css';
-@import './tana-bullets.css';
+/*@import './tana-bullets.css';*/
 @import './plugins.css';
 @import './opr.css';
 @import './sidebar.css';
-/*@import './logseq.css';*/
 
 @font-face { 
     font-family: 'tabler-icons240';
     src: url('./tabler-icons.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
-
-/* ==========================================================================
-Base Root Settings
-========================================================================== */
-
-body {
-    -webkit-font-smoothing: antialiased;
 }
 
 :root {
@@ -182,7 +174,7 @@ html[data-theme='dark'] {
     --ls-page-blockquote-border-color: var(--ls-border-color);
     --ls-page-inline-code-color: hsl(var(--cl-color-1));
     --ls-page-inline-code-bg-color: hsl(var(--cl-color-1), 0.1);
-    --ls-scrollbar-foreground-color: hsl(var(--cl-background), 0.6);
+    --ls-scrollbar-foreground-color: var(--cl-color-3-60);
     --ls-scrollbar-background-color: hsl(var(--cl-text-color), 0);
     --ls-scrollbar-thumb-hover-color: hsl(var(--cl-color-1));
     --ls-head-text-color: var(--ls-link-text-color);
@@ -303,7 +295,7 @@ html[data-theme='light'] {
     --ls-page-blockquote-border-color: var(--ls-border-color);
     --ls-page-inline-code-color: hsl(var(--cl-color-1));
     --ls-page-inline-code-bg-color: hsl(var(--cl-color-1), 0.1);
-    --ls-scrollbar-foreground-color: hsl(var(--cl-background), 0.6);
+    --ls-scrollbar-foreground-color: var(--cl-color-3-60);
     --ls-scrollbar-background-color: hsl(var(--cl-text-color), 0);
     --ls-scrollbar-thumb-hover-color: hsl(var(--cl-color-1));
     --ls-head-text-color: var(--ls-link-text-color);
@@ -334,6 +326,11 @@ html[data-theme='light'] {
     --ls-highlight-color-pink-text: #f472b6;
     --ls-success-text-color: var(--color-green-500);
     --ls-header-button-background: hsl(var(--cl-text-color), 1);
+}
+
+/* === Body === */
+body {
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Main Interface */
@@ -391,10 +388,6 @@ Base Settings
     padding-top: 0px !important;
 }
 
-/* Setting up outer layer background color */
-/*.cp__sidebar-main-layout, #app-container, .left-sidebar-inner {
-    background-color: var(--ls-secondary-background-color);
-}*/
 /* Adjusting left sidebar size and background color */
 .left-sidebar-inner {
     padding-top: 0px;
@@ -419,9 +412,11 @@ Base Settings
     user-select: none;
     -webkit-app-region: drag;
 }
+/* === Typograph === */
 
+/* Headlines */
 :not(.block-ref) .ls-block h1, .editor-inner .multiline-block.h1::first-line, .editor-inner .uniline-block.h1, .ls-block h1 {
-    transform:translateY(-4px) !important;
+    transform:translateY(-5px) !important;
 }
 :not(.block-ref) .ls-block h2, .editor-inner .multiline-block.h2::first-line, .editor-inner .uniline-block.h2, .ls-block h2 {
     transform:translateY(-5px) !important;
@@ -433,9 +428,7 @@ Base Settings
     transform:translateY(-5.5px) !important;
 }
 
-/* ==========================================================================
-Bullet Containers
-========================================================================== */
+/* === BULLET CONTAINERS === */
 
 /* Adjust size of bullets so they are not so big */
 .bullet-container.bullet-closed {
@@ -467,25 +460,13 @@ Bullet Containers
     margin-left: 29.5px;
 }
 
-/* ==========================================================================
-Typography Settings
-   ========================================================================== */
-
-/* Adjust padding between each block to give them a little breathing room */
+/* === TYPOGRAPHY === */
 .ls-block {
     padding: 2px 0px;
 }
-
-
 .ls-block .custom-query.mt-4 {
     margin-top: var(--mt-4, 2em);
 }
-
-/*mark.p-0.rounded-none {
-    color: hsl(var(--cl-color-1));
-    text-decoration: underline;
-    text-decoration-color: hsl(var(--cl-color-1));
-}*/
 .tippy-tooltip-content {
     border-radius: 4px;
 }
@@ -497,7 +478,6 @@ Typography Settings
     position: relative;
     top: 1px;
 }
-
 div[data-refs-self*='"card"'] {
     background-color: var(--bg-color-1);
     border-radius: 4px;
@@ -506,8 +486,6 @@ div[data-refs-self*='"card"'] {
     padding-top: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
-
-
 .table-wrapper {
     max-width: 100% !important;
 }
@@ -515,51 +493,23 @@ div[data-refs-self*='"card"'] {
 .my-2.color-level.px-2 .foldable-title:hover {
     color: hsl(var(--cl-color-1));
 }
-/* ==========================================================================
-Breadcrumbs
-   ========================================================================== */
+/* === BREADCRUMBS === */
 .references-blocks .breadcrumb {
     margin-left: 0px;
 }
-/*.references-blocks .breadcrumb {
-    margin-left: 13px;
-    margin-bottom: 1px;
-}
-.references-blocks .breadcrumb a {
-    opacity: 0.7;
-}
-.references-blocks .breadcrumb a:hover {
-    opacity: 1;
-}
-.lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
-    margin-left: 14px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    display: block;
-}
-.lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb > .ui__icon:first-child {
-    display: none;
-}
-.lazy-visibility > .fade-enter > .my-2.color-level.px-2 > .flex.flex-col > .content > .flex-1.flex-row.foldable-title > .flex.flex-row.items-center > .block-control {
-    position: relative;
-    top: 2px;
-    left: 4px;
-}
-.my-2.color-level.px-2 .foldable-title:hover:before {
-    color: hsl(var(--cl-color-1));
-}
-.breadcrumb span.page-reference {
-    color: hsl(var(--cl-color-1));
-}
+/* === CODE MIRROR === */
 
-.breadcrumb span.page-reference .bracket {
-    display: none;
+/* Coloring */
+/*.white-theme .cm-s-solarized {
+    background-color: var(--bg-color-1);
+}
+.white-theme .color-level .cm-s-solarized {
+    background-color: var(--bg-color);
+}
+.dark-theme .cm-s-solarized {
+    background-color: var(--bg-dark);
 }*/
-
-/* ==========================================================================
-Code Mirror Settings
-   ========================================================================== */
-
+/* Styling */
 .extensions__code-lang {
     margin: 2px;
     background-color: transparent;
@@ -576,15 +526,6 @@ Code Mirror Settings
     border-radius: 5px;
     padding-right: 10px;
 }
-.white-theme .cm-s-solarized {
-    background-color: var(--bg-color-1);
-}
-.white-theme .color-level .cm-s-solarized {
-    background-color: var(--bg-color);
-}
-.dark-theme .cm-s-solarized {
-    background-color: var(--bg-dark);
-}
 .cm-s-solarized.cm-s-dark .CodeMirror-gutters, .cm-s-solarized.cm-s-light .CodeMirror-gutters {
     background-color: hsl(var(--cl-background), 0);
 }
@@ -600,14 +541,15 @@ Code Mirror Settings
 .cm-s-solarized.CodeMirror {
     box-shadow: none;
 }
+.CodeMirror-hscrollbar {
+    height: 3px;
+}
 /* ==========================================================================
 End of Code Mirror
    ========================================================================== */
 
-/* ==========================================================================
-Parent Block Header Style
-   ========================================================================== */
-/*.mb-4 + div > .page-blocks-inner > div > div > .content > .blocks-container > div > div > .ls-block > .flex.flex-row.pr-2 > .block-control-wrap {
+/* === PARENT BLOCK STYLING === */
+.mb-4 + div > .page-blocks-inner > div > div > .content > .blocks-container > div > div > .ls-block > .flex.flex-row.pr-2 > .block-control-wrap {
     display: none;
 }
 .mb-4 + div > .page-blocks-inner > div > div > .content > .blocks-container > div > div > .ls-block > .flex.flex-row.pr-2 .awLi-icon[data-is-emoji=true] {
@@ -636,7 +578,7 @@ Parent Block Header Style
 .mb-4 + div > .page-blocks-inner > div > div > .content > .blocks-container > div > div > .ls-block > .flex.flex-row.pr-2 .form-checkbox {
     width: 22px;
     height: 22px;
-    border-width: 2.5px;
+    border-width: 0px;
 }
 .mb-4 + div > .page-blocks-inner > div > div > .content > .blocks-container > div > div > .ls-block > .flex.flex-row.pr-2 .color-level {
     font-size: initial;
