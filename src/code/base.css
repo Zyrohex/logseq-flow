@@ -544,6 +544,15 @@ div[data-refs-self*='"card"'] {
 .CodeMirror-hscrollbar {
     height: 3px;
 }
+/* give codemirror border style */
+.code-editor.flex.flex-1.flex-row.w-full {
+    border: 2px solid var(--cl-text-color-10);
+    padding: 5px;
+    border-radius: 5px;
+}
+:is(.white-theme, .dark-theme) .cm-s-solarized, .color-level :is(.white-theme, .dark-theme) .cm-s-solarized {
+  background-color: transparent;
+}
 /* ==========================================================================
 End of Code Mirror
    ========================================================================== */
