@@ -497,7 +497,7 @@ div[data-refs-self*='"card"'] {
 .references-blocks .breadcrumb {
     margin-left: 0px;
 }
-.breadcrumb.block-parents.my-2 {
+.mb-4>.breadcrumb.block-parents.my-2 {
     margin-left: 30px;
 }
 /* === CODE MIRROR === */
