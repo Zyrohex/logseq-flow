@@ -4,7 +4,7 @@
 html[data-theme='dark'] {
     --background-color-h: 179;
     --background-color-s: 9%;
-    --background-color-l: 13%;
+    --background-color-l: 10%;
     --cl-background: 213, 9%, 23%;
     --cl-text-color: 217, 13%, 78%;
     --cl-color-3: 213, 38%, 47%;
@@ -18,7 +18,7 @@ html[data-theme='light'] {
     --background-color-s: 9%;
     --background-color-l: 90%;
     --cl-background: 36, 9%, 80%;
-    --cl-text-color: 217, 13%, 38%;
+    --cl-text-color: 217, 13%, 28%;
     --cl-color-1: 213, 28%, 47%;
     --cl-color-2: 179, 20%, 47%;
     --cl-color-3: 197, 35%, 53%;

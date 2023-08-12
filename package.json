@@ -12,6 +12,24 @@
                 "mode": "dark"
             },
             {
+                "name": "Budha",
+                "url": "./src/palettes/budha.css",
+                "description": "Budha",
+                "mode": "dark"
+            },
+            {
+                "name": "Replit",
+                "url": "./src/palettes/replit.css",
+                "description": "Replit",
+                "mode": "dark"
+            },
+            {
+                "name": "Koki",
+                "url": "./src/palettes/koki.css",
+                "description": "Koki",
+                "mode": "dark"
+            },
+            {
                 "name": "Absent",
                 "url": "./src/palettes/absent.css",
                 "description": "Absent",
@@ -21,6 +39,12 @@
                 "name": "Jellyfish",
                 "url": "./src/palettes/jellyfish.css",
                 "description": "Jellyfish",
+                "mode": "dark"
+            },
+            {
+                "name": "Adventuretime",
+                "url": "./src/palettes/adventuretime.css",
+                "description": "Adventuretime",
                 "mode": "dark"
             },
             {

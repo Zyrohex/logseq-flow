@@ -50,11 +50,11 @@
 }
 /* Highlights */
 mark {
-    background-color: transparent;
+    background-color: var(--cl-color-1-10);
     padding: 1px 0px !important;
     border-radius: 0px;
-    color: hsl(var(--cl-text-color));
-    text-decoration: underline !important;
+    color: var(--cl-color-1-100);
+    text-decoration: none !important;
     text-underline-offset: 3px !important;
     text-decoration-color: var(--cl-color-2-100) !important;
     text-decoration-thickness: 3px !important;
@@ -221,15 +221,16 @@ a.priority[href="#/page/C" i]::before {
 
 /*  === Checkboxes ===  */
 .form-checkbox {
-    background-color: hsl(var(--cl-color-1), 0.4);
-    border: 0px solid hsl(var(--cl-text-color), 0.2);
+    background-color: var(--cl-text-color-10);
+    border: 1px solid var(--cl-text-color-20);
     border-style: solid;
-    border-radius: 1px;
+    border-radius: 4px;
     position: relative;
     opacity: var(--cl-checkbox-opacity, 1);
     width: 15px;
     height: 15px;
     top: -0.5px;
+    opacity: 0.7;
 }
 
 .form-checkbox:checked {
@@ -241,12 +242,12 @@ a.priority[href="#/page/C" i]::before {
 
 .block-marker {
     font-size: inherit;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--ls-secondary-text-color);
     opacity: 0.8;
-    background-color: hsl(var(--cl-text-color), 0.15);
-    padding: 1px 5px;
-    border-radius: 3px;
+    background-color: var(--cl-text-color-10);
+    padding: 0px 5px;
+    border-radius: 2px;
     font-size: small;
     margin: 0px 5px;
 }
@@ -419,13 +420,12 @@ svg.h-4.w-4 {
 
 /* Tags */
 a.tag {
+    font-weight: 500;
+    color: var(--cl-color-2-100);
     background-color: transparent;
-    color: hsl(var(--cl-color-2), 1);
-    padding: 0px 1px;
-    border-radius: 3px;
-    transition: 0.2s;
-    opacity: 1;
-    font-weight: 400;
+    padding: 0px 0px;
+    opacity: 0.8;
+    font-size: inherit;
 }
 
 a.tag:hover {
@@ -518,10 +518,6 @@ span.inline.px-1.with-bg-color[style*="pink"] {
 
 
     /* Make top header bar a neutral color */
-    div#head,
-    .cp__right-sidebar-topbar {
-        opacity: 1;
-    }
 
     .flex.flex-col.wrap.gap-1.relative {
         opacity: 1;
