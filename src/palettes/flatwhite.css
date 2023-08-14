@@ -3,8 +3,8 @@
 html[data-theme='light'] {
     --background-color-h: 33;
     --background-color-s: 36%;
-    --background-color-l: 90%;
-    --cl-background: 33,36%,80%;
+    --background-color-l: 96%;
+    --cl-background: 33,36%,86%;
     --cl-text-color: 34,8%,25%;
     --cl-color-1: 300,17%,53%;
     --cl-color-2: 160,19%,46%;

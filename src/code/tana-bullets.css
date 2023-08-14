@@ -1,136 +1,76 @@
-/* Fix for bullet threading */
-/*.ls-block .bullet {
-  box-shadow: none !important;
-}*/
+/********************************************
+TANA BULLET HIGHLIGHTER by Nick Martin
+********************************************/
 
-:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
-  position: relative;
-  top: -6px;
-  left: -5px;
+/* ===== 
+These will only affect the block in question,
+and ignores if child blocks contain a page-reference
+or task
+===== */
+
+/* Gives the block itself a highlight change if it contains a page reference */
+[data-refs-self]:not([data-refs-self^="[]"], [data-refs-self^='["todo"'], [data-refs-self^='["done"']) > .flex-row > .mr-1 .bullet-container .bullet {
+    background-color: hsl(var(--cl-color-1), 0.8);
+}
+[data-refs-self]:not([data-refs-self^="[]"], [data-refs-self^='["todo"'], [data-refs-self^='["done"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(var(--cl-color-1), 0.1);
+    border: 0px dashed hsl(var(--cl-color-1), 0.2);
+}
+/* This will target blocks that are marked DONE but still have a page reference */
+[data-refs-self]:not([data-refs-self^="[]"]) > .flex-row > .mr-1 .bullet-container .bullet {
+    background-color: hsl(var(--cl-color-1), 0.8);
+}
+[data-refs-self]:not([data-refs-self^="[]"]) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(var(--cl-color-1), 0.1);
+    border: 0px dashed hsl(var(--cl-color-1), 0.2);
+}
+/* Target any blocks that only contain a task page-ref name and return those to normal color */
+[data-refs-self^='["todo"]'] .bullet-container .bullet, [data-refs-self^='["doing"]'] .bullet-container .bullet, [data-refs-self^='["now"]'] .bullet-container .bullet, [data-refs-self^='["wait"]'] .bullet-container .bullet, [data-refs-self^='["waiting"]'] .bullet-container .bullet {
+    background-color: var(--ls-block-bullet-color) !important;
+}
+[data-refs-self^='["todo"]'] .bullet-container.bullet-closed, [data-refs-self^='["doing"]'] .bullet-container.bullet-closed, [data-refs-self^='["now"]'] .bullet-container.bullet-closed, [data-refs-self^='["wait"]'] .bullet-container.bullet-closed, [data-refs-self^='["waiting"]'] .bullet-container.bullet-closed {
+    background-color: var(--ls-block-bullet-border-color) !important;
+    border: 0px solid !important;
 }
 
-:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
-:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container:not(.bullet-closed) .bullet {
-  background-color: transparent !important;
+/* ===== 
+The below section will take into account of child blocks, 
+and change the parent blocks bullet color based 
+on rather or not those child block conditions exist 
+===== */
+
+/* Simple check to see if data-refs has any values defined but is not empty
+by Losgeq standards an empty data-ref attribute will show as "[]" */
+[data-refs]:not([data-refs^="[]"]) > .flex-row > .mr-1 .bullet-container .bullet {
+    background-color: hsl(var(--cl-color-1), 0.8);
 }
-:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container {
-  background-color: transparent !important;
+/* Re-shades the bullet closed background color and adds a border */
+[data-refs]:not([data-refs^="[]"]) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(var(--cl-color-1), 0.1);
+    border: 1px dashed hsl(var(--cl-color-1), 1);
 }
 
-:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
-:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed .bullet {
-  background-color: transparent !important;
+/* This will mark only the parent blocks red if there's a child block with a task item. 
+We don't really care about highlighting the block itself that's marked as a task item */
+.dark-theme :is([data-refs*='"todo"'], [data-refs*='["doing"'], [data-refs*='["now"']) > .flex-row > .mr-1 .bullet-container .bullet {
+    background-color: hsl(var(--cl-color-3)) !important;
 }
-:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container .bullet {
-  transform: scale(1.1);
+.dark-theme :is([data-refs*='"todo"'], [data-refs*='["doing"'], [data-refs*='["now"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(var(--cl-color-3), 0.2) !important;
+    border: 1px dashed hsl(var(--cl-color-3), 1) !important;
 }
-
-:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
-  position: relative;
-  top: -8.5px;
-  left: -5px;
+.dark-theme :is([data-refs*='"todo"'], [data-refs*='["doing"'], [data-refs*='["now"']) > .flex-row > .mr-1 .bullet-container {
+    background-color: hsl(var(--cl-color-3), 0.2) !important;
+    border: 1px dashed hsl(var(--cl-color-3), 1) !important;
 }
-:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  font-family: 'tabler-icons240';
-  border-radius: 50%;
-  vertical-align: middle;
-  color: hsl(var(--cl-text-color), 0.6);
+.white-theme :is([data-refs*='"todo"'], [data-refs*='["doing"'], [data-refs*='["now"']) > .flex-row > .mr-1 .bullet-container .bullet {
+    background-color: hsl(var(--cl-color-3)) !important;
 }
-:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  font-family: 'tabler-icons240';
-  vertical-align: middle;
-  color: hsl(var(--cl-text-color), 0.6);
+.white-theme :is([data-refs*='"todo"'], [data-refs*='["doing"'], [data-refs*='["now"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(var(--cl-color-3), 0.2) !important;
+    border: 1px dashed hsl(var(--cl-color-3), 1) !important;
 }
-:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  background-color: transparent;
-}
-:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {
-  background-color: transparent !important;
-}
-.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f014";
-  font-weight: 100;
-}
-.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f014";
-  font-weight: 100;
-}
-/* ADD YOUR PAGE TYPES BELOW */
-.type-block[data-ref*='indexcard']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f014" !important;
-}
-.type-block[data-ref*='indexcard']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f014" !important;
-}
-.type-block[data-ref*='fleeting']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f97d" !important;
-}
-.type-block[data-ref*='fleeting']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f97d" !important;
-}
-.type-block[data-ref*='project']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\ea38" !important;
-}
-.type-block[data-ref*='project']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\ea38" !important;
-}
-.type-block[data-ref*='resource']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\eb54" !important;
-}
-.type-block[data-ref*='resource']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\eb54" !important;
-}
-.type-block[data-ref*='question']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\ec9d" !important;
-}
-.type-block[data-ref*='question']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\ec9d" !important;
-}
-.type-block[data-ref*='goal']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\eb45" !important;
-}
-.type-block[data-ref*='goal']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\eb45" !important;
-}
-.type-block[data-ref*='task']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f76d" !important;
-}
-.type-block[data-ref*='task']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f76d" !important;
-}
-.type-block[data-ref*='milestone']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\ec76" !important;
-}
-.type-block[data-ref*='milestone']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\ec76" !important;
-}
-.type-block[data-ref*='problem']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f681" !important;
-}
-.type-block[data-ref*='problem']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f681" !important;
-}
-.type-block[data-ref*='planning']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\ecdd" !important;
-}
-.type-block[data-ref*='planning']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\ecdd" !important;
-}
-.descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f635" !important;
-  color: var(--cl-color-2-100)
-}
-.descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f635" !important;
-  background-color: hsl(var(--cl-color-2), 0.15);
-  color: var(--cl-color-2-100);
-}
-.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f561" !important;
-  color: var(--cl-color-1-100)
-}
-.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f561" !important;
-  background-color: hsl(var(--cl-color-1), 0.15);
-  color: var(--cl-color-1-100);
+.white-theme :is([data-refs*='"todo"'], [data-refs*='["doing"'], [data-refs*='["now"']) > .flex-row > .mr-1 .bullet-container {
+    background-color: hsl(var(--cl-color-3), 0.2) !important;
+    border: 1px dashed hsl(var(--cl-color-3), 1) !important;
 }

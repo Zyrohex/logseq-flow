@@ -575,12 +575,6 @@ span.inline.px-1.with-bg-color[style*="pink"] {
         box-shadow: none;
     }
 }
-
-/* References Section */
-.references-blocks>div>div>.content>div.flex.flex-col {
-    row-gap: 22px;
-}
-
 /* Main Reference Panels surround each block */
 
 .color-level {
@@ -601,6 +595,7 @@ span.inline.px-1.with-bg-color[style*="pink"] {
 .flex-1.flex-row.foldable-title .page-ref {
     color: hsl(var(--cl-color-1), 1);
     font-weight: 600;
+    border-bottom: 0px solid;
 }
 
 /* Give the linked & unlinked titles custom icons */

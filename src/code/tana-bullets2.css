@@ -1,0 +1,136 @@
+/* Fix for bullet threading */
+/*.ls-block .bullet {
+  box-shadow: none !important;
+}*/
+
+:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
+  position: relative;
+  top: -6px;
+  left: -5px;
+}
+
+:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
+:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container:not(.bullet-closed) .bullet {
+  background-color: transparent !important;
+}
+:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container {
+  background-color: transparent !important;
+}
+
+:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed,
+:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed .bullet {
+  background-color: transparent !important;
+}
+:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a:hover>.bullet-container .bullet {
+  transform: scale(1.1);
+}
+
+:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container {
+  position: relative;
+  top: -8.5px;
+  left: -5px;
+}
+:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  font-family: 'tabler-icons240';
+  border-radius: 50%;
+  vertical-align: middle;
+  color: hsl(var(--cl-text-color), 0.6);
+}
+:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  font-family: 'tabler-icons240';
+  vertical-align: middle;
+  color: hsl(var(--cl-text-color), 0.6);
+}
+:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  background-color: transparent;
+}
+:is(.concept-block, .descriptor-block)>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {
+  background-color: transparent !important;
+}
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f014";
+  font-weight: 100;
+}
+.type-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\f014";
+  font-weight: 100;
+}
+/* ADD YOUR PAGE TYPES BELOW */
+.type-block[data-ref*='indexcard']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f014" !important;
+}
+.type-block[data-ref*='indexcard']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\f014" !important;
+}
+.type-block[data-ref*='fleeting']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f97d" !important;
+}
+.type-block[data-ref*='fleeting']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\f97d" !important;
+}
+.type-block[data-ref*='project']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\ea38" !important;
+}
+.type-block[data-ref*='project']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\ea38" !important;
+}
+.type-block[data-ref*='resource']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\eb54" !important;
+}
+.type-block[data-ref*='resource']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\eb54" !important;
+}
+.type-block[data-ref*='question']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\ec9d" !important;
+}
+.type-block[data-ref*='question']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\ec9d" !important;
+}
+.type-block[data-ref*='goal']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\eb45" !important;
+}
+.type-block[data-ref*='goal']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\eb45" !important;
+}
+.type-block[data-ref*='task']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f76d" !important;
+}
+.type-block[data-ref*='task']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\f76d" !important;
+}
+.type-block[data-ref*='milestone']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\ec76" !important;
+}
+.type-block[data-ref*='milestone']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\ec76" !important;
+}
+.type-block[data-ref*='problem']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f681" !important;
+}
+.type-block[data-ref*='problem']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\f681" !important;
+}
+.type-block[data-ref*='planning']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\ecdd" !important;
+}
+.type-block[data-ref*='planning']>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\ecdd" !important;
+}
+.descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f635" !important;
+  color: var(--cl-color-2-100)
+}
+.descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\f635" !important;
+  background-color: hsl(var(--cl-color-2), 0.15);
+  color: var(--cl-color-2-100);
+}
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f561" !important;
+  color: var(--cl-color-1-100)
+}
+.concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
+  content: "\f561" !important;
+  background-color: hsl(var(--cl-color-1), 0.15);
+  color: var(--cl-color-1-100);
+}
