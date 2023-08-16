@@ -376,161 +376,28 @@ a.external-link {
     border-bottom: 1px dashed var(--cl-color-1-40);
 }
 
-@media (hover: hover) {
-
-    body {
-        font-size: 14px;
-        letter-spacing: -0.00622354em;
-    }
-
-    /* left sidebar styling */
-
-    .left-sidebar-inner {
-        margin-top: 16px;
-    }
-
-    .left-sidebar-inner>div>nav {
-        margin-left: 0px !important;
-    }
-
-    .left-sidebar-inner>div>nav>div>a {
-        font-size: 13px;
-        padding-top: 2px;
-        padding-bottom: 2px;
-    }
-
-    .left-sidebar-inner>div>nav>div>div>a {
-        font-size: 13px;
-        padding-top: 2px;
-        padding-bottom: 2px;
-    }
-
-    .favorites {
-        margin-left: 0px;
-        margin-top: 16px;
-        font-size: 13px;
-    }
-
-    .favorite-item,
-    .recent-item {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    /* main area and right sidebar styling */
-    .cp__sidebar-left-layout.is-open+#main-content-container {
-        margin: 0 10px 10px 0px;
-    }
-
-    .white-theme #main-content-container,
-    .white-theme .sidebar-item {
-        background-color: var(--bg-color);
-    }
-
-    .dark-theme #main-content-container,
-    .dark-theme .sidebar-item {
-        background-color: var(--bg-color-1);
-    }
-
-    #main-content-container,
-    .sidebar-item {
-        border-radius: 4px;
-        margin: 0 10px 10px 10px;
-        padding-top: 32px;
-        box-shadow: 0px 6px 10px hsla(210, 4%, 18%, 0.05);
-        border: 1px solid var(--cl-text-color-10);
-        z-index: 8;
-    }
-
-    .cp__header {
-        height: 44px;
-    }
-
-    .cp__header>.r {
-        flex: 0 1 auto;
-    }
-
-    .cp__header>.l {
-        margin-top: 4px;
-    }
-
-    .cp__right-sidebar-topbar {
-        /* display: none; */
-        height: 44px;
-    }
-
-    .theme-inner.ls-left-sidebar-open>#app-container>#left-container>.cp__header>.l {
-        justify-content: flex-end;
-        width: 265px;
-    }
-
-    .sidebar-item-list {
-        /* margin-top: 44px; */
-        margin-right: 12px;
-        border-radius: 6px;
-        height: calc(100vh - 56px) !important;
-    }
-
-    .sidebar-item {
-        margin: 0 0 4px 0px;
-        box-shadow: none;
-    }
-
-    .journals-nav>a.active {
-        background-color: transparent !important;
-    }
-
-    .dark-theme .journals-nav>a.active {
-        background-color: transparent !important;
-    }
-
-    .cp__sidebar-main-layout,
-    #app-container,
-    .left-sidebar-inner {
-        background-color: var(--ls-secondary-background-color);
-    }
-
-    /* hide navigation arrows only on desktop */
-    /* .it.navigation.nav-left.button.icon, .it.navigation.nav-right.button.icon, .button.icon.toggle-right-sidebar {
-      display: none;
-    } */
-
-    ::-webkit-scrollbar {
-        width: 20px;
-    }
-
-    /* wordcount plugin adjustments */
-    .wordcount-btn {
-        display: block;
-        font-size: 14px;
-        color: var(--text-faint);
-        border: none;
-    }
-
+body {
+    font-size: 14px;
+    letter-spacing: -0.00622354em;
 }
 
-/* experimental */
-@media (hover: hover) {
 
-    .cp__header,
-    .cp__right-sidebar-topbar,
-    .window-controls {
-        height: 17px;
-        opacity: 0;
-        transition: all 150ms ease-in-out;
-    }
+.white-theme #main-content-container,
+.white-theme .sidebar-item {
+    background-color: var(--bg-color);
+}
 
-    .cp__header:hover,
-    .cp__right-sidebar-topbar:hover,
-    .window-controls:hover,
-    .window-control:hover~.right-sidebar-container:hover .cp__right-sidebar-topbar {
-        height: 44px;
-        opacity: 1;
-    }
+.dark-theme #main-content-container,
+.dark-theme .sidebar-item {
+    background-color: var(--bg-color-1);
+}
 
-    .r.flex {
-        flex-grow: 1;
-    }
+#main-content-container,
+.sidebar-item {
+    border-radius: 4px;
+    box-shadow: 0px 6px 10px hsla(210, 4%, 18%, 0.05);
+    border: 1px solid var(--cl-text-color-10);
+    z-index: 8;
 }
 
 /* Main Interface */
@@ -538,8 +405,7 @@ a.external-link {
 #app-container,
 .left-sidebar-inner,
 .cp__right-sidebar,
-.cp__right-sidebar-topbar,
-.color-level .color-level {
+.cp__right-sidebar-topbar {
     background-color: transparent;
 }
 
@@ -628,6 +494,7 @@ a.page-ref.page-property-key.block-property {
 .left-sidebar-inner {
     padding-top: 0px;
     width: var(--ls-left-sidebar-width);
+    border-right: 0px solid;
 }
 
 .left-sidebar-inner .create {
