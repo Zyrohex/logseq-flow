@@ -434,6 +434,9 @@ body {
     margin: 8px 0px;
     border-radius: .25rem;
 }
+.pre-block {
+    margin-bottom: 3px;
+}
 
 /*#main-content-container {
     margin-top: var(--ct-header-height) !important;
@@ -472,7 +475,7 @@ body {
 
 .page-property-value.inline {
     color: var(--cl-text-color-100);
-    opacity: 0.6;
+    opacity: 1;
 }
 
 a.page-ref.page-property-key.block-property {
@@ -599,7 +602,7 @@ a.page-ref.page-property-key.block-property {
 
 /* === TYPOGRAPHY === */
 .ls-block {
-    padding: 2px 0px;
+    padding: 0px;
 }
 
 .ls-block .custom-query.mt-4 {

@@ -50,11 +50,11 @@
 }
 /* Highlights */
 mark {
-    background-color: var(--cl-color-1-10);
+    background-color: transparent;
     padding: 1px 0px !important;
     border-radius: 0px;
-    color: var(--cl-color-1-100);
-    text-decoration: none !important;
+    color: var(--cl-text-color-100);
+    text-decoration: underline !important;
     text-underline-offset: 3px !important;
     text-decoration-color: var(--cl-color-2-100) !important;
     text-decoration-thickness: 3px !important;
