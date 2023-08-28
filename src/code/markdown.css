@@ -148,12 +148,12 @@ blockquote:before {
 
 .ls-block h1,
 .editor-inner .uniline-block.h1 {
-    border-bottom: 0px;
+    border-bottom: 1px;
 }
 
 .ls-block h2,
 .editor-inner .uniline-block.h2 {
-    border-bottom: 0px;
+    border-bottom: 1px;
 }
 
 /*.ls-block :is(h1,h2,h3,h4,h5,h6):after {
@@ -577,7 +577,7 @@ span.inline.px-1.with-bg-color[style*="pink"] {
 }
 /* Main Reference Panels surround each block */
 
-.color-level {
+:is(.references, .custom-query, .scheduled-or-deadlines) .color-level {
     background-color: transparent;
     /* border: 2px solid hsl(var(--cl-background), 0.8);*/
     border-radius: 0px;
