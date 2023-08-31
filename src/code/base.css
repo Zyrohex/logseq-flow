@@ -160,8 +160,8 @@ html[data-theme='dark'] {
     --ls-table-tr-even-background-color: var(--color-level-3);
     --ls-active-primary-color: hsl(var(--cl-color-1));
     --ls-active-secondary-color: hsl(var(--cl-color-2));
-    --ls-block-properties-background-color: var(--bg-color-2);
-    --ls-page-properties-background-color: var(--bg-color-2);
+    --ls-block-properties-background-color: var(--bg-color-1);
+    --ls-page-properties-background-color: var(--bg-color-1);
     --ls-block-ref-link-text-color: hsl(var(--cl-color-1));
     --ls-search-background-color: var(--color-level-3);
     --ls-mark-bg-color: var(--color-accent);
@@ -362,8 +362,8 @@ a.tag {
 }
 
 .page-ref {
-    color: var(--cl-text-color-100) !important;
-    border-bottom: 1px dashed var(--cl-color-1-40);
+    color: var(--cl-color-1-100);
+    border-bottom: 1.5px solid var(--cl-color-1-40);
 }
 
 a.external-link:before,
@@ -381,25 +381,6 @@ body {
     letter-spacing: -0.00622354em;
 }
 
-
-.white-theme #main-content-container,
-.white-theme .sidebar-item {
-    background-color: var(--bg-color);
-}
-
-.dark-theme #main-content-container,
-.dark-theme .sidebar-item {
-    background-color: var(--bg-color-1);
-}
-
-#main-content-container,
-.sidebar-item {
-    border-radius: 4px;
-    box-shadow: 0px 6px 10px hsla(210, 4%, 18%, 0.05);
-    border: 1px solid var(--cl-text-color-10);
-    z-index: 8;
-}
-
 /* Main Interface */
 .cp__sidebar-main-layout,
 #app-container,
@@ -411,7 +392,7 @@ body {
 
 .white-theme #app-container,
 .white-theme div#right-sidebar-container {
-    background-color: var(--bg-color-1);
+    background-color: var(--bg-color);
 }
 
 .dark-theme #app-container,
@@ -424,7 +405,7 @@ body {
 }
 
 .dark-theme .color-level>.flex.flex-col>.initial>div>.blocks-container {
-    background-color: var(--bg-color-2);
+    background-color: var(--bg-color-1);
 }
 
 .color-level>.flex.flex-col>.initial>div>.blocks-container {
@@ -462,7 +443,7 @@ body {
 }
 
 .dark-theme .block-properties {
-    background-color: var(--bg-color-2) !important;
+    background-color: var(--bg-color-1) !important;
 }
 
 .dark-theme .references .block-properties {
