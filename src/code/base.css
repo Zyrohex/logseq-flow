@@ -1,6 +1,6 @@
 /* === BASE SETTINGS === */
 @import './markdown.css';
-@import './tana-bullets.css';
+@import './tana-bullets2.css';
 @import './plugins.css';
 @import './opr.css';
 @import './sidebar.css';
@@ -363,7 +363,7 @@ a.tag {
 
 .page-ref {
     color: var(--cl-color-1-100);
-    border-bottom: 1.5px solid var(--cl-color-1-40);
+    border-bottom: 1px dashed var(--cl-color-1-20);
 }
 
 a.external-link:before,
@@ -706,6 +706,7 @@ End of Code Mirror
    ========================================================================== */
 
 /* === PARENT BLOCK STYLING === */
+/*
 .mb-4+div>.page-blocks-inner>div>div>.content>.blocks-container>div>div>.ls-block>.flex.flex-row.pr-2>.block-control-wrap {
     display: none;
 }
