@@ -363,19 +363,7 @@ html[data-theme='light'] {
 .page-hierarchy.mt-6 {
     display: none;
 }
-.form-checkbox:not(:checked):before {
-    content: "\ed27";
-    font-family: 'tabler-icons240';
-    position: relative;
-    top: -4px;
-    color: var(--cl-color-1-100);
-}
-.form-checkbox:after {
-    position: relative;
-    top: -4.5px;
-    margin-left: 3px;
-    color: var(--cl-text-color-100);
-}
+
 /*.pre-block>.block-children-container>.block-children>.ls-block>.block-children-container>.block-children>.ls-block .bullet-container {
   display: flex;
 }*/

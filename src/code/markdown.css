@@ -213,10 +213,9 @@ a.priority[href="#/page/C" i]::before {
 /*  === Checkboxes ===  */
 .form-checkbox {
     background-color: var(--cl-text-color-10);
-    background-color: transparent;
-    border: 0px solid var(--cl-text-color-20);
+    border: 1px solid var(--cl-text-color-60);
     border-style: solid;
-    border-radius: 0px;
+    border-radius: 2px;
     position: relative;
     width: 15px;
     height: 15px;
