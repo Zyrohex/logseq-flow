@@ -18,6 +18,12 @@
                 "mode": "dark"
             },
             {
+                "name": "(Mix) Bearded Ruby",
+                "_url": "./src/palettes/bearded-ruby.css",
+                "description": "Bearded Ruby",
+                "mode": "dark"
+            },
+            {
                 "name": "(Cool) Replit",
                 "url": "./src/palettes/replit.css",
                 "description": "Replit",
@@ -37,7 +43,7 @@
             },
             {
                 "name": "(Mix) Jellyfish",
-                "url": "./src/palettes/jellyfish.css",
+                "_url": "./src/palettes/jellyfish.css",
                 "description": "Jellyfish",
                 "mode": "dark"
             },
@@ -66,14 +72,14 @@
                 "mode": "light"
             },
             {
-                "name": "Adobe",
+                "name": "(Cool) Night Owl",
                 "url": "./src/palettes/adobe.css",
-                "description": "Adobe",
+                "description": "Night Owl",
                 "mode": "dark"
             },
             {
                 "name": "Anderson",
-                "url": "./src/palettes/anderson.css",
+                "_url": "./src/palettes/anderson.css",
                 "description": "Anderson",
                 "mode": "dark"
             },
@@ -121,7 +127,7 @@
             },
             {
                 "name": "Bearded Solarized",
-                "url": "./src/palettes/bearded-solarized.css",
+                "_url": "./src/palettes/bearded-solarized.css",
                 "description": "Bearded Solarized",
                 "mode": "dark"
             },
@@ -187,7 +193,7 @@
             },
             {
                 "name": "(Cool) Cobalt",
-                "url": "./src/palettes/cobalt.css",
+                "_url": "./src/palettes/cobalt.css",
                 "description": "Cobalt",
                 "mode": "dark"
             },
@@ -265,7 +271,7 @@
             },
             {
                 "name": "(Cool) Hatsunemiku",
-                "url": "./src/palettes/hatsunemiku.css",
+                "_url": "./src/palettes/hatsunemiku.css",
                 "description": "Hatsunemiku",
                 "mode": "dark"
             },
@@ -289,7 +295,7 @@
             },
             {
                 "name": "(Cool) Inkstained",
-                "url": "./src/palettes/inkstained.css",
+                "_url": "./src/palettes/inkstained.css",
                 "description": "Inkstained",
                 "mode": "dark"
             },
@@ -367,7 +373,7 @@
             },
             {
                 "name": "(Warm) Mellow",
-                "url": "./src/palettes/mellow.css",
+                "_url": "./src/palettes/mellow.css",
                 "description": "Mellow",
                 "mode": "dark"
             },
@@ -487,13 +493,13 @@
             },
             {
                 "name": "(Warm) Remedy",
-                "url": "./src/palettes/remedy.css",
+                "_url": "./src/palettes/remedy.css",
                 "description": "Remedy",
                 "mode": "dark"
             },
             {
                 "name": "(Mix) Panda",
-                "url": "./src/palettes/panda.css",
+                "_url": "./src/palettes/panda.css",
                 "description": "Panda",
                 "mode": "dark"
             },
@@ -541,7 +547,7 @@
             },
             {
                 "name": "(Cool) Solarized",
-                "url": "./src/palettes/solarized.css",
+                "_url": "./src/palettes/solarized.css",
                 "description": "Dark Default with Improvements",
                 "mode": "dark"
             },
@@ -571,7 +577,7 @@
             },
             {
                 "name": "(Mix) Teady",
-                "url": "./src/palettes/teady.css",
+                "_url": "./src/palettes/teady.css",
                 "description": "Teady",
                 "mode": "dark"
             },

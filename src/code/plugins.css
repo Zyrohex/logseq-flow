@@ -258,7 +258,7 @@ div[data-refs-self*="kanban-small"]>.block-children-container.flex>.block-childr
 }
 
 div[data-refs-self*="kanban-small"]>.block-children-container.flex>.block-children .block-content:hover {
-    font-size: 14px !important;
+    font-size: 16px !important;
     min-width: 100px;
 }
 

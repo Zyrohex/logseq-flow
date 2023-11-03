@@ -4,7 +4,7 @@
 html[data-theme='dark'] {
     --background-color-h: 207;
     --background-color-s: 95%;
-    --background-color-l: 10%;
+    --background-color-l: 14%;
     --cl-background: 207, 95%, 20%;
     --cl-text-color: 213, 13%, 86%;
     --cl-color-1: 221, 100%, 75%;
@@ -14,12 +14,12 @@ html[data-theme='dark'] {
 
 .white-theme,
 html[data-theme='light'] {
-    --background-color-h: 120;
-    --background-color-s: 5%;
-    --background-color-l: 96%;
-    --cl-background: 120, 5%, 86%;
-    --cl-text-color: 256, 20%, 18%;
-    --cl-color-1: 4, 100%, 66%;
-    --cl-color-2: 40, 90%, 51%;
-    --cl-color-3: 345, 46%, 55%;
+    --background-color-h: 0;
+    --background-color-s: 0%;
+    --background-color-l: 98%;
+    --cl-background: 0, 0%, 88%;
+    --cl-text-color: 243, 14%, 29%;
+    --cl-color-1: 182, 86%, 33%;
+    --cl-color-2: 221, 63%, 56%;
+    --cl-color-3: 279, 50%, 53%;
 }

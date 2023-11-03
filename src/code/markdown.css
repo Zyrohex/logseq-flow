@@ -35,18 +35,9 @@
 /* Inline Code */
 :not(pre):not(mark)>code {
     padding: 2px 6px !important;
-    color: hsl(var(--cl-color-1), 1);
     border-radius: 5px;
-    border: 0px solid hsl(var(--cl-text-color), 0.15);
-}
-.white-theme :not(pre):not(mark)>code {
-    background-color: var(--bg-color-1);
-}
-.dark-theme :not(pre):not(mark)>code {
-    background-color: var(--bg-dark);
-}
-.white-theme .color-level :not(pre):not(mark)>code {
-    background-color: var(--bg-color-2);
+    background-color: var(--cl-color-2-10);
+    color: var(--cl-color-2-100);
 }
 /* Highlights */
 mark {
@@ -105,7 +96,7 @@ blockquote:before {
 .editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6):first-line,
 .editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6),
 .ls-block :is(h1, h2, h3, h4, h5, h6) {
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .ls-block h1,
@@ -156,7 +147,7 @@ blockquote:before {
     border-bottom: 1px;
 }
 
-/*.ls-block :is(h1,h2,h3,h4,h5,h6):after {
+.ls-block :is(h1,h2,h3,h4,h5,h6):after {
     font-weight: 700;
     margin-left: 15px;
     font-size: xx-small;
@@ -183,7 +174,7 @@ blockquote:before {
 }
 .ls-block h6:after {
     content: "H6";
-}*/
+}
 
 /* === PRIORITIES === */
 a[priority]:not(a[priority=""])::before,
@@ -222,11 +213,11 @@ a.priority[href="#/page/C" i]::before {
 /*  === Checkboxes ===  */
 .form-checkbox {
     background-color: var(--cl-text-color-10);
-    border: 1px solid var(--cl-text-color-20);
+    background-color: transparent;
+    border: 0px solid var(--cl-text-color-20);
     border-style: solid;
-    border-radius: 4px;
+    border-radius: 0px;
     position: relative;
-    opacity: var(--cl-checkbox-opacity, 1);
     width: 15px;
     height: 15px;
     top: -0.5px;
@@ -234,8 +225,12 @@ a.priority[href="#/page/C" i]::before {
 }
 
 .form-checkbox:checked {
-    background-color: hsl(var(--cl-color-3)) !important;
+    background-color: var(--cl-color-1-100);
+    border-radius: 50%;
     opacity: 1;
+    width: 13px;
+    height: 13px;
+    margin: 1px;
 }
 
 /* TASK NAMES */
@@ -420,22 +415,14 @@ svg.h-4.w-4 {
 
 /* Tags */
 a.tag {
-    font-weight: 500;
-    color: var(--cl-color-2-100);
-    background-color: transparent;
-    padding: 0px 0px;
     opacity: 0.8;
-    font-size: inherit;
+    color: var(--cl-text-color-60);
 }
 
 a.tag:hover {
-    background-color: transparent;
-    color: hsl(var(--cl-color-2), 1);
     opacity: 1;
-}
-
-.ls-block :is(h1, h2, h3, h4, h5, h6) a.tag {
-    font-weight: bold;
+    color: var(--cl-color-1-100);
+    background-color: transparent;
 }
 
 body {
@@ -577,25 +564,11 @@ span.inline.px-1.with-bg-color[style*="pink"] {
 }
 /* Main Reference Panels surround each block */
 
-:is(.references, .custom-query, .scheduled-or-deadlines) .color-level {
-    background-color: transparent;
-    /* border: 2px solid hsl(var(--cl-background), 0.8);*/
-    border-radius: 0px;
-    /*box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);*/
-    padding: 0px;
-}
 
 /* Title Elements */
 .flex-1.flex-row.foldable-title,
 .block-parents a {
     color: hsl(var(--cl-text-color), 1);
-}
-
-/* Adjust font size on the page-ref titles in the references block section */
-.flex-1.flex-row.foldable-title .page-ref {
-    color: hsl(var(--cl-color-1), 1);
-    font-weight: 600;
-    border-bottom: 0px solid;
 }
 
 /* Give the linked & unlinked titles custom icons */
@@ -645,7 +618,7 @@ span.inline.px-1.with-bg-color[style*="pink"] {
     background-position-x: 5px;
     background-position-y: 5px;
     background-size: 25px 25px;
-}
+}*/
 
 /* journal query kanban view */
 /*:not(.ls-wide-mode) div#today-queries>.lazy-visibility {
