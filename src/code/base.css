@@ -109,9 +109,9 @@
 html[data-theme='dark'] {
     /* ==== BASE CALCULATORS ==== */
     --contrastThreshold: 60%;
-    --lightnessTransform: 5%;
+    --lightnessTransform: 2.5%;
     --darknessTransform: 15%;
-    --bg-light-transform: 5%;
+    --bg-light-transform: 2.5%;
     /* USED FOR CALCULATING VARIOUS SHADES FOR BACKGROUNDS */
     /* ==== TRANSFORMERS ==== */
     /* text colors */
@@ -168,7 +168,7 @@ html[data-theme='dark'] {
     --ls-mark-color: hsl(var(--cl-color-1));
     --ls-border-color: var(--bg-color-1);
     --ls-secondary-border-color: hsl(var(--cl-color-2));
-    --ls-guideline-color: var(--cl-text-color-10);
+    --ls-guideline-color: var(--cl-text-color-20);
     --ls-guideline-references-color: var(--cl-text-color-20);
     --ls-menu-hover-color: var(--ls-secondary-background-color);
     --ls-primary-text-color: hsl(var(--cl-text-color));
@@ -183,7 +183,7 @@ html[data-theme='dark'] {
     --ls-slide-background-color: var(--ls-primary-background-color);
     --ls-block-bullet-border-color: var(--cl-text-color-20);
     --ls-block-bullet-references-border-color: var(--cl-color-1-10);
-    --ls-block-bullet-color: var(--cl-text-color-60);
+    --ls-block-bullet-color: var(--cl-text-color-80);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-color-1), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -231,9 +231,9 @@ html[data-theme='dark'] {
 html[data-theme='light'] {
     /* ==== BASE CALCULATORS ==== */
     --contrastThreshold: 60%;
-    --lightnessTransform: 5%;
+    --lightnessTransform: 2.5%;
     --darknessTransform: 15%;
-    --bg-light-transform: 5%;
+    --bg-light-transform: 2.5%;
     /* USED FOR CALCULATING VARIOUS SHADES FOR BACKGROUNDS */
     /* ==== TRANSFORMERS ==== */
     /* text colors */
@@ -290,7 +290,7 @@ html[data-theme='light'] {
     --ls-mark-color: hsl(var(--cl-color-1));
     --ls-border-color: var(--bg-color-1);
     --ls-secondary-border-color: hsl(var(--cl-color-2));
-    --ls-guideline-color: var(--cl-text-color-10);
+    --ls-guideline-color: var(--cl-text-color-20);
     --ls-guideline-references-color: var(--cl-text-color-20);
     --ls-menu-hover-color: var(--ls-secondary-background-color);
     --ls-primary-text-color: hsl(var(--cl-text-color));
@@ -305,7 +305,7 @@ html[data-theme='light'] {
     --ls-slide-background-color: var(--ls-primary-background-color);
     --ls-block-bullet-border-color: var(--cl-text-color-20);
     --ls-block-bullet-references-border-color: var(--cl-color-1-10);
-    --ls-block-bullet-color: var(--cl-text-color-60);
+    --ls-block-bullet-color: var(--cl-text-color-80);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-color-1), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -350,7 +350,7 @@ html[data-theme='light'] {
 
 /* REFERENCES PANEL */
 :is(.references, .custom-query, .scheduled-or-deadlines) .color-level>.flex.flex-col>.initial {
-    background-color: var(--cl-text-color-05);
+    background-color: var(--bg-color-1);
     border-radius: 4px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     padding: 8px 20px;
@@ -542,7 +542,10 @@ body {
     background-color: var(--bg-dark);
 }
 .white-theme .block-properties {
-    background-color: var(--cl-text-color-05);
+    background-color: var(--bg-color-1);
+}
+.white-theme .references-blocks .block-properties {
+    background-color: var(--bg-color-2);
 }
 /*.block-properties .page-property-value {
     flex: 1 60%;
@@ -712,14 +715,12 @@ a.chosen {
 /* Adjust size of bullets so they are not so big */
 .bullet-container.bullet-closed {
     border: 0px dashed hsl(var(--cl-text-color), 0.2);
-    width: 11px;
-    height: 11px;
 }
 
 /* General bullet settings */
 .bullet-container {
-    width: 11px;
-    height: 11px;
+    width: 10px;
+    height: 10px;
     margin-left: calc(var(--ls-block-bullet-threading-width-overwrite, var(--cl-block-bullet-fix)) * .16);
     /* Fix for bullet threading */
     position: relative;
@@ -753,13 +754,9 @@ a.chosen {
     margin-left: 29.5px;
 }
 
-.block-children {
-    border-left-color: var(--cl-text-color-10);
-}
-
 /* === TYPOGRAPHY === */
 .ls-block {
-    padding: 2px 0px;
+    padding: 0px 0px;
 }
 .ls-block .custom-query.mt-4 {
     margin-top: var(--mt-4, 2em);
@@ -815,22 +812,20 @@ h1.title {
 /* Coloring */
 .white-theme .cm-s-solarized {
     background-color: var(--cl-text-color-05);
+    box-shadow: rgba(23, 42, 53, 0.1) 0px 0px 4px 2px;
 }
 .white-theme .color-level .cm-s-solarized {
     background-color: var(--cl-text-color-05);
+    box-shadow: rgba(23, 42, 53, 0.1) 0px 0px 4px 2px;
 }
 .dark-theme .cm-s-solarized {
     background-color: var(--cl-text-color-05);
+    box-shadow: rgba(23, 42, 53, 0.1) 0px 0px 4px 2px;
 }
 /* Styling */
 .extensions__code-lang {
     margin: 2px;
     background-color: transparent;
-}
-
-.cp__fenced-code-block {
-    margin-top: 5px;
-    margin-bottom: 10px;
 }
 
 .cm-s-solarized.cm-s-dark,
