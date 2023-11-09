@@ -360,10 +360,6 @@ html[data-theme='light'] {
     background-color: transparent;
 }
 
-.page-hierarchy.mt-6 {
-    display: none;
-}
-
 /*.pre-block>.block-children-container>.block-children>.ls-block>.block-children-container>.block-children>.ls-block .bullet-container {
   display: flex;
 }*/

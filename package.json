@@ -150,6 +150,18 @@
                 "mode": "dark"
             },
             {
+                "name": "Quiet",
+                "url": "./src/palettes/quiet.css",
+                "description": "Quiet",
+                "mode": "dark"
+            },
+            {
+                "name": "Quiet",
+                "url": "./src/palettes/quiet.css",
+                "description": "Quiet",
+                "mode": "light"
+            },
+            {
                 "name": "Cobalt",
                 "_url": "./src/palettes/cobalt.css",
                 "description": "Cobalt",
