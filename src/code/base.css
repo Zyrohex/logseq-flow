@@ -208,20 +208,20 @@ html[data-theme='dark'] {
     --color-level-4: var(--bg-color-4);
     --color-level-5: var(--bg-color-5);
     --color-level-6: var(--bg-color-5);
-    --ls-highlight-color-gray: #17171760;
-    --ls-highlight-color-red: #7f1d1d60;
-    --ls-highlight-color-yellow: #78350f60;
-    --ls-highlight-color-green: #14532d60;
-    --ls-highlight-color-blue: #1e3a8a60;
-    --ls-highlight-color-purple: #581c8760;
-    --ls-highlight-color-pink: #83184360;
-    --ls-highlight-color-gray-text: #a3a3a3;
-    --ls-highlight-color-red-text: #f87171;
-    --ls-highlight-color-yellow-text: #d79c05;
-    --ls-highlight-color-green-text: #11c653;
-    --ls-highlight-color-blue-text: #60a5fa;
-    --ls-highlight-color-purple-text: #c084fc;
-    --ls-highlight-color-pink-text: #f472b6;
+    --ls-highlight-color-gray: var(--cl-color-1-20);
+    --ls-highlight-color-red: var(--cl-color-2-20);
+    --ls-highlight-color-yellow: var(--cl-color-3-20);
+    --ls-highlight-color-green: var(--cl-color-1-20);
+    --ls-highlight-color-blue: var(--cl-color-2-20);
+    --ls-highlight-color-purple: var(--cl-color-3-20);
+    --ls-highlight-color-pink: var(--cl-color-1-20);
+    --ls-highlight-color-gray-text: var(--cl-color-1-100);
+    --ls-highlight-color-red-text: var(--cl-color-2-100);
+    --ls-highlight-color-yellow-text: var(--cl-color-3-100);
+    --ls-highlight-color-green-text: var(--cl-color-1-100);
+    --ls-highlight-color-blue-text: var(--cl-color-2-100);
+    --ls-highlight-color-purple-text: var(--cl-color-3-100);
+    --ls-highlight-color-pink-text: var(--cl-color-1-100);
     --ls-success-text-color: var(--color-green-500);
     --ls-header-button-background: hsl(var(--cl-text-color), 1);
 }
@@ -330,20 +330,20 @@ html[data-theme='light'] {
     --color-level-4: var(--bg-color-4);
     --color-level-5: var(--bg-color-5);
     --color-level-6: var(--bg-color-5);
-    --ls-highlight-color-gray: #a3a3a330;
-    --ls-highlight-color-gray-text: #a3a3a3;
-    --ls-highlight-color-red: #f8717130;
-    --ls-highlight-color-red-text: #f87171;
-    --ls-highlight-color-yellow: #fbbf2430;
-    --ls-highlight-color-yellow-text: #d79c05;
-    --ls-highlight-color-green: #4ade8030;
-    --ls-highlight-color-green-text: #11c653;
-    --ls-highlight-color-blue: #60a5fa30;
-    --ls-highlight-color-blue-text: #60a5fa;
-    --ls-highlight-color-purple: #c084fc30;
-    --ls-highlight-color-purple-text: #c084fc;
-    --ls-highlight-color-pink: #f472b630;
-    --ls-highlight-color-pink-text: #f472b6;
+    --ls-highlight-color-gray: var(--cl-color-1-20);
+    --ls-highlight-color-red: var(--cl-color-2-20);
+    --ls-highlight-color-yellow: var(--cl-color-3-20);
+    --ls-highlight-color-green: var(--cl-color-1-20);
+    --ls-highlight-color-blue: var(--cl-color-2-20);
+    --ls-highlight-color-purple: var(--cl-color-3-20);
+    --ls-highlight-color-pink: var(--cl-color-1-20);
+    --ls-highlight-color-gray-text: var(--cl-color-1-100);
+    --ls-highlight-color-red-text: var(--cl-color-2-100);
+    --ls-highlight-color-yellow-text: var(--cl-color-3-100);
+    --ls-highlight-color-green-text: var(--cl-color-1-100);
+    --ls-highlight-color-blue-text: var(--cl-color-2-100);
+    --ls-highlight-color-purple-text: var(--cl-color-3-100);
+    --ls-highlight-color-pink-text: var(--cl-color-1-100);
     --ls-success-text-color: var(--color-green-500);
     --ls-header-button-background: hsl(var(--cl-text-color), 1);
 }
@@ -502,12 +502,12 @@ body {
 
 .white-theme #app-container,
 .white-theme div#right-sidebar-container {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-1);
 }
 
 .dark-theme #app-container,
 .dark-theme div#right-sidebar-container {
-    background-color: var(--bg-color);
+    background-color: var(--bg-color-1);
 }
 
 .color-level>.flex.flex-col>.initial>div>.blocks-container {
@@ -786,9 +786,9 @@ div[data-refs-self*='"card"'] {
 }
 
 h1.title {
-    color: var(--cl-color-2-100);
-    font-size: 20px;
-    margin: 0px;
+    font-size: 30px;
+    margin: -6px;
+    font-weight: 600;
 }
 
 .my-2.color-level.px-2 .foldable-title:hover {
@@ -937,4 +937,77 @@ h1.title {
 .block-body hr:is(:only-child) {
     margin: 12px 0px !important;
     border-top: 1px solid var(--cl-text-color-10);
+}
+main:not(.ls-wide-mode) .page, main:not(.ls-wide-mode) #journals .journal-item .journal.page {
+    max-width: 85ch;
+}
+
+
+#main-content-container .page {
+    margin: 0;
+    padding-top: 48px;
+    padding-left: 48px;
+    padding-bottom: 48px;
+    padding-right: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#main-content-container .page {
+  padding: 2rem;
+  background-color: var(--bg-color) !important;
+  border-radius: 7px;
+  box-shadow: 0px 0.5px 1.75px rgba(0, 0, 0, 0.039), 0px 1.85px 6.25px rgba(0, 0, 0, 0.19);
+}
+.block-properties {
+  border-radius: 5px;
+  background-color: var(--bg-color-1) !important;
+}
+.references .block-properties {
+  border-radius: 5px;
+  background-color: var(--bg-color-2) !important;
+}
+:is(.references, .custom-query, .scheduled-or-deadlines) .color-level>.flex.flex-col>.initial {
+  background-color: var(--bg-color-1) !important;
+}
+.ls-block {
+  padding: 1px 0px !important;
+}
+#app-container #left-container #main-container {
+    display: flex;
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: -16px;
+    padding: 16px;
+    transition: transform 150ms;
+    background-color: transparent;
+}
+#main-content-container .page {
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 48px;
+    padding-bottom: 48px;
+    padding-right: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+span.rotating-arrow.collapsed {
+    opacity: 0;
 }

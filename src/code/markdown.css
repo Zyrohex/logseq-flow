@@ -146,7 +146,9 @@ blockquote:before {
 .editor-inner .uniline-block.h2 {
     border-bottom: 1px;
 }
-
+.ls-block :is(h1,h2,h3,h4,h5,h6) {
+    border-bottom: 1px solid var(--cl-text-color-20);
+}
 .ls-block :is(h1,h2,h3,h4,h5,h6):after {
     font-weight: 700;
     margin-left: 15px;

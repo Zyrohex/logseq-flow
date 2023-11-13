@@ -156,6 +156,12 @@
                 "mode": "dark"
             },
             {
+                "name": "Seashell",
+                "url": "./src/palettes/seashell.css",
+                "description": "Seashell",
+                "mode": "dark"
+            },
+            {
                 "name": "Quiet",
                 "url": "./src/palettes/quiet.css",
                 "description": "Quiet",
