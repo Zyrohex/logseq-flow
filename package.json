@@ -78,6 +78,12 @@
                 "mode": "dark"
             },
             {
+                "name": "Soft Era",
+                "_url": "./src/palettes/soft-era.css",
+                "description": "Soft Era",
+                "mode": "dark"
+            },
+            {
                 "name": "Ark",
                 "url": "./src/palettes/ark.css",
                 "description": "Ark",
@@ -162,6 +168,12 @@
                 "mode": "dark"
             },
             {
+                "name": "Yin",
+                "url": "./src/palettes/yin.css",
+                "description": "Yin",
+                "mode": "dark"
+            },
+            {
                 "name": "Quiet",
                 "url": "./src/palettes/quiet.css",
                 "description": "Quiet",
@@ -201,6 +213,12 @@
                 "name": "Ephemeral",
                 "url": "./src/palettes/ephemeral.css",
                 "description": "Ephemeral",
+                "mode": "dark"
+            },
+            {
+                "name": "Phonebook",
+                "url": "./src/palettes/phonebook.css",
+                "description": "Phonebook",
                 "mode": "dark"
             },
             {
@@ -496,6 +514,12 @@
                 "url": "./src/palettes/tokyo.css",
                 "description": "Tokyo",
                 "mode": "dark"
+            },
+            {
+                "name": "Tomorrow",
+                "url": "./src/palettes/tomorrow.css",
+                "description": "Tomorrow",
+                "mode": "light"
             },
             {
                 "name": "Two Firewatch",

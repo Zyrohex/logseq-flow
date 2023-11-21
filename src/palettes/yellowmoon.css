@@ -4,8 +4,8 @@
 html[data-theme='dark'] {
     --background-color-h: 223;
     --background-color-s: 14%;
-    --background-color-l: 14%;
-    --cl-background: 223, 14%, 24%;
+    --background-color-l: 18%;
+    --cl-background: 223, 14%, 28%;
     --cl-text-color: 188, 100%, 97%;
     --cl-color-1: 2, 44%, 67%;
     --cl-color-2: 54, 93%, 84%;

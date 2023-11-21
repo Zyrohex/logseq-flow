@@ -4,8 +4,8 @@
 html[data-theme='light'] {
     --background-color-h: 0;
     --background-color-s: 0%;
-    --background-color-l: 100%;
-    --cl-background: 0,0%,90%;
+    --background-color-l: 96%;
+    --cl-background: 0,0%,86%;
     --cl-text-color: 60,1%,30%;
     --cl-color-2: 214,45%,47%;
     --cl-color-1: 184,44%,43%;
