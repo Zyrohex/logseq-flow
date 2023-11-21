@@ -7,10 +7,9 @@ html[data-theme='dark'] {
     --background-color-l: 18%;
     --cl-background: 235,19%, 28%;
     --cl-text-color: 229,35%,75%;
-    --cl-color-1: 261,64%,73%;
-    --cl-color-2: 89,51%,61%;
-    --cl-color-3: 22,100%,70%;
-    --cl-gray: rgb(68,75,106);
+    --cl-color-1: 202, 100%, 75%;
+    --cl-color-2: 221, 89%, 72%;
+    --cl-color-3: 89, 51%, 61%;
 }
 
 .white-theme,
