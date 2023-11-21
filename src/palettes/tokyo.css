@@ -15,12 +15,12 @@ html[data-theme='dark'] {
 
 .white-theme,
 html[data-theme='light'] {
-    --background-color-h: 240;
-    --background-color-s: 33%;
-    --background-color-l: 99%;
-    --cl-background: 240,33%,89%;
-    --cl-text-color: 210,21%,11%;
-    --cl-color-1: 189,68%,27%;
-    --cl-color-2: 348,35%,41%;
-    --cl-color-3: 261,24%,38%;
+    --background-color-h: 230;
+    --background-color-s: 8%;
+    --background-color-l: 85%;
+    --cl-background: 230,8%,75%;
+    --cl-text-color: 229, 26%, 28%;
+    --cl-color-1: 189, 68%, 27%;
+    --cl-color-2: 171, 32%, 29%;
+    --cl-color-3: 261, 24%, 38%;
 }

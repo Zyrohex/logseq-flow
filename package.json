@@ -522,6 +522,12 @@
                 "mode": "light"
             },
             {
+                "name": "Tokyo",
+                "url": "./src/palettes/tokyo.css",
+                "description": "Tokyo",
+                "mode": "light"
+            },
+            {
                 "name": "Two Firewatch",
                 "url": "./src/palettes/twofirewatch.css",
                 "description": "Two Firewatch",
