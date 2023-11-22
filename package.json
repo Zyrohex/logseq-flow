@@ -19,7 +19,7 @@
             },
             {
                 "name": "Bearded Ruby",
-                "_url": "./src/palettes/bearded-ruby.css",
+                "url": "./src/palettes/bearded-ruby.css",
                 "description": "Bearded Ruby",
                 "mode": "dark"
             },
@@ -37,7 +37,7 @@
             },
             {
                 "name": "Jellyfish",
-                "_url": "./src/palettes/jellyfish.css",
+                "url": "./src/palettes/jellyfish.css",
                 "description": "Jellyfish",
                 "mode": "dark"
             },
@@ -60,9 +60,9 @@
                 "mode": "light"
             },
             {
-                "name": "Adobe",
+                "name": "Night Owl",
                 "url": "./src/palettes/adobe.css",
-                "description": "Adobe",
+                "description": "Night Owl",
                 "mode": "light"
             },
             {
@@ -73,13 +73,19 @@
             },
             {
                 "name": "Anderson",
-                "_url": "./src/palettes/anderson.css",
+                "url": "./src/palettes/anderson.css",
                 "description": "Anderson",
                 "mode": "dark"
             },
             {
+                "name": "Andromeda",
+                "url": "./src/palettes/andromeda.css",
+                "description": "Andromeda",
+                "mode": "dark"
+            },
+            {
                 "name": "Soft Era",
-                "_url": "./src/palettes/soft-era.css",
+                "url": "./src/palettes/soft-era.css",
                 "description": "Soft Era",
                 "mode": "dark"
             },
@@ -109,7 +115,7 @@
             },
             {
                 "name": "Bearded Solarized",
-                "_url": "./src/palettes/bearded-solarized.css",
+                "url": "./src/palettes/bearded-solarized.css",
                 "description": "Bearded Solarized",
                 "mode": "dark"
             },
@@ -181,7 +187,7 @@
             },
             {
                 "name": "Cobalt",
-                "_url": "./src/palettes/cobalt.css",
+                "url": "./src/palettes/cobalt.css",
                 "description": "Cobalt",
                 "mode": "dark"
             },
@@ -201,6 +207,18 @@
                 "name": "Default",
                 "url": "./src/palettes/default.css",
                 "description": "Dark Default with Improvements",
+                "mode": "dark"
+            },
+            {
+                "name": "Material Forest",
+                "url": "./src/palettes/material-forest.css",
+                "description": "Material Forest",
+                "mode": "dark"
+            },
+            {
+                "name": "Material Ocean",
+                "url": "./src/palettes/material-ocean.css",
+                "description": "Material Ocean",
                 "mode": "dark"
             },
             {
@@ -259,7 +277,7 @@
             },
             {
                 "name": "Hatsunemiku",
-                "_url": "./src/palettes/hatsunemiku.css",
+                "url": "./src/palettes/hatsunemiku.css",
                 "description": "Hatsunemiku",
                 "mode": "dark"
             },
@@ -277,7 +295,7 @@
             },
             {
                 "name": "Inkstained",
-                "_url": "./src/palettes/inkstained.css",
+                "url": "./src/palettes/inkstained.css",
                 "description": "Inkstained",
                 "mode": "dark"
             },
@@ -337,7 +355,7 @@
             },
             {
                 "name": "Mellow",
-                "_url": "./src/palettes/mellow.css",
+                "url": "./src/palettes/mellow.css",
                 "description": "Mellow",
                 "mode": "dark"
             },
@@ -439,13 +457,13 @@
             },
             {
                 "name": "Remedy",
-                "_url": "./src/palettes/remedy.css",
+                "url": "./src/palettes/remedy.css",
                 "description": "Remedy",
                 "mode": "dark"
             },
             {
                 "name": "Panda",
-                "_url": "./src/palettes/panda.css",
+                "url": "./src/palettes/panda.css",
                 "description": "Panda",
                 "mode": "dark"
             },
@@ -481,7 +499,7 @@
             },
             {
                 "name": "Solarized",
-                "_url": "./src/palettes/solarized.css",
+                "url": "./src/palettes/solarized.css",
                 "description": "Dark Default with Improvements",
                 "mode": "dark"
             },
@@ -505,7 +523,7 @@
             },
             {
                 "name": "Teady",
-                "_url": "./src/palettes/teady.css",
+                "url": "./src/palettes/teady.css",
                 "description": "Teady",
                 "mode": "dark"
             },

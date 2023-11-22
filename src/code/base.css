@@ -1,9 +1,4 @@
-/* === BASE SETTINGS === */
-@import './markdown.css';
-/*@import './tana-bullets2.css';*/
-@import './plugins.css';
-@import './opr.css';
-@import './sidebar.css';
+@import url('https://zyrohex.github.io/flow-base/src/code/base.css');
 
 @font-face {
     font-family: 'tabler-icons240';
