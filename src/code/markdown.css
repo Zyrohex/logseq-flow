@@ -36,8 +36,8 @@
 :not(pre):not(mark)>code {
     padding: 2px 6px !important;
     border-radius: 5px;
-    background-color: var(--cl-color-2-10);
-    color: var(--cl-color-2-100);
+    background-color: var(--cl-text-color-05);
+    color: var(--cl-text-color-100);
 }
 /* Highlights */
 mark {
@@ -96,37 +96,7 @@ blockquote:before {
 .editor-inner .multiline-block:is(.h1, .h2, .h3, .h4, .h5, .h6):first-line,
 .editor-inner .uniline-block:is(.h1, .h2, .h3, .h4, .h5, .h6),
 .ls-block :is(h1, h2, h3, h4, h5, h6) {
-    font-weight: 400;
-}
-
-.ls-block h1,
-.editor-inner .h1.uniline-block {
-    font-size: 125%;
-}
-
-.ls-block h2,
-.editor-inner .h2.uniline-block {
-    font-size: 120%;
-}
-
-.ls-block h3,
-.editor-inner .h3.uniline-block {
-    font-size: 118%;
-}
-
-.ls-block h4,
-.editor-inner .h4.uniline-block {
-    font-size: 115%;
-}
-
-.ls-block h5,
-.editor-inner .h5.uniline-block {
-    font-size: 110%;
-}
-
-.ls-block h6,
-.editor-inner .h6.uniline-block {
-    font-size: 105%;
+    font-weight: 800;
 }
 
 .ls-block :is(h1, h2, h3, h4, h5, h6) {
@@ -134,48 +104,18 @@ blockquote:before {
 }
 .editor-inner .uniline-block:is(.h1, .h2),
 .ls-block :is(h1, h2) {
-    margin: 0px;
+    margin: 0px !important;
+    padding: 0px !important;
 }
 
 .ls-block h1,
 .editor-inner .uniline-block.h1 {
-    border-bottom: 1px;
+    border-bottom: 1px solid var(--cl-text-color-60);
 }
 
 .ls-block h2,
 .editor-inner .uniline-block.h2 {
-    border-bottom: 1px;
-}
-.ls-block :is(h1,h2,h3,h4,h5,h6) {
-    border-bottom: 1px solid var(--cl-text-color-20);
-}
-.ls-block :is(h1,h2,h3,h4,h5,h6):after {
-    font-weight: 700;
-    margin-left: 15px;
-    font-size: xx-small;
-    vertical-align: middle;
-    color: hsl(var(--cl-text-color), 0.3);
-    background-color: hsl(var(--cl-text-color), 0.05);
-    padding: 3px;
-    border-radius: 4px;
-}
-.ls-block h1:after {
-    content: "H1";
-}
-.ls-block h2:after {
-    content: "H2";
-}
-.ls-block h3:after {
-    content: "H3";
-}
-.ls-block h4:after {
-    content: "H4";
-}
-.ls-block h5:after {
-    content: "H5";
-}
-.ls-block h6:after {
-    content: "H6";
+    border-bottom: 1px solid var(--cl-text-color-60);
 }
 
 /* === PRIORITIES === */

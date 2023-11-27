@@ -174,7 +174,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Yin",
+                "name": "Neutral - Yin",
                 "url": "./src/palettes/yin.css",
                 "description": "Yin",
                 "mode": "dark"
@@ -504,7 +504,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Sunbather",
+                "name": "Neutral - Sunbather",
                 "url": "./src/palettes/sunbather.css",
                 "description": "Sunbather",
                 "mode": "dark"
@@ -546,7 +546,7 @@
                 "mode": "light"
             },
             {
-                "name": "Two Firewatch",
+                "name": "Warm - Two Firewatch",
                 "url": "./src/palettes/twofirewatch.css",
                 "description": "Two Firewatch",
                 "mode": "dark"
@@ -570,7 +570,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Yellowmoon",
+                "name": "Warm - Yellowmoon",
                 "url": "./src/palettes/yellowmoon.css",
                 "description": "Yellowmoon",
                 "mode": "dark"

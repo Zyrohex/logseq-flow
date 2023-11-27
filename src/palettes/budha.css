@@ -4,10 +4,10 @@
 html[data-theme='dark'] {
     --background-color-h: 222;
     --background-color-s: 22%;
-    --background-color-l: 18%;
-    --cl-background: 222,22%,28%;
+    --background-color-l: 13%;
+    --cl-background: 222,22%,23%;
     --cl-text-color: 0,0%,61%;
     --cl-color-1: 343, 100%, 67%;
-    --cl-color-2: 298, 100%, 79%;
-    --cl-color-3: 358, 100%, 88%;
+    --cl-color-3: 298, 100%, 79%;
+    --cl-color-2: 358, 100%, 88%;
 }

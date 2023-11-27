@@ -1,4 +1,9 @@
-@import url('https://zyrohex.github.io/flow-base/src/code/base.css');
+/* === BASE SETTINGS === */
+@import './markdown.css';
+/*@import './tana-bullets2.css';*/
+@import './plugins.css';
+@import './opr.css';
+@import './sidebar.css';
 
 @font-face {
     font-family: 'tabler-icons240';
@@ -793,10 +798,9 @@ h1.title {
 
 /* === BREADCRUMBS === */
 .references-blocks .breadcrumb {
-    margin-left: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 2px;
     margin-top: 2px;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 /* === CODE MIRROR === */
