@@ -357,6 +357,7 @@ html[data-theme='light'] {
     padding-left: 0px;
     margin-top: 8px;
 }
+
 :is(.references, .custom-query, .scheduled-or-deadlines) .color-level {
     padding: 0px;
     background-color: transparent;
@@ -366,54 +367,64 @@ html[data-theme='light'] {
   display: flex;
 }*/
 .ls-block[data-refs-self*=":container"]>.block-main-container>.flex.flex-col span.inline {
-  font-weight: 500;
+    font-weight: 500;
 }
+
 .ls-block[data-refs-self*=":container"] .page-reference[data-ref*=":container"] {
-  display: none;
+    display: none;
 }
+
 .ls-block[data-refs-self*=":container"]>.block-main-container>.flex.flex-col {
-  border-top: 1px solid var(--cl-text-color-10);
-  border-left: 1px solid var(--cl-text-color-10);
-  border-right: 1px solid var(--cl-text-color-10);
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  padding-top: 1px;
-  padding-left: 8px;
-  padding-right: 8px;
-  background-color: var(--cl-color-1-20);
+    border-top: 1px solid var(--cl-text-color-10);
+    border-left: 1px solid var(--cl-text-color-10);
+    border-right: 1px solid var(--cl-text-color-10);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-top: 1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: var(--cl-color-1-20);
 }
+
 .ls-block[data-refs-self*=":container"]>.block-children-container>.block-children>.ls-block>.block-main-container>.flex.flex-col {
-  border-bottom: 0px solid var(--cl-text-color-10);
-  border-left: 1px solid var(--cl-text-color-10);
-  border-right: 1px solid var(--cl-text-color-10);
-  padding-left: 8px;
-  padding-right: 8px;
-  background-color: var(--cl-text-color-05);
+    border-bottom: 0px solid var(--cl-text-color-10);
+    border-left: 1px solid var(--cl-text-color-10);
+    border-right: 1px solid var(--cl-text-color-10);
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: var(--cl-text-color-05);
 }
+
 .ls-block[data-refs-self*=":container"]>.block-children-container>.block-children>.ls-block:last-child>.block-main-container>.flex.flex-col {
-  border-bottom: 1px solid var(--cl-text-color-10);
-  border-left: 1px solid var(--cl-text-color-10);
-  border-right: 1px solid var(--cl-text-color-10);
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  padding-bottom: 5px;
-  padding-left: 8px;
-  padding-right: 8px;
-  background-color: var(--cl-text-color-05);
+    border-bottom: 1px solid var(--cl-text-color-10);
+    border-left: 1px solid var(--cl-text-color-10);
+    border-right: 1px solid var(--cl-text-color-10);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: var(--cl-text-color-05);
 }
-.ls-block[data-refs-self*=":container"]>.block-children-container>.block-children, .ls-block[data-refs-self*=":container"]>.block-children-container>.block-children>.ls-block {
-  padding: 0px;
-  border: 0px solid;
+
+.ls-block[data-refs-self*=":container"]>.block-children-container>.block-children,
+.ls-block[data-refs-self*=":container"]>.block-children-container>.block-children>.ls-block {
+    padding: 0px;
+    border: 0px solid;
 }
+
 .ls-block[data-refs-self*=":container"] .bullet-container {
-  display: none;
+    display: none;
 }
+
 .ls-block[data-refs-self*=":container"]>.block-children-container {
-  margin-left: 0px;
+    margin-left: 0px;
 }
+
 .ls-block[data-refs-self*=":container"]>.block-children-container>.block-children {
-  border-left: 0px solid;
+    border-left: 0px solid;
 }
+
 /*.block-properties {
   padding: 0px 8px;
 }*/
@@ -517,6 +528,7 @@ body {
     padding: 0px;
     margin: 0px;
 }
+
 .pre-block {
     margin-bottom: 3px;
 }
@@ -538,12 +550,15 @@ body {
 .dark-theme .block-properties {
     background-color: var(--bg-dark);
 }
+
 .white-theme .block-properties {
     background-color: var(--bg-color-1);
 }
+
 .white-theme .references-blocks .block-properties {
     background-color: var(--bg-color-2);
 }
+
 /*.block-properties .page-property-value {
     flex: 1 60%;
 }
@@ -579,10 +594,12 @@ body {
     content: ":";
     padding-right: 5px;
 }*/
-.block-properties>div>.page-property-key, .block-properties>div>div:first-child .page-ref {
+.block-properties>div>.page-property-key,
+.block-properties>div>div:first-child .page-ref {
     text-transform: lowercase;
     color: var(--cl-text-color-100);
 }
+
 /*span.page-property-key.font-medium:before, .block-properties>div>div:nth-child(1)+.mr-1:before {
     content: "\f698";
     margin-right: 5px;
@@ -729,6 +746,7 @@ a.chosen {
     height: 2px;*/
     transform: scale(0.8);
 }
+
 .bullet-container .bullet:hover {
     transform: scale(1.0) !important;
 }
@@ -755,6 +773,7 @@ a.chosen {
 .ls-block {
     padding: 0px 0px;
 }
+
 .ls-block .custom-query.mt-4 {
     margin-top: var(--mt-4, 2em);
 }
@@ -810,14 +829,17 @@ h1.title {
     background-color: var(--cl-text-color-05);
     box-shadow: rgba(23, 42, 53, 0.1) 0px 0px 4px 2px;
 }
+
 .white-theme .color-level .cm-s-solarized {
     background-color: var(--cl-text-color-05);
     box-shadow: rgba(23, 42, 53, 0.1) 0px 0px 4px 2px;
 }
+
 .dark-theme .cm-s-solarized {
     background-color: var(--cl-text-color-05);
     box-shadow: rgba(23, 42, 53, 0.1) 0px 0px 4px 2px;
 }
+
 /* Styling */
 .extensions__code-lang {
     margin: 2px;
@@ -862,6 +884,38 @@ h1.title {
 .CodeMirror-hscrollbar {
     height: 3px;
 }
+
+.cm-s-solarized .cm-keyword {
+    color: var(--cl-color-1-100);
+}
+
+.cm-s-solarized .cm-def {
+    color: var(--cl-color-3-100);
+    filter: hue-rotate(05deg);
+}
+
+.cm-s-solarized .cm-operator {
+    color: var(--cl-color-2-100);
+}
+
+.cm-s-solarized .cm-string,
+.cm-s-solarized .cm-string-2 {
+    color: var(--cl-color-3-100);
+}
+
+.cm-s-solarized .cm-variable,
+.cm-s-solarized .cm-variable-2 {
+    color: var(--cl-color-2-100);
+}
+
+.cm-s-solarized .cm-property {
+    color: var(--cl-color-3-100);
+}
+
+.cm-s-solarized .cm-comment {
+    color: var(--cl-text-color-40);
+}
+
 /* END OF CODE MIRROR */
 
 /* DRILLED DOWN BLOCK STYLE CHANGES */
