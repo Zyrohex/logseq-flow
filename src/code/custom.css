@@ -5,8 +5,8 @@ body, .ls-block, .inline {
   letter-spacing: -0.00622354em !important;
 }
 :root {
-  --cl-page-width: 600px;
-  --cl-page-max-width: 900px;
+  --cl-page-width: 800px;
+  --cl-page-max-width: 1000px;
   --cl-font-family: "Euclid Circular A";
   --cl-font-family: "Consolas";
   --cl-font-family: "SF Pro Text";
@@ -17,7 +17,7 @@ body, .ls-block, .inline {
 }
 .current-page-ref {
   border-bottom: 1px solid;
-  color: var(--cl-color-2-100);
+  color: var(--cl-color-3-100);
 }
 .page-reference:hover {
   background-color: transparent !important;
@@ -100,16 +100,9 @@ body, .ls-block, .inline {
 
 
 .tag {
-  background-color: var(--cl-color-1-10) !important;
+  background-color: var(--cl-color-3-10) !important;
   padding: 1px 5px !important;
-  color: var(--cl-color-1-80) !important;
-  border-radius: 2px;
-  font-weight: 300;
-}
-.tag {
-  background-color: var(--cl-color-2-10) !important;
-  padding: 1px 5px !important;
-  color: var(--cl-color-2-80) !important;
+  color: var(--cl-color-3-80) !important;
   border-radius: 2px;
   font-weight: 300;
 }
@@ -133,6 +126,19 @@ body, .ls-block, .inline {
     display: none;
 }
 
+/****************** Flex Reference Panel ***************/
+.my-2>.flex.flex-col {
+    display: flex;
+    flex-direction: row;
+}
+
+.my-2>.flex.flex-col>.content {
+    flex: 0 20%;
+}
+
+.my-2>.flex.flex-col>.initial {
+    flex: 1 80%;
+}
 /****************** LONG FORM WRITING ******************/
 /*.flex-1.page.relative:not(.is-journals)>.relative :is(.ls-block[level="1"], .ls-block[level="2"], .ls-block[level="3"][haschild="true"])>.block-main-container .bullet-container {
   display: none;
