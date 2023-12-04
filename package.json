@@ -54,13 +54,13 @@
                 "mode": "dark"
             },
             {
-                "name": "Momo",
+                "name": "Cool Momo",
                 "url": "./src/palettes/momo.css",
                 "description": "Momo",
                 "mode": "light"
             },
             {
-                "name": "Night Owl",
+                "name": "Cool Night Owl",
                 "url": "./src/palettes/adobe.css",
                 "description": "Night Owl",
                 "mode": "light"
@@ -84,19 +84,13 @@
                 "mode": "dark"
             },
             {
-                "name": "Soft Era",
-                "url": "./src/palettes/soft-era.css",
-                "description": "Soft Era",
-                "mode": "light"
-            },
-            {
                 "name": "Ark",
                 "url": "./src/palettes/ark.css",
                 "description": "Ark",
                 "mode": "dark"
             },
             {
-                "name": "Ayu",
+                "name": "Warm Ayu",
                 "url": "./src/palettes/ayu.css",
                 "description": "Ayu",
                 "mode": "light"
@@ -126,7 +120,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Flatwhite",
+                "name": "Warm Flatwhite",
                 "url": "./src/palettes/flatwhite.css",
                 "description": "Flatwhite Colors",
                 "mode": "light"
@@ -150,7 +144,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Chocolate",
+                "name": "Warm Chocolate",
                 "url": "./src/palettes/chocolate.css",
                 "description": "Vanilla Chocolate",
                 "mode": "light"
@@ -180,7 +174,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Quiet",
+                "name": "Cool Quiet",
                 "url": "./src/palettes/quiet.css",
                 "description": "Quiet",
                 "mode": "light"
@@ -246,13 +240,13 @@
                 "mode": "dark"
             },
             {
-                "name": "Everforest",
+                "name": "Warm Everforest",
                 "url": "./src/palettes/everforest.css",
                 "description": "Everforest",
                 "mode": "light"
             },
             {
-                "name": "FlatUI",
+                "name": "Cool FlatUI",
                 "url": "./src/palettes/flatui.css",
                 "description": "FlatUI",
                 "mode": "light"
@@ -264,7 +258,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Gruvbox",
+                "name": "Warm Gruvbox",
                 "url": "./src/palettes/gruvbox.css",
                 "description": "Gruvbox",
                 "mode": "light"
@@ -282,13 +276,13 @@
                 "mode": "dark"
             },
             {
-                "name": "Hatsunemiku",
+                "name": "Cool Hatsunemiku",
                 "url": "./src/palettes/hatsunemiku.css",
                 "description": "Hatsunemiku",
                 "mode": "light"
             },
             {
-                "name": "Inkstained",
+                "name": "Cool Inkstained",
                 "url": "./src/palettes/inkstained.css",
                 "description": "Inkstained",
                 "mode": "light"
@@ -306,7 +300,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Kanagawa",
+                "name": "Warm Kanagawa",
                 "url": "./src/palettes/kanagawa.css",
                 "description": "Kanagawa",
                 "mode": "light"
@@ -336,13 +330,13 @@
                 "mode": "dark"
             },
             {
-                "name": "Moonlight",
+                "name": "Cool Moonlight",
                 "url": "./src/palettes/moonlight.css",
                 "description": "Moonlight",
                 "mode": "light"
             },
             {
-                "name": "Munsell",
+                "name": "Cool Munsell",
                 "url": "./src/palettes/munsell.css",
                 "description": "Munsell",
                 "mode": "light"
@@ -366,7 +360,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Newspaper",
+                "name": "Warm Newspaper",
                 "url": "./src/palettes/newspaper.css",
                 "description": "Newspaper",
                 "mode": "light"
@@ -378,7 +372,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Newsprint",
+                "name": "Neutral Newsprint",
                 "url": "./src/palettes/newsprint.css",
                 "description": "Newsprint",
                 "mode": "light"
@@ -390,7 +384,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Parchment",
+                "name": "Warm Parchment",
                 "url": "./src/palettes/parchment.css",
                 "description": "Parchment",
                 "mode": "light"
@@ -408,7 +402,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Oceanic Material",
+                "name": "Warm Oceanic Material",
                 "url": "./src/palettes/oceanic-material.css",
                 "description": "Oceanic Material",
                 "mode": "light"
@@ -426,19 +420,19 @@
                 "mode": "dark"
             },
             {
-                "name": "One Light Pro",
+                "name": "Cool One Light Pro",
                 "url": "./src/palettes/one-dark-pro.css",
                 "description": "One Light Pro",
                 "mode": "light"
             },
             {
-                "name": "Paper",
+                "name": "Warm Paper",
                 "url": "./src/palettes/paper.css",
                 "description": "Paper",
                 "mode": "light"
             },
             {
-                "name": "Papercolor",
+                "name": "Cool Papercolor",
                 "url": "./src/palettes/papercolor.css",
                 "description": "Papercolor",
                 "mode": "light"
@@ -450,7 +444,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Primary",
+                "name": "Warm Primary",
                 "url": "./src/palettes/primary.css",
                 "description": "Primary",
                 "mode": "light"
@@ -480,7 +474,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Rose",
+                "name": "Warm Rose",
                 "url": "./src/palettes/rose.css",
                 "description": "Rose",
                 "mode": "light"
@@ -492,7 +486,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Solarized",
+                "name": "Warm Solarized",
                 "url": "./src/palettes/solarized.css",
                 "description": "Light Default with Improvements",
                 "mode": "light"
@@ -510,7 +504,7 @@
                 "mode": "dark"
             },
             {
-                "name": "Sunbather",
+                "name": "Cool Sunbather",
                 "url": "./src/palettes/sunbather.css",
                 "description": "Sunbather",
                 "mode": "light"
@@ -534,13 +528,13 @@
                 "mode": "dark"
             },
             {
-                "name": "Tomorrow",
+                "name": "Cool Tomorrow",
                 "url": "./src/palettes/tomorrow.css",
                 "description": "Tomorrow",
                 "mode": "light"
             },
             {
-                "name": "Tokyo",
+                "name": "Cool Tokyo",
                 "url": "./src/palettes/tokyo.css",
                 "description": "Tokyo",
                 "mode": "light"
@@ -552,13 +546,13 @@
                 "mode": "dark"
             },
             {
-                "name": "Two Firewatch",
+                "name": "Warm Two Firewatch",
                 "url": "./src/palettes/twofirewatch.css",
                 "description": "Two Firewatch",
                 "mode": "light"
             },
             {
-                "name": "Watermelon",
+                "name": "Cool Watermelon",
                 "url": "./src/palettes/watermelon.css",
                 "description": "Watermelon",
                 "mode": "light"
