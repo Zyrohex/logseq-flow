@@ -87,7 +87,7 @@
                 "name": "Soft Era",
                 "url": "./src/palettes/soft-era.css",
                 "description": "Soft Era",
-                "mode": "dark"
+                "mode": "light"
             },
             {
                 "name": "Ark",
