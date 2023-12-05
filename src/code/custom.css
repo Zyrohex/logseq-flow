@@ -5,8 +5,8 @@ body, .ls-block, .inline {
   letter-spacing: -0.00622354em !important;
 }
 :root {
-  --cl-page-width: 600px;
-  --cl-page-max-width: 900px;
+  --cl-page-width: 800px;
+  --cl-page-max-width: 1100px;
   --cl-font-family: "Euclid Circular A";
   --cl-font-family: "Consolas";
   --cl-font-family: "SF Pro Text";
@@ -33,7 +33,6 @@ body, .ls-block, .inline {
 }
 .last-with-siblings .page-ref {
   color: var(--cl-color-1-80) !important;
-  color: var(--cl-text-color-100) !important;
   border-radius: 2px;
   font-weight: 600;
 }
@@ -127,6 +126,33 @@ body, .ls-block, .inline {
 }
 .cp__sidebar-main-layout, #app-container, .left-sidebar-inner {
   background-color: var(--bg-color-1) !important;
+}
+
+/* experimental */
+@media (hover: hover) {
+
+  .cp__header,
+  .cp__right-sidebar-topbar {
+    height: 10px;
+    opacity: 0;
+    transition: all 150ms ease-in-out;
+  }
+
+  .cp__header:hover,
+  .cp__right-sidebar-topbar:hover {
+    height: 44px;
+    opacity: 1;
+  }
+
+  .r.flex {
+    flex-grow: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cp__right-sidebar.closed {
+    width: 0 !important;
+  }
 }
 
 /****************** LONG FORM WRITING ******************/
