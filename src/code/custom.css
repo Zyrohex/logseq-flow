@@ -5,8 +5,8 @@ body, .ls-block, .inline {
   letter-spacing: -0.00622354em !important;
 }
 :root {
-  --cl-page-width: 800px;
-  --cl-page-max-width: 1000px;
+  --cl-page-width: 600px;
+  --cl-page-max-width: 900px;
   --cl-font-family: "Euclid Circular A";
   --cl-font-family: "Consolas";
   --cl-font-family: "SF Pro Text";
@@ -14,6 +14,9 @@ body, .ls-block, .inline {
   --cl-font-family: Inter;
   --cl-font-family: "SF Pro Text";
   --ls-scrollbar-width: 0px;
+}
+.block-body {
+  font-size: smaller !important;
 }
 .current-page-ref {
   border-bottom: 1px solid;
@@ -29,18 +32,10 @@ body, .ls-block, .inline {
   border-bottom: 0px solid;
 }
 .last-with-siblings .page-ref {
-  background-color: var(--cl-color-1-10) !important;
-  padding: 1px 5px !important;
   color: var(--cl-color-1-80) !important;
+  color: var(--cl-text-color-100) !important;
   border-radius: 2px;
-  font-weight: 300;
-}
-.last-with-siblings .current-page-ref {
-  background-color: var(--cl-color-2-10) !important;
-  padding: 1px 5px !important;
-  color: var(--cl-color-2-80) !important;
-  border-radius: 2px;
-  font-weight: 300;
+  font-weight: 600;
 }
 /*.last-with-siblings .page-ref:after {
   content: "―";
@@ -57,9 +52,6 @@ body, .ls-block, .inline {
   font-family: 'tabler-icons240';
   margin-left: 3px;
   color: var(--cl-text-color-60);
-}
-.last-with-siblings .bracket {
-    display: none;
 }
 /*.first-with-siblings {
     background-color: var(--cl-text-color-100);
@@ -96,9 +88,6 @@ body, .ls-block, .inline {
 .block-properties>div>div+.mr-1 {color: transparent;}
 
 
-
-
-
 .tag {
   background-color: var(--cl-color-3-10) !important;
   padding: 1px 5px !important;
@@ -126,45 +115,40 @@ body, .ls-block, .inline {
     display: none;
 }
 
-/****************** Flex Reference Panel ***************/
-.my-2>.flex.flex-col {
-    display: flex;
-    flex-direction: row;
+/****************** LUMA SETTINGS **********************/
+#main-content-container, .sidebar-item {
+    background-color: var(--bg-color) !important;
+    border-radius: 4px;
+    margin: 0px 10px 10px;
+    padding-top: 32px;
+    box-shadow: var(--box-shadow-med);
+    border: 1px solid var(--ls-border-color);
+    z-index: 8;
+}
+.cp__sidebar-main-layout, #app-container, .left-sidebar-inner {
+  background-color: var(--bg-color-1) !important;
 }
 
-.my-2>.flex.flex-col>.content {
-    flex: 0 20%;
-}
-
-.my-2>.flex.flex-col>.initial {
-    flex: 1 80%;
-}
 /****************** LONG FORM WRITING ******************/
 /*.flex-1.page.relative:not(.is-journals)>.relative :is(.ls-block[level="1"], .ls-block[level="2"], .ls-block[level="3"][haschild="true"])>.block-main-container .bullet-container {
-  display: none;
+    display: none;
 }
+
 .flex-1.page.relative:not(.is-journals)>.relative .ls-block[level="1"]+.ls-block[level="1"][haschild="true"] {
-  margin-top: 10px;
+    margin-top: 10px;
 }
+
 .flex-1.page.relative:not(.is-journals)>.relative :is(.ls-block[level="1"], .ls-block[level="2"], .ls-block[level="3"][haschild="true"])>.block-children-container>.block-children {
-  border-left: 0px solid;
+    border-left: 0px solid;
 }
 .flex-1.page.relative:not(.is-journals)>.relative :is(.ls-block[level="1"], .ls-block[level="2"], .ls-block[level="3"][haschild="true"])>.block-children-container>.block-children-left-border {
-  display: none;
+    display: none;
 }
 .flex-1.page.relative:not(.is-journals)>.relative :is(.ls-block[level="1"], .ls-block[level="2"], .ls-block[level="3"][haschild="true"])>.block-children-container {
-  border-left: 0px solid;
-  margin-left: 0px;
+    border-left: 0px solid;
+    margin-left: 0px;
 }
-.flex-1.page.relative:not(.is-journals)>.relative .ls-block[level="2"]>.block-children-container {
-  margin-left: 2px !important;
-}
-.flex-1.page.relative:not(.is-journals)>.relative :is(.ls-block[level="1"], .ls-block[level="2"], .ls-block[level="3"][haschild="true"]) {
-  padding: 4px 0px !important;
-}
-.flex-1.page.relative:not(.is-journals)>.relative :is(.ls-block[level="1"], .ls-block[level="2"], .ls-block[level="3"][haschild="true"])>.block-main-container:hover {
-  background-color: transparent;
-}
+
 .flex-1.page.relative:not(.is-journals)>.relative :not(.ls-block[level="1"]) .ls-block[level="2"]:hover {
-  background-color: var(--cl-text-color-05);
+    background-color: var(--cl-text-color-05);
 }
