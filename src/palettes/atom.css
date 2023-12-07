@@ -1,0 +1,25 @@
+@import '../code/base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --background-color-h: 220;
+    --background-color-s: 13%;
+    --background-color-l: 18%;
+    --cl-background: 220, 13%, 28%;
+    --cl-text-color: 227, 13%, 86%;
+    --cl-color-1: 207, 82%, 66%;
+    --cl-color-2: 286, 60%, 67%;
+    --cl-color-3: 95, 38%, 62%;
+}
+
+.white-theme,
+html[data-theme='light'] {
+    --background-color-h: 0;
+    --background-color-s: 0%;
+    --background-color-l: 98%;
+    --cl-background: 0, 0%, 88%;
+    --cl-text-color: 228, 8%, 24%;
+    --cl-color-1: 221, 87%, 60%;
+    --cl-color-2: 301, 63%, 40%;
+    --cl-color-3: 119, 34%, 47%;
+}

@@ -1,8 +1,6 @@
 body, .ls-block, .inline {
   font-variant-ligatures: common-ligatures;
   font-weight: 400 !important;
-  font-size: 14px !important;
-  letter-spacing: -0.00622354em !important;
 }
 :root {
   --cl-page-width: 800px;
@@ -12,7 +10,6 @@ body, .ls-block, .inline {
   --cl-font-family: "SF Pro Text";
   --cl-font-family: "Segoe UI";
   --cl-font-family: Inter;
-  --cl-font-family: "SF Pro Text";
   --ls-scrollbar-width: 0px;
 }
 .block-body {
@@ -32,9 +29,14 @@ body, .ls-block, .inline {
   border-bottom: 0px solid;
 }
 .last-with-siblings .page-ref {
-  color: var(--cl-color-1-80) !important;
   border-radius: 2px;
-  font-weight: 600;
+  padding: 1px 5px;
+  background-color: var(--cl-color-1-10);
+  color: var(--cl-color-1-100);
+  font-weight: 300;
+}
+.last-with-siblings .bracket {
+  display: none;
 }
 /*.last-with-siblings .page-ref:after {
   content: "―";
@@ -159,7 +161,9 @@ body, .ls-block, .inline {
 /*.flex-1.page.relative:not(.is-journals)>.relative :is(.ls-block[level="1"], .ls-block[level="2"], .ls-block[level="3"][haschild="true"])>.block-main-container .bullet-container {
     display: none;
 }
-
+.flex-1.page.relative:not(.is-journals)>.relative .ls-block[level="1"], .flex-1.page.relative:not(.is-journals)>.relative .ls-block[level="2"] {
+  padding: 5px 0px;
+}
 .flex-1.page.relative:not(.is-journals)>.relative .ls-block[level="1"]+.ls-block[level="1"][haschild="true"] {
     margin-top: 10px;
 }

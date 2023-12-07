@@ -96,6 +96,18 @@
                 "mode": "light"
             },
             {
+                "name": "Cool Atom",
+                "url": "./src/palettes/atom.css",
+                "description": "Atom",
+                "mode": "dark"
+            },
+            {
+                "name": "Cool Atom",
+                "url": "./src/palettes/atom.css",
+                "description": "Atom",
+                "mode": "light"
+            },
+            {
                 "name": "Ayu",
                 "url": "./src/palettes/ayu.css",
                 "description": "Ayu",
