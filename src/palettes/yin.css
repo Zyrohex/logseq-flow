@@ -14,12 +14,12 @@ html[data-theme='dark'] {
 
 .white-theme,
 html[data-theme='light'] {
-    --background-color-h: 180;
-    --background-color-s: 20%;
-    --background-color-l: 98%;
-    --cl-background: 180,20%,88%;
-    --cl-text-color: 203,24%,15%;
-    --cl-color-2: 317,100%,75%;
-    --cl-color-1: 272,100%,79%;
-    --cl-color-3: 77,48%,55%;
+    --background-color-h: 207;
+    --background-color-s: 18%;
+    --background-color-l: 90%;
+    --cl-background: 207,18%,80%;
+    --cl-text-color: 210,23%,23%;
+    --cl-color-1: 307,75%,62%;
+    --cl-color-2: 212,70%,53%;
+    --cl-color-3: 77,50%,43%;
 }

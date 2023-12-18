@@ -4,12 +4,12 @@
 html[data-theme='dark'] {
     --background-color-h: 207;
     --background-color-s: 95%;
-    --background-color-l: 13%;
-    --cl-background: 207, 95%, 23%;
+    --background-color-l: 8%;
+    --cl-background: 207, 95%, 18%;
     --cl-text-color: 213, 13%, 86%;
     --cl-color-1: 221, 100%, 75%;
     --cl-color-2: 276, 68%, 75%;
-    --cl-color-3: 35, 71%, 74%;
+    --cl-color-3: 350, 100%, 76%;
 }
 
 .white-theme,
@@ -19,7 +19,7 @@ html[data-theme='light'] {
     --background-color-l: 98%;
     --cl-background: 0, 0%, 88%;
     --cl-text-color: 243, 14%, 29%;
-    --cl-color-1: 182, 86%, 33%;
-    --cl-color-2: 221, 63%, 56%;
-    --cl-color-3: 279, 50%, 53%;
+    --cl-color-1: 221, 63%, 56%;
+    --cl-color-2: 279, 50%, 53%;
+    --cl-color-3: 350, 100%, 76%;
 }

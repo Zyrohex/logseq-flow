@@ -47,6 +47,36 @@
 .ls-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed {
   background-color: transparent !important;
 }
+.is-concept[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\eb67" !important;
+  font-weight: 100;
+  color: var(--cl-color-1-60) !important;
+}
+.is-concept[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f747" !important;
+  font-weight: 100;
+  color: var(--cl-color-1-60) !important;
+}
+.is-collector[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\eaad" !important;
+  font-weight: 100;
+  color: var(--cl-color-1-60) !important;
+}
+.is-collector[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f749" !important;
+  font-weight: 100;
+  color: var(--cl-color-1-60) !important;
+}
+.is-descriptor[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f3a3" !important;
+  font-weight: 100;
+  color: var(--cl-color-1-60) !important;
+}
+.is-descriptor[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f719" !important;
+  font-weight: 100;
+  color: var(--cl-color-1-60) !important;
+}
 .ls-block[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f698";
   font-weight: 100;
@@ -62,9 +92,9 @@
   font-weight: 100;
   color: var(--cl-text-color-20);
 }
-.ls-block[data-refs-self*="[\""][haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+*.ls-block[data-refs-self*="[\""][haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   color: var(--cl-text-color-20);
-  content: "\f747";
+  content: "\eb67";
 }
 .ls-block[data-refs-self*="[\""][haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before, .ls-block[data-refs-self*="[\""][haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   color: var(--cl-text-color-20);

@@ -1,3 +1,5 @@
+@import './tana-bullets2.css';
+
 @font-face {
     font-family: 'tabler-icons240';
     src: url('./tabler-icons.ttf') format('truetype');
@@ -161,6 +163,7 @@
     --ls-primary-text-color: var(--cl-text-color-100);
     --ls-secondary-text-color: var(--cl-text-color-80);
     --ls-title-text-color: #93a1a1;
+    --ls-anchor-link-text-color: var(--ls-link-text-color);
     --ls-link-text-color: var(--cl-color-1-100);
     --ls-link-text-hover-color: var(--ls-active-secondary-color);
     --ls-link-ref-text-color: var(--ls-link-text-color);
@@ -283,6 +286,7 @@
     --ls-primary-text-color: var(--cl-text-color-100);
     --ls-secondary-text-color: var(--cl-text-color-80);
     --ls-title-text-color: var(--ls-header-button-background);
+    --ls-anchor-link-text-color: var(--ls-link-text-color);
     --ls-link-text-color: var(--cl-color-1-100);
     --ls-link-text-hover-color: #1a537c;
     --ls-link-ref-text-color: var(--ls-link-text-color);

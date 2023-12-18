@@ -12,56 +12,12 @@ body, .ls-block, .inline {
   --cl-font-family: Inter;
   --ls-scrollbar-width: 0px;
 }
-.block-body {
-  font-size: smaller !important;
-}
 .current-page-ref {
-  border-bottom: 1px solid;
-  color: var(--cl-color-3-100);
+  text-decoration-color: var(--cl-color-3-60);
 }
 .page-reference:hover {
   background-color: transparent !important;
 }
-.last-with-siblings:hover .page-ref {
-  color: var(--cl-color-1-100) !important;
-}
-.last-with-siblings .current-page-ref {
-  border-bottom: 0px solid;
-}
-.last-with-siblings .page-ref {
-  border-radius: 2px;
-  padding: 1px 5px;
-  background-color: var(--cl-color-1-10);
-  color: var(--cl-color-1-100);
-  font-weight: 300;
-}
-.last-with-siblings .bracket {
-  display: none;
-}
-/*.last-with-siblings .page-ref:after {
-  content: "―";
-  content: "\eb2d";
-  vertical-align: middle;
-  font-family: 'tabler-icons240';
-  margin-left: 3px;
-  color: var(--cl-color-1-100);
-}*/
-.last-with-siblings:after {
-  content: "\ee87";
-  content: "―";
-  vertical-align: inherit;
-  font-family: 'tabler-icons240';
-  margin-left: 3px;
-  color: var(--cl-text-color-60);
-}
-/*.first-with-siblings {
-    background-color: var(--cl-text-color-100);
-    padding: 2px 5px;
-    border-radius: 2px;
-}
-.first-with-siblings .page-ref {
-    color: var(--bg-color) !important;
-}*/
 .block-properties {
   display: inline-block;
 }
@@ -74,50 +30,99 @@ body, .ls-block, .inline {
     margin-right: -3px;
   font-size: smaller;
 }
-.my-2>.flex.flex-col>.initial {
-    background-color: var(--bg-color-1);
-    padding: 0px;
-    border-radius: 2px;
-    margin: 0px;
-}
-.flex-1.flex-row.foldable-title .page-ref:before {
-    font-family: 'tabler-icons240';
-    content: "\eb6e";
-    font-weight: 100 !important;
-    margin-right: 5px;
-}
 .block-properties>div>div+.mr-1 {color: transparent;}
-
-
 .tag {
   background-color: var(--cl-color-3-10) !important;
   padding: 1px 5px !important;
-  color: var(--cl-color-3-80) !important;
+  color: var(--cl-color-3-100) !important;
   border-radius: 2px;
   font-weight: 300;
 }
-/*.last-with-siblings .page-ref:after {
-  content: "―";
-  content: "\eb2d";
-  vertical-align: middle;
-  font-family: 'tabler-icons240';
-  margin-left: 3px;
-  color: var(--cl-color-1-100);
-}*/
-.first-tag:before {
+.bracket {
+  vertical-align: top;
+}
+/************** REFERENCE PANEL ENHANCEMENTS ***********/
+.breadcrumb.block-parents.my-2 a {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.breadcrumb.block-parents.my-2 .bracket {
+  display: none;
+}
+.my-2>.flex.flex-col>div+div {
+    background-color: var(--bg-dark);
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin: 0px;
+    border: 3px solid var(--bg-color-1);
+}
+html[data-color=logseq] .references-blocks-item {
+  background-color: transparent !important;
+}
+/************** BLOCK REF STYLER ***********************/
+.is-block-ref {
+    background-color: var(--cl-color-1-05);
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 2px solid var(--cl-color-1-05);
+}
+.lazy-visibility .is-block-ref {
+    border: 0px solid !important;
+}
+.lazy-visibility .is-block-ref>.block-children-container {
+    margin-left: 0px !important;
+}
+.lazy-visibility .is-block-ref>.block-children-container.block-childrens {
+    border-left: 0px solid;
+}
+.block-ref {
+    border-bottom: 0px solid !important;
+}
+/*************** First Page Reference ******************/
+.concept-block .page-ref {
+  border-radius: 2px;
+  padding: 0px;
+  background-color: transparent;
+  color: var(--cl-color-2-100);
+  color: var(--ls-primary-text-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+.concept-block .current-page-ref {
+  border-bottom: 0px solid;
+  background-color: transparent;
+  color: var(--cl-color-1-100) !important;
+}
+.concept-block .bracket {
+  display: none;
+}
+.concept-block:after {
   content: "\ee87";
   content: "―";
   vertical-align: inherit;
   font-family: 'tabler-icons240';
-  margin-right: 3px;
+  margin-left: 3px;
   color: var(--cl-text-color-60);
 }
-.first-tag .bracket {
+.descriptor-block .bracket {
     display: none;
 }
-
+.descriptor-block .page-ref, .descriptor-block {
+  color: var(--ls-primary-text-color);
+  opacity: 0.75;
+}
+.descriptor-block:after {
+    content: "―";
+    margin: 0px 3px;
+}
 /****************** LUMA SETTINGS **********************/
-#main-content-container, .sidebar-item {
+.cp__right-sidebar-topbar {
+  background-color: transparent !important;
+}
+.cp__right-sidebar .sidebar-item .initial {
+  background-color: var(--bg-color) !important;
+}
+#main-content-container {
     background-color: var(--bg-color) !important;
     border-radius: 4px;
     margin: 0px 10px 10px;
@@ -131,7 +136,7 @@ body, .ls-block, .inline {
 }
 
 /* experimental */
-@media (hover: hover) {
+/*@media (hover: hover) {
 
   .cp__header,
   .cp__right-sidebar-topbar {
