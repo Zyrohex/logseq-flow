@@ -1,0 +1,13 @@
+@import '../code/base.css';
+
+.white-theme,
+html[data-theme='light'] {
+    --background-color-h: 28;
+    --background-color-s: 31%;
+    --background-color-l: 89%;
+    --cl-background: 28,31%,79%;
+    --cl-text-color: 0, 0%, 35%;
+    --cl-color-1: 334, 45%, 47%;
+    --cl-color-3: 231, 49%, 45%;
+    --cl-color-2: 184, 40%, 35%;
+}

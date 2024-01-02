@@ -48,57 +48,57 @@
   background-color: transparent !important;
 }
 .is-concept[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\eb67" !important;
+  content: "\faeb" !important;
+  content: "\ee93" !important;
   font-weight: 100;
   color: var(--cl-color-1-60) !important;
 }
 .is-concept[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f747" !important;
+  content: "\faeb" !important;
+  content: "\ee93" !important;
   font-weight: 100;
   color: var(--cl-color-1-60) !important;
 }
 .is-collector[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\eaad" !important;
   font-weight: 100;
-  color: var(--cl-color-1-60) !important;
 }
 .is-collector[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f749" !important;
+  content: "\eaad" !important;
   font-weight: 100;
-  color: var(--cl-color-1-60) !important;
+  color: var(--cl-color-3-60) !important;
 }
 .is-descriptor[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f3a3" !important;
+  content: "\eac5" !important;
   font-weight: 100;
-  color: var(--cl-color-1-60) !important;
+  color: var(--cl-color-2-60) !important;
 }
 .is-descriptor[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f719" !important;
+  content: "\eac5" !important;
   font-weight: 100;
-  color: var(--cl-color-1-60) !important;
+  color: var(--cl-color-2-60) !important;
+}
+.is-question[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f9e6" !important;
+  font-weight: 100;
+  color: var(--cl-color-3-60) !important;
+}
+.is-question[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\f9e6" !important;
+  font-weight: 100;
+  color: var(--cl-color-3-60) !important;
 }
 .ls-block[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f698";
   font-weight: 100;
-  color: var(--cl-text-color-20);
+  color: var(--cl-text-color-60);
 }
 .ls-block[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\ea5f";
   font-weight: 100;
-  color: var(--cl-text-color-20);
 }
 .ls-block[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   content: "\ea61";
   font-weight: 100;
-  color: var(--cl-text-color-20);
-}
-*.ls-block[data-refs-self*="[\""][haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  color: var(--cl-text-color-20);
-  content: "\eb67";
-}
-.ls-block[data-refs-self*="[\""][haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before, .ls-block[data-refs-self*="[\""][haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  color: var(--cl-text-color-20);
-  content: "\f747";
 }
 /*.pre-block[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before, .pre-block[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\ea08" !important;
@@ -109,59 +109,59 @@
 :is(.ls-block[data-refs-self^="[\"todo\""][haschild="false"], .ls-block[data-refs-self^="[\"doing\""][haschild="false"], .ls-block[data-refs-self^="[\"now\""][haschild="false"])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f698";
   font-weight: 100;
-  color: var(--cl-text-color-40);
+  color: var(--cl-text-color-60);
 }
 :is(.ls-block[data-refs-self^="[\"todo\""][haschild="true"], .ls-block[data-refs-self^="[\"doing\""][haschild="true"], .ls-block[data-refs-self^="[\"now\""][haschild="true"])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f698";
   font-weight: 100;
-  color: var(--cl-text-color-40);
+  color: var(--cl-text-color-60);
 }
 :is(.ls-block[data-refs-self^="[\"doing\""][haschild="false"], .ls-block[data-refs-self^="[\"now\""][haschild="false"])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f698";
   font-weight: 100;
-  color: var(--cl-text-color-40);
+  color: var(--cl-text-color-60);
 }
 :is(.ls-block[data-refs-self^="[\"doing\""][haschild="true"], .ls-block[data-refs-self^="[\"now\""][haschild="true"])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f698";
   font-weight: 100;
-  color: var(--cl-text-color-40);
+  color: var(--cl-text-color-60);
 }
 :is(.ls-block[data-refs-self^="[\"wait\""], .ls-block[data-refs-self^="[\"waiting\""])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f698";
   font-weight: 100;
-  color: var(--cl-text-color-40);
+  color: var(--cl-text-color-60);
 }
 :is(.ls-block[data-refs-self^="[\"wait\""], .ls-block[data-refs-self^="[\"waiting\""])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   content: "\f698";
   font-weight: 100;
-  color: var(--cl-text-color-40);
+  color: var(--cl-text-color-60);
 }
 :is(.ls-block[data-refs-self^="[\"cancelled\""], .ls-block[data-refs-self^="[\"canceled\""])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f698";
   font-weight: 100;
-  color: var(--cl-text-color-40);
+  color: var(--cl-text-color-60);
 }
 :is(.ls-block[data-refs-self^="[\"cancelled\""], .ls-block[data-refs-self^="[\"canceled\""])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   content: "\f698";
   font-weight: 100;
-  color: var(--cl-text-color-40);
+  color: var(--cl-text-color-60);
 }
 .ls-block[data-refs-self^="[\"done\""][haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f698";
   font-weight: 100;
-  color: var(--cl-text-color-40);
+  color: var(--cl-text-color-60);
 }
 .ls-block[data-refs-self^="[\"done\""][haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f698";
   font-weight: 100;
-  color: var(--cl-text-color-40);
+  color: var(--cl-text-color-60);
 }
 .pre-block[data-refs-self*="[\""]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  color: var(--cl-text-color-40);
+  color: var(--cl-text-color-60);
   content: "\f698";
 }
 .pre-block[data-refs-self*="[\""]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  color: var(--cl-text-color-40);
+  color: var(--cl-text-color-60);
   content: "\ea61";
 }
 /* ADD YOUR PAGE TYPES BELOW */
@@ -227,21 +227,21 @@
 }
 .descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f635" !important;
-  color: var(--cl-color-2-100)
+  color: var(--cl-color-2-60)
 }
 .descriptor-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   content: "\f635" !important;
   background-color: hsl(var(--cl-color-2), 0.15);
-  color: var(--cl-color-2-100);
+  color: var(--cl-color-2-60);
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f561" !important;
-  color: var(--cl-color-1-100)
+  color: var(--cl-color-1-60)
 }
 .concept-block>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
   content: "\f561" !important;
   background-color: hsl(var(--cl-color-1), 0.15);
-  color: var(--cl-color-1-100);
+  color: var(--cl-color-1-60);
 }
 .page.relative>.relative .pre-block[data-refs-self*=":gallery-view"] ~ .ls-block[level="1"][haschild="false"] {
   background-color: transparent !important;

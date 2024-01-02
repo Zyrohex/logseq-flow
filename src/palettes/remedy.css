@@ -2,14 +2,14 @@
 
 .dark-theme,
 html[data-theme='dark'] {
-    --background-color-h: 27;
-    --background-color-s: 9%;
-    --background-color-l: 13%;
-    --cl-background: 27, 9%, 23%;
-    --cl-text-color: 40, 82%, 87%;
-    --cl-color-1: 40, 81%, 70%;
-    --cl-color-2: 300, 8%, 55%;
-    --cl-color-3: 25, 66%, 62%;
+    --background-color-h: 220;
+    --background-color-s: 16%;
+    --background-color-l: 22%;
+    --cl-background: 220, 16%, 32%;
+    --cl-text-color: 218, 27%, 94%;
+    --cl-color-1: 210, 34%, 63%;
+    --cl-color-2: 219, 17%, 49%;
+    --cl-color-3: 219, 17%, 49%;
 }
 
 .white-theme,
