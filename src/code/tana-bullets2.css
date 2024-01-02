@@ -107,52 +107,42 @@
   content: "\eaf2" !important;
 }*/
 :is(.ls-block[data-refs-self^="[\"todo\""][haschild="false"], .ls-block[data-refs-self^="[\"doing\""][haschild="false"], .ls-block[data-refs-self^="[\"now\""][haschild="false"])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f698";
   font-weight: 100;
   color: var(--cl-text-color-60);
 }
 :is(.ls-block[data-refs-self^="[\"todo\""][haschild="true"], .ls-block[data-refs-self^="[\"doing\""][haschild="true"], .ls-block[data-refs-self^="[\"now\""][haschild="true"])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f698";
   font-weight: 100;
   color: var(--cl-text-color-60);
 }
 :is(.ls-block[data-refs-self^="[\"doing\""][haschild="false"], .ls-block[data-refs-self^="[\"now\""][haschild="false"])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f698";
   font-weight: 100;
   color: var(--cl-text-color-60);
 }
 :is(.ls-block[data-refs-self^="[\"doing\""][haschild="true"], .ls-block[data-refs-self^="[\"now\""][haschild="true"])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f698";
   font-weight: 100;
   color: var(--cl-text-color-60);
 }
 :is(.ls-block[data-refs-self^="[\"wait\""], .ls-block[data-refs-self^="[\"waiting\""])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f698";
   font-weight: 100;
   color: var(--cl-text-color-60);
 }
 :is(.ls-block[data-refs-self^="[\"wait\""], .ls-block[data-refs-self^="[\"waiting\""])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f698";
   font-weight: 100;
   color: var(--cl-text-color-60);
 }
 :is(.ls-block[data-refs-self^="[\"cancelled\""], .ls-block[data-refs-self^="[\"canceled\""])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f698";
   font-weight: 100;
   color: var(--cl-text-color-60);
 }
 :is(.ls-block[data-refs-self^="[\"cancelled\""], .ls-block[data-refs-self^="[\"canceled\""])>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\f698";
   font-weight: 100;
   color: var(--cl-text-color-60);
 }
 .ls-block[data-refs-self^="[\"done\""][haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f698";
   font-weight: 100;
   color: var(--cl-text-color-60);
 }
 .ls-block[data-refs-self^="[\"done\""][haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\f698";
   font-weight: 100;
   color: var(--cl-text-color-60);
 }
