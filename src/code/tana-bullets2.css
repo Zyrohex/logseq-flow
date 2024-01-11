@@ -67,6 +67,16 @@
   font-weight: 100;
   color: var(--cl-color-3-60) !important;
 }
+.is-foundation[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\eb2d" !important;
+  font-weight: 100;
+  color: var(--cl-color-1-60) !important;
+}
+.is-foundation[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\eb2d" !important;
+  font-weight: 100;
+  color: var(--cl-color-1-60) !important;
+}
 .is-descriptor[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\eac5" !important;
   font-weight: 100;

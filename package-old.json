@@ -1,0 +1,78 @@
+{
+    "name": "(Neutral Blue) Moonlight ",
+    "url": "./src/palettes/moonlight.css",
+    "description": "Moonlight",
+    "mode": "light"
+},
+{
+    "name": "(Neutral Blue) Hatsunemiku ",
+    "url": "./src/palettes/hatsunemiku.css",
+    "description": "Hatsunemiku",
+    "mode": "light"
+},
+{
+    "name": "(Neutral Blue) Atom ",
+    "url": "./src/palettes/atom.css",
+    "description": "Atom",
+    "mode": "light"
+},
+{
+    "name": "(Neutral Blue) One Light Pro ",
+    "url": "./src/palettes/one-dark-pro.css",
+    "description": "One Light Pro",
+    "mode": "light"
+},
+{
+    "name": "(Neutral Blue) Pencil ",
+    "url": "./src/palettes/pencil.css",
+    "description": "Pencil",
+    "mode": "light"
+},
+{
+    "name": "(Neutral Blue) Quiet ",
+    "url": "./src/palettes/quiet.css",
+    "description": "Quiet",
+    "mode": "light"
+},
+{
+    "name": "(Neutral Blue) Tokyo ",
+    "url": "./src/palettes/tokyo.css",
+    "description": "Tokyo",
+    "mode": "light"
+},
+{
+    "name": "(Neutral Blue) Watermelon ",
+    "url": "./src/palettes/watermelon.css",
+    "description": "Watermelon",
+    "mode": "light"
+},
+{
+    "name": "(Neutral Green) Momo ",
+    "url": "./src/palettes/momo.css",
+    "description": "Momo",
+    "mode": "light"
+},
+{
+    "name": "(Neutral Orange) Two Firewatch ",
+    "url": "./src/palettes/twofirewatch.css",
+    "description": "Two Firewatch",
+    "mode": "light"
+},
+{
+    "name": "(Neutral Red) Material ",
+    "url": "./src/palettes/material.css",
+    "description": "material",
+    "mode": "light"
+},
+{
+    "name": "(Warm Blue) Kanagawa ",
+    "url": "./src/palettes/kanagawa.css",
+    "description": "Kanagawa",
+    "mode": "light"
+},
+{
+    "name": "(Warm Orange) Everforest ",
+    "url": "./src/palettes/everforest.css",
+    "description": "Everforest",
+    "mode": "light"
+},

@@ -7,7 +7,6 @@ body, .ls-block, .inline {
   --cl-page-max-width: 1100px;
   --cl-font-family: "SF Pro Text";
   --cl-font-family: Inter;
-  --cl-font-family: "SF Pro Text";
   --ls-scrollbar-width: 0px;
 }
 .current-page-ref {
@@ -20,12 +19,11 @@ body, .ls-block, .inline {
   display: none;
 }
 .block-properties {
-    display: inline-block;
     background-color: var(--bg-dark);
     padding: 5px 8px;
-    border-radius: 10px;
+    border-radius: 4px;
     margin: 0px;
-    border: 3px solid var(--bg-color-1);
+    border: 1.5px solid var(--bg-color-1);
 }
 .block-properties>div>div+.mr-1:before {
     color: var(--cl-text-color-40);
@@ -40,34 +38,6 @@ body, .ls-block, .inline {
 .bracket {
   vertical-align: top;
 }
-.is-descriptor i {
-  color: var(--cl-color-2-100);
-}
-.is-descriptor .page-ref {
-  color: var(--cl-color-2-100);
-}
-.is-collector .page-ref {
-  color: var(--cl-color-3-100);
-}
-.is-question>.block-main-container span.inline {
-    border-bottom: 1px solid var(--cl-color-3-40);
-    font-weight: 800 !important;
-}
-/*.is-question>.block-children-container>.block-children, .is-question>.block-children-container>.block-children>.ls-block>.block-children-container>.block-children {
-  border-left: 0px solid;
-  padding-top: 0px;
-}
-.is-question>.block-children-container {
-    margin-left: 0px;
-}
-.is-question {
-    border: 1px solid var(--cl-text-color-20);
-    border-radius: 4px;
-}
-*/
-.is-question>.block-children-container>.block-children>.ls-block>.block-main-container .bullet-container {
-    opacity: 1;
-}
 /************** REFERENCE PANEL ENHANCEMENTS ***********/
 .breadcrumb.block-parents.my-2 a {
   font-size: 16px;
@@ -79,9 +49,9 @@ body, .ls-block, .inline {
 .my-2>.flex.flex-col {
     background-color: var(--bg-dark);
     padding: 3px 8px;
-    border-radius: 10px;
+    border-radius: 4px;
     margin: 0px;
-    border: 3px solid var(--bg-color-1);
+    border: 1.5px solid var(--bg-color-1);
 }
 .references-blocks-item {
   background-color: transparent !important;
@@ -106,8 +76,49 @@ body, .ls-block, .inline {
 .block-ref {
     border-bottom: 0px solid !important;
 }
+/*************** CODE MIRROR SETTINGS ******************/
+.code-editor.flex.flex-1.flex-row.w-full {
+    border: 1.5px solid var(--bg-color-1);
+    border-radius: 4px;
+}
+.dark-theme .cm-s-solarized, .light-theme .cm-s-solarized {
+  background-color: var(--bg-dark) !important;
+}
+.CodeMirror-gutter.CodeMirror-linenumbers {
+    background-color: var(--bg-color-1) !important;
+}
 /*************** First Page Reference ******************/
-.concept-block .page-ref {
+.is-descriptor i {
+  color: var(--cl-color-2-100);
+}
+.is-descriptor .page-ref {
+  color: var(--cl-color-2-100);
+}
+.is-collector .page-ref {
+  color: var(--cl-color-3-100);
+}
+.is-question>.block-main-container span.inline {
+    border-bottom: 1px solid var(--cl-color-3-40);
+    font-weight: 800 !important;
+}
+.is-foundation>.block-main-container b {
+  font-weight: 400;
+}
+.is-question>.block-children-container>.block-children, .is-question>.block-children-container>.block-children>.ls-block>.block-children-container>.block-children {
+  border-left: 0px solid;
+  padding-top: 0px;
+}
+.is-question>.block-children-container {
+    margin-left: 0px;
+}
+.is-question {
+    border: 1px solid var(--cl-text-color-20);
+    border-radius: 4px;
+}
+.is-question>.block-children-container>.block-children>.ls-block>.block-main-container .bullet-container {
+    opacity: 1;
+}
+/*.concept-block .page-ref {
   border-radius: 2px;
   padding: 0px;
   background-color: transparent;
@@ -131,7 +142,7 @@ body, .ls-block, .inline {
   font-family: 'tabler-icons240';
   margin-left: 3px;
   color: var(--cl-text-color-60);
-}
+}*/
 .descriptor-block .bracket {
     display: none;
 }

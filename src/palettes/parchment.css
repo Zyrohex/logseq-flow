@@ -17,8 +17,8 @@ html[data-theme='dark'] {
     --background-color-s: 28%;
     --background-color-l: 92%;
     --cl-background: 38, 28%, 82%;
-    --cl-text-color: 32, 52%, 27%;
+    --cl-text-color: 32, 52%, 22%;
     --cl-color-1: 162, 58%, 32%;
     --cl-color-2: 20, 70%, 38%;
-    --cl-color-3: 39, 88%, 61%;
+    --cl-color-3: 39, 88%, 41%;
 }
