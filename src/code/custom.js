@@ -200,21 +200,24 @@ function updatePageReferencesWithDescriptorBlock() {
                 child.nodeType !== Node.TEXT_NODE || child.textContent.trim()
             );
 
-            // Check if the <i> element is the only child element of '.inline'
-            if (children.length === 1 && children[0].nodeType === Node.ELEMENT_NODE && children[0].tagName === 'I') {
+            if (children.length === 1 && children[0].nodeType === Node.ELEMENT_NODE) {
                 let ancestor = inline;
                 for (let i = 0; i < 8; i++) {
                     if (ancestor.parentNode) {
                         ancestor = ancestor.parentNode;
                     } else {
-                        // If there's no 9th ancestor, break out of the loop
                         break;
                     }
                 }
 
-                // Add 'is-descriptor' class if we successfully traversed 9 levels up
-                if (ancestor.nodeType === Node.ELEMENT_NODE) {
+                // Check if the single child element is <i> and assign 'is-descriptor'
+                if (children[0].tagName === 'I' && ancestor.nodeType === Node.ELEMENT_NODE) {
                     ancestor.classList.add('is-descriptor');
+                }
+
+                // Check if the single child element is <b> and assign 'assertion-block'
+                if (children[0].tagName === 'B' && ancestor.nodeType === Node.ELEMENT_NODE) {
+                    ancestor.classList.add('is-foundation');
                 }
             }
         });
@@ -232,6 +235,7 @@ function updatePageReferencesWithDescriptorBlock() {
 
 // Call the function to initialize
 updatePageReferencesWithDescriptorBlock();
+
 
 function updatePageReferencesWithCollectorBlock() {
     const observer = new MutationObserver((mutationsList) => {
