@@ -158,7 +158,7 @@
     --ls-border-color: var(--bg-color-2);
     --ls-secondary-border-color: #126277;
     --ls-tertiary-border-color: rgba(0,2,0,.1);
-    --ls-guideline-color: var(--cl-text-color-20);
+    --ls-guideline-color: var(--cl-text-color-10);
     --ls-menu-hover-color: var(--ls-secondary-background-color);
     --ls-primary-text-color: var(--cl-text-color-100);
     --ls-secondary-text-color: var(--cl-text-color-80);
@@ -281,7 +281,7 @@
     --ls-border-color: var(--bg-color-2);
     --ls-secondary-border-color: #e2e2e2;
     --ls-tertiary-border-color: hsla(0,0%,78%,.3);
-    --ls-guideline-color: var(--cl-text-color-20);
+    --ls-guideline-color: var(--cl-text-color-10);
     --ls-menu-hover-color: var(--ls-a-chosen-bg);
     --ls-primary-text-color: var(--cl-text-color-100);
     --ls-secondary-text-color: var(--cl-text-color-80);
@@ -438,6 +438,11 @@
 
 .extensions__code-lang {
     background-color: transparent;
+}
+
+/************* BULLET CONTAINER *************/
+.bullet-container .bullet {
+    height: 8px;
 }
 
 /***************** MARKDOWN *****************/

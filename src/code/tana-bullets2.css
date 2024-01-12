@@ -64,12 +64,12 @@
   color: var(--cl-color-3-60) !important;
 }
 .is-foundation[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\eb2d" !important;
+  content: "\f7a0" !important;
   font-weight: 100;
   color: var(--cl-color-1-60) !important;
 }
 .is-foundation[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\eb2d" !important;
+  content: "\f7a0" !important;
   font-weight: 100;
   color: var(--cl-color-1-60) !important;
 }
