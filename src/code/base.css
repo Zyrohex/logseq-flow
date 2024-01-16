@@ -440,11 +440,6 @@
     background-color: transparent;
 }
 
-/************* BULLET CONTAINER *************/
-.bullet-container .bullet {
-    height: 8px;
-}
-
 /***************** MARKDOWN *****************/
 .block-marker {
     opacity: 0.7;
