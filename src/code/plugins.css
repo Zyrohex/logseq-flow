@@ -496,6 +496,9 @@ div[data-refs-self*="kanban-fit"]>.block-children-container.flex>.block-children
     margin: 0px;
     padding: 0px;
   }
+  .journal-item>.journal .ls-block[level="1"][haschild="true"]>.block-main-container .is-paragraph {
+    font-size: smaller;
+  }
   .journal-item>.journal .ls-block[level="1"]>.block-main-container .inline a.tag {
     display: contents;
     font-size: smaller;
