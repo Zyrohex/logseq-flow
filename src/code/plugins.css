@@ -574,3 +574,56 @@ div[data-refs-self*="kanban-fit"]>.block-children-container.flex>.block-children
   background-color: var(--cl-color-2-05);
   background-color: var(--cl-text-color-05);
 }
+
+/**************** DRILL DOWN TABLE VIEW ********************/
+.mb-4+div>.page-blocks-inner .ls-block[level="1"][haschild="true"] {
+  display: flex;
+  padding: 10px 0px;
+}
+
+.mb-4+div>.page-blocks-inner .ls-block[level="1"][haschild="false"] :is(h1, h2, h3, h4, h5, h6) {
+  font-weight: 700;
+}
+
+.mb-4+div>.page-blocks-inner .is-empty .bullet {
+  opacity: 1;
+}
+
+.mb-4+div>.page-blocks-inner .ls-block[level="1"]>.block-children-container {
+  margin-left: 0px;
+  flex: 1 0;
+}
+
+.mb-4+div>.page-blocks-inner .ls-block[level="1"]>.block-children-container>.block-children {
+  border-left: 0px solid !important;
+  padding: 0px;
+}
+
+.mb-4+div>.page-blocks-inner .ls-block[level="1"]>.block-children-container>.block-children-left-border {
+  display: none;
+}
+
+.mb-4+div>.page-blocks-inner .ls-block[level="1"][haschild="true"]>.block-main-container {
+  flex: 0 0 30%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.mb-4+div>.page-blocks-inner .ls-block[level="1"][haschild="true"]>.block-main-container .is-paragraph {
+  font-size: smaller;
+}
+
+.mb-4+div>.page-blocks-inner .ls-block[level="1"]>.block-main-container .inline a.tag {
+  display: contents;
+  font-size: smaller;
+  word-break: break-word;
+}
+
+.mb-4+div>.page-blocks-inner .ls-block[level="1"]>.block-main-container .bracket {
+  display: none;
+}
+
+.mb-4+div>.page-blocks-inner .ls-block[level="1"][haschild="true"]:nth-child(odd) {
+  background-color: var(--cl-color-2-05);
+  background-color: var(--cl-text-color-05);
+}
