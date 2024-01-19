@@ -539,6 +539,7 @@ div[data-refs-self*="kanban-fit"]>.block-children-container.flex>.block-children
 :is(.journal-item>.journal, .is-journals) .page-blocks-inner .ls-block[level="1"]>.block-children-container {
   margin-left: 0px;
   flex: 1 0;
+  overflow-x: hidden !important;
 }
 
 :is(.journal-item>.journal, .is-journals) .page-blocks-inner .ls-block[level="1"]>.block-children-container>.block-children {
@@ -592,6 +593,7 @@ div[data-refs-self*="kanban-fit"]>.block-children-container.flex>.block-children
 .mb-4+div>.page-blocks-inner .ls-block[level="1"]>.block-children-container {
   margin-left: 0px;
   flex: 1 0;
+  overflow-x: hidden !important;
 }
 
 .mb-4+div>.page-blocks-inner .ls-block[level="1"]>.block-children-container>.block-children {
