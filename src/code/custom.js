@@ -45,7 +45,7 @@ function collapseAndAbbreviateNamespaceRefs() {
 
 collapseAndAbbreviateNamespaceRefs();
 
-function updatePageReferencesWithCurrentClass() {
+/*function updatePageReferencesWithCurrentClass() {
     const observer = new MutationObserver((mutationsList) => {
         for (const mutation of mutationsList) {
             if (mutation.type === 'childList' || mutation.type === 'attributes') {
@@ -83,6 +83,7 @@ function updatePageReferencesWithCurrentClass() {
 
 // Initialize the function to start observing and update classes accordingly
 updatePageReferencesWithCurrentClass();
+*/
 
 function updatePageReferencesWithSiblingClasses() {
     const observer = new MutationObserver((mutationsList) => {
@@ -215,9 +216,12 @@ function updatePageReferencesWithDescriptorBlock() {
                     ancestor.classList.add('is-descriptor');
                 }
 
-                // Check if the single child element is <b> and assign 'assertion-block'
+                // Check if the single child element is <b> with a child having class '.page-reference' and assign 'is-foundation'
                 if (children[0].tagName === 'B' && ancestor.nodeType === Node.ELEMENT_NODE) {
-                    ancestor.classList.add('is-foundation');
+                    const bElement = children[0];
+                    if (bElement.querySelector('.page-reference')) {
+                        ancestor.classList.add('is-foundation');
+                    }
                 }
             }
         });
@@ -387,9 +391,6 @@ function updateAndRemoveTaggedReferences() {
     });
 
     function findAllMatchedElements() {
-        /* This function will iterate through every page + block reference to get a count for how many tags
-        vs page references exists for a page reference. If the tags count is equal to the total page reference
-        count, then we delete the entire page element, otherwise we only remove the tag reference. */
         let pageNameElement = parent.document.querySelector('.title .title').getAttribute('data-ref')
         let allPageReferences = parent.document.querySelectorAll('.references-blocks-wrap')
         let pageRef = parent.document.querySelectorAll('.references-blocks-wrap>.lazy-visibility')
@@ -442,4 +443,53 @@ function updateAndRemoveTaggedReferences() {
     findAllMatchedElements();
 }
 
-updateAndRemoveTaggedReferences();
+/*updateAndRemoveTaggedReferences();
+
+function updateHeadlineBlocks() {
+    const observer = new MutationObserver((mutationsList) => {
+        for (const mutation of mutationsList) {
+            if (mutation.type === 'childList' || mutation.type === 'attributes') {
+                updatePageReferences();
+            }
+        }
+    });
+
+    function updatePageReferences() {
+        const inlineElements = document.querySelectorAll('.inline');
+
+        inlineElements.forEach((inline) => {
+            const children = Array.from(inline.childNodes).filter(child =>
+                child.nodeType !== Node.TEXT_NODE || child.textContent.trim()
+            );
+
+            if (children.length === 1 && children[0].nodeType === Node.ELEMENT_NODE) {
+                let ancestor = inline;
+                for (let i = 0; i < 8; i++) {
+                    if (ancestor.parentNode) {
+                        ancestor = ancestor.parentNode;
+                    } else {
+                        break;
+                    }
+                }
+
+                // Check if the single child element is an h2 element
+                if (children[0].tagName === 'H2' && ancestor.nodeType === Node.ELEMENT_NODE) {
+                    ancestor.classList.add('some-class'); // Replace 'some-class' with the class you want to add
+                }
+            }
+        });
+    }
+
+    observer.observe(document.body, {
+        subtree: true,
+        childList: true,
+        characterData: true,
+    });
+
+    // Apply the class to the elements immediately and also check for any mismatches
+    updatePageReferences();
+}
+
+// Call the function to initialize
+updateHeadlineBlocks();
+*/

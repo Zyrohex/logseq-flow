@@ -239,6 +239,10 @@
   background-color: hsl(var(--cl-color-1), 0.15);
   color: var(--cl-color-1-60);
 }
+/******************* FIXES **********************/
+.ls-block .bullet-container .selected {
+  border: 0px solid !important;
+}
 /*
 .page.relative>.relative>.flex.flex-row+div :not(.pre-block).ls-block[haschild="true"]>.block-main-container .tag[data-ref=":hide-bullet"] {
   display: none;

@@ -13,11 +13,11 @@ html[data-theme='dark'] {
 }
 .white-theme,
 html[data-theme='light'] {
-    --background-color-h: 0;
-    --background-color-s: 0%;
-    --background-color-l: 100%;
-    --cl-background: 0,0%,90%;
-    --cl-text-color: 38,9%,24%;
+    --background-color-h: 183;
+    --background-color-s: 11%;
+    --background-color-l: 88%;
+    --cl-background: 183,11%,78%;
+    --cl-text-color: 192,94%,20%;
     --cl-color-2: 203,48%,48%;
     --cl-color-1: 203,82%,35%;
     --cl-color-3: 203,48%,48%;
