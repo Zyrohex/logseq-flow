@@ -6,21 +6,9 @@
     "logseq": {
         "themes": [
             {
-                "name": "(Blue) Absent ",
-                "url": "./src/palettes/absent.css",
-                "description": "Absent",
-                "mode": "dark"
-            },
-            {
                 "name": "(Pink) Budha ",
                 "url": "./src/palettes/budha.css",
                 "description": "Budha",
-                "mode": "dark"
-            },
-            {
-                "name": "(Blue) Bearded Ruby ",
-                "url": "./src/palettes/bearded-ruby.css",
-                "description": "Bearded Ruby",
                 "mode": "dark"
             },
             {
@@ -33,18 +21,6 @@
                 "name": "(Red) Koki ",
                 "url": "./src/palettes/koki.css",
                 "description": "Koki",
-                "mode": "dark"
-            },
-            {
-                "name": "(Red) Jellyfish ",
-                "url": "./src/palettes/jellyfish.css",
-                "description": "Jellyfish",
-                "mode": "dark"
-            },
-            {
-                "name": "(Green) Adventuretime ",
-                "url": "./src/palettes/adventuretime.css",
-                "description": "Adventuretime",
                 "mode": "dark"
             },
             {
@@ -66,27 +42,9 @@
                 "mode": "dark"
             },
             {
-                "name": "(Red) Anderson ",
-                "url": "./src/palettes/anderson.css",
-                "description": "Anderson",
-                "mode": "dark"
-            },
-            {
                 "name": "(Red) Deepsace ",
                 "url": "./src/palettes/deepspace.css",
                 "description": "Deepsace",
-                "mode": "dark"
-            },
-            {
-                "name": "(Green) Andromeda ",
-                "url": "./src/palettes/andromeda.css",
-                "description": "Andromeda",
-                "mode": "dark"
-            },
-            {
-                "name": "(Red) Ark ",
-                "url": "./src/palettes/ark.css",
-                "description": "Ark",
                 "mode": "dark"
             },
             {
@@ -96,21 +54,9 @@
                 "mode": "light"
             },
             {
-                "name": "(Blue) Atom ",
-                "url": "./src/palettes/atom.css",
-                "description": "Atom",
-                "mode": "dark"
-            },
-            {
                 "name": "(Orange) Ayu ",
                 "url": "./src/palettes/ayu.css",
                 "description": "Ayu",
-                "mode": "dark"
-            },
-            {
-                "name": "(Pink) Bear ",
-                "url": "./src/palettes/bear.css",
-                "description": "Bear",
                 "mode": "dark"
             },
             {
@@ -132,24 +78,6 @@
                 "mode": "light"
             },
             {
-                "name": "(Green) Catppuccin Frappe ",
-                "url": "./src/palettes/catppuccin-frappe.css",
-                "description": "Catppuccin Frappe",
-                "mode": "dark"
-            },
-            {
-                "name": "(Blue) Catppuccin Macchiato ",
-                "url": "./src/palettes/catppuccin-macchiato.css",
-                "description": "Catppuccin Macchiato",
-                "mode": "dark"
-            },
-            {
-                "name": "(Orange) Catppuccin Mocha ",
-                "url": "./src/palettes/catppuccin-mocha.css",
-                "description": "Catppuccin Mocha",
-                "mode": "dark"
-            },
-            {
                 "name": "(Warm Blue) Chocolate ",
                 "url": "./src/palettes/chocolate.css",
                 "description": "Vanilla Chocolate",
@@ -159,18 +87,6 @@
                 "name": "(Blue) Chocolate ",
                 "url": "./src/palettes/chocolate.css",
                 "description": "Dark Chocolate",
-                "mode": "dark"
-            },
-            {
-                "name": "(Blue) Quiet ",
-                "url": "./src/palettes/quiet.css",
-                "description": "Quiet",
-                "mode": "dark"
-            },
-            {
-                "name": "(Purple) Seashell ",
-                "url": "./src/palettes/seashell.css",
-                "description": "Seashell",
                 "mode": "dark"
             },
             {
@@ -192,18 +108,6 @@
                 "mode": "light"
             },
             {
-                "name": "(Green) Pencil ",
-                "url": "./src/palettes/pencil.css",
-                "description": "Pencil",
-                "mode": "dark"
-            },
-            {
-                "name": "(Green) Cobalt ",
-                "url": "./src/palettes/cobalt.css",
-                "description": "Cobalt",
-                "mode": "dark"
-            },
-            {
                 "name": "(Pink) Daycula ",
                 "url": "./src/palettes/daycula.css",
                 "description": "Daycula",
@@ -222,12 +126,6 @@
                 "mode": "dark"
             },
             {
-                "name": "(Green) Material Forest ",
-                "url": "./src/palettes/material-forest.css",
-                "description": "Material Forest",
-                "mode": "dark"
-            },
-            {
                 "name": "(Blue) Material Ocean ",
                 "url": "./src/palettes/material-ocean.css",
                 "description": "Material Ocean",
@@ -243,12 +141,6 @@
                 "name": "(Yellow) Ephemeral ",
                 "url": "./src/palettes/ephemeral.css",
                 "description": "Ephemeral",
-                "mode": "dark"
-            },
-            {
-                "name": "(Green) Phonebook ",
-                "url": "./src/palettes/phonebook.css",
-                "description": "Phonebook",
                 "mode": "dark"
             },
             {
@@ -282,22 +174,10 @@
                 "mode": "dark"
             },
             {
-                "name": "(Blue) Hatsunemiku ",
-                "url": "./src/palettes/hatsunemiku.css",
-                "description": "Hatsunemiku",
-                "mode": "dark"
-            },
-            {
                 "name": "(Neutral Blue) Inkstained ",
                 "url": "./src/palettes/inkstained.css",
                 "description": "Inkstained",
                 "mode": "light"
-            },
-            {
-                "name": "(Blue) Inkstained ",
-                "url": "./src/palettes/inkstained.css",
-                "description": "Inkstained",
-                "mode": "dark"
             },
             {
                 "name": "(Blue) Foggy Night ",
@@ -336,21 +216,9 @@
                 "mode": "dark"
             },
             {
-                "name": "(Orange) Miramare ",
-                "url": "./src/palettes/miramare.css",
-                "description": "Miramare",
-                "mode": "dark"
-            },
-            {
                 "name": "(Pink) Monokai Pro ",
                 "url": "./src/palettes/monokai-pro.css",
                 "description": "Monokai Pro",
-                "mode": "dark"
-            },
-            {
-                "name": "(Purple) Moonlight ",
-                "url": "./src/palettes/moonlight.css",
-                "description": "Moonlight",
                 "mode": "dark"
             },
             {
@@ -358,18 +226,6 @@
                 "url": "./src/palettes/munsell.css",
                 "description": "Munsell",
                 "mode": "light"
-            },
-            {
-                "name": "(Blue) Munsell ",
-                "url": "./src/palettes/munsell.css",
-                "description": "Munsell",
-                "mode": "dark"
-            },
-            {
-                "name": "(Orange) Mellow ",
-                "url": "./src/palettes/mellow.css",
-                "description": "Mellow",
-                "mode": "dark"
             },
             {
                 "name": "(Purple) Nebula ",
@@ -396,22 +252,10 @@
                 "mode": "light"
             },
             {
-                "name": "(Blue) Ngvuq ",
-                "url": "./src/palettes/ngvuq.css",
-                "description": "Ngvuq",
-                "mode": "dark"
-            },
-            {
                 "name": "(Warm Green) Parchment ",
                 "url": "./src/palettes/parchment.css",
                 "description": "Parchment",
                 "mode": "light"
-            },
-            {
-                "name": "(Blue) Nord ",
-                "url": "./src/palettes/nord.css",
-                "description": "Nord",
-                "mode": "dark"
             },
             {
                 "name": "(Blue) Oceanic Material ",
@@ -429,12 +273,6 @@
                 "name": "(Orange) Oceanic Next ",
                 "url": "./src/palettes/oceanic.css",
                 "description": "Oceanic Dark",
-                "mode": "dark"
-            },
-            {
-                "name": "(Purple) One Dark Pro ",
-                "url": "./src/palettes/one-dark-pro.css",
-                "description": "One Dark Pro",
                 "mode": "dark"
             },
             {
@@ -468,18 +306,6 @@
                 "mode": "dark"
             },
             {
-                "name": "(Pink) Panda ",
-                "url": "./src/palettes/panda.css",
-                "description": "Panda",
-                "mode": "dark"
-            },
-            {
-                "name": "(Pink) Rogue ",
-                "url": "./src/palettes/rogue.css",
-                "description": "Rogue",
-                "mode": "dark"
-            },
-            {
                 "name": "(Pink) Rose ",
                 "url": "./src/palettes/rose.css",
                 "description": "Rose",
@@ -490,12 +316,6 @@
                 "url": "./src/palettes/rose.css",
                 "description": "Rose",
                 "mode": "light"
-            },
-            {
-                "name": "(Pink) Snazzy ",
-                "url": "./src/palettes/snazzy.css",
-                "description": "Snazzy",
-                "mode": "dark"
             },
             {
                 "name": "(Warm Blue) Solarized ",
@@ -528,12 +348,6 @@
                 "mode": "dark"
             },
             {
-                "name": "(Blue) Teady ",
-                "url": "./src/palettes/teady.css",
-                "description": "Teady",
-                "mode": "dark"
-            },
-            {
                 "name": "(Blue) Tokyo ",
                 "url": "./src/palettes/tokyo.css",
                 "description": "Tokyo",
@@ -555,12 +369,6 @@
                 "name": "(Blue) Watermelon ",
                 "url": "./src/palettes/watermelon.css",
                 "description": "Watermelon",
-                "mode": "dark"
-            },
-            {
-                "name": "(Red) Yellowmoon ",
-                "url": "./src/palettes/yellowmoon.css",
-                "description": "Yellowmoon",
                 "mode": "dark"
             },
             {

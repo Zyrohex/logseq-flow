@@ -64,24 +64,24 @@
   color: var(--cl-color-3-60) !important;
 }
 .is-foundation[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\eb6e" !important;
+  content: "\f747" !important;
   font-weight: 100;
-  color: var(--cl-color-1-60) !important;
+  color: var(--cl-color-1-100) !important;
 }
 .is-foundation[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\eb6e" !important;
+  content: "\f747" !important;
   font-weight: 100;
-  color: var(--cl-color-1-60) !important;
+  color: var(--cl-color-1-100) !important;
 }
 .is-descriptor[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\eac5" !important;
+  content: "\f6d8" !important;
   font-weight: 100;
-  color: var(--cl-color-2-60) !important;
+  color: var(--cl-color-2-100) !important;
 }
 .is-descriptor[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\eac5" !important;
+  content: "\f6d8" !important;
   font-weight: 100;
-  color: var(--cl-color-2-60) !important;
+  color: var(--cl-color-2-100) !important;
 }
 .is-question[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f9e6" !important;

@@ -513,6 +513,7 @@ div[data-refs-self*="kanban-fit"]>.block-children-container.flex>.block-children
 }
 
 /**************** JOURNAL TABLE VIEW ********************/
+/*
 :is(.journal-item>.journal, .is-journals) .page-blocks-inner .ls-block[level="1"][haschild="true"] {
   display: flex;
   padding: 10px 0px;
@@ -577,6 +578,7 @@ div[data-refs-self*="kanban-fit"]>.block-children-container.flex>.block-children
 }
 
 /**************** DRILL DOWN TABLE VIEW ********************/
+/*
 .mb-4+div>.page-blocks-inner .ls-block[level="1"][haschild="true"] {
   display: flex;
   padding: 10px 0px;

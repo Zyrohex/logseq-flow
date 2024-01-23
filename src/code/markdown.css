@@ -385,40 +385,6 @@ body {
     border-radius: 2px;
 }
 
-span.inline.px-1.with-bg-color[style*="red"] {
-    color: var(--ls-highlight-color-red-text);
-    filter: brightness(0.75);
-}
-
-span.inline.px-1.with-bg-color[style*="gray"] {
-    color: var(--ls-highlight-color-gray-text);
-    filter: brightness(0.75);
-}
-
-span.inline.px-1.with-bg-color[style*="yellow"] {
-    color: var(--ls-highlight-color-yellow-text);
-    filter: brightness(0.75);
-}
-
-span.inline.px-1.with-bg-color[style*="green"] {
-    color: var(--ls-highlight-color-green-text);
-    filter: brightness(0.75);
-}
-
-span.inline.px-1.with-bg-color[style*="blue"] {
-    color: var(--ls-highlight-color-blue-text);
-    filter: brightness(0.75);
-}
-
-span.inline.px-1.with-bg-color[style*="purple"] {
-    color: var(--ls-highlight-color-purple-text);
-    filter: brightness(0.75);
-}
-
-span.inline.px-1.with-bg-color[style*="pink"] {
-    color: var(--ls-highlight-color-pink-text);
-}
-
 /* Fixes the line-break for long page titles */
 .ls-page-title.title span {
     white-space: normal !important;

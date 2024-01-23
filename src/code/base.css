@@ -1,4 +1,4 @@
-/*@import './tana-bullets2.css';*/
+@import './tana-bullets2.css';
 @import './plugins.css';
 
 @font-face {
@@ -486,4 +486,96 @@
 .editor-inner .uniline-block.h4,
 .ls-block h4 {
     transform: translateY(-5.5px) !important;
+}
+/************************* HIGHLIGHTER COLORS ********************************/
+.heading-bg[style="background-color: var(--color-yellow-500);"] {
+    background-color: var(--cl-color-1-100) !important;
+}
+.heading-bg[style="background-color: var(--color-red-500);"] {
+    background-color: var(--cl-color-1-100) !important;
+}
+.heading-bg[style="background-color: var(--color-pink-500);"] {
+    background-color: var(--cl-color-2-100) !important;
+}
+.heading-bg[style="background-color: var(--color-green-500);"] {
+    background-color: var(--cl-color-2-100) !important;
+}
+.heading-bg[style="background-color: var(--color-blue-500);"] {
+    background-color: var(--cl-color-3-100) !important;
+}
+.heading-bg[style="background-color: var(--color-purple-500);"] {
+    background-color: var(--cl-color-3-100) !important;
+}
+.heading-bg[style="background-color: var(--color-gray-500);"] {
+    background-color: var(--cl-text-color-80) !important;
+}
+span.inline.px-1.with-bg-color[style*="yellow"] {
+    color: var(--cl-color-1-100);
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+span.inline.px-1.with-bg-color[style*="red"] {
+    color: var(--cl-color-1-100);
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+span.inline.px-1.with-bg-color[style*="pink"] {
+    color: var(--cl-color-2-100);
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+span.inline.px-1.with-bg-color[style*="green"] {
+    color: var(--cl-color-2-100);
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+span.inline.px-1.with-bg-color[style*="blue"] {
+    color: var(--cl-color-3-100);
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+span.inline.px-1.with-bg-color[style*="purple"] {
+    color: var(--cl-color-3-100);
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+span.inline.px-1.with-bg-color[style*="gray"] {
+    color: var(--cl-text-color-80);
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+.with-bg-color[style*="yellow"] {
+    color: var(--cl-color-1-100);
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+.with-bg-color[style*="red"] {
+    color: var(--cl-color-1-100);
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+.with-bg-color[style*="pink"] {
+    color: var(--cl-color-2-100);
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+.with-bg-color[style*="green"] {
+    color: var(--cl-color-2-100);
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+.with-bg-color[style*="blue"] {
+    color: var(--cl-color-3-100);
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+.with-bg-color[style*="purple"] {
+    color: var(--cl-color-3-100);
+    background-color: transparent !important;
+    padding: 0px !important;
+}
+.with-bg-color[style*="gray"] {
+    color: var(--cl-text-color-80);
+    background-color: transparent !important;
+    padding: 0px !important;
 }
