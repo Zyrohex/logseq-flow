@@ -48,10 +48,12 @@
   background-color: transparent !important;
 }
 .is-concept[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\ee93" !important;
   font-weight: 100;
   color: var(--cl-color-1-60) !important;
 }
 .is-concept[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\ee93" !important;
   font-weight: 100;
   color: var(--cl-color-1-60) !important;
 }
