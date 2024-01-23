@@ -56,6 +56,7 @@
   content: "\ee93" !important;
   font-weight: 100;
   color: var(--cl-color-1-60) !important;
+  background-color: var(--cl-color-1-20) !important;
 }
 .is-collector[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   font-weight: 100;
