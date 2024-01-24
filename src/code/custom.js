@@ -145,7 +145,7 @@ function updatePageReferencesWithSiblingClasses() {
 // Call the function to initialize
 updatePageReferencesWithSiblingClasses();
 
-function updateBlockRefParentClass() {
+/*function updateBlockRefParentClass() {
     const observer = new MutationObserver((mutationsList) => {
         for (const mutation of mutationsList) {
             if (mutation.type === 'childList' || mutation.type === 'attributes') {
@@ -182,7 +182,7 @@ function updateBlockRefParentClass() {
 }
 
 // Call the function to initialize
-updateBlockRefParentClass();
+updateBlockRefParentClass();*/
 
 function updatePageReferencesWithDescriptorBlock() {
     const observer = new MutationObserver((mutationsList) => {
@@ -241,7 +241,7 @@ function updatePageReferencesWithDescriptorBlock() {
 updatePageReferencesWithDescriptorBlock();
 
 
-function updatePageReferencesWithCollectorBlock() {
+/*function updatePageReferencesWithCollectorBlock() {
     const observer = new MutationObserver((mutationsList) => {
         for (const mutation of mutationsList) {
             if (mutation.type === 'childList' || mutation.type === 'attributes') {
@@ -296,9 +296,9 @@ function updatePageReferencesWithCollectorBlock() {
 }
 
 // Call the function to initialize
-updatePageReferencesWithCollectorBlock();
+updatePageReferencesWithCollectorBlock();*/
 
-function updateRefTitles() {
+/*function updateRefTitles() {
 
     function cloneRefPanel() {
         let primaryRefTitle = top.document.querySelector('.relative>div>.lazy-visibility>div>.fade-enter>.references>.content>.flex.flex-col>.content');
@@ -322,9 +322,9 @@ function updateRefTitles() {
 }
 
 // Call the function to initialize
-updateRefTitles();
+updateRefTitles();*/
 
-function updatePageReferencesWithQuestionBlock() {
+/*function updatePageReferencesWithQuestionBlock() {
     const observer = new MutationObserver((mutationsList) => {
         for (const mutation of mutationsList) {
             if (mutation.type === 'childList' || mutation.type === 'attributes') {
@@ -379,7 +379,7 @@ function updatePageReferencesWithQuestionBlock() {
 }
 
 // Call the function to initialize
-updatePageReferencesWithQuestionBlock();
+updatePageReferencesWithQuestionBlock();*/
 
 function updateAndRemoveTaggedReferences() {
     const observer = new MutationObserver((mutationsList) => {
@@ -443,9 +443,9 @@ function updateAndRemoveTaggedReferences() {
     findAllMatchedElements();
 }
 
-/*updateAndRemoveTaggedReferences();
+updateAndRemoveTaggedReferences();
 
-function updateHeadlineBlocks() {
+/*function updateHeadlineBlocks() {
     const observer = new MutationObserver((mutationsList) => {
         for (const mutation of mutationsList) {
             if (mutation.type === 'childList' || mutation.type === 'attributes') {

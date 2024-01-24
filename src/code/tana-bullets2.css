@@ -50,13 +50,13 @@
 .is-concept[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\ee93" !important;
   font-weight: 100;
-  color: var(--cl-color-1-60) !important;
+  color: var(--cl-color-1-100) !important;
 }
 .is-concept[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\ee93" !important;
   font-weight: 100;
-  color: var(--cl-color-1-60) !important;
-  background-color: var(--cl-color-1-20) !important;
+  color: var(--cl-color-1-100) !important;
+  background-color: var(--cl-color-1-10) !important;
 }
 .is-collector[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   font-weight: 100;
@@ -102,12 +102,13 @@
   color: var(--cl-text-color-60);
 }
 .ls-block[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\ea5f";
+  content: "\f698";
   font-weight: 100;
 }
 .ls-block[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container.bullet-closed>.bullet:before {
-  content: "\ea61";
+  content: "\f698";
   font-weight: 100;
+  background-color: var(--cl-text-color-10);
 }
 /*.pre-block[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before, .pre-block[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\ea08" !important;
