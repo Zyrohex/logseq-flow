@@ -16,10 +16,10 @@ html[data-theme='dark'] {
 html[data-theme='light'] {
     --background-color-h: 192;
     --background-color-s: 15%;
-    --background-color-l: 94%;
-    --cl-background: 192,15%,84%;
+    --background-color-l: 84%;
+    --cl-background: 192,15%,74%;
     --cl-text-color: 210,29%,24%;
-    --cl-color-3: 145, 63%, 42%;
     --cl-color-1: 204, 64%, 44%;
-    --cl-color-2: 282, 44%, 47%;
+    --cl-color-2: 173, 70%, 35%;
+    --cl-color-3: 172, 71%, 25%;
 }
