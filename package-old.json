@@ -268,3 +268,99 @@
     "description": "Absent",
     "mode": "dark"
 },
+{
+    "name": "(Yellow) Remedy ",
+    "url": "./src/palettes/remedy.css",
+    "description": "Remedy",
+    "mode": "dark"
+},
+{
+    "name": "(Red) Two Firewatch ",
+    "url": "./src/palettes/twofirewatch.css",
+    "description": "Two Firewatch",
+    "mode": "dark"
+},
+{
+    "name": "(Red) Koki ",
+    "url": "./src/palettes/koki.css",
+    "description": "Koki",
+    "mode": "dark"
+},
+{
+    "name": "(Pink) Synthwave 84 ",
+    "url": "./src/palettes/synthwave84.css",
+    "description": "Synthwave 84",
+    "mode": "dark"
+},
+{
+    "name": "(Pink) Rose ",
+    "url": "./src/palettes/rose.css",
+    "description": "Rose",
+    "mode": "dark"
+},
+{
+    "name": "(Pink) Monokai Pro ",
+    "url": "./src/palettes/monokai-pro.css",
+    "description": "Monokai Pro",
+    "mode": "dark"
+},
+{
+    "name": "(Orange) Oceanic Next ",
+    "url": "./src/palettes/oceanic.css",
+    "description": "Oceanic Dark",
+    "mode": "dark"
+},
+{
+    "name": "(Green) Momo ",
+    "url": "./src/palettes/momo.css",
+    "description": "Momo",
+    "mode": "dark"
+},
+{
+    "name": "(Green) Grail ",
+    "url": "./src/palettes/grail.css",
+    "description": "Grail",
+    "mode": "dark"
+},
+{
+    "name": "(Green) Bearded Solarized ",
+    "url": "./src/palettes/bearded-solarized.css",
+    "description": "Bearded Solarized",
+    "mode": "dark"
+},
+{
+    "name": "(Blue) Watermelon ",
+    "url": "./src/palettes/watermelon.css",
+    "description": "Watermelon",
+    "mode": "dark"
+},
+{
+    "name": "(Blue) Material Ocean ",
+    "url": "./src/palettes/material-ocean.css",
+    "description": "Material Ocean",
+    "mode": "dark"
+},
+{
+    "name": "(Blue) Material ",
+    "url": "./src/palettes/material.css",
+    "description": "material",
+    "mode": "dark"
+},
+{
+    "name": "(Blue) Foggy Night ",
+    "url": "./src/palettes/foggynight.css",
+    "description": "Foggy Night",
+    "mode": "dark"
+},
+{
+    "name": "(Blue) Bespin ",
+    "url": "./src/palettes/bespin.css",
+    "description": "Bespin",
+    "mode": "dark"
+},
+{
+    "name": "(Blue) Github ",
+    "url": "./src/palettes/github.css",
+    "description": "Github Dark",
+    "mode": "dark"
+},
