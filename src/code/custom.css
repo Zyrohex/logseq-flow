@@ -33,7 +33,10 @@ b, i {
   color: var(--cl-color-3-100);
 }
 .current-page-ref {
-  text-decoration-color: var(--cl-color-3-60);
+    text-decoration: underline;
+    text-decoration-color: var(--cl-color-1-60);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
 }
 .page-reference:hover {
   background-color: transparent !important;
