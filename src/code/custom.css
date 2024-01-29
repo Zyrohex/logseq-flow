@@ -1,19 +1,36 @@
 body, .ls-block, .inline {
   font-variant-ligatures: common-ligatures;
-  font-weight: 400 !important;
+  font-weight: 200 !important;
   font-size: 16px;
 }
-.ls-block {
-  padding: 1px 0px;
-}
 :root {
-  --cl-page-width: 800px;
-  --cl-page-max-width: 1100px;
+  --cl-page-width: 700px;
+  --cl-page-max-width: 900px;
   --cl-font-family: "SF Pro Text";
   --cl-font-family: Inter;
   --cl-font-family: "Airbnb Cereal App";
-  --cl-font-family: Inter;
+  --cl-font-family: "Outfit";
   --ls-scrollbar-width: 0px;
+}
+:not(pre):not(mark)>code {
+  font-family: "SF Mono";
+}
+.ls-block {
+  padding: 2px 0px;
+}
+.form-checkbox, .form-radio {
+    background-color: var(--cl-color-1-10);
+    border: 1px solid var(--cl-color-1-20);
+    border-radius: 2px;
+}
+.block-marker {
+  font-weight: 400;
+}
+.pre-block>.block-main-container .bullet-container {
+  display: none;
+}
+b, i {
+  color: var(--cl-color-3-100);
 }
 .current-page-ref {
   text-decoration-color: var(--cl-color-3-60);
@@ -44,6 +61,9 @@ body, .ls-block, .inline {
 .bracket {
   vertical-align: top;
   color: var(--cl-text-color-60) !important;
+}
+.ls-block .is-paragraph {
+  font-size: smaller;
 }
 /************** REFERENCE PANEL ENHANCEMENTS ***********/
 .breadcrumb.block-parents.my-2 a {
@@ -90,12 +110,24 @@ body, .ls-block, .inline {
 .is-descriptor>.block-main-container .page-ref {
   color: var(--cl-color-2-100);
 }
+.is-descriptor>.block-main-container .page-reference {
+  font-style: normal;
+}
+.is-descriptor>.block-main-container .page-reference .bracket {
+    display: none;
+}
+.is-descriptor>.block-main-container .page-ref {
+    padding: 0px;
+    color: var(--cl-color-2-100);
+    border-radius: 0px;
+    font-weight: 500;
+}
 .is-collector .page-ref {
   color: var(--cl-color-3-100);
 }
 .is-question>.block-main-container span.inline {
     border-bottom: 1px solid var(--cl-color-3-40);
-    font-weight: 800 !important;
+    font-weight: bolder !important;
 }
 .is-question>.block-children-container>.block-children, .is-question>.block-children-container>.block-children>.ls-block>.block-children-container>.block-children {
   border-left: 0px solid;
@@ -125,16 +157,12 @@ body, .ls-block, .inline {
   background-color: transparent;
   color: var(--cl-color-1-100) !important;
 }*/
-.concept-block .page-ref {
-  font-weight: 700;
-  color: var(--cl-color-1-100);
-}
 .concept-block .bracket {
   display: none;
 }
 .concept-block:after {
-  content: "\ee87";
-  content: "―";
+  /*content: "\ee87";
+  content: "―";*/
   vertical-align: inherit;
   font-family: 'tabler-icons240';
   margin-left: 3px;

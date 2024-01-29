@@ -36,24 +36,6 @@
                 "mode": "dark"
             },
             {
-                "name": "(Neutral Orange) Ayu ",
-                "url": "./src/palettes/ayu.css",
-                "description": "Ayu",
-                "mode": "light"
-            },
-            {
-                "name": "(Orange) Ayu ",
-                "url": "./src/palettes/ayu.css",
-                "description": "Ayu",
-                "mode": "dark"
-            },
-            {
-                "name": "(Warm Purple) Flatwhite ",
-                "url": "./src/palettes/flatwhite.css",
-                "description": "Flatwhite Colors",
-                "mode": "light"
-            },
-            {
                 "name": "(Warm Blue) Chocolate ",
                 "url": "./src/palettes/chocolate.css",
                 "description": "Vanilla Chocolate",
@@ -70,12 +52,6 @@
                 "url": "./src/palettes/yin.css",
                 "description": "Yin",
                 "mode": "dark"
-            },
-            {
-                "name": "(Neutral Pink) Yin ",
-                "url": "./src/palettes/yin.css",
-                "description": "Yin",
-                "mode": "light"
             },
             {
                 "name": "(Warm Blue) Deepwhite ",
@@ -138,27 +114,9 @@
                 "mode": "dark"
             },
             {
-                "name": "(Neutral Blue) Inkstained ",
-                "url": "./src/palettes/inkstained.css",
-                "description": "Inkstained",
-                "mode": "light"
-            },
-            {
-                "name": "(Warm Green) Whitesand ",
-                "url": "./src/palettes/whitesand.css",
-                "description": "Whitesand",
-                "mode": "light"
-            },
-            {
                 "name": "(Warm Green) Silkworm ",
                 "url": "./src/palettes/silkworm.css",
                 "description": "Silkworm",
-                "mode": "light"
-            },
-            {
-                "name": "(Warm Orange) Lightkiss ",
-                "url": "./src/palettes/lightkiss.css",
-                "description": "Lightkiss",
                 "mode": "light"
             },
             {
@@ -168,40 +126,10 @@
                 "mode": "dark"
             },
             {
-                "name": "(Neutral Blue) Munsell ",
-                "url": "./src/palettes/munsell.css",
-                "description": "Munsell",
-                "mode": "light"
-            },
-            {
                 "name": "(Purple) Nebula ",
                 "url": "./src/palettes/nebula.css",
                 "description": "Nebula",
                 "mode": "dark"
-            },
-            {
-                "name": "(Warm Red) Newspaper ",
-                "url": "./src/palettes/newspaper.css",
-                "description": "Newspaper",
-                "mode": "light"
-            },
-            {
-                "name": "(Gray) Newsprint ",
-                "url": "./src/palettes/newsprint.css",
-                "description": "Newsprint",
-                "mode": "dark"
-            },
-            {
-                "name": "(Neutral Gray) Newsprint ",
-                "url": "./src/palettes/newsprint.css",
-                "description": "Newsprint",
-                "mode": "light"
-            },
-            {
-                "name": "(Warm Green) Parchment ",
-                "url": "./src/palettes/parchment.css",
-                "description": "Parchment",
-                "mode": "light"
             },
             {
                 "name": "(Blue) Oceanic Material ",
@@ -210,34 +138,10 @@
                 "mode": "dark"
             },
             {
-                "name": "(Warm Green) Oceanic Material ",
-                "url": "./src/palettes/oceanic-material.css",
-                "description": "Oceanic Material",
-                "mode": "light"
-            },
-            {
-                "name": "(Warm Blue) Paper ",
-                "url": "./src/palettes/paper.css",
-                "description": "Paper",
-                "mode": "light"
-            },
-            {
-                "name": "(Neutral Blue) Papercolor ",
-                "url": "./src/palettes/papercolor.css",
-                "description": "Papercolor",
-                "mode": "light"
-            },
-            {
                 "name": "(Red) Primary ",
                 "url": "./src/palettes/primary.css",
                 "description": "Primary",
                 "mode": "dark"
-            },
-            {
-                "name": "(Warm Orange) Primary ",
-                "url": "./src/palettes/primary.css",
-                "description": "Primary",
-                "mode": "light"
             },
             {
                 "name": "(Warm Orange) Rose ",

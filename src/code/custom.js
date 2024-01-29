@@ -45,46 +45,6 @@ function collapseAndAbbreviateNamespaceRefs() {
 
 collapseAndAbbreviateNamespaceRefs();
 
-/*function updatePageReferencesWithCurrentClass() {
-    const observer = new MutationObserver((mutationsList) => {
-        for (const mutation of mutationsList) {
-            if (mutation.type === 'childList' || mutation.type === 'attributes') {
-                updateCurrentPageRefs();
-            }
-        }
-    });
-
-    function updateCurrentPageRefs() {
-        const titleBlock = document.querySelector('.title.block');
-        if (!titleBlock) return;
-
-        const titleText = titleBlock.textContent.trim().toLowerCase();
-        const pageRefs = document.querySelectorAll('.ls-block .page-ref');
-
-        // Add or remove "current-page-ref" class based on matching with ".title.block" value
-        pageRefs.forEach((pageRef) => {
-            const dataRef = pageRef.getAttribute('data-ref').toLowerCase();
-            if (dataRef === titleText) {
-                pageRef.classList.add('current-page-ref');
-            } else {
-                pageRef.classList.remove('current-page-ref');
-            }
-        });
-    }
-
-    observer.observe(document.body, {
-        subtree: true,
-        childList: true,
-    });
-
-    // Apply the class to the elements immediately and also check for any mismatches
-    updateCurrentPageRefs();
-}
-
-// Initialize the function to start observing and update classes accordingly
-updatePageReferencesWithCurrentClass();
-*/
-
 function updatePageReferencesWithSiblingClasses() {
     const observer = new MutationObserver((mutationsList) => {
         for (const mutation of mutationsList) {
@@ -95,40 +55,25 @@ function updatePageReferencesWithSiblingClasses() {
     });
 
     function updatePageReferences() {
-        const inlineElements = document.querySelectorAll('.inline');
+        const lsblockElements = document.querySelectorAll('.ls-block > .block-main-container')
+        lsblockElements.forEach((lsblock) => {
+            const blockElements = lsblock.querySelectorAll('.block-content');
+            blockElements.forEach((block) => {
+                // Use querySelector to find .inline elements within the block
+                const inlineElements = block.querySelectorAll('.block-content-inner > .flex-1 > .inline');
 
-        inlineElements.forEach((inline) => {
-            const children = Array.from(inline.childNodes).filter(child => 
-                child.nodeType !== Node.TEXT_NODE || child.textContent.trim()
-            );
-
-            if (children.length < 2) {
-                return;
-            }
-
-            const firstChild = children[0];
-            const secondChild = children[1];
-
-            if (firstChild.nodeType === Node.ELEMENT_NODE && 
-                firstChild.classList.contains('page-reference') && 
-                secondChild.nodeType === Node.TEXT_NODE) {
-                firstChild.classList.add('concept-block');
-
-                let ancestor = firstChild;
-                for (let i = 0; i < 9; i++) {
-                    if (ancestor.parentNode) {
-                        ancestor = ancestor.parentNode;
-                    } else {
-                        // If there's no 9th ancestor, break out of the loop
-                        break;
+                inlineElements.forEach(inlineElement => {
+                    // Additional condition for .page-reference within .inline elements
+                    if (inlineElement && inlineElement.children.length === 1 && inlineElement.querySelector('.page-reference')) {
+                        const blockBody = block.querySelector('.block-body');
+                        if (blockBody) {
+                            // If the conditions are met, add the classes as needed
+                            inlineElement.querySelector('.page-reference').classList.add('concept-block');
+                            lsblock.parentNode.classList.add('is-concept');
+                        }
                     }
-                }
-
-                // Add 'is-concept' class if we successfully traversed 9 levels up
-                if (ancestor.nodeType === Node.ELEMENT_NODE) {
-                    ancestor.classList.add('is-concept');
-                }
-            }
+                });
+            });
         });
     }
 
@@ -141,48 +86,7 @@ function updatePageReferencesWithSiblingClasses() {
     // Apply the class to the elements immediately and also check for any mismatches
     updatePageReferences();
 }
-
-// Call the function to initialize
 updatePageReferencesWithSiblingClasses();
-
-/*function updateBlockRefParentClass() {
-    const observer = new MutationObserver((mutationsList) => {
-        for (const mutation of mutationsList) {
-            if (mutation.type === 'childList' || mutation.type === 'attributes') {
-                updateBlockRefParents();
-            }
-        }
-    });
-
-    function updateBlockRefParents() {
-        const blockRefElements = document.querySelectorAll('.block-ref-wrap');
-
-        blockRefElements.forEach((blockRef) => {
-            let parent = blockRef;
-            for (let i = 0; i < 9; i++) {
-                if (parent.parentElement) {
-                    parent = parent.parentElement;
-                } else {
-                    // Break early if there are not enough parent elements
-                    return;
-                }
-            }
-            parent.classList.add('is-block-ref');
-        });
-    }
-
-    observer.observe(document.body, {
-        subtree: true,
-        childList: true,
-        characterData: true,
-    });
-
-    // Apply the class to the elements immediately and also check for any mismatches
-    updateBlockRefParents();
-}
-
-// Call the function to initialize
-updateBlockRefParentClass();*/
 
 function updatePageReferencesWithDescriptorBlock() {
     const observer = new MutationObserver((mutationsList) => {
@@ -240,6 +144,148 @@ function updatePageReferencesWithDescriptorBlock() {
 // Call the function to initialize
 updatePageReferencesWithDescriptorBlock();
 
+function updateAndRemoveTaggedReferences() {
+    const observer = new MutationObserver((mutationsList) => {
+        for (const mutation of mutationsList) {
+            if (mutation.type === 'childList' || mutation.type === 'attributes') {
+                findAllMatchedElements();
+            }
+        }
+    });
+
+    function findAllMatchedElements() {
+        let pageNameElement = parent.document.querySelector('.title .title').getAttribute('data-ref')
+        let allPageReferences = parent.document.querySelectorAll('.references-blocks-wrap')
+        let pageRef = parent.document.querySelectorAll('.references-blocks-wrap>.lazy-visibility')
+
+        // Iterate through each page element
+        for (let page of pageRef) {
+            let matchedReferences = 0;
+            let matchedTagged = 0
+            let matchedRefElement = null;
+            // Iterate through each block references
+            let allReferences = page.querySelectorAll('.references-blocks-wrap .page-ref')
+            let currentReferences = Array.from(allReferences).filter(el => el.innerText.trim().toLowerCase().includes(pageNameElement.toLowerCase()));
+            for (let currentRef of currentReferences) {
+                let currentClassList = currentRef.parentNode.parentNode
+                if (currentClassList.classList.contains('page-reference')) {
+                    matchedReferences += 1
+                }
+                else if (currentClassList.classList.contains('page-property-value')) {
+                    matchedTagged += 1
+                    // set 11 parent levels up
+                    let matchedRefElement = currentClassList;
+                    // Loop 11 times to move up 11 levels
+                    for (let i = 0; i < 11; i++) {
+                        if (matchedRefElement.parentNode) {
+                            matchedRefElement = matchedRefElement.parentNode;
+                        }
+                    }
+                    removeElement(matchedRefElement)
+                }
+                if (matchedTagged >= 1 & matchedReferences == 0) {
+                    removeElement(page)
+                }
+                console.log(matchedReferences, matchedTagged)
+            }
+        }
+    }
+
+    function removeElement(element) {
+        if (element && element.parentNode) {  // Check if the element exists and has a parent
+            element.parentNode.removeChild(element);
+        }
+    }
+
+    observer.observe(document.body, {
+        subtree: true,
+        childList: true,
+        characterData: true,
+    });
+
+    findAllMatchedElements();
+}
+
+updateAndRemoveTaggedReferences();
+
+/*function updatePageReferencesWithCurrentClass() {
+    const observer = new MutationObserver((mutationsList) => {
+        for (const mutation of mutationsList) {
+            if (mutation.type === 'childList' || mutation.type === 'attributes') {
+                updateCurrentPageRefs();
+            }
+        }
+    });
+
+    function updateCurrentPageRefs() {
+        const titleBlock = document.querySelector('.title.block');
+        if (!titleBlock) return;
+
+        const titleText = titleBlock.textContent.trim().toLowerCase();
+        const pageRefs = document.querySelectorAll('.ls-block .page-ref');
+
+        // Add or remove "current-page-ref" class based on matching with ".title.block" value
+        pageRefs.forEach((pageRef) => {
+            const dataRef = pageRef.getAttribute('data-ref').toLowerCase();
+            if (dataRef === titleText) {
+                pageRef.classList.add('current-page-ref');
+            } else {
+                pageRef.classList.remove('current-page-ref');
+            }
+        });
+    }
+
+    observer.observe(document.body, {
+        subtree: true,
+        childList: true,
+    });
+
+    // Apply the class to the elements immediately and also check for any mismatches
+    updateCurrentPageRefs();
+}
+
+// Initialize the function to start observing and update classes accordingly
+updatePageReferencesWithCurrentClass();
+*/
+
+/*function updateBlockRefParentClass() {
+    const observer = new MutationObserver((mutationsList) => {
+        for (const mutation of mutationsList) {
+            if (mutation.type === 'childList' || mutation.type === 'attributes') {
+                updateBlockRefParents();
+            }
+        }
+    });
+
+    function updateBlockRefParents() {
+        const blockRefElements = document.querySelectorAll('.block-ref-wrap');
+
+        blockRefElements.forEach((blockRef) => {
+            let parent = blockRef;
+            for (let i = 0; i < 9; i++) {
+                if (parent.parentElement) {
+                    parent = parent.parentElement;
+                } else {
+                    // Break early if there are not enough parent elements
+                    return;
+                }
+            }
+            parent.classList.add('is-block-ref');
+        });
+    }
+
+    observer.observe(document.body, {
+        subtree: true,
+        childList: true,
+        characterData: true,
+    });
+
+    // Apply the class to the elements immediately and also check for any mismatches
+    updateBlockRefParents();
+}
+
+// Call the function to initialize
+updateBlockRefParentClass();*/
 
 /*function updatePageReferencesWithCollectorBlock() {
     const observer = new MutationObserver((mutationsList) => {
@@ -380,70 +426,6 @@ updateRefTitles();*/
 
 // Call the function to initialize
 updatePageReferencesWithQuestionBlock();*/
-
-function updateAndRemoveTaggedReferences() {
-    const observer = new MutationObserver((mutationsList) => {
-        for (const mutation of mutationsList) {
-            if (mutation.type === 'childList' || mutation.type === 'attributes') {
-                findAllMatchedElements();
-            }
-        }
-    });
-
-    function findAllMatchedElements() {
-        let pageNameElement = parent.document.querySelector('.title .title').getAttribute('data-ref')
-        let allPageReferences = parent.document.querySelectorAll('.references-blocks-wrap')
-        let pageRef = parent.document.querySelectorAll('.references-blocks-wrap>.lazy-visibility')
-
-        // Iterate through each page element
-        for (let page of pageRef) {
-            let matchedReferences = 0;
-            let matchedTagged = 0
-            let matchedRefElement = null;
-            // Iterate through each block references
-            let allReferences = page.querySelectorAll('.references-blocks-wrap .page-ref')
-            let currentReferences = Array.from(allReferences).filter(el => el.innerText.trim().toLowerCase().includes(pageNameElement.toLowerCase()));
-            for (let currentRef of currentReferences) {
-                let currentClassList = currentRef.parentNode.parentNode
-                if (currentClassList.classList.contains('page-reference')) {
-                    matchedReferences += 1
-                }
-                else if (currentClassList.classList.contains('page-property-value')) {
-                    matchedTagged += 1
-                    // set 11 parent levels up
-                    let matchedRefElement = currentClassList;
-                    // Loop 11 times to move up 11 levels
-                    for (let i = 0; i < 11; i++) {
-                        if (matchedRefElement.parentNode) {
-                            matchedRefElement = matchedRefElement.parentNode;
-                        }
-                    }
-                    removeElement(matchedRefElement)
-                }
-                if (matchedTagged >= 1 & matchedReferences == 0) {
-                    removeElement(page)
-                }
-                console.log(matchedReferences, matchedTagged)
-            }
-        }
-    }
-
-    function removeElement(element) {
-        if (element && element.parentNode) {  // Check if the element exists and has a parent
-            element.parentNode.removeChild(element);
-        }
-    }
-
-    observer.observe(document.body, {
-        subtree: true,
-        childList: true,
-        characterData: true,
-    });
-
-    findAllMatchedElements();
-}
-
-updateAndRemoveTaggedReferences();
 
 /*function updateHeadlineBlocks() {
     const observer = new MutationObserver((mutationsList) => {
