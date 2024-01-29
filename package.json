@@ -6,181 +6,181 @@
     "logseq": {
         "themes": [
             {
-                "name": "(Pink) Budha ",
+                "name": "Budha ",
                 "url": "./src/palettes/budha.css",
                 "description": "Budha",
                 "mode": "dark"
             },
             {
-                "name": "(Blue) Replit ",
+                "name": "Replit ",
                 "url": "./src/palettes/replit.css",
                 "description": "Replit",
                 "mode": "dark"
             },
             {
-                "name": "(Neutral Blue) Night Owl ",
+                "name": "Night Owl ",
                 "url": "./src/palettes/adobe.css",
                 "description": "Night Owl",
                 "mode": "light"
             },
             {
-                "name": "(Blue) Night Owl ",
+                "name": "Night Owl ",
                 "url": "./src/palettes/adobe.css",
                 "description": "Night Owl",
                 "mode": "dark"
             },
             {
-                "name": "(Red) Deepsace ",
+                "name": "Deepsace ",
                 "url": "./src/palettes/deepspace.css",
                 "description": "Deepsace",
                 "mode": "dark"
             },
             {
-                "name": "(Warm Blue) Chocolate ",
+                "name": "Chocolate ",
                 "url": "./src/palettes/chocolate.css",
                 "description": "Vanilla Chocolate",
                 "mode": "light"
             },
             {
-                "name": "(Blue) Chocolate ",
+                "name": "Chocolate ",
                 "url": "./src/palettes/chocolate.css",
                 "description": "Dark Chocolate",
                 "mode": "dark"
             },
             {
-                "name": "(Pink) Yin ",
+                "name": "Yin ",
                 "url": "./src/palettes/yin.css",
                 "description": "Yin",
                 "mode": "dark"
             },
             {
-                "name": "(Warm Blue) Deepwhite ",
+                "name": "Deepwhite ",
                 "url": "./src/palettes/deepwhite.css",
                 "description": "Deepwhite",
                 "mode": "light"
             },
             {
-                "name": "(Pink) Daycula ",
+                "name": "Daycula ",
                 "url": "./src/palettes/daycula.css",
                 "description": "Daycula",
                 "mode": "dark"
             },
             {
-                "name": "(Neutral Blue) Default",
+                "name": "Default",
                 "url": "./src/palettes/default.css",
                 "description": "Light Default with Improvements",
                 "mode": "light"
             },
             {
-                "name": "(Blue) Default ",
+                "name": "Default ",
                 "url": "./src/palettes/default.css",
                 "description": "Dark Default with Improvements",
                 "mode": "dark"
             },
             {
-                "name": "(Pink) Dracula ",
+                "name": "Dracula ",
                 "url": "./src/palettes/dracula.css",
                 "description": "Dracula",
                 "mode": "dark"
             },
             {
-                "name": "(Yellow) Ephemeral ",
+                "name": "Ephemeral ",
                 "url": "./src/palettes/ephemeral.css",
                 "description": "Ephemeral",
                 "mode": "dark"
             },
             {
-                "name": "(Blue) Everforest ",
+                "name": "Everforest ",
                 "url": "./src/palettes/everforest.css",
                 "description": "Everforest",
                 "mode": "dark"
             },
             {
-                "name": "(Neutral Blue) FlatUI ",
+                "name": "FlatUI ",
                 "url": "./src/palettes/flatui.css",
                 "description": "FlatUI",
                 "mode": "light"
             },
             {
-                "name": "(Warm Red) Gruvbox ",
+                "name": "Gruvbox ",
                 "url": "./src/palettes/gruvbox.css",
                 "description": "Gruvbox",
                 "mode": "light"
             },
             {
-                "name": "(Orange) Gruvbox ",
+                "name": "Gruvbox ",
                 "url": "./src/palettes/gruvbox.css",
                 "description": "Gruvbox",
                 "mode": "dark"
             },
             {
-                "name": "(Warm Green) Silkworm ",
+                "name": "Silkworm ",
                 "url": "./src/palettes/silkworm.css",
                 "description": "Silkworm",
                 "mode": "light"
             },
             {
-                "name": "(Green) Kanagawa ",
+                "name": "Kanagawa ",
                 "url": "./src/palettes/kanagawa.css",
                 "description": "Kanagawa",
                 "mode": "dark"
             },
             {
-                "name": "(Purple) Nebula ",
+                "name": "Nebula ",
                 "url": "./src/palettes/nebula.css",
                 "description": "Nebula",
                 "mode": "dark"
             },
             {
-                "name": "(Blue) Oceanic Material ",
+                "name": "Oceanic Material ",
                 "url": "./src/palettes/oceanic-material.css",
                 "description": "Oceanic Material",
                 "mode": "dark"
             },
             {
-                "name": "(Red) Primary ",
+                "name": "Primary ",
                 "url": "./src/palettes/primary.css",
                 "description": "Primary",
                 "mode": "dark"
             },
             {
-                "name": "(Warm Orange) Rose ",
+                "name": "Rose ",
                 "url": "./src/palettes/rose.css",
                 "description": "Rose",
                 "mode": "light"
             },
             {
-                "name": "(Warm Blue) Solarized ",
+                "name": "Solarized ",
                 "url": "./src/palettes/solarized.css",
                 "description": "Light Default with Improvements",
                 "mode": "light"
             },
             {
-                "name": "(Blue) Solarized ",
+                "name": "Solarized ",
                 "url": "./src/palettes/solarized.css",
                 "description": "Dark Default with Improvements",
                 "mode": "dark"
             },
             {
-                "name": "(Pink) Sunbather ",
+                "name": "Sunbather ",
                 "url": "./src/palettes/sunbather.css",
                 "description": "Sunbather",
                 "mode": "dark"
             },
             {
-                "name": "(Neutral Pink) Sunbather ",
+                "name": "Sunbather ",
                 "url": "./src/palettes/sunbather.css",
                 "description": "Sunbather",
                 "mode": "light"
             },
             {
-                "name": "(Blue) Tokyo ",
+                "name": "Tokyo ",
                 "url": "./src/palettes/tokyo.css",
                 "description": "Tokyo",
                 "mode": "dark"
             },
             {
-                "name": "(Neutral Blue) Tomorrow ",
+                "name": "Tomorrow ",
                 "url": "./src/palettes/tomorrow.css",
                 "description": "Tomorrow",
                 "mode": "light"
