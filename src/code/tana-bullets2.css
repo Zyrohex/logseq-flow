@@ -48,22 +48,23 @@
   background-color: transparent !important;
 }
 .is-concept[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\ee93" !important;
+  content: "\ed51" !important;
   font-weight: 100;
   color: var(--cl-color-1-100) !important;
 }
 .is-concept[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\ee93" !important;
+  content: "\ed51" !important;
   font-weight: 100;
   color: var(--cl-color-1-100) !important;
 }
 .is-collector[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
+  content: "\ee93" !important;
   font-weight: 100;
 }
 .is-collector[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
-  content: "\eaad" !important;
+  content: "\ee93" !important;
   font-weight: 100;
-  color: var(--cl-color-3-60) !important;
+  color: var(--cl-color-1-100) !important;
 }
 .is-foundation[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f747" !important;

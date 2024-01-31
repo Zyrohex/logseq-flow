@@ -7,7 +7,7 @@ html[data-theme='dark'] {
     --background-color-l: 13%;
     --cl-background: 222,29%,23%;
     --cl-text-color: 201, 30%, 80%;
-    --cl-color-1: 207, 61%, 59%;
-    --cl-color-2: 60, 42%, 76%;
-    --cl-color-3: 201, 99%, 65%;
+    --cl-color-1: 207, 61%, 59%; /* blue */
+    --cl-color-2: 201, 99%, 65%; /* yellow */
+    --cl-color-3: 60, 42%, 76%; /* blue */
 }
