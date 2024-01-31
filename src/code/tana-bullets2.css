@@ -50,12 +50,12 @@
 .is-concept[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\ed51" !important;
   font-weight: 100;
-  color: var(--cl-color-1-100) !important;
+  color: var(--cl-color-1-40) !important;
 }
 .is-concept[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\ed51" !important;
   font-weight: 100;
-  color: var(--cl-color-1-100) !important;
+  color: var(--cl-color-1-40) !important;
 }
 .is-collector[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\ee93" !important;
@@ -64,27 +64,27 @@
 .is-collector[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\ee93" !important;
   font-weight: 100;
-  color: var(--cl-color-1-100) !important;
+  color: var(--cl-color-1-40) !important;
 }
 .is-foundation[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f747" !important;
   font-weight: 100;
-  color: var(--cl-color-1-100) !important;
+  color: var(--cl-color-1-40) !important;
 }
 .is-foundation[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f747" !important;
   font-weight: 100;
-  color: var(--cl-color-1-100) !important;
+  color: var(--cl-color-1-40) !important;
 }
 .is-descriptor[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f6d8" !important;
   font-weight: 100;
-  color: var(--cl-color-2-100) !important;
+  color: var(--cl-color-2-40) !important;
 }
 .is-descriptor[haschild="true"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f6d8" !important;
   font-weight: 100;
-  color: var(--cl-color-2-100) !important;
+  color: var(--cl-color-2-40) !important;
 }
 .is-question[haschild="false"]>.flex.flex-row.pr-2>.block-control-wrap a>.bullet-container>.bullet:before {
   content: "\f9e6" !important;
