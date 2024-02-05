@@ -88,7 +88,7 @@ function updatePageReferencesWithSiblingClasses() {
 }
 updatePageReferencesWithSiblingClasses();
 
-function updatePageReferencesWithDescriptorBlock() {
+function addDescriptorFoundationBlocks() {
     const observer = new MutationObserver((mutationsList) => {
         for (const mutation of mutationsList) {
             if (mutation.type === 'childList' || mutation.type === 'attributes') {
@@ -98,34 +98,24 @@ function updatePageReferencesWithDescriptorBlock() {
     });
 
     function updatePageReferences() {
-        const inlineElements = document.querySelectorAll('.inline');
-
-        inlineElements.forEach((inline) => {
-            const children = Array.from(inline.childNodes).filter(child =>
-                child.nodeType !== Node.TEXT_NODE || child.textContent.trim()
-            );
-
-            if (children.length === 1 && children[0].nodeType === Node.ELEMENT_NODE) {
-                let ancestor = inline;
-                for (let i = 0; i < 8; i++) {
-                    if (ancestor.parentNode) {
-                        ancestor = ancestor.parentNode;
-                    } else {
-                        break;
-                    }
+        const blockElements = document.querySelectorAll('.ls-block > .block-main-container')
+        blockElements.forEach((block) => {
+            const childElement = block.parentNode.querySelector('.block-children-container')
+            const pageReferenceElement = block.querySelector('.page-ref');
+            let childRefElements = childElement ? childElement.querySelector('.page-ref') : null;
+            let inlineElement = block.querySelector('.inline > .flex > .flex-1 > .inline')
+            if (pageReferenceElement) {
+                const textContent = pageReferenceElement.getAttribute('data-ref')
+                if (textContent.startsWith('~')) {
+                    block.parentNode.classList.add('is-descriptor');
                 }
-
-                // Check if the single child element is <i> and assign 'is-descriptor'
-                if (children[0].tagName === 'I' && ancestor.nodeType === Node.ELEMENT_NODE) {
-                    ancestor.classList.add('is-descriptor');
-                }
-
-                // Check if the single child element is <b> with a child having class '.page-reference' and assign 'is-foundation'
-                if (children[0].tagName === 'B' && ancestor.nodeType === Node.ELEMENT_NODE) {
-                    const bElement = children[0];
-                    if (bElement.querySelector('.page-reference')) {
-                        ancestor.classList.add('is-foundation');
-                    }
+            }
+            if (inlineElement && inlineElement.firstChild.tagName === 'B' && inlineElement.firstChild.querySelector('.page-ref')) {
+                block.parentNode.classList.add('is-foundation')
+            } else if (inlineElement && inlineElement.childNodes.length === 1 && inlineElement.firstChild.nodeType === Node.ELEMENT_NODE && childRefElements) {
+                const pageReference = inlineElement.childNodes[0].querySelector('.page-ref')
+                if (pageReference) {
+                    block.parentNode.classList.add('is-collector')
                 }
             }
         });
@@ -142,9 +132,9 @@ function updatePageReferencesWithDescriptorBlock() {
 }
 
 // Call the function to initialize
-updatePageReferencesWithDescriptorBlock();
+addDescriptorFoundationBlocks();
 
-function updateAndRemoveTaggedReferences() {
+/*function updateAndRemoveTaggedReferences() {
     const observer = new MutationObserver((mutationsList) => {
         for (const mutation of mutationsList) {
             if (mutation.type === 'childList' || mutation.type === 'attributes') {
@@ -208,7 +198,7 @@ function updateAndRemoveTaggedReferences() {
 
 updateAndRemoveTaggedReferences();
 
-/*function updatePageReferencesWithCurrentClass() {
+function updatePageReferencesWithCurrentClass() {
     const observer = new MutationObserver((mutationsList) => {
         for (const mutation of mutationsList) {
             if (mutation.type === 'childList' || mutation.type === 'attributes') {
@@ -246,7 +236,6 @@ updateAndRemoveTaggedReferences();
 
 // Initialize the function to start observing and update classes accordingly
 updatePageReferencesWithCurrentClass();
-*/
 
 /*function updateBlockRefParentClass() {
     const observer = new MutationObserver((mutationsList) => {

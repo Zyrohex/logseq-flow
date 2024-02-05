@@ -460,3 +460,15 @@
     "description": "Newsprint",
     "mode": "light"
 },
+{
+    "name": "Sunbather ",
+    "url": "./src/palettes/sunbather.css",
+    "description": "Sunbather",
+    "mode": "dark"
+},
+{
+    "name": "Sunbather ",
+    "url": "./src/palettes/sunbather.css",
+    "description": "Sunbather",
+    "mode": "light"
+},

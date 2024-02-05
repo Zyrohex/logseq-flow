@@ -1,4 +1,4 @@
-@import './tana-bullets2.css';
+/*@import './tana-bullets2.css';*/
 @import './plugins.css';
 
 @font-face {
@@ -578,4 +578,14 @@ span.inline.px-1.with-bg-color[style*="gray"] {
     color: var(--cl-text-color-80);
     background-color: transparent !important;
     padding: 0px !important;
+}
+
+/*************** DESCRIPTOR CHANGES ********************/
+.is-descriptor > .block-main-container .bullet-container .bullet {
+    border-radius: 0px;
+    height: 1.5px;
+}
+
+.is-descriptor > .block-main-container .bullet-container.bullet-closed {
+    border-radius: 0px;
 }

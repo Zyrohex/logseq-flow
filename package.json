@@ -162,18 +162,6 @@
                 "mode": "dark"
             },
             {
-                "name": "Sunbather ",
-                "url": "./src/palettes/sunbather.css",
-                "description": "Sunbather",
-                "mode": "dark"
-            },
-            {
-                "name": "Sunbather ",
-                "url": "./src/palettes/sunbather.css",
-                "description": "Sunbather",
-                "mode": "light"
-            },
-            {
                 "name": "Tokyo ",
                 "url": "./src/palettes/tokyo.css",
                 "description": "Tokyo",
